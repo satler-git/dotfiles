@@ -2,7 +2,9 @@
 vim.opt.number = true
 
 -- タブの大きさ
-vim.opt.tabstop = 4
+-- vim.opt.tabstop = 4
+vim.opt.expandtab = true
+-- vim.cmd("set retab=4")
 
 -- エンコーディング
 
