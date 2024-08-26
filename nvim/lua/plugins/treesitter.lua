@@ -10,7 +10,7 @@ return {
 				extended_mode = true,
 				max_file_lines = nil,
 			},
-		},
+		}, -- TODO: ensure_installed
 	},
 	{
 		"nvim-treesitter/nvim-treesitter-context",
