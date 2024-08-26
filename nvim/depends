@@ -5,3 +5,4 @@ git
 luarocks
 
 ghq
+sqlite3

@@ -1,8 +1,9 @@
 return {
-	{ "nvim-lua/plenary.nvim", lazy = true },
-	{ "nvim-lua/popup.nvim", lazy = true },
-	{ "MunifTanjim/nui.nvim", lazy = true },
-	{ "vim-denops/denops.vim", lazy = true },
+	{ "nvim-lua/plenary.nvim" },
+	{ "nvim-lua/popup.nvim" },
+	{ "MunifTanjim/nui.nvim" },
+	{ "vim-denops/denops.vim" },
+	{ "kkharji/sqlite.lua" },
 	{
 		"stevearc/dressing.nvim",
 		lazy = true,
