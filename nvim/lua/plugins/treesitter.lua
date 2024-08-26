@@ -3,14 +3,37 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		event = "VimEnter",
-		opts = {
-			ident = { enable = true },
-			rainbow = {
-				enable = true,
-				extended_mode = true,
-				max_file_lines = nil,
-			},
-		}, -- TODO: ensure_installed
+		config = function()
+			require("nvim-treesitter.configs").setup({
+				ident = { enable = true },
+				rainbow = {
+					enable = true,
+					extended_mode = true,
+					max_file_lines = nil,
+				},
+				ensure_installed = {
+					"elixir",
+					"lua",
+					"rust",
+					-- haskell
+					"haskell",
+					"haskell_persistent",
+					-- utils
+					"json",
+					"toml",
+					"yaml",
+					"ledger",
+					"markdown",
+					"markdown_inline",
+					-- git
+					"gitignore",
+					"gitcommit",
+				},
+				highlight = { enable = true },
+				indent = { enable = true },
+			})
+		end,
+		-- TODO: ensure_installed
 	},
 	{
 		"nvim-treesitter/nvim-treesitter-context",
