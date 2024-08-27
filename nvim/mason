@@ -1,8 +1,6 @@
 lua-language-server
-rust-analyzer
 yaml-language-server
 json-lsp
 html-lsp
 elixir-ls
-haskell-language-server
 markdownlint
