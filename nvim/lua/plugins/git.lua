@@ -3,7 +3,7 @@ return {
 		"lewis6991/gitsigns.nvim",
 		version = "*",
 		config = true,
-		event = "VimEnter",
+		event = { "BufReadPost", "BufWritePost", "BufNewFile" },
 	},
 	{
 		"kdheepak/lazygit.nvim",

@@ -2,7 +2,7 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
-		event = "VimEnter",
+		-- event = { "LazyFile", "VeryLazy" },
 		config = function()
 			require("nvim-treesitter.configs").setup({
 				ident = { enable = true },
@@ -48,7 +48,7 @@ return {
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 		},
-		event = "VimEnter",
+		event = { "BufReadPost", "BufWritePost", "BufNewFile", "VeryLazy" },
 		config = true,
 	},
 	{
@@ -56,7 +56,7 @@ return {
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 		},
-		event = "VimEnter",
+		event = { "BufReadPost", "BufWritePost", "BufNewFile", "VeryLazy" },
 		config = function()
 			require("nvim-treesitter.configs").setup({
 				textsubjects = {
