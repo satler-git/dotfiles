@@ -51,14 +51,15 @@
   "popup.nvim": { "branch": "master", "commit": "b7404d35d5d3548a82149238289fa71f7f6de4ac" },
   "rainbow-delimiters.nvim": { "branch": "master", "commit": "c097f728a409d9923a3c70c1507e8389978a9b85" },
   "render-markdown.nvim": { "branch": "main", "commit": "e919a428cee007e4fc8f86fd0ddb311a723346c7" },
+  "rustaceanvim": { "branch": "master", "commit": "d3a8b145f0b3db4de9a08fcbc604659f52ee4fbc" },
   "skkeleton": { "branch": "main", "commit": "a3b59a5ebbad5fc19ec798d6f5ab248f9d7d175c" },
+  "smart-open.nvim": { "branch": "0.2.x", "commit": "87626ee8748b9bba22093adec7bb58c63e7214f0" },
   "sqlite.lua": { "branch": "master", "commit": "d0ffd703b56d090d213b497ed4eb840495f14a11" },
-  "telescope-frecency.nvim": { "branch": "master", "commit": "a7ebbb485d48f05edbca32f80ad5cfb0a7203fb1" },
   "telescope-ghq.nvim": { "branch": "master", "commit": "2bd2e2d10f1a06fce9cce1e33ffe464c84ceb63b" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "todo-comments.nvim": { "branch": "main", "commit": "8f45f353dc3649cb9b44cecda96827ea88128584" },
   "toggleterm.nvim": { "branch": "main", "commit": "48be57eaba817f038d61bbf64d2c597f578c0827" },
   "vim-kensaku-search": { "branch": "main", "commit": "9568c2b174a9cf31bd9922c0a991117f4dd4f0c3" },
-  "vimdoc-ja": { "branch": "master", "commit": "c95c79ac1c0db66f4331f275592cade06774a8f7" },
+  "vimdoc-ja": { "branch": "master", "commit": "ca2a7a35198501e95145a14b9df4f6ec36df98d9" },
   "which-key.nvim": { "branch": "main", "commit": "6c1584eb76b55629702716995cca4ae2798a9cca" }
 }
