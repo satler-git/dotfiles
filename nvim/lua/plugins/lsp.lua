@@ -1,6 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
-	event = "VimEnter",
+	event = { "BufReadPost", "BufWritePost", "BufNewFile" },
 	dependencies = {
 		{
 			{
@@ -32,7 +32,11 @@ return {
 					{ "]e", "<Cmd>Lspsaga diagnostic_jump_prev<CR>" },
 					{ "<Leader><C-o>", "<Cmd>Lspsaga outline<CR>" },
 				},
-				config = true,
+				opts = {
+					lightbulb = {
+						enable = false,
+					},
+				},
 			},
 		},
 	},
