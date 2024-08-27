@@ -5,9 +5,6 @@ return {
 		cmd = {
 			"Telescope",
 		},
-		keys = {
-			{ "<Leader>ff", "<Cmd>Telescope find_files<CR>" },
-		},
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope-ghq.nvim",
@@ -16,15 +13,19 @@ return {
 			require("telescope").load_extension("ghq")
 		end,
 	},
-	{ -- あっているはずだがよくわからないことになっているからoff
-		"nvim-telescope/telescope-frecency.nvim",
+	{
+		"danielfalk/smart-open.nvim",
+		branch = "0.2.x",
+		config = function()
+			require("telescope").load_extension("smart_open")
+		end,
+		keys = {
+			{ "<Leader>ff", "<Cmd>Telescope smart_open<CR>" },
+		},
 		dependencies = {
-			"nvim-web-devicons",
+			"kkharji/sqlite.lua",
+			"nvim-tree/nvim-web-devicons",
 			"nvim-telescope/telescope.nvim",
 		},
-		config = function()
-			require("telescope").load_extension("frecency")
-		end,
-		enabled = false,
 	},
 }
