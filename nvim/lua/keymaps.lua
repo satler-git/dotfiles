@@ -27,4 +27,4 @@ local function set_hjkl(h, j, k, l) -- TODO: コードが冗長
 	}
 end
 
--- vim.opt.langmap = set_hjkl("y", "u", "i", "o")
+-- vim.opt.langmap = set_hjkl("k", "t", "n", "s")
