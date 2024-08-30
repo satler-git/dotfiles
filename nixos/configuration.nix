@@ -11,9 +11,16 @@
     ];
  nix = {
 	settings = {
+		auto-optimise-store = true;
 		experimental-features = ["nix-command" "flakes"];
 	};
+	gc = {
+		automatic = true;
+		dates = "weekly";
+		options = "--delete-older-than 7d";
+	};
 };
+nixpkgs.config.allowUnfree = true;
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -71,7 +78,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
+    jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
