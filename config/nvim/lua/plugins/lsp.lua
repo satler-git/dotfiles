@@ -15,7 +15,7 @@ return {
                                                         "MasonUpdate",
                                                         "MasonUninstall",
                                                         "MasonUninstallAll",
-                                                }
+                                                },
 						config = true,
 					},
 				},
