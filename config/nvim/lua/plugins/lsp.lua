@@ -8,6 +8,14 @@ return {
 				dependencies = {
 					{
 						"williamboman/mason.nvim",
+                                                cmd = {
+                                                        "Mason",
+                                                        "MasonLog",
+                                                        "MasonInstall",
+                                                        "MasonUpdate",
+                                                        "MasonUninstall",
+                                                        "MasonUninstallAll",
+                                                }
 						config = true,
 					},
 				},
