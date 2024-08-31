@@ -115,6 +115,7 @@ KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="18d1|096e", ATTRS{idPr
   #  wget
     alacritty
     eza
+    nixfmt-rfc-style
   ];
 
   programs = {

@@ -3,14 +3,15 @@
 		nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 	};
 
-	outputs = inputs:  {
+	outputs = { nixpkgs, self }:  {
 		nixosConfigurations = {
-			desktop = inputs.nixpkgs.lib.nixosSystem {
+			desktop = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
 				modules = [
 					./nixos/configuration.nix
 				];
 			};
 		};
+		formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
 	};
 }
