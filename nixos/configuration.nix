@@ -5,22 +5,25 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
- nix = {
-	settings = {
-		auto-optimise-store = true;
-		experimental-features = ["nix-command" "flakes"];
-	};
-	gc = {
-		automatic = true;
-		dates = "weekly";
-		options = "--delete-older-than 7d";
-	};
-};
-nixpkgs.config.allowUnfree = true;
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
+  nix = {
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+    };
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+  };
+  nixpkgs.config.allowUnfree = true;
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -28,7 +31,7 @@ nixpkgs.config.allowUnfree = true;
   # Add support for google titan sec key
   # See also https://support.google.com/titansecuritykey/answer/9148044?hl=ja for more info
   services.udev.extraRules = ''
-KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="18d1|096e", ATTRS{idProduct}=="5026|0858|085b", TAG+="uaccess"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="18d1|096e", ATTRS{idProduct}=="5026|0858|085b", TAG+="uaccess"
   '';
 
   networking.hostName = "satlerdev"; # Define your hostname.
@@ -98,9 +101,12 @@ KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="18d1|096e", ATTRS{idPr
   users.users.satler = {
     isNormalUser = true;
     description = "satler";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
     shell = pkgs.zsh;
   };
@@ -111,56 +117,65 @@ KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="18d1|096e", ATTRS{idPr
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
     alacritty
     eza
     nixfmt-rfc-style
   ];
 
   programs = {
-	git = {
-		enable = true;
-	};
-	neovim = {
-		enable = true;
-		defaultEditor = true;
-		viAlias = true;
-		vimAlias = true;
-	};
-	starship = {
-		enable = true;
-	};
-	zsh = {
-		enable = true;
-		interactiveShellInit= builtins.readFile ../config/zsh/zshrc;
-	};
-};
+    git = {
+      enable = true;
+    };
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+      viAlias = true;
+      vimAlias = true;
+    };
+    starship = {
+      enable = true;
+    };
+    zsh = {
+      enable = true;
+      interactiveShellInit = builtins.readFile ../config/zsh/zshrc;
+    };
+  };
 
-i18n.inputMethod = {
+  i18n.inputMethod = {
     enable = true;
     type = "fcitx5";
-    fcitx5.addons = [pkgs.fcitx5-mozc];
-};
+    fcitx5.addons = [ pkgs.fcitx5-mozc ];
+  };
 
-fonts = {
+  fonts = {
     packages = with pkgs; [
-        noto-fonts-cjk-serif
-	noto-fonts-cjk-sans
-	noto-fonts-emoji
-	nerdfonts
-	monaspace
+      noto-fonts-cjk-serif
+      noto-fonts-cjk-sans
+      noto-fonts-emoji
+      nerdfonts
+      monaspace
     ];
     fontDir.enable = true;
     fontconfig = {
-        defaultFonts = {
-	    serif = ["Noto Serif CJK JP" "Noto Color Emoji"];
-	    sansSerif = ["Noto Sans CJK JP" "Noto Color Emoji"];
-	    monospace = ["JetBrainsMono Nerd Font" "Noto Color Emoji"];
-	    emoji = ["Noto Color Emoji"];
-	};
+      defaultFonts = {
+        serif = [
+          "Noto Serif CJK JP"
+          "Noto Color Emoji"
+        ];
+        sansSerif = [
+          "Noto Sans CJK JP"
+          "Noto Color Emoji"
+        ];
+        monospace = [
+          "JetBrainsMono Nerd Font"
+          "Noto Color Emoji"
+        ];
+        emoji = [ "Noto Color Emoji" ];
+      };
     };
-};
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
