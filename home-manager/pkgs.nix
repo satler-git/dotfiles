@@ -7,10 +7,13 @@ in {
     [
       gh
       ghq
+      lazygit
 
       eza
       ripgrep
 
       gcc
+
+      fzf
     ];
 }
