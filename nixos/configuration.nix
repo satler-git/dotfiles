@@ -67,7 +67,7 @@
   services.xserver.enable = true;
 
   # Nvidia configs
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
   };
 
