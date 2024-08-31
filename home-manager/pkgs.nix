@@ -15,5 +15,7 @@ in {
       gcc
 
       fzf
+
+      spotify
     ];
 }
