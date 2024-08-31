@@ -17,5 +17,6 @@ in {
       fzf
 
       spotify
+      slack
     ];
 }
