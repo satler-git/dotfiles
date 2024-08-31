@@ -114,6 +114,7 @@ KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="18d1|096e", ATTRS{idPr
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
     alacritty
+    eza
   ];
 
   programs = {
@@ -131,6 +132,7 @@ KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="18d1|096e", ATTRS{idPr
 	};
 	zsh = {
 		enable = true;
+		interactiveShellInit= builtins.readFile ../.zshrc;
 	};
 };
 
