@@ -132,7 +132,7 @@ KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="18d1|096e", ATTRS{idPr
 	};
 	zsh = {
 		enable = true;
-		interactiveShellInit= builtins.readFile ../.zshrc;
+		interactiveShellInit= builtins.readFile ../config/zsh/zshrc;
 	};
 };
 
