@@ -18,5 +18,7 @@ in {
 
       spotify
       slack
+
+      osu-lazer-bin
     ];
 }
