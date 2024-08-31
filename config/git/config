@@ -5,4 +5,5 @@
 	editor = nvim
 [init]
 	defaultbranch = main
-
+[credential "https://github.com"]
+        helper = "!gh auth git-credential"
