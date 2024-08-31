@@ -15,19 +15,15 @@
           system = "x86_64-linux";
           modules = [
             ./nixos/configuration.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.satler = import ./home-manager/linux.nix;
+            }
           ];
         };
       };
     formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
-    homeConfigurations = {
-      linux = home-manager.lib.homeManagerConfigration {
-          pkgs = import nixpkgs {
-            system = "x86_64-linux";
-            config.allowUnfree = true;
-            overlayrs = [];
-          };
-          modules = [ ./home-manager/linux.nix ];
-      };
-    };
   };
 }
