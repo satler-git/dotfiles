@@ -121,6 +121,7 @@
     #  wget
     alacritty
     eza
+    nixfmt-rfc-style
   ];
 
   programs = {
