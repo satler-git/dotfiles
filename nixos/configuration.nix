@@ -27,6 +27,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
 
   # Add support for google titan sec key
   # See also https://support.google.com/titansecuritykey/answer/9148044?hl=ja for more info
