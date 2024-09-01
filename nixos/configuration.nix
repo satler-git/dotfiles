@@ -143,6 +143,7 @@
     alacritty
     eza
     nixfmt-rfc-style
+    chromium
   ];
 
   programs = {
