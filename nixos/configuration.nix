@@ -145,6 +145,9 @@
     nixfmt-rfc-style
     chromium
     wineWowPackages.stable
+    egl-wayland
+    kitty
+    nvidia-vaapi-driver
   ];
 
   programs = {
@@ -164,7 +167,13 @@
       enable = true;
       interactiveShellInit = builtins.readFile ../config/zsh/zshrc;
     };
+    hyprland = {
+      enable = true;
+    };
   };
+
+  # hint for electron apps
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   i18n.inputMethod = {
     enable = true;
