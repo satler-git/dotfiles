@@ -1,4 +1,6 @@
 {
+  description = "My dotfiles for Nixos";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     home-manager = {
