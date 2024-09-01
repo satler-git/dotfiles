@@ -20,5 +20,7 @@ in {
       slack
 
       osu-lazer-bin
+
+      hledger
     ];
 }
