@@ -144,6 +144,7 @@
     eza
     nixfmt-rfc-style
     chromium
+    wineWowPackages.stable
   ];
 
   programs = {
