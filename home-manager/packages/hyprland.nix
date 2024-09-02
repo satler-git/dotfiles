@@ -20,6 +20,8 @@
 
   "$terminal" = "alacritty";
   "$browser" = "firefox";
+  "$fileManager" = "alacritty --command=\"yazi\"";
+  "$launcher" = "wofi";
 
   input = {
     kb_layout = "jp";
@@ -93,14 +95,15 @@
       workspace_swipe = "off";
   };
 
-  "$mainMod" = "Alt";
+  "$mainMod" = "SUPER";
 
     bind = [
     # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
     "$mainMod, Return, exec, $terminal"
+    "Alt, Space, exec, $launcher"
     "$mainMod, q, killactive"
     # bind = $mainMod, m, exit,
-    # "$mainMod, e, exec, $fileManager"
+    "$mainMod, e, exec, $fileManager"
     "$mainMod, f, togglefloating"
     "$mainMod, f, pin,"
     "$mainMod, space, exec, $menu"

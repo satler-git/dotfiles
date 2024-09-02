@@ -14,13 +14,21 @@ in {
 
       gcc
 
+      lutris
+
       fzf
 
       spotify
       slack
 
+      ueberzugpp
+
       osu-lazer-bin
 
       hledger
+
+      wl-clipboard
+
+      yazi
     ];
 }
