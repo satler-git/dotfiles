@@ -8,6 +8,8 @@ in
     ghq
     lazygit
 
+    discord
+
     eza
     ripgrep
 
