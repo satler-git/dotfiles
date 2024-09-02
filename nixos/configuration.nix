@@ -178,7 +178,7 @@
     eza
     nixfmt-rfc-style
     chromium
-    wineWowPackages.stable
+    wine
     egl-wayland
     kitty
     nvidia-vaapi-driver
