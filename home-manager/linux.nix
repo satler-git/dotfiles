@@ -15,4 +15,10 @@ in
     homeDirectory = "/home/${username}";
     stateVersion = "24.05";
   };
+
+  wayland.windowManager.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+  wayland.windowManager.hyprland.settings = import ./packages/hyprland.nix { inherit pkgs; };
 }

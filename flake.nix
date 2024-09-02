@@ -7,10 +7,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
   };
 
   outputs =
-    { nixpkgs, home-manager, self }:
+    { nixpkgs, home-manager, /* hyprland, */ self }:
     {
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
@@ -22,7 +24,9 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.satler = import ./home-manager/linux.nix;
+              # wayland.windowManager.hyprland.enable = true;
             }
+            # hyprland.homeManagerModules.default
           ];
         };
       };
