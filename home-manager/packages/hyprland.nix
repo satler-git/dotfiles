@@ -30,7 +30,8 @@
     kb_layout = "jp";
 
     follow_mouse = "0";
-    mouse_refocus = false;
+    # mouse_refocus = false;
+    mouse_refocus = true;
 
     sensitivity = 0; # -1.0 to 1.0, 0 means no modification.
 
