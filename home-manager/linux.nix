@@ -8,6 +8,8 @@ in
     packages
     ./packages/git.nix
     ./packages/neovim.nix
+    ./packages/wofi.nix
+    ./services/dunst.nix
   ];
   programs.home-manager.enable = true;
   home = rec {
