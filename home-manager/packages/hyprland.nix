@@ -24,7 +24,7 @@
   "$terminal" = "alacritty";
   "$browser" = "firefox";
   "$fileManager" = "alacritty --command=\"yazi\"";
-  "$launcher" = "wofi";
+  "$launcher" = "wofi --show drun";
 
   input = {
     kb_layout = "jp";
