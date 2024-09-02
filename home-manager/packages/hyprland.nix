@@ -158,4 +158,8 @@
     "$mainMod ctrl, h, resizeactive, -100 100"
   ];
 
+  exec-once = [
+    "fcitx5"
+  ];
+
 }
