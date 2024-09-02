@@ -45,7 +45,10 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  networking.nameservers = [ "8.8.8.8" "4.4.4.4" ];
+  networking.nameservers = [
+    "8.8.8.8"
+    "4.4.4.4"
+  ];
 
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";
@@ -73,7 +76,7 @@
     enable = true;
   };
 
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
     modesetting.enable = true;

@@ -1,8 +1,8 @@
 { pkgs, ... }:
 let
   packages = import ./pkgs.nix;
-#  extPackages = import ./extraPkgs.nix;
 in
+#  extPackages = import ./extraPkgs.nix;
 {
   imports = [
     packages
