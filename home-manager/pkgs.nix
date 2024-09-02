@@ -1,34 +1,33 @@
-{ pkgs, ...}:
+{ pkgs, ... }:
 let
 
-in {
-  home.packages =
-    with pkgs;
-    [
-      gh
-      ghq
-      lazygit
+in
+{
+  home.packages = with pkgs; [
+    gh
+    ghq
+    lazygit
 
-      eza
-      ripgrep
+    eza
+    ripgrep
 
-      gcc
+    gcc
 
-      lutris
+    lutris
 
-      fzf
+    fzf
 
-      spotify
-      slack
+    spotify
+    slack
 
-      ueberzugpp
+    ueberzugpp
 
-      osu-lazer-bin
+    osu-lazer-bin
 
-      hledger
+    hledger
 
-      wl-clipboard
+    wl-clipboard
 
-      yazi
-    ];
+    yazi
+  ];
 }

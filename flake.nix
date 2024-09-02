@@ -12,7 +12,11 @@
   };
 
   outputs =
-    { nixpkgs, home-manager, /* hyprland, */ self }:
+    {
+      nixpkgs,
+      home-manager, # hyprland,
+      self,
+    }:
     {
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
@@ -30,6 +34,6 @@
           ];
         };
       };
-    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
-  };
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
+    };
 }

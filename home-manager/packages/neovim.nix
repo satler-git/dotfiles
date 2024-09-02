@@ -3,7 +3,7 @@
     enable = true;
   };
   home.file = {
-    ".config/nvim/"= {
+    ".config/nvim/" = {
       target = ".config/nvim";
       source = ../../config/nvim;
       recursive = true;

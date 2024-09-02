@@ -2,7 +2,10 @@
 {
   # many configs are copied from https://github.com/Comamoca/dotfiles/blob/main/config/home-manager/hyprland.nix
   # Thanks !
-  monitor = [ ",preferred,auto,auto" ",preferred,auto,auto" ];
+  monitor = [
+    ",preferred,auto,auto"
+    ",preferred,auto,auto"
+  ];
 
   env = [
     "XCURSOR_SIZE,32"
@@ -42,29 +45,28 @@
     force_zero_scaling = true;
   };
 
-
   general = {
-      gaps_in = 5;
-      gaps_out = 20;
-      border_size = 2;
-      "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-      "col.inactive_border" = "rgba(595959aa)";
-      layout = "dwindle";
-      allow_tearing = false;
+    gaps_in = 5;
+    gaps_out = 20;
+    border_size = 2;
+    "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+    "col.inactive_border" = "rgba(595959aa)";
+    layout = "dwindle";
+    allow_tearing = false;
   };
 
   decoration = {
-      rounding = 8;
+    rounding = 8;
 
-      blur = {
-          enabled = true;
-          size = 3;
-          passes = 1;
-      };
-      drop_shadow = "yes";
-      shadow_range = 4;
-      shadow_render_power = 3;
-      "col.shadow" = "rgba(1a1a1aee)";
+    blur = {
+      enabled = true;
+      size = 3;
+      passes = 1;
+    };
+    drop_shadow = "yes";
+    shadow_range = 4;
+    shadow_render_power = 3;
+    "col.shadow" = "rgba(1a1a1aee)";
   };
 
   animations = {
@@ -81,23 +83,22 @@
     ];
   };
 
-
   dwindle = {
-      pseudotile = "yes";
-      preserve_split = "yes";
-    };
-
-      misc = {
-      force_default_wallpaper = -1;
+    pseudotile = "yes";
+    preserve_split = "yes";
   };
 
-    gestures = {
-      workspace_swipe = "off";
+  misc = {
+    force_default_wallpaper = -1;
+  };
+
+  gestures = {
+    workspace_swipe = "off";
   };
 
   "$mainMod" = "SUPER";
 
-    bind = [
+  bind = [
     # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
     "$mainMod, Return, exec, $terminal"
     "Alt, Space, exec, $launcher"
