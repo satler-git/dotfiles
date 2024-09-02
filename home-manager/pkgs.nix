@@ -18,6 +18,7 @@ in
     lutris
 
     fzf
+    foliate
 
     spotify
     slack
