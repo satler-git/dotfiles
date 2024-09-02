@@ -22,6 +22,7 @@ in
 
     ueberzugpp
 
+    obsidian
     osu-lazer-bin
 
     hledger
