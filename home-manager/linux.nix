@@ -9,6 +9,7 @@ in
     ./packages/git.nix
     ./packages/neovim.nix
     ./packages/wofi.nix
+    ./packages/zsh.nix
     ./services/dunst.nix
   ];
   programs.home-manager.enable = true;

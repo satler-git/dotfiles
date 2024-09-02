@@ -200,7 +200,6 @@
     };
     zsh = {
       enable = true;
-      interactiveShellInit = builtins.readFile ../config/zsh/zshrc;
     };
     hyprland = {
       enable = true;
