@@ -90,6 +90,7 @@
     "opacity 0.8, class:(clipse)"
     "float,class:^(firefox),title:^(ピクチャーインピクチャー)"
     "pin,class:^(firefox),title:^(ピクチャーインピクチャー)"
+    "size 30% 30%, class:^(firefox),title:^(ピクチャーインピクチャー)"
   ];
 
   dwindle = {
@@ -181,6 +182,8 @@
     "$mainMod SHIFT, n, movetoworkspace, -1"
 
     "$mainMod SHIFT, l, movewindow, r"
+    "$mainMod SHIFT, k, movewindow, u"
+    "$mainMod SHIFT, j, movewindow, d"
     "$mainMod SHIFT, h, movewindow, l"
 
     # Change window size
