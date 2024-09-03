@@ -120,6 +120,7 @@
     "$mainMod, J, togglesplit," # dwindle
     "$mainMod, b, exec, $browser"
     "$mainMod, v, exec, alacritty --class clipse -e clipse  "
+    "Control_L, Print, exec, grim -g \"$(slurp -d)\" - | wl-copy"
 
     # Move focus with mainMod + arrow keys
     "$mainMod, h, movefocus, l"
