@@ -22,6 +22,7 @@ return {
 					"json",
 					"toml",
 					"yaml",
+					"nix",
 					"ledger",
 					"markdown",
 					"markdown_inline",
