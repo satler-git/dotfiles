@@ -88,6 +88,8 @@
     "float, class:(clipse)"
     "size 622 652, class:(clipse)"
     "opacity 0.8, class:(clipse)"
+    "float,class:^(firefox),title:^(ピクチャーインピクチャー)"
+    "pin,class:^(firefox),title:^(ピクチャーインピクチャー)"
   ];
 
   dwindle = {
