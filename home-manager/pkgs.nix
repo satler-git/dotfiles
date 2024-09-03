@@ -21,7 +21,6 @@ in
     foliate
 
     spotify
-    slack
 
     ueberzugpp
 
