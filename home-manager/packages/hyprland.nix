@@ -84,6 +84,11 @@
     ];
   };
 
+  windowrulev2 = [
+    "float, class:(clipse)"
+    "size 622 652, class:(clipse)"
+  ];
+
   dwindle = {
     pseudotile = "yes";
     preserve_split = "yes";
@@ -112,6 +117,7 @@
     "$mainMod, P, pseudo" # dwindle
     "$mainMod, J, togglesplit," # dwindle
     "$mainMod, b, exec, $browser"
+    "$mainMod, v, exec, alacritty --class clipse -e clipse  "
 
     # Move focus with mainMod + arrow keys
     "$mainMod, h, movefocus, l"
@@ -165,6 +171,7 @@
 
   exec-once = [
     "fcitx5"
+    "clipse -listen"
   ];
 
 }
