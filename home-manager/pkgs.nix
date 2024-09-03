@@ -8,6 +8,8 @@ in
     ghq
     lazygit
 
+    clipse
+
     discord
 
     eza
