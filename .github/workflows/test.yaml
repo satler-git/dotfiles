@@ -28,4 +28,4 @@ jobs:
 
       - name: Build Nix Flake
         run: |
-          nix build --extra-experimental-features 'nix-command flakes' .#desktop."x86_64-linux".config.system.build.toplevel
+          nix build --extra-experimental-features 'nix-command flakes' .#nixosConfigurations.desktop."x86_64-linux".config.system.build.toplevel
