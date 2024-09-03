@@ -29,4 +29,4 @@ jobs:
 
       - name: Build Nix Flake
         run: |
-          nix-shell -p '(nixos{}).nixos-rebuild --extra-experimental-features 'nix-command flakes' .#desktop'
+          nix-shell -p '(nixos{}).nixos-rebuild' --run nixos-rebuild --extra-experimental-features 'nix-command flakes' .#desktop
