@@ -129,6 +129,9 @@
 
     # bind = $mainMod, g, movefocus, d
 
+    "$mainMod, Tab, cyclenext"
+    "$mainMod, Tab SHIFT, cyclenext, prev"
+
     # Switch workspaces with mainMod + [0-9]
     "$mainMod, 1, workspace, 1"
     "$mainMod, 2, workspace, 2"
@@ -152,6 +155,18 @@
     "$mainMod SHIFT, 8, movetoworkspace, 8"
     "$mainMod SHIFT, 9, movetoworkspace, 9"
     "$mainMod SHIFT, 0, movetoworkspace, 10"
+
+    # Focus workspace with mainMod + Tab + [0-9]
+    "$mainMod Tab, 1, focusworkspaceoncurrentmonitor, 1"
+    "$mainMod Tab, 2, focusworkspaceoncurrentmonitor, 2"
+    "$mainMod Tab, 3, focusworkspaceoncurrentmonitor, 3"
+    "$mainMod Tab, 4, focusworkspaceoncurrentmonitor, 4"
+    "$mainMod Tab, 5, focusworkspaceoncurrentmonitor, 5"
+    "$mainMod Tab, 6, focusworkspaceoncurrentmonitor, 6"
+    "$mainMod Tab, 7, focusworkspaceoncurrentmonitor, 7"
+    "$mainMod Tab, 8, focusworkspaceoncurrentmonitor, 8"
+    "$mainMod Tab, 9, focusworkspaceoncurrentmonitor, 9"
+    "$mainMod Tab, 0, focusworkspaceoncurrentmonitor, 10"
 
     # Example special workspace (scratchpad)
     "$mainMod, w, togglespecialworkspace, magic"
