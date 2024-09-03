@@ -33,6 +33,9 @@ in
 
     wl-clipboard
 
+    grim # for screenshot in wayland
+    slurp
+
     yazi
   ];
 }
