@@ -18,6 +18,8 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
+        host:
+          - desktop
     steps:
       - uses: actions/checkout@v4
 
@@ -28,5 +30,4 @@ jobs:
         uses: DeterminateSystems/magic-nix-cache-action@main
 
       - name: Build Nix Flake
-        run: |
-          nix-shell -p '(nixos{}).nixos-rebuild' --run nixos-rebuild --extra-experimental-features 'nix-command flakes' $(cwd)#desktop
+        run: nix --experimental-features 'nix-command flakes' build .#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel -L
