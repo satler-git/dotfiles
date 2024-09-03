@@ -160,8 +160,10 @@
       "networkmanager"
       "wheel"
     ];
-    packages = with pkgs; [
-    ];
+    packages =
+      with pkgs;
+      [
+      ];
     shell = pkgs.zsh;
   };
 
