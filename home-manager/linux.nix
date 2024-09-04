@@ -23,5 +23,5 @@ in
     enable = true;
     xwayland.enable = true;
   };
-  wayland.windowManager.hyprland.settings = import ./packages/hyprland.nix { inherit pkgs; };
+  wayland.windowManager.hyprland.settings = import ./programs/hyprland.nix { inherit pkgs; };
 }
