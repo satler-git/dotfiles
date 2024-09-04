@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-
+  ueli = pkgs.callPackage ./packages/ueli/default.nix {  };
 in
 {
   home.packages = with pkgs; [
@@ -25,6 +25,7 @@ in
     spotify
 
     ueberzugpp
+    ueli
 
     obsidian
     osu-lazer-bin
