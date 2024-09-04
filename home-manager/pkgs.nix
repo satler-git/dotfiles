@@ -28,6 +28,8 @@ in
 
     ueberzugpp
     ueli
+    egl-wayland
+    glew
 
     obsidian
     osu-lazer-bin
