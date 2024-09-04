@@ -14,6 +14,11 @@ in
     discord
 
     eza
+
+    gst_all_1.gst-plugins-base
+    gst_all_1.gst-plugins-bad
+    gst_all_1.gst-plugins-ugly
+
     ripgrep
 
     gcc
@@ -27,6 +32,7 @@ in
 
     spotify
 
+    unzip
     ueberzugpp
 
     obsidian
