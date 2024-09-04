@@ -22,6 +22,8 @@ in
     fzf
     foliate
 
+    playerctl
+
     spotify
 
     ueberzugpp
