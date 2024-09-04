@@ -121,8 +121,9 @@
     "$mainMod, P, pseudo" # dwindle
     "$mainMod, J, togglesplit," # dwindle
     "$mainMod, b, exec, $browser"
-    "$mainMod, v, exec, alacritty --class clipse -e clipse  "
+    "$mainMod, v, exec, alacritty --class clipse -e clipse"
     "Control_L, Print, exec, grim -g \"$(slurp -d)\" - | wl-copy"
+    "Alt,Print, exec, hyprctl -j activewindow | jq -r '\"\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])\"' | grim -g - - | wl-copy"
 
     # Move focus with mainMod + arrow keys
     "$mainMod, h, movefocus, l"
@@ -189,6 +190,18 @@
     # Change window size
     "$mainMod ctrl, l, resizeactive, 100 100"
     "$mainMod ctrl, h, resizeactive, -100 100"
+  ];
+
+  # map media keys
+  bindel = [
+    ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+    ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+    ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  ];
+  bindl = [
+    ", XF86AudioPlay, exec, playerctl play-pause"
+    ", XF86AudioPrev, exec, playerctl previous"
+    ", XF86AudioNext, exec, playerctl next"
   ];
 
   exec-once = [
