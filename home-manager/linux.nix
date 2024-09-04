@@ -10,6 +10,7 @@ in
     ./programs/neovim.nix
     ./programs/wofi.nix
     ./programs/zsh.nix
+    ./programs/waybar.nix
     ./services/dunst.nix
   ];
   programs.home-manager.enable = true;

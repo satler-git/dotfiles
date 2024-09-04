@@ -207,6 +207,7 @@
   exec-once = [
     "fcitx5"
     "clipse -listen"
+    "waybar"
   ];
 
 }
