@@ -43,5 +43,8 @@ jobs:
       - name: Check the flake
         uses: DeterminateSystems/flake-checker-action@main
 
+      - name: Cloc
+        run: nix --experimental-features 'nix-command flakes' run nixpkgs#cloc -- --vcs=git
+
       - name: Build Nix Flake
         run: nix --experimental-features 'nix-command flakes' build .#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel -L
