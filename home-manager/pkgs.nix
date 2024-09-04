@@ -7,6 +7,8 @@ in
     ghq
     lazygit
 
+    bibata-cursors
+
     clipse
 
     discord

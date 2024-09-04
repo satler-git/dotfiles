@@ -8,10 +8,10 @@
   ];
 
   env = [
-    "XCURSOR_SIZE,32"
-    # "HYPRCURSOR_THEME,MyCursor"
+    "HYPRCURSOR_THEME,Bibata-Modern-Ice"
     "HYPRCURSOR_SIZE,25"
-    "XCURSOR_SIZE,24"
+    "XCURSOR_THEME,Bibata-Modern-Ice"
+    "XCURSOR_SIZE,25"
     # for nvidia, see https://wiki.hyprland.org/Nvidia/
     "LIBVA_DRIVER_NAME,nvidia"
     "XDG_SESSION_TYPE,wayland"
