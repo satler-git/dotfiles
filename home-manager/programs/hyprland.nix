@@ -91,6 +91,7 @@
     "float,class:^(firefox),title:^(ピクチャーインピクチャー)"
     "pin,class:^(firefox),title:^(ピクチャーインピクチャー)"
     "size 30% 30%, class:^(firefox),title:^(ピクチャーインピクチャー)"
+    "float, class:(ueli)"
   ];
 
   dwindle = {
