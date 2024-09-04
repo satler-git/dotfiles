@@ -6,10 +6,10 @@ in
 {
   imports = [
     packages
-    ./packages/git.nix
-    ./packages/neovim.nix
-    ./packages/wofi.nix
-    ./packages/zsh.nix
+    ./programs/git.nix
+    ./programs/neovim.nix
+    ./programs/wofi.nix
+    ./programs/zsh.nix
     ./services/dunst.nix
   ];
   programs.home-manager.enable = true;
