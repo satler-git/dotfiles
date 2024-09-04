@@ -5,7 +5,7 @@ let
 
   src = fetchurl {
     url = "https://github.com/oliverschwendener/ueli/releases/download/v${version}/${pname}-${version}.AppImage";
-    hash = "sha256-he1uGC1M/nFcKpMM9JKY4oeexJcnzV0ZRxhTjtJz6xw=";
+    hash = "sha256-uLLuI+rDSMsd+TpnkRU228Ki9REvp4guV+Jgdzp5wI8=";
   };
 in
 appimageTools.wrapType2 {
