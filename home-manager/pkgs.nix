@@ -29,6 +29,7 @@ in
     foliate
 
     playerctl
+    pureref
 
     spotify
 
