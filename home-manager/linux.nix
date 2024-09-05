@@ -23,6 +23,6 @@ in
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
+    settings = import ./programs/hyprland.nix { inherit pkgs; };
   };
-  wayland.windowManager.hyprland.settings = import ./programs/hyprland.nix { inherit pkgs; };
 }
