@@ -34,6 +34,8 @@ in
 
     spotify
 
+    thunderbird
+
     unzip
     ueberzugpp
 
