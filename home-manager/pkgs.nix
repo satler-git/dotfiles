@@ -22,6 +22,7 @@ in
     ripgrep
 
     gcc
+    ghq
 
     lutris
 
