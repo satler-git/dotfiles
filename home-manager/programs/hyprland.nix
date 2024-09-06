@@ -106,6 +106,11 @@
     workspace_swipe = "off";
   };
 
+  device = {
+    name = "ydotoold-virtual-device";
+    kb_layout = "us";
+  };
+
   "$mainMod" = "SUPER";
 
   bind = [

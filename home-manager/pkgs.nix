@@ -59,6 +59,7 @@ in
     slurp
 
     yazi
+    ydotool
 
     zoom-us
 
