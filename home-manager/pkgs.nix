@@ -29,8 +29,7 @@ in
     foliate
 
     playerctl
-    # pureref
-      # Couldn't enable before #338836 marged to nixpkgs-unstable
+    pureref
 
     spotify
 
