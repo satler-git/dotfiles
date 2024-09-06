@@ -42,6 +42,8 @@ in
     obsidian
     osu-lazer-bin
 
+    reversal-icon-theme
+
     hledger
 
     waydroid
