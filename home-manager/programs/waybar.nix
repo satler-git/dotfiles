@@ -6,9 +6,9 @@
       mainBar = {
         layer = "top";
         position = "top";
-        modules-left = [];
+        modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "clock" ];
-        modules-right = [ "wireplumber" ];
+        modules-right = [ "wireplumber" ] ;
 
         "clock" = {
           timezones = "Asia/Tokyo";
@@ -26,12 +26,24 @@
           #   };
           # };
         };
+
         "wireplumber" = {
           format = "{volume}% {icon}";
           format-muted = "";
           format-icons = ["" "" ""];
         };
+
+        "hyprland/workspaces" = {
+          # format = "<sub>{icon}</sub>\n{windows}";
+          format = "{icon}";
+          window-rewrite = {
+            "title<.*youtube.*>" = "";
+            "class<firefox>" = "";
+            "class<firefox> title<.*github.*>" = "";
+            "Alacritty vim nvim clipse" = "";
+	        };
+        };
       };
     };
   };
-}
+ }
