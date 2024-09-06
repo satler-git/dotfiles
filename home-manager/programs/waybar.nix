@@ -8,7 +8,7 @@
         position = "top";
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "clock" ];
-        modules-right = [ "wireplumber" ] ;
+        modules-right = [ "wireplumber" "tray" ] ;
 
         "clock" = {
           timezones = "Asia/Tokyo";
@@ -42,6 +42,11 @@
             "class<firefox> title<.*github.*>" = "";
             "Alacritty vim nvim clipse" = "";
 	        };
+        };
+
+        "tray" = {
+          icon-size = 21;
+          spaceing = 23;
         };
       };
     };
