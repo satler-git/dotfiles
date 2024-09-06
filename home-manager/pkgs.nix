@@ -21,6 +21,8 @@ in
 
     jq
 
+    luajit
+
     ripgrep
 
     gcc
@@ -34,6 +36,8 @@ in
     playerctl
     pureref
 
+    sqlite
+    sqlite.dev
     spotify
 
     thunderbird
@@ -55,6 +59,8 @@ in
     slurp
 
     yazi
+
+    zoom-us
 
     libsForQt5.xp-pen-deco-01-v2-driver
   ];
