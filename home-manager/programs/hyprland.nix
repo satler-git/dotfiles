@@ -122,8 +122,8 @@
     "$mainMod, J, togglesplit," # dwindle
     "$mainMod, b, exec, $browser"
     "$mainMod, v, exec, alacritty --class clipse -e clipse"
-    "Control_L, Print, exec, grim -g \"$(slurp -d)\" - | wl-copy"
-    "Alt,Print, exec, hyprctl -j activewindow | jq -r '\"\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])\"' | grim -g - - | wl-copy"
+    "Control_L, Print, exec, grim -g \"$(slurp -d)\" - | wl-copy; dunstify \"A rect screenshot is copied!\""
+    "Alt,Print, exec, hyprctl -j activewindow | jq -r '\"\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])\"' | grim -g - - | wl-copy; \"A winwdow screenshot is copied!\""
 
     # Move focus with mainMod + arrow keys
     "$mainMod, h, movefocus, l"
