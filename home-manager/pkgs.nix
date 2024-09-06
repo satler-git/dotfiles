@@ -43,6 +43,7 @@ in
 
     hledger
 
+    waydroid
     wl-clipboard
 
     grim # for screenshot in wayland
