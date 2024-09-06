@@ -29,7 +29,7 @@
         "wireplumber" = {
           format = "{volume}% {icon}";
           format-muted = "";
-          format-icons = ["", "", ""];
+          format-icons = ["" "" ""];
         };
       };
     };
