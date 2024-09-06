@@ -8,7 +8,7 @@
         position = "top";
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "clock" ];
-        modules-right = [ "wireplumber" "tray" ] ;
+        modules-right = [ "wireplumber" "privacy" "tray" ] ;
 
         "clock" = {
           timezones = "Asia/Tokyo";
@@ -47,6 +47,24 @@
         "tray" = {
           icon-size = 21;
           spaceing = 23;
+        };
+
+        "privacy" = {
+          icon-spacing = 4;
+          icon-size = 18;
+        	transition-duration = 250;
+        	modules = [
+		        {
+			        type = "screenshare";
+			        tooltip = true;
+		        	tooltip-icon-size = 24;
+		        }
+		        {
+			        type = "audio-in";
+			        tooltip = true;
+			        tooltip-icon-size = 24;
+		        }
+	        ];
         };
       };
     };
