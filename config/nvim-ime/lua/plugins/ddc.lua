@@ -26,6 +26,7 @@ return {
                         patch_global('completionMenu', 'pum.vim')
                         vim.fn["ddc#enable"]()
                 end,
+                event = "InsertEnter",
                 keys = {
                         { "<S-Tab>", "<Cmd>call pum#map#insert_relative(-1)<CR>", mode = "i" },
                         { "<C-n>", "<Cmd>call pum#map#select_relative(+1)<CR>", mode = "i" },
