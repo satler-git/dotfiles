@@ -9,12 +9,15 @@ in
 
     bibata-cursors
 
+    cabal-install
     clipse
 
     discord
 
+    elixir_1_16
     eza
 
+    ghc
     gst_all_1.gst-plugins-base
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-ugly
@@ -39,6 +42,7 @@ in
     playerctl
     pureref
 
+    stack
     sqlite
     sqlite.dev
     spacedrive
@@ -53,6 +57,7 @@ in
     osu-lazer-bin
 
     reversal-icon-theme
+    rustup
 
     hledger
 
