@@ -7,36 +7,55 @@ in
     ghq
     lazygit
 
+    anki-bin
     aria
+    audacity
 
     bat
     bibata-cursors
+    blender
+    buf
 
     cabal-install
     clipse
 
     discord
+    difftastic
     deno
+    duckdb
 
     elixir_1_16
+    eva
     eza
 
+    ffmpeg_7-full
+
+    gimp
     ghc
     gst_all_1.gst-plugins-base
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-ugly
 
+    inkscape
+
     jq
     jujutsu
     just
 
+    kalker
+    kicad
+    krita
+
     luajit
 
+    numbat
     # mindustry-server
     mindustry-wayland
+    mpv
 
     gcc
     ghq
+    go-task
 
     lutris
 
@@ -44,6 +63,9 @@ in
     fzf
     foliate
 
+    pandoc
+    peazip
+    pixelorama
     playerctl
     pureref
 
@@ -55,6 +77,7 @@ in
     spotify
 
     thunderbird
+    typst
 
     unzip
     ueberzugpp
@@ -69,7 +92,10 @@ in
 
     hledger
 
+    vlc
+
     waydroid
+    wireshark
     wl-clipboard
 
     grim # for screenshot in wayland
