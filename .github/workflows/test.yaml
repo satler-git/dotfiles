@@ -23,28 +23,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Free Disk Space (Ubuntu)
-        uses: jlumbroso/free-disk-space@main
-        with:
-          tool-cache: true
-          android: true
-          dotnet: true
-          haskell: true
-          large-packages: true
-          docker-images: true
-          swap-storage: true
-
-      - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@main
-
-      - name: Setup Cache
-        uses: DeterminateSystems/magic-nix-cache-action@main
-
       - name: Check the flake
         uses: DeterminateSystems/flake-checker-action@main
 
-      - name: Cloc
-        run: nix --experimental-features 'nix-command flakes' run nixpkgs#cloc -- --vcs=git
-
-      - name: Build Nix Flake
-        run: nix --experimental-features 'nix-command flakes' build .#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel -L
+      - name: actions-cloc
+        uses: maxfie1d/actions-cloc@v1
