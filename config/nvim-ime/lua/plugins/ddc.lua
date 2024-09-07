@@ -5,6 +5,7 @@ return {
                 dependencies = {
                         "vim-denops/denops.vim",
                         "Shougo/pum.vim",
+                        "Shougo/ddc-ui-pum",
                         "Shougo/ddc-filter-sorter_rank",
                         "Shougo/ddc-filter-converter_remove_overlap",
                 },
@@ -24,10 +25,9 @@ return {
                                         minAutoCompleteLength = 1,
                                 },
                         })
-                        patch_global('completionMenu', 'pum.vim')
+                        patch_global('ui', 'pum')
                         vim.fn["ddc#enable"]()
                 end,
-                event = "InsertEnter",
                 keys = {
                         { "<S-Tab>", "<Cmd>call pum#map#insert_relative(-1)<CR>", mode = "i" },
                         { "<C-n>", "<Cmd>call pum#map#select_relative(+1)<CR>", mode = "i" },
