@@ -23,6 +23,9 @@ in
 
     luajit
 
+    mindustry-server
+    mindustry-wayland
+
     ripgrep
 
     gcc
