@@ -1,6 +1,7 @@
 let
   alacritty = ./alacritty.nix;
   git = ./git.nix;
+  gpg = ./gpg.nix;
   hyprland = ./hyprland;
   neovim = ./neovim.nix;
   waybar = ./waybar.nix;
@@ -11,6 +12,7 @@ in
   imports = [
     alacritty
     git
+    gpg
     hyprland
     neovim
     waybar
