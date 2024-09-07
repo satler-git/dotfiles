@@ -8,10 +8,15 @@
   modulesPath,
   ...
 }:
-
+let
+  nvidia = import ./nvidia.nix { inherit config; };
+  titan = import ./titan.nix;
+in
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
+    nvidia
+    titan
   ];
 
   boot.initrd.availableKernelModules = [
