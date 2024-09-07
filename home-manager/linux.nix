@@ -28,28 +28,6 @@ in
   home.sessionVariables = {
     LC_CTYPE = "en_US.UTF-8";
     LC_ALL = "en_US.UTF-8";
-  };
-
-  systemd.user.services = {
-    ydotool = {
-      Unit = {
-        Description = "Starts ydotoold Daemon";
-      };
-
-      Service = {
-        Type = "simple";
-        Restart = "always";
-        RestartSec = 3;
-        ExecStartPre = "sleep 2";
-        ExecStart = "${pkgs.ydotool}/bin/ydotoold";
-        ExecReload = "kill -HUP $MAINPID";
-        KillMode = "process";
-        TimeoutSec = 180;
-      };
-
-      Install = {
-        WantedBy = [ "default.target" ];
-      };
-    };
+    YDOTOOL_SOCKET = "/tmp/.ydotool_socket";
   };
 }
