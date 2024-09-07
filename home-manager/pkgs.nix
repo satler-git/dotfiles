@@ -16,6 +16,7 @@ in
     clipse
 
     discord
+    deno
 
     elixir_1_16
     eza
@@ -46,6 +47,7 @@ in
     playerctl
     pureref
 
+    skk-dicts
     stack
     sqlite
     sqlite.dev
