@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   # many configs are copied from https://github.com/Comamoca/dotfiles/blob/main/config/home-manager/hyprland.nix
   # Thanks !
