@@ -1,5 +1,9 @@
 /* Many style from https://www.reddit.com/r/unixporn/comments/1f5prr6/hyprland_pywal16 */
-
+/*
+ * background: 15141b
+ * color4: 54c59f
+ * foreground: bdbdbd
+ */
 * {
   border: none;
   border-radius: 0;
@@ -10,7 +14,7 @@
 }
 
 window#waybar {
-  background-color: @background;
+  background-color: #15141b;
   transition-duration: 0.5s;
   border-radius: 0 0 16px 16px;
 }
@@ -26,15 +30,15 @@ window#waybar.hidden {
   border: 2px;
   padding: 2px 12px;
   background-color: transparent;
-  color: @foreground;
+  color: #bdbdbd;
 }
 
 #workspaces {
   border-style: solid;
   border-width: 2px;
-  border-color: @color4;
+  border-color: #54c59f;
   border-radius: 16px;
-  background-color: @background;
+  background-color: #15141b;
 }
 
 #workspaces button {
@@ -44,40 +48,40 @@ window#waybar.hidden {
 
 #workspaces button:hover {
   background-color: transparent;
-  color: @color4;
+  color: #54c59f;
 }
 
 #workspaces button.active {
-  color: @color4;
+  color: #54c59f;
 }
 
 .modules-left {
-  background-color: @color4;
+  background-color: #54c59f;
   border-radius: 0 16px 16px 16px;
 }
 
 #wireplumber {
-  color: @foreground;
+  color: #bdbdbd;
 }
 
 #clock {
   font-family: JetBrainsMono Nerd Font;
-  color: @foreground;
+  color: #bdbdbd;
 }
 
 .modules-right {
-  background-color: @color4;
+  background-color: #15141b;
   border-radius: 16px 0 16px 16px;
 }
 
 tooltip {
   border-radius: 8px;
   padding: 15px;
-  background-color: @background;
+  background-color: #15141b;
 }
 
 tooltip label {
   padding: 5px;
-  background-color: @background;
+  background-color: #15141b;
 }
 
