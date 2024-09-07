@@ -1,6 +1,7 @@
 require("options")
 require("commands")
 require("keymaps")
+require("extra")
 require("config.lazy")
 
 if vim.fn.has("win32")==1 then
