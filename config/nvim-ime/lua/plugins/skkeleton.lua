@@ -7,5 +7,8 @@ return {
                 keys = {
                         { "<C-j>", "<Plug>(skkeleton-enable)", mode = { "i", "c" } }
                 },
+                config = function()
+                        require("dicts")
+                end
         }
 }
