@@ -186,22 +186,7 @@
     kitty
     nvidia-vaapi-driver
     dropbox-cli
-    ydotool
   ];
-
-  systemd.services.ydotool = {
-    description = "ydotoold Daemon";
-    wantedBy = [ "basic.target" ];
-    serviceConfig = {
-      # ExecStartPre = "${lib.getBin pkgs.coreutils}/bin/sleep 2";
-      ExecStart = "${lib.getBin pkgs.ydotool}/bin/ydotoold --socket-perm=744";
-      ExecReload = "${lib.getBin pkgs.coreutils}/bin/kill -HUP $MAINPID";
-      KillMode = "process"; # upstream recommends process
-      Restart = "always";
-      RestartSec = 3;
-      TimeoutSec = 180;
-    };
-  };
 
   programs = {
     git = {

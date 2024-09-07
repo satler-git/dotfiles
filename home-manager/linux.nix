@@ -28,6 +28,5 @@ in
   home.sessionVariables = {
     LC_CTYPE = "en_US.UTF-8";
     LC_ALL = "en_US.UTF-8";
-    YDOTOOL_SOCKET = "/tmp/.ydotool_socket";
   };
 }
