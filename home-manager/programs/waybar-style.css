@@ -1,0 +1,83 @@
+/* Many style from https://www.reddit.com/r/unixporn/comments/1f5prr6/hyprland_pywal16 */
+
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family:
+    Material Design Icons,
+    JetBrainsMono Nerd Font;
+}
+
+window#waybar {
+  background-color: @background;
+  transition-duration: 0.5s;
+  border-radius: 0 0 16px 16px;
+}
+
+window#waybar.hidden {
+  opacity: 0.5;
+}
+
+#memory,
+#wireplumber,
+#clock,
+#tray {
+  border: 2px;
+  padding: 2px 12px;
+  background-color: transparent;
+  color: @foreground;
+}
+
+#workspaces {
+  border-style: solid;
+  border-width: 2px;
+  border-color: @color4;
+  border-radius: 16px;
+  background-color: @background;
+}
+
+#workspaces button {
+  background-color: transparent;
+  border-radius: 16px;
+}
+
+#workspaces button:hover {
+  background-color: transparent;
+  color: @color4;
+}
+
+#workspaces button.active {
+  color: @color4;
+}
+
+.modules-left {
+  background-color: @color4;
+  border-radius: 0 16px 16px 16px;
+}
+
+#wireplumber {
+  color: @foreground;
+}
+
+#clock {
+  font-family: JetBrainsMono Nerd Font;
+  color: @foreground;
+}
+
+.modules-right {
+  background-color: @color4;
+  border-radius: 16px 0 16px 16px;
+}
+
+tooltip {
+  border-radius: 8px;
+  padding: 15px;
+  background-color: @background;
+}
+
+tooltip label {
+  padding: 5px;
+  background-color: @background;
+}
+

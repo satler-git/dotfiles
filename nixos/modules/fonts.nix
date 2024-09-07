@@ -2,10 +2,12 @@
 {
   fonts = {
     packages = with pkgs; [
+      jetbrains-mono
       noto-fonts-cjk-serif
       noto-fonts-cjk-sans
       noto-fonts-emoji
       nerdfonts
+      material-design-icons
       monaspace
     ];
     fontDir.enable = true;

@@ -23,7 +23,7 @@ in
 
     luajit
 
-    mindustry-server
+    # mindustry-server
     mindustry-wayland
 
     ripgrep
