@@ -7,6 +7,9 @@ in
     ghq
     lazygit
 
+    aria
+
+    bat
     bibata-cursors
 
     cabal-install
@@ -23,19 +26,20 @@ in
     gst_all_1.gst-plugins-ugly
 
     jq
+    jujutsu
+    just
 
     luajit
 
     # mindustry-server
     mindustry-wayland
 
-    ripgrep
-
     gcc
     ghq
 
     lutris
 
+    fd
     fzf
     foliate
 
@@ -56,6 +60,8 @@ in
     obsidian
     osu-lazer-bin
 
+    ripgrep
+    ripgrep-all
     reversal-icon-theme
     rustup
 
@@ -69,6 +75,8 @@ in
 
     yazi
 
+    zellij
+    zola
     zoom-us
 
     libsForQt5.xp-pen-deco-01-v2-driver
