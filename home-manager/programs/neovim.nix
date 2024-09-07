@@ -2,7 +2,16 @@
 {
   programs.neovim = {
     enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+    extraPackages = with pkgs; [
+      sqlite
+      sqlite.dev
+      nodejs
+    ];
   };
+
   home.file = {
     ".config/nvim/" = {
       target = ".config/nvim";
@@ -27,6 +36,9 @@
         false
         )
       '';
+    };
+    ".config/nvim/lua/extra.lua" = {
+      text = "vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.so'";
     };
   };
 }

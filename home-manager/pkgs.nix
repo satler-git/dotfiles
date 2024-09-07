@@ -71,8 +71,6 @@ in
 
     skk-dicts
     stack
-    sqlite
-    sqlite.dev
     spacedrive
     spotify
 
