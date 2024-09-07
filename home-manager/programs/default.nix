@@ -1,4 +1,4 @@
-{ pkgs, ... }
+{ pkgs, ... }:
 let
   alacritty = ./alacritty.nix;
   git = ./git.nix;
