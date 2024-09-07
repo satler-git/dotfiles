@@ -41,6 +41,7 @@ in
 
     sqlite
     sqlite.dev
+    spacedrive
     spotify
 
     thunderbird
