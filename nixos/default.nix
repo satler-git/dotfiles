@@ -20,6 +20,7 @@ let
   systemd = import ./modules/systemd.nix;
   time = import ./modules/time.nix;
   users = import ./modules/users.nix;
+  virtualisation = import ./modules/virtualisation.nix;
 in
 {
   nixpkgs.config.allowUnfree = true;
@@ -37,5 +38,6 @@ in
     systemd
     time
     users
+    virtualisation
   ];
 }
