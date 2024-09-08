@@ -1,6 +1,8 @@
 {
   gtk = {
     enable = true;
-    cursorTheme = "Bibata-Modern-Ice";
+    cursorTheme =  {
+      name = "Bibata-Modern-Ice";
+    };
   };
 }
