@@ -3,8 +3,6 @@ let
 in
 {
   home.packages = with pkgs; [
-    gh
-    ghq
     lazygit
 
     anki-bin
@@ -30,8 +28,12 @@ in
 
     ffmpeg_7-full
 
-    gimp
+    gh
+    gh-dash
+    gh-poi
     ghc
+    ghq
+    gimp
     gst_all_1.gst-plugins-base
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-ugly
@@ -104,6 +106,7 @@ in
     zellij
     zola
     zoom-us
+    zoxide
 
     libsForQt5.xp-pen-deco-01-v2-driver
   ];
