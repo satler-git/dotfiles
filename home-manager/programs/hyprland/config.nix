@@ -211,7 +211,7 @@
   exec-once = [
     "fcitx5"
     "clipse -listen"
-    "sleep 3;waybar--log-level trace"
+    "sleep 0.05 && waybar"
   ];
 
 }
