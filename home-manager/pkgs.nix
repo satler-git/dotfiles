@@ -95,7 +95,6 @@ in
 
     vlc
 
-    waydroid
     wireshark
     wl-clipboard
 
