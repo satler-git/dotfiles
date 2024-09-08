@@ -83,4 +83,7 @@ abbr -S lla='eza -Fla'
 abbr -S rr='rm -rf'
 abbr -S v='nvim'
 
+eval "$(zoxide init zsh)"
+eval "$(atuin init zsh)"
+
 clear
