@@ -30,6 +30,7 @@ in
     environment
     fonts
     hardware
+    i18n
     nix
     programs
     services
