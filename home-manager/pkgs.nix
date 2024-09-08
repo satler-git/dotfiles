@@ -84,6 +84,7 @@ in
 
     obsidian
     osu-lazer-bin
+    oxker
 
     ripgrep
     ripgrep-all
