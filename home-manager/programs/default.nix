@@ -8,6 +8,7 @@ let
   neovim = import ./neovim.nix;
   waybar = import ./waybar.nix;
   wofi = import ./wofi.nix;
+  zellij = import ./zellij.nix;
   zsh = import ./zsh.nix;
 in
 {
@@ -20,6 +21,7 @@ in
     neovim
     waybar
     wofi
+    zellij
     zsh
   ];
 }

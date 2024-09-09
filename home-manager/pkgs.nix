@@ -103,7 +103,6 @@ in
 
     yazi
 
-    zellij
     zola
     zoom-us
     zoxide
