@@ -77,9 +77,9 @@ fi
 # rr rm -rf
 
 abbr -S l='eza -F'
-abbr -S ll='eza -Fl'
-abbr -S la='eza -Fa'
-abbr -S lla='eza -Fla'
+abbr -S ll='eza -F -l'
+abbr -S la='eza -F -a'
+abbr -S lla='eza -F -l -a'
 abbr -S rr='rm -rf'
 abbr -S v='nvim'
 
