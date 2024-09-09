@@ -37,5 +37,5 @@ jobs:
           - desktop
     steps:
       - uses: actions/checkout@v4
-      - uses: cachix/install-nix-action@v26
+      - uses: cachix/install-nix-action@v27
       - run: nix flake check
