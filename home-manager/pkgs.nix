@@ -5,6 +5,7 @@ in
   home.packages = with pkgs; [
     lazygit
 
+    alacritty-theme
     anki-bin
     aria
     audacity
@@ -17,9 +18,9 @@ in
     cabal-install
     clipse
 
-    discord
-    difftastic
     deno
+    difftastic
+    discord
     duckdb
 
     elixir_1_16
