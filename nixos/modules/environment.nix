@@ -4,7 +4,6 @@
 
     systemPackages = with pkgs; [
       alacritty
-      chromium
       dropbox-cli
       egl-wayland
       eza
