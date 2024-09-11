@@ -35,8 +35,9 @@ in
     ghc
     ghq
     gimp
-    gst_all_1.gst-plugins-base
+    google-chrome
     gst_all_1.gst-plugins-bad
+    gst_all_1.gst-plugins-base
     gst_all_1.gst-plugins-ugly
 
     inkscape
