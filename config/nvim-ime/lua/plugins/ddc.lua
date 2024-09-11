@@ -11,10 +11,13 @@ return {
         },
         config = function()
             local patch_global = vim.fn["ddc#custom#patch_global"]
+            patch_global("ui", "pum")
+            patch_global("sources", { "skkeleton" })
             patch_global("sourceOptions", {
                 _ = {
                     sorters = { "sorter_rank" },
                     converters = { "converter_remove_overlap" },
+                    matchers = { "matcher_head" },
                 },
                 ["skkeleton"] = {
                     mark = "skkeleton",
@@ -26,7 +29,6 @@ return {
                 },
             })
             vim.fn["ddc#enable"]()
-            patch_global("ui", "pum")
         end,
         keys = {
             { "<S-Tab>", "<Cmd>call pum#map#insert_relative(-1)<CR>", mode = "i" },
