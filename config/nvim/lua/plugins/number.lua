@@ -1,4 +1,4 @@
 return {
-	"sitiom/nvim-numbertoggle",
-	event = "VimEnter",
+    "sitiom/nvim-numbertoggle",
+    event = "VimEnter",
 }
