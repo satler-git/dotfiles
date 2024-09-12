@@ -40,4 +40,4 @@ jobs:
         uses: DeterminateSystems/magic-nix-cache-action@main
 
       - name: Build Nix Flake
-        run: nix --experimental-features 'nix-command flakes' build .#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel -L --no-link --dry-run
+        run: nix --experimental-features 'nix-command flakes' build .#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel -L --no-link
