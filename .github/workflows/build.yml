@@ -21,21 +21,6 @@ jobs:
         host:
           - desktop
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Check the flake
-        uses: DeterminateSystems/flake-checker-action@main
-
-      - name: actions-cloc
-        uses: maxfie1d/actions-cloc@v1
-  check-expr:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        host:
-          - desktop
-    steps:
       - name: Free Disk Space (Ubuntu)
         uses: jlumbroso/free-disk-space@main
         with:
