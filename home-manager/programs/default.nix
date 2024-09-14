@@ -1,6 +1,7 @@
 { pkgs, ... }:
 let
   alacritty = import ./alacritty.nix;
+  gh = import ./gh-cli.nix;
   git = import ./git.nix;
   gpg = import ./gpg.nix;
   gtk = import ./gtk.nix;
@@ -14,6 +15,7 @@ in
 {
   imports = [
     alacritty
+    gh
     git
     gpg
     gtk
