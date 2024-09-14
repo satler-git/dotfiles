@@ -1,6 +1,6 @@
 vim.opt.laststatus = 0
 vim.opt.fillchars = {
-    stl = "─",
-    stlnc = "─",
+  stl = "─",
+  stlnc = "─",
 }
 vim.opt.statusline = "─"
