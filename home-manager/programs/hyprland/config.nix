@@ -52,7 +52,7 @@
     "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
     "col.inactive_border" = "rgba(595959aa)";
     layout = "dwindle";
-    allow_tearing = false;
+    allow_tearing = true;
   };
 
   decoration = {
@@ -90,6 +90,7 @@
     "float,class:^(firefox),title:^(ピクチャーインピクチャー)"
     "pin,class:^(firefox),title:^(ピクチャーインピクチャー)"
     "size 30% 30%, class:^(firefox),title:^(ピクチャーインピクチャー)"
+    "immediate, class:^(osu!)$"
   ];
 
   dwindle = {
