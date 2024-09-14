@@ -26,6 +26,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
+              home-manager.backupFileExtension = "backup";
               home-manager.users.satler = import ./home-manager/linux.nix;
             }
           ];

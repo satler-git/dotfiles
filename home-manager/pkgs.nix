@@ -30,8 +30,6 @@ in
     ffmpeg_7-full
 
     gh
-    gh-dash
-    gh-poi
     ghc
     ghq
     gimp
