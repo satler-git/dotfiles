@@ -2,8 +2,8 @@
   # many configs are copied from https://github.com/Comamoca/dotfiles/blob/main/config/home-manager/hyprland.nix
   # Thanks !
   monitor = [
-    ",preferred,auto,auto"
-    ",preferred,auto,auto"
+    "HDMI-A-1,1920x1080@60.00Hz,auto,auto"
+    "DP-1,1920x1080@165.00Hz,auto,auto"
   ];
 
   env = [
