@@ -29,3 +29,13 @@ end
 
 -- vim.opt.langmap = set_hjkl("k", "t", "n", "s")
 keymap("n", "U", "<C-r>", opts)
+keymap("n", "<Leader>l", "<Cmd>noh<CR>", opts)
+
+-- ref: https://zenn.dev/vim_jp/articles/43d021f461f3a4
+keymap("o", "i<Space>", "iW", opts)
+keymap("x", "i<Space>", "iW", opts)
+keymap("n", "M", "%", opts)
+keymap("x", "y", "mzy`z", opts)
+keymap("x", "p", "P", opts)
+keymap("x", ">", ">gv", opts)
+keymap("x", "<", "<gv", opts)
