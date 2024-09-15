@@ -69,7 +69,7 @@ in
     peazip
     pixelorama
     playerctl
-    pureref
+    # pureref
 
     skk-dicts
     stack
