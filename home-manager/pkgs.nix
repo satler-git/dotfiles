@@ -1,7 +1,9 @@
 { pkgs, ... }:
-let
-in
 {
+  imports = [
+    ./pkgs/chromium.nix
+  ];
+
   home.packages = with pkgs; [
     lazygit
 
@@ -20,7 +22,6 @@ in
 
     deno
     difftastic
-    discord
     duckdb
 
     elixir_1_16
@@ -33,7 +34,6 @@ in
     ghc
     ghq
     gimp
-    google-chrome
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-base
     gst_all_1.gst-plugins-ugly
@@ -76,7 +76,6 @@ in
     skk-dicts
     stack
     spacedrive
-    spotify
 
     thunderbird
     typst
@@ -84,7 +83,6 @@ in
     unzip
     ueberzugpp
 
-    obsidian
     osu-lazer-bin
     oxker
 
