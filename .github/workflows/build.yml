@@ -1,15 +1,15 @@
 name: Build nix configs
 on:
-  pull_request:
-    branches:
-      - main
-  push:
-    branches:
-      - main
-    paths:
-      - '**/*.nix'
-      - 'flake.lock'
-      - '.github/workflows/**'
+  # pull_request:
+  #   branches:
+  #     - main
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - '**/*.nix'
+  #     - 'flake.lock'
+  #     - '.github/workflows/**'
   workflow_dispatch:
 
 jobs:
