@@ -4,20 +4,21 @@ return {
     lazy = false,
     dependencies = {
       "vim-denops/denops.vim",
-      "Shougo/pum.vim",
-      "Shougo/ddc-ui-pum",
-      "Shougo/ddc-filter-sorter_rank",
       "Shougo/ddc-filter-converter_remove_overlap",
+      "Shougo/ddc-source-around",
+      "Shougo/ddc-ui-pum",
+      "Shougo/pum.vim",
+      "tani/ddc-fuzzy",
     },
     config = function()
       local patch_global = vim.fn["ddc#custom#patch_global"]
       patch_global("ui", "pum")
-      patch_global("sources", { "skkeleton" })
+      patch_global("sources", { "skkeleton", "around" })
       patch_global("sourceOptions", {
         _ = {
-          sorters = { "sorter_rank" },
-          converters = { "converter_remove_overlap" },
-          matchers = { "matcher_head" },
+          sorters = { "sorter_fuzzy" },
+          converters = { "converter_remove_overlap", "converter_fuzzy" },
+          matchers = { "matcher_fuzzy" },
         },
         ["skkeleton"] = {
           mark = "skkeleton",
