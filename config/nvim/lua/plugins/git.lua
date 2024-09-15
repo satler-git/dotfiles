@@ -2,7 +2,10 @@ return {
   {
     "lewis6991/gitsigns.nvim",
     version = "*",
-    config = true,
+    config = function()
+      require("gitsigns").setup()
+      require("scrollbar.handlers.gitsigns").setup()
+    end,
     event = { "BufReadPost", "BufWritePost", "BufNewFile" },
   },
   {
