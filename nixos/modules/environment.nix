@@ -11,6 +11,7 @@
       nvidia-vaapi-driver
       wget
       wine
+      polkit_gnome
     ];
 
     # hint for electron apps
