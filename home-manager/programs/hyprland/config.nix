@@ -131,7 +131,7 @@
     "Control_L, Print, exec, grim -g \"$(slurp -d)\" - | wl-copy; dunstify \"A rect screenshot is copied!\""
     "Alt,Print, exec, hyprctl -j activewindow | jq -r '\"\\(.at[0]),\\(.at[1]) \\(.size[0])x\\(.size[1])\"' | grim -g - - | wl-copy; dunstify \"A winwdow screenshot is copied!\""
 
-    ",Zenkaku_Hankaku, exec, ~/.bin/vime.sh"
+    ",Eisu_toggle, exec, ~/.bin/vime.sh"
 
     # Move focus with mainMod + arrow keys
     "$mainMod, h, movefocus, l"
