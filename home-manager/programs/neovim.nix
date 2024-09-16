@@ -40,5 +40,9 @@
     ".config/nvim/lua/extra.lua" = {
       text = "vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.so'";
     };
+    ".bin/vime.sh" = {
+      source = ../../config/bin/vime.sh;
+      executable = true;
+    };
   };
 }
