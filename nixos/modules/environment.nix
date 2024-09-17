@@ -14,7 +14,5 @@
       polkit_gnome
     ];
 
-    # hint for electron apps
-    sessionVariables.NIXOS_OZONE_WL = "1";
   };
 }
