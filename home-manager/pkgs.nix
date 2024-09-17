@@ -10,6 +10,7 @@
     alacritty-theme
     anki-bin
     aria
+    aseprite
     audacity
 
     bat
@@ -69,7 +70,6 @@
 
     pandoc
     peazip
-    pixelorama
     playerctl
     # pureref
 
