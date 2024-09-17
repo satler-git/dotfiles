@@ -39,6 +39,7 @@
     gst_all_1.gst-plugins-base
     gst_all_1.gst-plugins-ugly
 
+    haskellPackages.tidal
     hyprpicker
 
     inkscape
@@ -74,8 +75,9 @@
     # pureref
 
     skk-dicts
-    stack
     spacedrive
+    stack
+    supercollider-with-sc3-plugins
 
     thunderbird
     typst

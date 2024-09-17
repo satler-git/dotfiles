@@ -10,6 +10,7 @@
         "wheel"
         "docker"
         "input"
+        "audio"
       ];
       shell = pkgs.zsh;
     };
