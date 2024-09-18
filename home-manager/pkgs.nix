@@ -42,6 +42,7 @@
     haskellPackages.tidal
     hyprpicker
 
+    imhex
     inkscape
 
     jq
