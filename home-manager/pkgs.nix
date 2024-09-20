@@ -56,6 +56,7 @@
     luajit
 
     numbat
+    nb
     # mindustry-server
     mindustry-wayland
     mpv
