@@ -27,6 +27,7 @@
 
     elixir_1_16
     eva
+    evcxr
     eza
 
     ffmpeg_7-full
