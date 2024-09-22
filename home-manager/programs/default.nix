@@ -6,6 +6,7 @@ let
   gpg = import ./gpg.nix;
   gtk = import ./gtk.nix;
   hyprland = import ./hyprland;
+  i3 = import ./i3;
   neovim = import ./neovim.nix;
   waybar = import ./waybar.nix;
   wofi = import ./wofi.nix;
@@ -20,6 +21,7 @@ in
     gpg
     gtk
     hyprland
+    i3
     neovim
     waybar
     wofi
