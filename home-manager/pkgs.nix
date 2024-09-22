@@ -5,8 +5,6 @@
   ];
 
   home.packages = with pkgs; [
-    lazygit
-
     alacritty-theme
     anki-bin
     aria
@@ -54,6 +52,8 @@
     kicad
     krita
 
+    lazygit
+    logseq
     luajit
 
     numbat
