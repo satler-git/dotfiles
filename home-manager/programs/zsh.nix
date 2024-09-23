@@ -33,25 +33,14 @@
           sha256 = "sha256-GFHlZjIHUWwyeVoCpszgn4AmLPSSE8UVNfRmisnhkpg=";
         };
       }
-      {
-        name = "zsh-autosuggestions";
-        src = pkgs.fetchFromGitHub {
-          owner = "zsh-users";
-          repo = "zsh-autosuggestions";
-          rev = "v0.7.0";
-          sha256 = "sha256-zhaXjrNL0amxexbZm4Kr5Y/feq1+2zW0O6eo9iZhmi0=";
-        };
-      }
-      {
-        name = "Feature-rich-Syntax-Highlighting";
-        src = pkgs.fetchFromGitHub {
-          owner = "z-shell";
-          repo = "F-Sy-H";
-          rev = "v1.67";
-          sha256 = "sha256-zhaXjrNL0amxexbZm4Kr5Y/feq1+2zW0O6eo9iZhmi0=";
-        };
-      }
     ];
+    autosuggestion = {
+      enable = true;
+    };
+    syntaxHighlighting = {
+      enable = true;
+      # package = pkgs.zsh-f-sy-h;
+    };
     history = {
       size = 100000;
       save = 1000000;
