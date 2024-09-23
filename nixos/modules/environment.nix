@@ -14,5 +14,6 @@
       polkit_gnome
     ];
 
+    pathsToLink = [ "/share/zsh" ];
   };
 }

@@ -107,6 +107,8 @@
     grim # for screenshot in wayland
     slurp
 
+    xclip
+
     yazi
 
     zola
