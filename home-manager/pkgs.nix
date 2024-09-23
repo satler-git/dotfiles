@@ -102,6 +102,7 @@
 
     wireshark
     wl-clipboard
+    wolfram-engine
 
     grim # for screenshot in wayland
     slurp
