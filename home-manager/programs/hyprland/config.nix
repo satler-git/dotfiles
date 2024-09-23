@@ -219,7 +219,7 @@
   exec-once = [
     "fcitx5"
     "clipse -listen"
-    "sleep 0.05 && waybar"
+    "waybar"
   ];
 
 }
