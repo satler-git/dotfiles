@@ -28,12 +28,18 @@
     evcxr
     eza
 
+    fd
     ffmpeg_7-full
+    foliate
+    fzf
 
+    gcc
     gh
     ghc
     ghq
+    ghq
     gimp
+    go-task
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-base
     gst_all_1.gst-plugins-ugly
@@ -55,22 +61,13 @@
     lazygit
     logseq
     luajit
+    lutris
 
-    numbat
-    nb
     # mindustry-server
     mindustry-wayland
     mpv
-
-    gcc
-    ghq
-    go-task
-
-    lutris
-
-    fd
-    fzf
-    foliate
+    nb
+    numbat
 
     pandoc
     peazip
