@@ -20,12 +20,13 @@ return {
           "haskell_persistent",
           -- utils
           "json",
-          "toml",
-          "yaml",
-          "nix",
+          "kdl",
           "ledger",
           "markdown",
           "markdown_inline",
+          "nix",
+          "toml",
+          "yaml",
           -- git
           "gitignore",
           "gitcommit",
