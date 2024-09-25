@@ -13,7 +13,10 @@
     firewall = {
       enable = true;
       allowedTCPPorts = [ 17500 ]; # 17500: Dropbox
-      allowedUDPPorts = [ 17500 ];
+      allowedUDPPorts = [
+        17500
+        57120
+      ];
     };
   };
 }
