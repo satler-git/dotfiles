@@ -17,6 +17,7 @@ in
     bat
     bibata-cursors
     blender
+    bottom
     buf
 
     cabal-install
@@ -25,6 +26,7 @@ in
     deno
     difftastic
     duckdb
+    duf
 
     elixir_1_16
     eva
