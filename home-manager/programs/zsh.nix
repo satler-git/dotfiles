@@ -7,22 +7,22 @@
     enable = true;
     enableCompletion = true;
     completionInit = ''
-        # Completion
-        autoload -Uz compinit; compinit
-        autoload -Uz colors; colors
+      # Completion
+      autoload -Uz compinit; compinit
+      autoload -Uz colors; colors
 
-        zstyle ':completion:*:default' menu select=2
-        zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-      '';
+      zstyle ':completion:*:default' menu select=2
+      zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+    '';
     initExtra = ''
-        setopt auto_param_slash
-        setopt auto_param_keys
+      setopt auto_param_slash
+      setopt auto_param_keys
 
-        setopt correct
-        setopt interactive_comments
+      setopt correct
+      setopt interactive_comments
 
-        setopt no_beep
-      '';
+      setopt no_beep
+    '';
     plugins = [
       {
         name = "zsh-completions";

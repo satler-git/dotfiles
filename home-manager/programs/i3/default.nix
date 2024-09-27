@@ -1,6 +1,7 @@
 let
   config = import ./config.nix;
-in{
+in
+{
   xsession.windowManager.i3 = {
     enable = true;
     inherit config;

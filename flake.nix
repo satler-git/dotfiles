@@ -26,7 +26,8 @@
         config.allowUnfree = true;
         inherit system;
       };
-    in{
+    in
+    {
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";

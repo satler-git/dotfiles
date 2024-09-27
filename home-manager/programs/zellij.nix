@@ -8,4 +8,3 @@
     source = ../../config/zellij/config.kdl;
   };
 }
-
