@@ -8,6 +8,7 @@ let
   hyprland = import ./hyprland;
   i3 = import ./i3;
   neovim = import ./neovim.nix;
+  supercollider = import ./supercollider.nix;
   waybar = import ./waybar.nix;
   wofi = import ./wofi.nix;
   yazi = import ./yazi.nix;
@@ -25,6 +26,7 @@ in
     hyprland
     i3
     neovim
+    supercollider
     waybar
     wofi
     yazi
