@@ -89,6 +89,7 @@ in
     unzip
     ueberzugpp
 
+    open-webui
     osu-lazer-bin
     oxker
 
