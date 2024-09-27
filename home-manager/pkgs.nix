@@ -1,5 +1,7 @@
-{ pkgs, ... }:
-{
+{ pkgs, inputs, ... }:
+let
+  superdirt-install = inputs.tidalcycles.packages.x86_64-linux.superdirt-install;
+in{
   imports = [
     ./pkgs/chromium.nix
   ];
@@ -78,6 +80,7 @@
     spacedrive
     stack
     supercollider-with-sc3-plugins
+    superdirt-install
 
     thunderbird
     typst
