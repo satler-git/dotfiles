@@ -1,6 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 let
-  packages = import ./pkgs.nix;
+  packages = import ./pkgs.nix { inherit pkgs inputs; };
   programs = import ./programs;
   services = import ./services;
 in
