@@ -1,29 +1,25 @@
-include("SuperDirt")
-SuperDirt.start(
-s.options.sampleRate = 44100;
+// SuperDirtのインクルード
+include("SuperDirt");
 
-s.options.numBuffers = 1024 * 128;
-
-s.options.memSize = 8192 * 32;
-
-s.options.numWireBufs = 64;
-
-s.options.maxNodes = 1024 * 32;
-
-s.options.numOutputBusChannels = 2;
-
-s.options.numInputBusChannels = 2;
-
-s.latency_(0.3);
-// 8. lateメッセージが出る場合は増やす。
-
+// SuperDirtの設定
 s.waitForBoot {
- ~dirt = SuperDirt(2, s);
+    // サンプルレートやバッファの設定
+    s.options.sampleRate = 44100;
+    s.options.numBuffers = 1024 * 128;
+    s.options.memSize = 8192 * 32;
+    s.options.numWireBufs = 64;
+    s.options.maxNodes = 1024 * 32;
+    s.options.numOutputBusChannels = 2;
+    s.options.numInputBusChannels = 2;
+    s.latency_(0.3); // レイテンシの設定
 
- ~dirt.loadSoundFiles;
+    // SuperDirtの起動
+    ~dirt = SuperDirt(2, s);
+    ~dirt.loadSoundFiles; // サウンドファイルのロード
+    s.sync; // サウンドの同期
+    ~dirt.start(57120, [0, 0]); // SuperDirtの開始
+};
 
- s.sync;
+// SuperDirtを開始する
+SuperDirt.start;
 
- ~dirt.start(57120, [0, 0]);
-}
-)
