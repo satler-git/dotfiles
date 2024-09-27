@@ -1,7 +1,8 @@
 { pkgs, inputs, ... }:
 let
   superdirt-install = inputs.tidalcycles.packages.x86_64-linux.superdirt-install;
-in{
+in
+{
   imports = [
     ./pkgs/chromium.nix
   ];
