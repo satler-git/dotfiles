@@ -28,7 +28,10 @@
       acceleration = "cuda";
       openFirewall = true;
       loadModels = [
+        "gemma"
         "llama3.2"
+        "phi3:14b"
+        "qwen2.5-coder"
         "qwen2.5:14b"
       ];
     };
