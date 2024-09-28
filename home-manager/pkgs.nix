@@ -29,6 +29,7 @@ in
     duf
 
     elixir_1_16
+    elixir-ls
     eva
     evcxr
     eza
@@ -44,11 +45,14 @@ in
     ghq
     ghq
     gimp
+    gitbutler
     go-task
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-base
     gst_all_1.gst-plugins-ugly
 
+    haskell-language-server
+    haskellPackages.hoogle
     haskellPackages.tidal
     hyprpicker
 
@@ -59,19 +63,22 @@ in
     jujutsu
     just
 
+    k9s
     kalker
     kicad
     krita
 
     lazygit
     logseq
+    lua-language-server
     luajit
     lutris
 
-    # mindustry-server
     mindustry-wayland
     mpv
+
     nb
+    nil
     numbat
 
     pandoc
@@ -82,8 +89,8 @@ in
     skk-dicts
     spacedrive
     stack
+    stylua
     supercollider-with-sc3-plugins
-    superdirt-install
 
     thunderbird
     typst
@@ -119,5 +126,7 @@ in
     zoxide
 
     libsForQt5.xp-pen-deco-01-v2-driver
+  ] ++ [
+    superdirt-install
   ];
 }
