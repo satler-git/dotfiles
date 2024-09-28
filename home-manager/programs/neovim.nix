@@ -9,7 +9,9 @@
       sqlite
       sqlite.dev
       nodejs
+      python39
     ];
+    extraLuaPackages = ps: [ ps.jsregexp ];
   };
 
   home.file = {
