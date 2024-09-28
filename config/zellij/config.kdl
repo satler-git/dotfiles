@@ -1,7 +1,5 @@
 theme "Catppuccin Mocha"
 
-copy_on_select false
-
 ui {
     pane_frames {
         rounded_corners true
