@@ -6,7 +6,6 @@
     docker = {
       enable = true;
       autoPrune.enable = true;
-      enableNvidia = true;
     };
     waydroid.enable = true;
     oci-containers.backend = "docker";
