@@ -6,7 +6,7 @@
   };
 
   services.xserver.videoDrivers = [ "nvidia" ];
-
+  hardware.nvidia-container-toolkit.enable = true;
   hardware.nvidia = {
     modesetting.enable = true;
 
