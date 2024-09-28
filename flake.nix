@@ -11,6 +11,7 @@
       url = "github:mitchmindtree/tidalcycles.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
   outputs =
@@ -18,13 +19,18 @@
       nixpkgs,
       home-manager,
       tidalcycles,
+      neovim-nightly-overlay,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
+      overlays = [
+        neovim-nightly-overlay.overlays.default
+      ];
       pkgs = import nixpkgs {
         config.allowUnfree = true;
         inherit system;
+        inherit overlays;
       };
     in
     {
