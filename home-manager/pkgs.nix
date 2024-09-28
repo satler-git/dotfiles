@@ -81,6 +81,7 @@ in
     nil
     numbat
 
+    p7zip
     pandoc
     peazip
     playerctl
