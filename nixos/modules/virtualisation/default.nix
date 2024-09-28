@@ -10,10 +10,12 @@
     };
     waydroid.enable = true;
     oci-containers.backend = "docker";
-    virtualbox.host = {
+    vmware.host = {
       enable = true;
-      enableKvm = true;
-      addNetworkInterface = false;
+      extraConfig = ''
+        mks.gl.allowUnsupportedDrivers = "TRUE"
+        mks.vk.allowUnsupportedDevices = "TRUE"
+      '';
     };
   };
 }
