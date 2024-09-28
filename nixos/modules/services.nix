@@ -31,7 +31,9 @@
         "llama3.2"
         "qwen2.5-coder"
         "qwen2.5:14b"
-        "zephyr:7b"
+
+        "phi3.5:3.8b"
+        "gemma2:9b"
       ];
     };
     open-webui = {
