@@ -96,6 +96,7 @@ in
     supercollider-with-sc3-plugins
 
     thunderbird
+    treefmt
     typst
 
     unzip
