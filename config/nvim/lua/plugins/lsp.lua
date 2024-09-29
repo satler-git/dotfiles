@@ -3,24 +3,6 @@ return {
   event = { "BufReadPost", "BufWritePost", "BufNewFile" },
   dependencies = {
     {
-      {
-        "williamboman/mason-lspconfig.nvim",
-        dependencies = {
-          {
-            "williamboman/mason.nvim",
-            cmd = {
-              "Mason",
-              "MasonLog",
-              "MasonInstall",
-              "MasonUpdate",
-              "MasonUninstall",
-              "MasonUninstallAll",
-            },
-            config = true,
-          },
-        },
-        config = true,
-      },
       "hrsh7th/cmp-nvim-lsp",
       "j-hui/fidget.nvim",
       {
@@ -50,16 +32,21 @@ return {
   },
   config = function()
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
-    require("mason-lspconfig").setup_handlers({
-      -- The first entry (without a key) will be the default handler
-      -- and will be called for each installed server that doesn't have
-      -- a dedicated handler.
-
-      function(server_name) -- default handler (optional)
-        require("lspconfig")[server_name].setup({
-          capabilities = capabilities,
-        })
-      end,
+    require("lspconfig").rust_analyzer.setup({
+      capabilities = capabilities,
+      settings = {
+        ["rust-analyzer"] = {
+          diagnostics = {
+            enable = false,
+          },
+        },
+      },
     })
+    require("lspconfig").elixirls.setup({
+      capabilities = capabilities,
+      cmd = { "elixir-ls" },
+    })
+    require("lspconfig").lua_ls.setup({})
+    require("lspconfig").nil_ls.setup({})
   end,
 }
