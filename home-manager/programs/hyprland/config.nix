@@ -199,9 +199,6 @@
     # Change window size
     "$mainMod ctrl, l, resizeactive, 100 100"
     "$mainMod ctrl, h, resizeactive, -100 100"
-
-    # Color picker
-    "$mainMod SHIFT, c, exec, hyprpicker --autocopy"
   ];
 
   # map media keys
