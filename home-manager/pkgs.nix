@@ -113,6 +113,7 @@ in
     hledger
 
     vlc
+    vmware-workstation
 
     wireshark
     wl-clipboard
