@@ -10,6 +10,7 @@ in
   home.packages = with pkgs; [
     alacritty-theme
     anki-bin
+    ardour
     aria
     aseprite
     audacity
@@ -54,7 +55,6 @@ in
     haskell-language-server
     haskellPackages.hoogle
     haskellPackages.tidal
-    hyprpicker
 
     imhex
     inkscape
@@ -69,7 +69,7 @@ in
     krita
 
     lazygit
-    logseq
+    lmms
     lua-language-server
     luajit
     lutris
@@ -91,6 +91,7 @@ in
     spacedrive
     stack
     stylua
+    sunvox
     supercollider-with-sc3-plugins
 
     thunderbird
@@ -125,6 +126,7 @@ in
     zola
     zoom-us
     zoxide
+    zrythm
 
     libsForQt5.xp-pen-deco-01-v2-driver
   ] ++ [
