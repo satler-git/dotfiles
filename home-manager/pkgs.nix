@@ -90,6 +90,7 @@ in
     skk-dicts
     spacedrive
     stack
+    stylish-haskell
     stylua
     sunvox
     supercollider-with-sc3-plugins
