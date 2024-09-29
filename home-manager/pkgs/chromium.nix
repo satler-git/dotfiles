@@ -10,9 +10,9 @@ let
       postBuild = lib.strings.concatStrings [
         "wrapProgram $out/bin/"
         appName
-        " --add-flags \"\${NIXOS_OZONE_WL:+--enable-webrtc-pipewire-capturer}\""
-        " --add-flags \"\${NIXOS_OZONE_WL:+--enable-features=WaylandWindowDecorations}\""
-        " --add-flags \"\${NIXOS_OZONE_WL:+--enable-wayland-ime}\""
+        " --add-flags \"--enable-webrtc-pipewire-capturer\""
+        " --add-flags \"--enable-features=WaylandWindowDecorations\""
+        " --add-flags \"--enable-wayland-ime\""
       ];
     };
 
@@ -24,9 +24,9 @@ let
     postBuild = lib.strings.concatStrings [
       "wrapProgram $out/bin/"
       "google-chrome-stable"
-      " --add-flags \"\${NIXOS_OZONE_WL:+--enable-webrtc-pipewire-capturer}\""
-      " --add-flags \"\${NIXOS_OZONE_WL:+--enable-features=WaylandWindowDecorations}\""
-      " --add-flags \"\${NIXOS_OZONE_WL:+--enable-wayland-ime}\""
+      " --add-flags \"--enable-webrtc-pipewire-capturer\""
+      " --add-flags \"--enable-features=WaylandWindowDecorations\""
+      " --add-flags \"--enable-wayland-ime\""
     ];
   };
 
