@@ -12,6 +12,7 @@
         layout = "jp";
         variant = "";
       };
+      videoDrivers = [ "vmware" ];
     };
     printing.enable = true;
     pipewire = {
