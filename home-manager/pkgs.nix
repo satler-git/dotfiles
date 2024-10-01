@@ -8,6 +8,7 @@ in
   ];
 
   home.packages = with pkgs; [
+    act
     alacritty-theme
     anki-bin
     ardour
