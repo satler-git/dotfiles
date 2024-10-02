@@ -90,6 +90,7 @@ in
 
     skk-dicts
     spacedrive
+    src-cli
     stack
     stylish-haskell
     stylua
