@@ -43,7 +43,7 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     config = true,
-    enabled = false,
+    enabled = true,
   },
   {
     "andersevenrud/nvim_context_vt",

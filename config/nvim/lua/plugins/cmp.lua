@@ -1,13 +1,14 @@
 return {
   "hrsh7th/nvim-cmp",
   dependencies = {
+    "L3MON4D3/LuaSnip",
+    "f3fora/cmp-spell",
+    "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-cmdline",
     "hrsh7th/cmp-nvim-lsp",
-    "onsails/lspkind.nvim",
-    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-nvim-lsp-signature-help",
     "hrsh7th/cmp-path",
-    "f3fora/cmp-spell",
-    "L3MON4D3/LuaSnip",
+    "onsails/lspkind.nvim",
   },
   event = { "InsertEnter", "CmdlineEnter" },
   config = function()
@@ -63,6 +64,7 @@ return {
         { name = "nvim_lsp" },
         { name = "path" },
         { name = "spell" },
+        { name = "nvim_lsp_signature_help" },
       }, {
         { name = "buffer" },
       }),
