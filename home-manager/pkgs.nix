@@ -7,133 +7,136 @@ in
     ./pkgs/chromium.nix
   ];
 
-  home.packages = with pkgs; [
-    act
-    alacritty-theme
-    anki-bin
-    ardour
-    aria
-    aseprite
-    audacity
+  home.packages =
+    with pkgs;
+    [
+      act
+      alacritty-theme
+      anki-bin
+      ardour
+      aria
+      aseprite
+      audacity
 
-    bat
-    bibata-cursors
-    blender
-    bottom
-    buf
+      bat
+      bibata-cursors
+      blender
+      bottom
+      buf
 
-    cabal-install
-    clipse
+      cabal-install
+      clipse
 
-    deno
-    difftastic
-    duckdb
-    duf
+      deno
+      difftastic
+      duckdb
+      duf
 
-    elixir_1_16
-    elixir-ls
-    eva
-    evcxr
-    eza
+      elixir_1_16
+      elixir-ls
+      eva
+      evcxr
+      eza
 
-    fd
-    ffmpeg_7-full
-    foliate
-    fzf
+      fd
+      ffmpeg_7-full
+      foliate
+      fzf
 
-    gcc
-    gh
-    ghc
-    ghq
-    ghq
-    gimp
-    gitbutler
-    go-task
-    gst_all_1.gst-plugins-bad
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-ugly
+      gcc
+      gh
+      ghc
+      ghq
+      ghq
+      gimp
+      gitbutler
+      go-task
+      gst_all_1.gst-plugins-bad
+      gst_all_1.gst-plugins-base
+      gst_all_1.gst-plugins-ugly
 
-    haskell-language-server
-    haskellPackages.hoogle
-    haskellPackages.tidal
+      haskell-language-server
+      haskellPackages.hoogle
+      haskellPackages.tidal
 
-    imhex
-    inkscape
+      imhex
+      inkscape
 
-    jq
-    jujutsu
-    just
+      jq
+      jujutsu
+      just
 
-    k9s
-    kalker
-    kicad
-    krita
+      k9s
+      kalker
+      kicad
+      krita
 
-    lazygit
-    lmms
-    lua-language-server
-    luajit
-    lutris
+      lazygit
+      lmms
+      lua-language-server
+      luajit
+      lutris
 
-    mindustry-wayland
-    mpv
+      mindustry-wayland
+      mpv
 
-    nb
-    nil
-    numbat
+      nb
+      nil
+      numbat
 
-    p7zip
-    pandoc
-    peazip
-    playerctl
-    # pureref
+      p7zip
+      pandoc
+      peazip
+      playerctl
+      # pureref
 
-    skk-dicts
-    spacedrive
-    src-cli
-    stack
-    stylish-haskell
-    stylua
-    sunvox
-    supercollider-with-sc3-plugins
+      skk-dicts
+      spacedrive
+      src-cli
+      stack
+      stylish-haskell
+      stylua
+      sunvox
+      supercollider-with-sc3-plugins
 
-    thunderbird
-    treefmt
-    typst
+      thunderbird
+      treefmt
+      typst
 
-    unzip
-    ueberzugpp
+      unzip
+      ueberzugpp
 
-    osu-lazer-bin
-    oxker
+      osu-lazer-bin
+      oxker
 
-    ripgrep
-    ripgrep-all
-    reversal-icon-theme
-    rustup
+      ripgrep
+      ripgrep-all
+      reversal-icon-theme
+      rustup
 
-    hledger
+      hledger
 
-    vlc
+      vlc
 
-    wireshark
-    wl-clipboard
-    wolfram-engine
+      wireshark
+      wl-clipboard
+      wolfram-engine
 
-    grim # for screenshot in wayland
-    slurp
+      grim # for screenshot in wayland
+      slurp
 
-    xclip
+      xclip
 
-    yazi
+      yazi
 
-    zola
-    zoom-us
-    zoxide
-    zrythm
+      zola
+      zoom-us
+      zoxide
+      zrythm
 
-    libsForQt5.xp-pen-deco-01-v2-driver
-  ] ++ [
-    superdirt-install
-  ];
+      libsForQt5.xp-pen-deco-01-v2-driver
+    ]
+    ++ [
+      superdirt-install
+    ];
 }
