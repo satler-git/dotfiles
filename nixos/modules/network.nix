@@ -12,10 +12,13 @@
 
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 17500 ]; # 17500: Dropbox
+      allowedTCPPorts = [
+        17500 # Dropbox
+        2222 # Hoogle
+      ];
       allowedUDPPorts = [
-        17500
-        57120
+        17500 # Dropbox
+        57120 # SuperColider
       ];
     };
   };
