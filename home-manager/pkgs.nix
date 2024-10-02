@@ -5,6 +5,7 @@ in
 {
   imports = [
     ./pkgs/chromium.nix
+    ./pkgs/trane-cli.nix
   ];
 
   home.packages =
