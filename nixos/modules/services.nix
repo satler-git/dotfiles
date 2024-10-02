@@ -49,10 +49,10 @@
           PYDANTIC_SKIP_VALIDATING_CORE_SCHEMAS = "True";
       };
     };
-  };
-  hoogle = {
-    enable = true;
-    port = 2222;
+    hoogle = {
+      enable = true;
+      port = 2222;
+    };
   };
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
