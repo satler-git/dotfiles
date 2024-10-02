@@ -12,6 +12,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    treefmt-nix.url = "github:numtide/treefmt-nix";
   };
 
   outputs =
@@ -20,6 +21,8 @@
       home-manager,
       tidalcycles,
       neovim-nightly-overlay,
+      treefmt-nix,
+      systems,
       ...
     }@inputs:
     let
@@ -32,6 +35,8 @@
         inherit system;
         inherit overlays;
       };
+
+      treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
     in
     {
       nixosConfigurations = {
@@ -53,6 +58,10 @@
           ];
         };
       };
-      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
+      formatter.x86_64-linux = treefmtEval.config.build.wrapper;
+
+      checks.x86_64-linux = {
+        format = treefmtEval.config.build.wrapper;
+      };
     };
 }
