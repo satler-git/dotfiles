@@ -32,7 +32,8 @@ return {
   },
   config = function()
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
-    require("lspconfig").rust_analyzer.setup({
+    local lspconfig = require("lspconfig")
+    lspconfig.rust_analyzer.setup({
       capabilities = capabilities,
       on_attach = function(_, _)
         vim.lsp.inlay_hint.enable(true)
@@ -64,11 +65,54 @@ return {
         },
       },
     })
-    require("lspconfig").elixirls.setup({
+    lspconfig.elixirls.setup({
       capabilities = capabilities,
       cmd = { "elixir-ls" },
     })
-    require("lspconfig").lua_ls.setup({})
-    require("lspconfig").nil_ls.setup({})
+    lspconfig.lua_ls.setup({})
+    lspconfig.nil_ls.setup({})
+    lspconfig.taplo.setup({})
+    lspconfig.yamlls.setup({
+      settings = {
+        yaml = {
+          schemas = {
+            ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+          },
+        },
+      },
+    })
+    -- lspconfig.remark_ls.setup({
+    --   settings = {
+    --     remark = {
+    --       requireConfig = true,
+    --     },
+    --   },
+    -- })
+    -- nixpkgsに見当たらない?
+    lspconfig.harper_ls.setup({
+      settings = {
+        ["harper-ls"] = {
+          fileDictPath = "~/.harper/",
+        },
+        linters = {
+          spell_check = true,
+          spelled_numbers = false,
+          an_a = true,
+          sentence_capitalization = false,
+          unclosed_quotes = true,
+          wrong_quotes = false,
+          long_sentences = true,
+          repeated_words = true,
+          spaces = true,
+          matcher = true,
+          correct_number_suffix = true,
+          number_suffix_capitalization = true,
+          multiple_sequential_pronouns = true,
+          linking_verbs = false,
+          avoid_curses = true,
+          terminating_conjunctions = true,
+        },
+      },
+    })
   end,
 }
