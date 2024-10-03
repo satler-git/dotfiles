@@ -34,7 +34,6 @@ in
       duf
 
       elixir_1_16
-      elixir-ls
       eva
       evcxr
       eza
@@ -74,7 +73,6 @@ in
 
       lazygit
       lmms
-      lua-language-server
       luajit
       lutris
 
@@ -82,7 +80,6 @@ in
       mpv
 
       nb
-      nil
       numbat
 
       p7zip
