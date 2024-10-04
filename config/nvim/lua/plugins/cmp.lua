@@ -65,6 +65,7 @@ return {
         { name = "path" },
         { name = "spell" },
         { name = "nvim_lsp_signature_help" },
+        { name = "skkeleton" },
       }, {
         { name = "buffer" },
       }),
