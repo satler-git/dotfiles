@@ -88,7 +88,6 @@ in
       playerctl
       # pureref
 
-      skk-dicts
       spacedrive
       src-cli
       stack

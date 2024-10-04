@@ -13,6 +13,18 @@ let
 
     cargoHash = "sha256-9HSXL6llRNolH4tSvYKqCFcaTwpuyr+h3wzjzz7QLZM=";
   };
+  dicts_lua = ''
+    -- SKKELETON's JISYO
+    vim.api.nvim_exec(
+      [[
+        call skkeleton#config({
+          \   'globalDictionaries': ['${pkgs.skkDictionaries.l}/share/SKK-JISYO.L'],
+          \   'eggLikeNewline': v:true,
+          \ })
+      ]],
+    false
+    )
+  '';
 in
 {
   programs.neovim = {
@@ -52,18 +64,10 @@ in
       recursive = true;
     };
     ".config/nvim-ime/lua/dicts.lua" = {
-      text = ''
-        -- SKKELETON's JISYO
-        vim.api.nvim_exec(
-          [[
-            call skkeleton#config({
-              \   'globalDictionaries': ['${pkgs.skk-dicts}/share/SKK-JISYO.L'],
-              \   'eggLikeNewline': v:true,
-              \ })
-          ]],
-        false
-        )
-      '';
+      text = dicts_lua;
+    };
+    ".config/nvim/lua/dicts.lua" = {
+      text = dicts_lua;
     };
     ".config/nvim/lua/extra.lua" = {
       text = "vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.so'";
