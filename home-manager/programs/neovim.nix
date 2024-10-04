@@ -27,6 +27,8 @@ in
       nodejs
       python39
 
+      haskellPackages.fast-tags
+
       # Lang-servers
       lua-language-server
       elixir-ls
