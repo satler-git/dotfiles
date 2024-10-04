@@ -6,7 +6,7 @@
         gdm.enable = true;
       };
       desktopManager = {
-        gnome.enable = true;
+        gnome.enable = false;
       };
       xkb = {
         layout = "jp";
