@@ -53,6 +53,7 @@ in
       gimp
       gitbutler
       go-task
+      graalvm-ce
       gst_all_1.gst-plugins-bad
       gst_all_1.gst-plugins-base
       gst_all_1.gst-plugins-ugly
