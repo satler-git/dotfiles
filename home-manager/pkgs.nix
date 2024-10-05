@@ -26,6 +26,7 @@ in
       buf
 
       cabal-install
+      calibre
       clipse
 
       deno
@@ -69,6 +70,7 @@ in
       k9s
       kalker
       kicad
+      koreader
       krita
 
       lazygit
