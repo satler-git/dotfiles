@@ -13,6 +13,9 @@
     };
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     treefmt-nix.url = "github:numtide/treefmt-nix";
+    zjstatus = {
+      url = "github:dj95/zjstatus";
+    };
   };
 
   outputs =
@@ -23,12 +26,16 @@
       neovim-nightly-overlay,
       treefmt-nix,
       systems,
+      zjstatus,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
       overlays = [
         neovim-nightly-overlay.overlays.default
+        (final: prev: {
+          zjstatus = zjstatus.packages.${prev.system}.default;
+        })
       ];
       pkgs = import nixpkgs {
         config.allowUnfree = true;

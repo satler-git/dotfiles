@@ -37,4 +37,20 @@
     };
     date = "2024-08-10";
   };
+  zellij-room = {
+    pname = "zellij-room";
+    version = "v1.1.1";
+    src = fetchurl {
+      url = "https://github.com/rvcas/room/releases/download/v1.1.1/room.wasm";
+      sha256 = "sha256-wCGnvFaoaoyH6QFkIqaDj0j0lGe1DOAX4ZmUQOyT/eY=";
+    };
+  };
+  zellij-zj-quit = {
+    pname = "zellij-zj-quit";
+    version = "0.3.0";
+    src = fetchurl {
+      url = "https://github.com/cristiand391/zj-quit/releases/download/0.3.0/zj-quit.wasm";
+      sha256 = "sha256-f1D3cDuLRZ5IqY3IGq6UYSEu1VK54TwmkmwWaxVQD2A=";
+    };
+  };
 }
