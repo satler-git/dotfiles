@@ -26,6 +26,14 @@ require("lazy").setup({
   spec = {
     -- import your plugins
     { import = "plugins" },
+    { import = "plugins.ui" },
+    { import = "plugins.misc" },
+    { import = "plugins.integrations" },
+    { import = "plugins.exvim" },
+    { import = "plugins.coding" },
+    { import = "plugins.coding.edit" },
+    { import = "plugins.coding.lang" },
+    { import = "plugins.coding.misc" },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
