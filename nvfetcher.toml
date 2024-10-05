@@ -1,0 +1,9 @@
+[trane-cli]
+src.git = "https://github.com/trane-project/trane-cli.git"
+fetch.github = "trane-project/trane-cli"
+cargo_locks = [ "Cargo.lock" ]
+
+[harper-ls]
+src.git = "https://github.com/elijah-potter/harper.git"
+fetch.github = "elijah-potter/harper"
+cargo_locks = [ "Cargo.lock" ]
