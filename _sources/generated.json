@@ -1,0 +1,52 @@
+{
+    "harper-ls": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./harper-ls-5be31ca5bfa1be507a8294ae387101bbab650b47/Cargo.lock",
+                {}
+            ]
+        },
+        "date": "2024-10-04",
+        "extract": null,
+        "name": "harper-ls",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "elijah-potter",
+            "repo": "harper",
+            "rev": "5be31ca5bfa1be507a8294ae387101bbab650b47",
+            "sha256": "sha256-+HwQIrUWfPHnArz4ixTwKedy3JVS3UVRhMpA9elBJFc=",
+            "type": "github"
+        },
+        "version": "5be31ca5bfa1be507a8294ae387101bbab650b47"
+    },
+    "trane-cli": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./trane-cli-d2e456a791898381c890ffcbb92a92642614cf0d/Cargo.lock",
+                {}
+            ]
+        },
+        "date": "2024-08-10",
+        "extract": null,
+        "name": "trane-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "trane-project",
+            "repo": "trane-cli",
+            "rev": "d2e456a791898381c890ffcbb92a92642614cf0d",
+            "sha256": "sha256-UDYY52PBvlnfXL+XnmdiTtjIf1sgnZvUwabtTy8QYbc=",
+            "type": "github"
+        },
+        "version": "d2e456a791898381c890ffcbb92a92642614cf0d"
+    }
+}
