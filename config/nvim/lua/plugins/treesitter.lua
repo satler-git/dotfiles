@@ -35,7 +35,6 @@ return {
         indent = { enable = true },
       })
     end,
-    -- TODO: ensure_installed
   },
   {
     "nvim-treesitter/nvim-treesitter-context",
@@ -78,11 +77,9 @@ return {
   },
   {
     "Wansmer/treesj",
-    keys = { "<space>m", "<space>j", "<space>s" },
+    keys = { "<space>m", "<space>j", "<space>s" }, -- m -> toggle, j -> join, s -> split
+    cmd = { "TSJToggle", "TSJSplit", "TSJJoin" },
     dependencies = { "nvim-treesitter/nvim-treesitter" },
-    config = function()
-      require("treesj").setup({--[[ your config ]]
-      })
-    end,
+    opts = {},
   },
 }
