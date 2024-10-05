@@ -33,6 +33,7 @@ in
       difftastic
       duckdb
       duf
+      dust
 
       elixir_1_16
       eva
