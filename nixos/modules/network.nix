@@ -14,7 +14,7 @@
       enable = true;
       allowedTCPPorts = [
         17500 # Dropbox
-        2222 # Hoogle
+        8080 # Hoogle
       ];
       allowedUDPPorts = [
         17500 # Dropbox
