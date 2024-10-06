@@ -6,7 +6,7 @@ return {
     ft = { "haskell", "lhaskell", "cabal", "cabalproject", "tidal" },
     config = function()
       local ht = require("haskell-tools")
-      vim.keymap.set("n", "K", "ht.hoogle.hoogle_singature")
+      vim.keymap.set("n", "K", "<Cmd>require('haskell-tools').hoogle.hoogle_signature()<CR>")
     end,
   },
 }

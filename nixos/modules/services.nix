@@ -40,6 +40,7 @@
     open-webui = {
       enable = true;
       openFirewall = true;
+      port = 2222;
       environment = {
         ANONYMIZED_TELEMETRY = "False";
         DO_NOT_TRACK = "True";
@@ -51,7 +52,7 @@
     };
     hoogle = {
       enable = true;
-      port = 2222;
+      port = 8080;
     };
   };
   # Enable sound with pipewire.
