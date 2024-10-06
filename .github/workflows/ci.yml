@@ -23,4 +23,5 @@ jobs:
           git config --global user.name "GitHub Actions"
           git add .
           git commit -m "Update lockfiles"
-          git push origin HEAD
+          git push
+
