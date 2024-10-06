@@ -90,6 +90,7 @@ return {
     -- })
     -- nixpkgsに見当たらない?
     lspconfig.harper_ls.setup({
+      filetypes = { "markdown" },
       settings = {
         ["harper-ls"] = {
           fileDictPath = "~/.harper/",
