@@ -44,6 +44,10 @@ in
       taplo
       yaml-language-server
       harper-ls
+
+      # DAP
+      haskellPackages.ghci-dap
+      haskellPackages.haskell-debug-adapter
     ];
     extraLuaPackages = ps: [ ps.jsregexp ];
   };
