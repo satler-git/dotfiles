@@ -2,7 +2,7 @@
     "harper-ls": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./harper-ls-c4a3a0c3136e6903dce5a5af350daac51af00a01/Cargo.lock",
+                "./harper-ls-9cea679dee46348748577a168157d34b564a4d69/Cargo.lock",
                 {}
             ]
         },
@@ -18,11 +18,11 @@
             "name": null,
             "owner": "elijah-potter",
             "repo": "harper",
-            "rev": "c4a3a0c3136e6903dce5a5af350daac51af00a01",
-            "sha256": "sha256-dTp+ZVA6YZ1lbZuXb81dbvBoiYMmEpiYARgBwlO+JM4=",
+            "rev": "9cea679dee46348748577a168157d34b564a4d69",
+            "sha256": "sha256-ahigBXbzmpa5qVMIY4CYArunrfQa6NfXi8L5zhzqlVo=",
             "type": "github"
         },
-        "version": "c4a3a0c3136e6903dce5a5af350daac51af00a01"
+        "version": "9cea679dee46348748577a168157d34b564a4d69"
     },
     "trane-cli": {
         "cargoLocks": {
