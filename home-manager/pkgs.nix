@@ -35,6 +35,7 @@ in
       duf
       dust
 
+      element-desktop
       elixir_1_16
       eva
       evcxr
