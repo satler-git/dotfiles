@@ -18,11 +18,18 @@ jobs:
         uses: DeterminateSystems/nix-installer-action@main
       - name: Update with nvfetcher
         run: nix run nixpkgs#nvfetcher
-      - name: Commit changes
+      - name: Diff
+        id: diff
         run: |
+          git add -N .
+          git diff --name-only --exit-code
+        continue-on-error: true
+      - name: Commit & Push
+        run: | # ref: https://beanslabo.co.jp/techblog/7412/
+          set -x
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
-          git add .
-          git commit -m "Update lockfiles"
-          git push
-
+          git diff –quiet && git diff –staged –quiet || git add .
+          git diff –quiet && git diff –staged –quiet || git commit -m "Update lockfiles"
+          git diff –quiet && git diff –staged –quiet || git push
+        if: steps.diff.outcome == 'failure'
