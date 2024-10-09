@@ -63,6 +63,7 @@ in
       haskellPackages.hoogle
       haskellPackages.tidal
 
+      ihp-new
       imhex
       inkscape
 
