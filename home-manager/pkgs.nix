@@ -87,6 +87,7 @@ in
       mpv
 
       nb
+      nix-your-shell
       numbat
 
       p7zip
