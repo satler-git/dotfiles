@@ -8,13 +8,21 @@ in{
     enable = true;
     enableZshIntegration = true;
   };
-  home.file.zellij = {
-    target = ".config/zellij/config.kdl";
-    source = pkgs.substituteAll {
-      src = ../../config/zellij/config.kdl;
-      zj-quit_location = "${zellij-zj-quit.src}";
-      room_location = "${zellij-room.src}";
-      zjstatus_location = "${pkgs.zjstatus}/bin/zjstatus.wasm";
+  home.file = {
+    zellij-main = {
+      target = ".config/zellij/config.kdl";
+      source = pkgs.substituteAll {
+        src = ../../config/zellij/config.kdl;
+        zj-quit_location = "${zellij-zj-quit.src}";
+        room_location = "${zellij-room.src}";
+      };
+    };
+    zellij-layout-default = {
+      target = ".config/zellij/layouts/default.kdl";
+      source = pkgs.substituteAll {
+        src = ../../config/zellij/layouts/default.kdl;
+        zjstatus_location = "${pkgs.zjstatus}/bin/zjstatus.wasm";
+      };
     };
   };
 }
