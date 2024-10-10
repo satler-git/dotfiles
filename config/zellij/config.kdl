@@ -32,7 +32,7 @@ keybinds {
 default_tab_template {
     children
     pane size=1 borderless=true {
-        zjstatus {
+        plugin location="file:@zjstatus_location@" {
             format_left   "{mode} #[fg=#89B4FA,bold]{session}"
             format_center "{tabs}"
             format_right  "{command_git_branch} {datetime}"
@@ -69,6 +69,5 @@ plugins {
         cancel_key "Esc"
     }
     room location="file:@room_location@" {}
-    zjstatus location="file:@zjstatus_location@" {}
 }
 
