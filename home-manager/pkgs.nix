@@ -133,6 +133,7 @@ in
       slurp
 
       xclip
+      xh
 
       yazi
 
