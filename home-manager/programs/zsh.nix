@@ -67,4 +67,12 @@
     enable = true;
     enableZshIntegration = true;
   };
+  programs.eza = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+  programs.atuin = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 }
