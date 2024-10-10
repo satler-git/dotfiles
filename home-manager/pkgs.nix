@@ -112,6 +112,7 @@ in
       unzip
       ueberzugpp
 
+      obs-studio
       osu-lazer-bin
       oxker
 
