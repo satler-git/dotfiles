@@ -27,8 +27,8 @@ layout {
                 command_git_branch_rendermode  "static"
 
                 datetime        "#[fg=#6C7086,bold] {format} "
-                datetime_format "%A, %d %b %Y %H:%M"
-                datetime_timezone "Europe/Berlin"
+                datetime_format "%Y %b %d, %A, %H:%M"
+                datetime_timezone "Asia/Tokyo"
             }
         }
     }
