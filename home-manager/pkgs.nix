@@ -14,14 +14,14 @@ in
       act
       alacritty-theme
       anki-bin
-      ardour
+      # ardour
       aria
       aseprite
-      audacity
+      # audacity
 
       bat
       bibata-cursors
-      blender
+      # blender
       bottom
       buf
 
@@ -35,7 +35,7 @@ in
       duf
       dust
 
-      element-desktop
+      # element-desktop
       elixir_1_16
       eva
       evcxr
@@ -52,7 +52,7 @@ in
       ghq
       ghq
       gimp
-      gitbutler
+      # gitbutler
       gnumake
       graalvm-ce
       gst_all_1.gst-plugins-bad
@@ -68,17 +68,18 @@ in
       inkscape
 
       jq
-      jujutsu
+      # jujutsu
       just
 
       k9s
       kalker
-      kicad
+      # kicad
       koreader
       krita
 
       lazygit
       libsForQt5.xp-pen-deco-01-v2-driver
+      libsForQt5.xwaylandvideobridge
       lmms
       luajit
       lutris
@@ -88,7 +89,7 @@ in
 
       nb
       nix-your-shell
-      numbat
+      # numbat
 
       p7zip
       pandoc
@@ -96,7 +97,7 @@ in
       playerctl
       # pureref
 
-      spacedrive
+      # spacedrive
       src-cli
       stack
       stylish-haskell
@@ -124,9 +125,9 @@ in
 
       vlc
 
-      wireshark
+      # wireshark
       wl-clipboard
-      wolfram-engine
+      # wolfram-engine
 
       grim # for screenshot in wayland
       slurp
@@ -140,8 +141,6 @@ in
       zoom-us
       zoxide
       zrythm
-
-      libsForQt5.xp-pen-deco-01-v2-driver
     ]
     ++ [
       superdirt-install
