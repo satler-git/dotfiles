@@ -109,8 +109,9 @@ in
       treefmt
       typst
 
-      unzip
       ueberzugpp
+      unzip
+      uxn
 
       obs-studio
       osu-lazer-bin
