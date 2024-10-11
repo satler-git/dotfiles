@@ -93,6 +93,13 @@
     "size 30% 30%, class:^(firefox),title:^(ピクチャーインピクチャー)"
     "immediate, class:^(osu!)$"
     "float,class:^(FloatingVim)"
+
+    # for xwaylandvideobridge
+    "opacity 0.0 override, class:^(xwaylandvideobridge)$"
+    "noanim, class:^(xwaylandvideobridge)$"
+    "noinitialfocus, class:^(xwaylandvideobridge)$"
+    "maxsize 1 1, class:^(xwaylandvideobridge)$"
+    "noblur, class:^(xwaylandvideobridge)$"
   ];
 
   dwindle = {
