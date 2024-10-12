@@ -3,21 +3,21 @@
 {
   harper-ls = {
     pname = "harper-ls";
-    version = "708a3d63a9491501141ea434b3de9ca65e024432";
+    version = "fe5cb8e90d911251e931662628a8fcfe6365cf88";
     src = fetchFromGitHub {
       owner = "elijah-potter";
       repo = "harper";
-      rev = "708a3d63a9491501141ea434b3de9ca65e024432";
+      rev = "fe5cb8e90d911251e931662628a8fcfe6365cf88";
       fetchSubmodules = false;
-      sha256 = "sha256-YKbcbcCTPyNRFYRLfdqtlWiWtmwkc7Xhm6xaS1awjKc=";
+      sha256 = "sha256-R0qMEP1jJzYI9x17hm6908nSRD9BVSnqXHbIK0SvPnM=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./harper-ls-708a3d63a9491501141ea434b3de9ca65e024432/Cargo.lock;
+      lockFile = ./harper-ls-fe5cb8e90d911251e931662628a8fcfe6365cf88/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2024-10-09";
+    date = "2024-10-12";
   };
   trane-cli = {
     pname = "trane-cli";
