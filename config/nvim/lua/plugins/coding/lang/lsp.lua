@@ -115,5 +115,6 @@ return {
         },
       },
     })
+    lspconfig.bufls.setup({})
   end,
 }
