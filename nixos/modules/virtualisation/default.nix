@@ -16,10 +16,11 @@
     #     mks.vk.allowUnsupportedDevices = "TRUE"
     #   '';
     # };
-    virtualbox.host = {
-      enable = true;
-      enableKvm = true;
-      addNetworkInterface = false;
-    };
+    # TODO: i3とかX上じゃないとだめそう
+    # virtualbox.host = {
+    #   enable = true;
+    #   enableKvm = true;
+    #   addNetworkInterface = false;
+    # };
   };
 }
