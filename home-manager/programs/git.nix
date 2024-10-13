@@ -1,7 +1,4 @@
 {
-  # home.file = {
-  #   ".gitconfig".source = ../../config/git/config;
-  # };
   programs.git = {
     enable = true;
     lfs.enable = true;
@@ -17,6 +14,7 @@
       };
       init.defaultBranch = "main";
       commit.verbose = true;
+      commit.template = toString ./gitmessage;
       ghq.root = "~/repos";
     };
   };
