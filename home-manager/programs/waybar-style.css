@@ -1,7 +1,7 @@
 /* Many style from https://www.reddit.com/r/unixporn/comments/1f5prr6/hyprland_pywal16 */
-@define-color background #15141b
-@define-color color4 #54c59f
-@define-color foreground #bdbdbd
+@define-color background #15141b;
+@define-color color4 #54c59f;
+@define-color foreground #bdbdbd;
 * {
   border: none;
   border-radius: 0;
