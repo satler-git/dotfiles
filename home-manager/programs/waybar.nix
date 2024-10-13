@@ -8,7 +8,10 @@
         layer = "top";
         position = "top";
         modules-left = [ "hyprland/workspaces" ];
-        modules-center = [ "clock" ];
+        modules-center = [
+          "clock"
+          "custom/media"
+        ];
         modules-right = [
           "wireplumber"
           "privacy"
@@ -74,6 +77,19 @@
               tooltip-icon-size = 24;
             }
           ];
+        };
+        "custom/media" = {
+          interval = 5;
+          format = "{icon} {}";
+          max-length = 30;
+          tooltip = false;
+          format-icons = {
+            default = " ";
+            spotify = " ";
+          };
+          escape = true;
+          exec = "playerctl metadata --format '{{ title }} -- {{ artist }}'";
+          on-click = "playerctl play-pause";
         };
       };
     };
