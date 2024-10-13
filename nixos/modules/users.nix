@@ -11,6 +11,7 @@
         "docker"
         "input"
         "audio"
+        "vboxusers"
       ];
       shell = pkgs.zsh;
     };
