@@ -16,5 +16,8 @@
     #     mks.vk.allowUnsupportedDevices = "TRUE"
     #   '';
     # };
+    virtualbox.host = {
+      enable = true;
+    };
   };
 }
