@@ -67,6 +67,19 @@ window#waybar.hidden {
   color: @foreground;
 }
 
+#custom-media {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: @foreground;
+  background: @background;
+	transition: color 1s linear;
+}
+
 .modules-right {
   background-color: @background;
   border-radius: 16px 0 16px 16px;
