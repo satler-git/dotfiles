@@ -1,4 +1,7 @@
 {
+  home.file.".gitmessage" = {
+    source = ./gitmessage;
+  };
   programs.git = {
     enable = true;
     lfs.enable = true;
@@ -14,7 +17,7 @@
       };
       init.defaultBranch = "main";
       commit.verbose = true;
-      commit.template = toString ./gitmessage;
+      commit.template = "~/.gitmessage";
       ghq.root = "~/repos";
     };
   };
