@@ -8,11 +8,11 @@ in
 #  extPackages = import ./extraPkgs.nix;
 {
   imports = [
+    ./stylix.nix
     packages
     programs
     services
     modules
-    ./stylix.nix
   ];
   programs.home-manager.enable = true;
   home = rec {

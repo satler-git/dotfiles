@@ -55,6 +55,7 @@
             inherit inputs;
           };
           modules = [
+            stylix.nixosModules.stylix
             ./nixos
             home-manager.nixosModules.home-manager
             {
@@ -64,7 +65,6 @@
               home-manager.backupFileExtension = "backup";
               home-manager.users.satler = import ./home-manager/linux.nix { inherit pkgs inputs; };
             }
-            stylix.nixosModules.stylix
           ];
         };
       };

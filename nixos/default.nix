@@ -25,7 +25,6 @@ in
 {
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "24.05"; # Don't change this
-
   imports = [
     boot
     environment
@@ -39,5 +38,6 @@ in
     time
     users
     virtualisation
+    ./modules/stylix.nix
   ];
 }
