@@ -105,6 +105,7 @@ in
       sunvox
       supercollider-with-sc3-plugins
 
+      taskwarrior3
       tetrio-desktop
       thunderbird
       treefmt
