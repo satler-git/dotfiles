@@ -15,6 +15,29 @@ in{
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
 
+    fonts = {
+      serif = {
+        package = pkgs.noto-fonts-cjk-serif;
+        name = "Noto Serif CJK JP";
+      };
+
+      sansSerif = {
+        package = pkgs.noto-fonts-cjk-serif;
+        name = "Noto Sans CJK JP";
+      };
+
+      monospace = {
+        package = pkgs.jetbrains-mono;
+        name = "JetBrainsMono Nerd Font";
+      };
+
+      emoji = {
+        package = pkgs.noto-fonts-emoji;
+        name = "Noto Color Emoji";
+      };
+  };
+
+
     # 無効にするターゲット
     targets.alacritty.enable = false;
     targets.firefox.enable = false;

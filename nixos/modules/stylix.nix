@@ -16,6 +16,6 @@ in{
     # cursor.package = pkgs.bibata-cursors;
     # cursor.name = "Bibata-Modern-Ice";
     #
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
   };
 }
