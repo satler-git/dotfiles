@@ -15,6 +15,7 @@ return {
           "elixir",
           "lua",
           "rust",
+          "proto",
           -- haskell
           "haskell",
           "haskell_persistent",

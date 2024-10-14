@@ -16,6 +16,7 @@
     zjstatus = {
       url = "github:dj95/zjstatus";
     };
+    stylix.url = "github:danth/stylix";
   };
 
   outputs =
@@ -27,6 +28,7 @@
       treefmt-nix,
       systems,
       zjstatus,
+      stylix,
       ...
     }@inputs:
     let
@@ -62,6 +64,7 @@
               home-manager.backupFileExtension = "backup";
               home-manager.users.satler = import ./home-manager/linux.nix { inherit pkgs inputs; };
             }
+            stylix.nixosModules.stylix
           ];
         };
       };
