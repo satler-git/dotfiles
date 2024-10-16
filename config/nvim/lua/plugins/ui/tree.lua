@@ -1,6 +1,8 @@
 return {
   "stevearc/oil.nvim",
-  opts = {},
+  opts = {
+    skip_confirm_for_simple_edits = true,
+  },
   keys = {
     { "<C-n>", "<Cmd>Oil<CR>" },
   },
