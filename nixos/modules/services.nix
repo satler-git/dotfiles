@@ -38,7 +38,8 @@
       ];
     };
     open-webui = {
-      enable = true;
+      # enable = true; # FiXME
+      enable = false;
       openFirewall = true;
       port = 2222;
       environment = {
