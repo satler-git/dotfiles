@@ -26,7 +26,7 @@ in
       buf
 
       cabal-install
-      calibre
+      # calibre # disable temp FIXME
       clipse
 
       deno
