@@ -107,6 +107,7 @@ in
 
       tetrio-desktop
       thunderbird
+      tre-command
       treefmt
       typst
 
