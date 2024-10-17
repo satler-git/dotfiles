@@ -35,6 +35,7 @@
 
         "phi3.5:3.8b"
         "gemma2:9b"
+        "codestral:22b"
       ];
     };
     open-webui = {
