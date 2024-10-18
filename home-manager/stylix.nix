@@ -1,13 +1,14 @@
 { pkgs, config, ... }:
 let
   theme = "catppuccin-frappe";
-in{
+in
+{
   stylix = {
     enable = true;
 
     image = pkgs.fetchurl {
-        url = "https://raw.githubusercontent.com/NixOS/nixos-artwork/ea1384e183f556a94df85c7aa1dcd411f5a69646/wallpapers/nix-wallpaper-nineish.png";
-        hash = "sha256-EMSD1XQLaqHs0NbLY0lS1oZ4rKznO+h9XOGDS121m9c=";
+      url = "https://raw.githubusercontent.com/NixOS/nixos-artwork/ea1384e183f556a94df85c7aa1dcd411f5a69646/wallpapers/nix-wallpaper-nineish.png";
+      hash = "sha256-EMSD1XQLaqHs0NbLY0lS1oZ4rKznO+h9XOGDS121m9c=";
     };
 
     cursor.package = pkgs.bibata-cursors;
@@ -35,8 +36,7 @@ in{
         package = pkgs.noto-fonts-emoji;
         name = "Noto Color Emoji";
       };
-  };
-
+    };
 
     # 無効にするターゲット
     targets.alacritty.enable = false;

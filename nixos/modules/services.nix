@@ -56,6 +56,24 @@
       enable = true;
       port = 8080;
     };
+    xremap = {
+
+      userName = "satler";
+
+      serviceMode = "system";
+
+      config = {
+        modmap = [
+          {
+            # CapsLockをCtrlに置換
+            name = "CapsLock is dead";
+            remap = {
+              CapsLock = "Ctrl_L";
+            };
+          }
+        ];
+      };
+    };
   };
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;

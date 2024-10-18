@@ -1,6 +1,6 @@
 { pkgs, fetchFromGitHub, ... }:
 let
-  trane-cli-src = (pkgs.callPackages ../../_sources/generated.nix {}).trane-cli;
+  trane-cli-src = (pkgs.callPackages ../../_sources/generated.nix { }).trane-cli;
 
   trane-cli = pkgs.rustPlatform.buildRustPackage {
     pname = "trane-cli";

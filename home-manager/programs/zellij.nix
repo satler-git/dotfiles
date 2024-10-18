@@ -1,9 +1,10 @@
 { pkgs, ... }:
 let
-  sources = (pkgs.callPackages ../../_sources/generated.nix {});
+  sources = (pkgs.callPackages ../../_sources/generated.nix { });
   zellij-room = sources.zellij-room;
   zellij-zj-quit = sources.zellij-zj-quit;
-in{
+in
+{
   programs.zellij = {
     enable = true;
     enableZshIntegration = true;

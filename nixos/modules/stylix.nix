@@ -1,7 +1,8 @@
 { pkgs, config, ... }:
 let
   theme = "catppuccin-frappe";
-in{
+in
+{
   stylix = {
     homeManagerIntegration.followSystem = false;
     homeManagerIntegration.autoImport = true;

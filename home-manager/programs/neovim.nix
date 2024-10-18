@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  harper-src = (pkgs.callPackages ../../_sources/generated.nix {}).harper-ls;
+  harper-src = (pkgs.callPackages ../../_sources/generated.nix { }).harper-ls;
   harper-ls = pkgs.rustPlatform.buildRustPackage {
     pname = "harper-ls";
     version = "0.11.0";

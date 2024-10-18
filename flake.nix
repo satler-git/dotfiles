@@ -17,6 +17,7 @@
       url = "github:dj95/zjstatus";
     };
     stylix.url = "github:danth/stylix";
+    xremap.url = "github:xremap/nix-flake";
   };
 
   outputs =
@@ -29,6 +30,7 @@
       systems,
       zjstatus,
       stylix,
+      xremap,
       ...
     }@inputs:
     let
@@ -56,6 +58,7 @@
           };
           modules = [
             stylix.nixosModules.stylix
+            xremap.nixosModules.default
             ./nixos
             home-manager.nixosModules.home-manager
             {
