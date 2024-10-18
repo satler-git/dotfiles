@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   programs.taskwarrior = {
-    enable = true;
+    enable = false;
     package = pkgs.taskwarrior3;
   };
 }
