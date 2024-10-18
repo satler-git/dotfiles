@@ -3,7 +3,7 @@ local term_opts = { silent = true }
 
 local keymap = vim.api.nvim_set_keymap
 
--- keymap("n", "<Leader>", "<Cmd><CR>", opts)
+-- keymap("n", "<Space>", "<Cmd><CR>", opts)
 
 local function set_hjkl(h, j, k, l) -- TODO: コードが冗長
   local hu, ju, ku, lu = string.upper(h), string.upper(j), string.upper(k), string.upper(l)
@@ -29,7 +29,7 @@ end
 
 -- vim.opt.langmap = set_hjkl("k", "t", "n", "s")
 keymap("n", "U", "<C-r>", opts)
-keymap("n", "<Leader>l", "<Cmd>noh<CR>", opts)
+keymap("n", "<Space>l", "<Cmd>noh<CR>", opts)
 
 -- ref: https://zenn.dev/vim_jp/articles/43d021f461f3a4
 keymap("o", "i<Space>", "iW", opts)

@@ -11,8 +11,8 @@ return {
   {
     "phaazon/hop.nvim",
     keys = {
-      { "<Leader>w", "<Cmd>HopWord<CR>" },
-      { "<Leader>L", "<Cmd>HopLine<CR>" },
+      { "<Space>w", "<Cmd>HopWord<CR>" },
+      { "<Space>L", "<Cmd>HopLine<CR>" },
     },
     opts = {},
   },

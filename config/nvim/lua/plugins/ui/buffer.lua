@@ -26,7 +26,7 @@ return {
       { "<A-s-c>", "<Cmd>BufferRestore<CR>" },
       -- { "<A-a-c>", "<Cmd>BufferCloseAllButVisible<CR>" },
       {
-        "<Leader>bsd",
+        "<Space>bsd",
         "<Cmd>BufferOrderByDirectory<CR>",
         desc = "Buffer OrderByDirectory",
       },

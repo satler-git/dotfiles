@@ -20,7 +20,7 @@ return {
           { "ge", "<Cmd>Lspsaga show_line_diagnostics<CR>" },
           { "[e", "<Cmd>Lspsaga diagnostic_jump_next<CR>" },
           { "]e", "<Cmd>Lspsaga diagnostic_jump_prev<CR>" },
-          { "<Leader><C-o>", "<Cmd>Lspsaga outline<CR>" },
+          { "<Space><C-o>", "<Cmd>Lspsaga outline<CR>" },
         },
         opts = {
           lightbulb = {

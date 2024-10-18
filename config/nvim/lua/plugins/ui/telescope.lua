@@ -20,7 +20,7 @@ return {
       require("telescope").load_extension("smart_open")
     end,
     keys = {
-      { "<Leader>ff", "<Cmd>Telescope smart_open<CR>" },
+      { "<Space>ff", "<Cmd>Telescope smart_open<CR>" },
     },
     dependencies = {
       "kkharji/sqlite.lua",
