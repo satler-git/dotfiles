@@ -12,6 +12,7 @@
     ./neovim.nix
     ./supercollider.nix
     ./taskwarrior.nix
+    ./tealdeer.nix
     ./waybar.nix
     ./wofi.nix
     ./yazi.nix
