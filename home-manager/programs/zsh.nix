@@ -60,6 +60,7 @@
         lla = "eza -F -l -a";
         rr = "rm -rf";
         v = "nvim";
+        lg = "lazygit";
       };
     };
   };
