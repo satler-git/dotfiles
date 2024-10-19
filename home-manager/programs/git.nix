@@ -11,6 +11,9 @@
       signByDefault = true;
       key = "97A7F4C53C4121DD";
     };
+    delta = {
+      enable = true;
+    };
     extraConfig = {
       core = {
         editor = "nvim";

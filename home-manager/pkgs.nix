@@ -19,11 +19,13 @@ in
       aseprite
       # audacity
 
+      # blender
       bat
       bibata-cursors
-      # blender
       bottom
       buf
+      delta
+      difftastic
 
       cabal-install
       # calibre # disable temp FIXME
