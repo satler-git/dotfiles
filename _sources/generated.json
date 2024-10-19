@@ -1,4 +1,29 @@
 {
+    "cargo-compete": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./cargo-compete-6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c/Cargo.lock",
+                {}
+            ]
+        },
+        "date": "2024-06-08",
+        "extract": null,
+        "name": "cargo-compete",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "qryxip",
+            "repo": "cargo-compete",
+            "rev": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c",
+            "sha256": "sha256-qlRVHSUVOqdTx4H3pE19Fy634742veTisHm6IqfKBUQ=",
+            "type": "github"
+        },
+        "version": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c"
+    },
     "harper-ls": {
         "cargoLocks": {
             "Cargo.lock": [

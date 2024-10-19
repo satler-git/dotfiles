@@ -6,6 +6,7 @@ in
   imports = [
     ./pkgs/chromium.nix
     ./pkgs/trane-cli.nix
+    ./pkgs/cargo-compete.nix
   ];
 
   home.packages =
