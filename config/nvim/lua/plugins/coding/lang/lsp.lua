@@ -75,9 +75,14 @@ return {
     lspconfig.yamlls.setup({
       settings = {
         yaml = {
-          schemas = {
-            ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
-          },
+          schemaStore = { enable = true },
+          -- schemas = {
+          --   ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+          --   ["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = "/compose.*",
+          --   ["https://taskfile.dev/schema.json"] = "Taskfile.y*",
+          --   ["https://json.schemastore.org/buf.json"] = "buf.y*",
+          --   ["https://json.schemastore.org/buf.gen.json"] = "buf.gen.*",
+          -- },
         },
       },
     })
