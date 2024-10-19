@@ -4,6 +4,7 @@ return {
   dependencies = {
     {
       "hrsh7th/cmp-nvim-lsp",
+      "b0o/schemastore.nvim",
       "j-hui/fidget.nvim",
       {
         "nvimdev/lspsaga.nvim",
@@ -33,6 +34,7 @@ return {
   config = function()
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
     local lspconfig = require("lspconfig")
+    local schemastore = require("schemastore")
     lspconfig.rust_analyzer.setup({
       capabilities = capabilities,
       on_attach = function(_, _)
@@ -69,20 +71,30 @@ return {
       capabilities = capabilities,
       cmd = { "elixir-ls" },
     })
-    lspconfig.lua_ls.setup({})
-    lspconfig.nil_ls.setup({})
-    lspconfig.taplo.setup({})
+    lspconfig.lua_ls.setup({
+      capabilities = capabilities,
+    })
+    lspconfig.nil_ls.setup({
+      capabilities = capabilities,
+    })
+    lspconfig.taplo.setup({
+      capabilities = capabilities,
+    })
     lspconfig.yamlls.setup({
+      capabilities = capabilities,
       settings = {
         yaml = {
-          schemaStore = { enable = true },
-          -- schemas = {
-          --   ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
-          --   ["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = "/compose.*",
-          --   ["https://taskfile.dev/schema.json"] = "Taskfile.y*",
-          --   ["https://json.schemastore.org/buf.json"] = "buf.y*",
-          --   ["https://json.schemastore.org/buf.gen.json"] = "buf.gen.*",
-          -- },
+          schemaStore = { enable = false },
+          schemas = schemastore.yaml.schemas(),
+        },
+      },
+    })
+    lspconfig.jsonls.setup({
+      capabilities = capabilities,
+      settings = {
+        json = {
+          schemas = schemastore.json.schemas(),
+          validate = { enable = true },
         },
       },
     })

@@ -29,26 +29,31 @@ in
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
-    extraPackages = with pkgs; [
-      sqlite
-      sqlite.dev
-      nodejs
-      python39
+    extraPackages =
+      with pkgs;
+      [
+        sqlite
+        sqlite.dev
+        nodejs
+        python39
 
-      haskellPackages.fast-tags
+        haskellPackages.fast-tags
 
-      # Lang-servers
-      lua-language-server
-      elixir-ls
-      nil
-      taplo
-      yaml-language-server
-      harper-ls
+        # Lang-servers
+        lua-language-server
+        elixir-ls
+        nil
+        taplo
+        yaml-language-server
+        vscode-langservers-extracted
 
-      # DAP
-      haskellPackages.ghci-dap
-      haskellPackages.haskell-debug-adapter
-    ];
+        # DAP
+        haskellPackages.ghci-dap
+        haskellPackages.haskell-debug-adapter
+      ]
+      ++ [
+        harper-ls
+      ];
     extraLuaPackages = ps: [ ps.jsregexp ];
   };
 
