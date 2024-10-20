@@ -2,6 +2,13 @@
   networking = {
     hostName = "satlerdev"; # Define your hostname.
 
+    hosts = {
+      "0.0.0.0" = [
+        "x.com"
+        "twitter.com"
+      ];
+    };
+
     # Enable networking
     networkmanager.enable = true;
 
