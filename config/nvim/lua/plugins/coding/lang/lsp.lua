@@ -33,7 +33,9 @@ return {
   },
   config = function()
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
+    local configs = require("lspconfig.configs")
     local lspconfig = require("lspconfig")
+    local util = require("lspconfig/util")
     local schemastore = require("schemastore")
     lspconfig.rust_analyzer.setup({
       capabilities = capabilities,
@@ -133,5 +135,39 @@ return {
       },
     })
     lspconfig.bufls.setup({})
+    configs.testing_ls = {
+      default_config = {
+        cmd = { "~/.cargo/bin/testing-language-server" }, -- TODO: Install with Nix
+        filetypes = { "rust" },
+        root_dir = util.root_pattern(".git", "Cargo.toml"),
+        init_options = {
+          enable = true,
+          fileTypes = { "rust" },
+          adapterCommand = {
+            rust = {
+              {
+                path = "~/.cargo/bin/testing-ls-adapter",
+                extra_arg = { "--test-kind=cargo-nextest", "--workspace" },
+                include = { "/**/src/**/*.rs" },
+                exclude = { "/**/target/**" },
+              },
+            },
+          },
+          enableWorkspaceDiagnostics = true,
+          trace = {
+            server = "verbose",
+          },
+        },
+      },
+      docs = {
+        description = [[
+      https://github.com/kbwo/testing-language-server
+
+      Language Server for real-time testing.
+    ]],
+      },
+    }
+
+    lspconfig.testing_ls.setup({})
   end,
 }

@@ -9,7 +9,7 @@ fetch.github = "elijah-potter/harper"
 cargo_locks = [ "Cargo.lock" ]
 
 [cargo-compete]
-src.git = "https://github.com/qryxip/cargo-compete"
+src.git = "https://github.com/qryxip/cargo-compete.git"
 fetch.github = "qryxip/cargo-compete"
 cargo_locks = [ "Cargo.lock" ]
 

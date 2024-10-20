@@ -30,6 +30,7 @@ in
 
       cabal-install
       # calibre # disable temp FIXME
+      cargo-nextest
       clipse
 
       deno
