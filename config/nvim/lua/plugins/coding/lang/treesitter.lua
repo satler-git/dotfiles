@@ -16,6 +16,7 @@ return {
           "lua",
           "rust",
           "proto",
+          "sql",
           -- haskell
           "haskell",
           "haskell_persistent",
