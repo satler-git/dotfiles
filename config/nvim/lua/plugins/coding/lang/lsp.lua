@@ -137,7 +137,7 @@ return {
     lspconfig.bufls.setup({})
     configs.testing_ls = {
       default_config = {
-        cmd = { "~/.cargo/bin/testing-language-server" }, -- TODO: Install with Nix
+        cmd = { "testing-language-server" },
         filetypes = { "rust" },
         root_dir = util.root_pattern(".git", "Cargo.toml"),
         init_options = {
@@ -146,7 +146,7 @@ return {
           adapterCommand = {
             rust = {
               {
-                path = "~/.cargo/bin/testing-ls-adapter",
+                path = "testing-ls-adapter",
                 extra_arg = { "--test-kind=cargo-nextest", "--workspace" },
                 include = { "/**/src/**/*.rs" },
                 exclude = { "/**/target/**" },

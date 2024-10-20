@@ -1,107 +1,132 @@
 {
-  "cargo-compete": {
-    "cargoLocks": {
-      "Cargo.lock": [
-        "./cargo-compete-6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c/Cargo.lock",
-        {}
-      ]
+    "cargo-compete": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./cargo-compete-6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c/Cargo.lock",
+                {}
+            ]
+        },
+        "date": "2024-06-08",
+        "extract": null,
+        "name": "cargo-compete",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "qryxip",
+            "repo": "cargo-compete",
+            "rev": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c",
+            "sha256": "sha256-qlRVHSUVOqdTx4H3pE19Fy634742veTisHm6IqfKBUQ=",
+            "type": "github"
+        },
+        "version": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c"
     },
-    "date": "2024-06-08",
-    "extract": null,
-    "name": "cargo-compete",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "qryxip",
-      "repo": "cargo-compete",
-      "rev": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c",
-      "sha256": "sha256-qlRVHSUVOqdTx4H3pE19Fy634742veTisHm6IqfKBUQ=",
-      "type": "github"
+    "harper-ls": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./harper-ls-7e258169c4e64dd9b80a0247f4de2a60e71605fe/Cargo.lock",
+                {}
+            ]
+        },
+        "date": "2024-10-19",
+        "extract": null,
+        "name": "harper-ls",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "elijah-potter",
+            "repo": "harper",
+            "rev": "7e258169c4e64dd9b80a0247f4de2a60e71605fe",
+            "sha256": "sha256-BqWQ13RLt/Jk5IIi/DpmRRs5VmQJCGZh36zAK0VR9VY=",
+            "type": "github"
+        },
+        "version": "7e258169c4e64dd9b80a0247f4de2a60e71605fe"
     },
-    "version": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c"
-  },
-  "harper-ls": {
-    "cargoLocks": {
-      "Cargo.lock": [
-        "./harper-ls-7e258169c4e64dd9b80a0247f4de2a60e71605fe/Cargo.lock",
-        {}
-      ]
+    "testing-language-server": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./testing-language-server-ee2acbb3a48b1a65d95cf3a073a499180394fee2/Cargo.lock",
+                {}
+            ]
+        },
+        "date": "2024-10-19",
+        "extract": null,
+        "name": "testing-language-server",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "kbwo",
+            "repo": "testing-language-server",
+            "rev": "ee2acbb3a48b1a65d95cf3a073a499180394fee2",
+            "sha256": "sha256-rKiVz4Td2gTSO17ehz2Z3LH7dz577cFX+xygdOr71s4=",
+            "type": "github"
+        },
+        "version": "ee2acbb3a48b1a65d95cf3a073a499180394fee2"
     },
-    "date": "2024-10-19",
-    "extract": null,
-    "name": "harper-ls",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "elijah-potter",
-      "repo": "harper",
-      "rev": "7e258169c4e64dd9b80a0247f4de2a60e71605fe",
-      "sha256": "sha256-BqWQ13RLt/Jk5IIi/DpmRRs5VmQJCGZh36zAK0VR9VY=",
-      "type": "github"
+    "trane-cli": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./trane-cli-d2e456a791898381c890ffcbb92a92642614cf0d/Cargo.lock",
+                {}
+            ]
+        },
+        "date": "2024-08-10",
+        "extract": null,
+        "name": "trane-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "trane-project",
+            "repo": "trane-cli",
+            "rev": "d2e456a791898381c890ffcbb92a92642614cf0d",
+            "sha256": "sha256-UDYY52PBvlnfXL+XnmdiTtjIf1sgnZvUwabtTy8QYbc=",
+            "type": "github"
+        },
+        "version": "d2e456a791898381c890ffcbb92a92642614cf0d"
     },
-    "version": "7e258169c4e64dd9b80a0247f4de2a60e71605fe"
-  },
-  "trane-cli": {
-    "cargoLocks": {
-      "Cargo.lock": [
-        "./trane-cli-d2e456a791898381c890ffcbb92a92642614cf0d/Cargo.lock",
-        {}
-      ]
+    "zellij-room": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "zellij-room",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-wCGnvFaoaoyH6QFkIqaDj0j0lGe1DOAX4ZmUQOyT/eY=",
+            "type": "url",
+            "url": "https://github.com/rvcas/room/releases/download/v1.1.1/room.wasm"
+        },
+        "version": "v1.1.1"
     },
-    "date": "2024-08-10",
-    "extract": null,
-    "name": "trane-cli",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "trane-project",
-      "repo": "trane-cli",
-      "rev": "d2e456a791898381c890ffcbb92a92642614cf0d",
-      "sha256": "sha256-UDYY52PBvlnfXL+XnmdiTtjIf1sgnZvUwabtTy8QYbc=",
-      "type": "github"
-    },
-    "version": "d2e456a791898381c890ffcbb92a92642614cf0d"
-  },
-  "zellij-room": {
-    "cargoLocks": null,
-    "date": null,
-    "extract": null,
-    "name": "zellij-room",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": null,
-      "sha256": "sha256-wCGnvFaoaoyH6QFkIqaDj0j0lGe1DOAX4ZmUQOyT/eY=",
-      "type": "url",
-      "url": "https://github.com/rvcas/room/releases/download/v1.1.1/room.wasm"
-    },
-    "version": "v1.1.1"
-  },
-  "zellij-zj-quit": {
-    "cargoLocks": null,
-    "date": null,
-    "extract": null,
-    "name": "zellij-zj-quit",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": null,
-      "sha256": "sha256-f1D3cDuLRZ5IqY3IGq6UYSEu1VK54TwmkmwWaxVQD2A=",
-      "type": "url",
-      "url": "https://github.com/cristiand391/zj-quit/releases/download/0.3.0/zj-quit.wasm"
-    },
-    "version": "0.3.0"
-  }
+    "zellij-zj-quit": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "zellij-zj-quit",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-f1D3cDuLRZ5IqY3IGq6UYSEu1VK54TwmkmwWaxVQD2A=",
+            "type": "url",
+            "url": "https://github.com/cristiand391/zj-quit/releases/download/0.3.0/zj-quit.wasm"
+        },
+        "version": "0.3.0"
+    }
 }

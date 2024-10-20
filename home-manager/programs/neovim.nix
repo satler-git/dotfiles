@@ -9,6 +9,31 @@ let
     cargoLock.lockFile = harper-src.cargoLock."Cargo.lock".lockFile;
   };
 
+  testing-language-server-src =
+    (pkgs.callPackages ../../_sources/generated.nix { }).testing-language-server;
+
+  testing-language-server = pkgs.rustPlatform.buildRustPackage {
+    pname = "testing-language-server";
+    version = "0.0.15";
+
+    doCheck = false; # ファイルを削除しようとして権限でテストが失敗する
+
+    src = testing-language-server-src.src;
+    cargoLock.lockFile = testing-language-server-src.cargoLock."Cargo.lock".lockFile;
+  };
+
+  testing-ls-adapter = pkgs.rustPlatform.buildRustPackage {
+    pname = "testing-ls-adapter";
+    version = "0.0.9";
+
+    src = testing-language-server-src.src;
+    cargoLock.lockFile = testing-language-server-src.cargoLock."Cargo.lock".lockFile;
+
+    doCheck = false; # ファイルを削除しようとして権限でテストが失敗する
+
+    cargoBuildFlags = [ "--manifest-path=crates/adapter/Cargo.toml" ];
+  };
+
   dicts_lua = ''
     -- SKKELETON's JISYO
     vim.api.nvim_exec(
@@ -57,6 +82,8 @@ in
       ]
       ++ [
         harper-ls
+        testing-language-server
+        testing-ls-adapter
       ];
     extraLuaPackages = ps: [ ps.jsregexp ];
   };

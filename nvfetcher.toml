@@ -1,17 +1,22 @@
 [trane-cli]
 src.git = "https://github.com/trane-project/trane-cli.git"
 fetch.github = "trane-project/trane-cli"
-cargo_locks = [ "Cargo.lock" ]
+cargo_locks = ["Cargo.lock"]
 
 [harper-ls]
 src.git = "https://github.com/elijah-potter/harper.git"
 fetch.github = "elijah-potter/harper"
-cargo_locks = [ "Cargo.lock" ]
+cargo_locks = ["Cargo.lock"]
 
 [cargo-compete]
 src.git = "https://github.com/qryxip/cargo-compete.git"
 fetch.github = "qryxip/cargo-compete"
 cargo_locks = [ "Cargo.lock" ]
+
+[testing-language-server]
+src.git = "https://github.com/kbwo/testing-language-server.git"
+fetch.github = "kbwo/testing-language-server"
+cargo_locks = ["Cargo.lock"]
 
 # Zellij plugins
 [zellij-room]
@@ -21,4 +26,3 @@ fetch.url = "https://github.com/rvcas/room/releases/download/$ver/room.wasm"
 [zellij-zj-quit]
 src.github = "cristiand391/zj-quit"
 fetch.url = "https://github.com/cristiand391/zj-quit/releases/download/$ver/zj-quit.wasm"
-
