@@ -32,20 +32,24 @@ in
     extraPackages =
       with pkgs;
       [
-        sqlite
-        sqlite.dev
         nodejs
         python39
+        sqlite
+        sqlite.dev
 
         haskellPackages.fast-tags
 
         # Lang-servers
-        lua-language-server
+        # efm-langserver
         elixir-ls
+        lua-language-server
         nil
-        taplo
-        yaml-language-server
+        taplo # Toml
         vscode-langservers-extracted
+        yaml-language-server
+
+        # Lint
+        # clippy
 
         # DAP
         haskellPackages.ghci-dap
