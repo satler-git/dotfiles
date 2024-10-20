@@ -20,4 +20,3 @@ in
     cargo-compete
   ];
 }
-
