@@ -24,4 +24,7 @@
       ghq.root = "~/repos";
     };
   };
+  programs.lazygit = {
+    enable = true;
+  };
 }

@@ -80,7 +80,6 @@ in
       koreader
       krita
 
-      lazygit
       libsForQt5.xp-pen-deco-01-v2-driver
       libsForQt5.xwaylandvideobridge
       lmms
