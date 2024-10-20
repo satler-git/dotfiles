@@ -9,6 +9,7 @@
     };
     waydroid.enable = true;
     oci-containers.backend = "docker";
+    libvirtd.enable = true;
     # vmware.host = {
     #   enable = true;
     #   extraConfig = ''
