@@ -27,11 +27,11 @@
     "harper-ls": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./harper-ls-754ded00b6ca9a7cb108d6470e360261593792e3/Cargo.lock",
+                "./harper-ls-10481244073d444d278b41e7919ec7c404f38ae4/Cargo.lock",
                 {}
             ]
         },
-        "date": "2024-10-20",
+        "date": "2024-10-21",
         "extract": null,
         "name": "harper-ls",
         "passthru": null,
@@ -43,11 +43,11 @@
             "name": null,
             "owner": "elijah-potter",
             "repo": "harper",
-            "rev": "754ded00b6ca9a7cb108d6470e360261593792e3",
-            "sha256": "sha256-tklFwegC4cxExLgMQV3/BA/o9MkIYxFLNMO5PEnFBwI=",
+            "rev": "10481244073d444d278b41e7919ec7c404f38ae4",
+            "sha256": "sha256-MPoArAi4e+Qcu5frscf3ksVx+jWs9LL4iCEE9lB1z7o=",
             "type": "github"
         },
-        "version": "754ded00b6ca9a7cb108d6470e360261593792e3"
+        "version": "10481244073d444d278b41e7919ec7c404f38ae4"
     },
     "testing-language-server": {
         "cargoLocks": {
