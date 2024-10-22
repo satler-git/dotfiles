@@ -14,6 +14,10 @@
     delta = {
       enable = true;
     };
+    ignores = [
+      ".env"
+      "*.swp"
+    ];
     extraConfig = {
       core = {
         editor = "nvim";
