@@ -14,7 +14,7 @@ in
       target = ".config/zellij/config.kdl";
       source = pkgs.substituteAll {
         src = ../../config/zellij/config.kdl;
-        zj-quit_location = "${zellij-zj-quit.src}";
+        zj_quit_location = "${zellij-zj-quit.src}";
         room_location = "${zellij-room.src}";
       };
     };

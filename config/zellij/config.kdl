@@ -30,7 +30,7 @@ keybinds {
 }
 
 plugins {
-    zj-quit location="file:@zj-quit_location@" {
+    zj-quit location="file:@zj_quit_location@" {
         confirm_key "q"
         cancel_key "Esc"
     }
