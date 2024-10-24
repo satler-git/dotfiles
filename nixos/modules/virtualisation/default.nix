@@ -3,12 +3,22 @@
     ./grimoire.nix
   ];
   virtualisation = {
-    docker = {
+    # docker = {
+    #   enable = true;
+    #   autoPrune.enable = true;
+    # };
+    containers.enable = true;
+    podman = {
       enable = true;
-      autoPrune.enable = true;
+
+      # Create a `docker` alias for podman, to use it as a drop-in replacement
+      dockerCompat = true;
+
+      # Required for containers under podman-compose to be able to talk to each other.
+      defaultNetwork.settings.dns_enabled = true;
     };
     waydroid.enable = true;
-    oci-containers.backend = "docker";
+    oci-containers.backend = "podman";
     libvirtd.enable = true;
     # vmware.host = {
     #   enable = true;

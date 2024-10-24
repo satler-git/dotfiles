@@ -35,6 +35,8 @@ in
 
       deno
       difftastic
+      dive
+      docker-compose
       duckdb
       duf
       dust
@@ -98,6 +100,7 @@ in
       pandoc
       peazip
       playerctl
+      podman-tui
       # pureref
 
       # spacedrive
