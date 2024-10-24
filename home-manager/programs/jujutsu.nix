@@ -2,8 +2,8 @@
   programs.jujutsu = {
     enable = true;
     settings = {
-      email = "mitsclatw24@mbr.nifty.com";
-      name = "satler-git";
+      user.email = "mitsclatw24@mbr.nifty.com";
+      user.name = "satler-git";
     };
   };
 }
