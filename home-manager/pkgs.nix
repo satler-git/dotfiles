@@ -74,8 +74,8 @@ in
       inkscape
 
       jq
-      # jujutsu
-      just
+      jujutsu
+      # just
 
       k9s
       kalker
