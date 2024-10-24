@@ -74,7 +74,6 @@ in
       inkscape
 
       jq
-      jujutsu
       # just
 
       k9s

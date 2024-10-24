@@ -13,6 +13,8 @@
 
       zstyle ':completion:*:default' menu select=2
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+      source <(jj util completion zsh)
     '';
     initExtra = ''
       setopt auto_param_slash

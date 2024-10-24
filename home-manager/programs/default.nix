@@ -9,6 +9,7 @@
     ./gtk.nix
     ./hyprland
     ./i3
+    ./jujutsu.nix
     ./neovim.nix
     ./supercollider.nix
     ./taskwarrior.nix
