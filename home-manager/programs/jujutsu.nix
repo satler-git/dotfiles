@@ -1,3 +1,4 @@
+{ pkgs, lib, ... }:
 {
   programs.jujutsu = {
     enable = true;
@@ -9,7 +10,7 @@
         editor = "nvim";
         diff = {
           format = "git";
-          tool = [ "delta" " --true-color" "--no-gitconfig" "$left" "$right"];
+          tool = [ "${lib.getExe pkgs.delta}" "--true-color" "always" "--no-gitconfig" "--color-only" "$left" "$right"];
         };
         signing = {
           sign-all = true;
