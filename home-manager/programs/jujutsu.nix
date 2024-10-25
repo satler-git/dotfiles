@@ -10,7 +10,7 @@
         editor = "nvim";
         diff = {
           format = "git";
-          tool = [ "${lib.getExe pkgs.delta}" "--true-color" "always" "--no-gitconfig" "--color-only" "$left" "$right"];
+          tool = [ "${lib.getExe pkgs.delta}" "--no-gitconfig" "--color-only" "$left" "$right"];
         };
         signing = {
           sign-all = true;
