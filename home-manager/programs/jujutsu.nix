@@ -11,6 +11,11 @@
           format = "git";
           tool = [ "delta" " --true-color" "--no-gitconfig" "$left" "$right"];
         };
+        signing = {
+          sign-all = true;
+          backend = "gpg";
+          key = "97A7F4C53C4121DD";
+        };
       };
     };
   };
