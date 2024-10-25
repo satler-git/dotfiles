@@ -4,6 +4,7 @@
     settings = {
       user.email = "mitsclatw24@mbr.nifty.com";
       user.name = "satler-git";
+      ui.paginate = "never";
     };
   };
 }
