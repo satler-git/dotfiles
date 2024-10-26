@@ -99,6 +99,8 @@ in
       pandoc
       peazip
       playerctl
+      podman-compose
+      podman-desktop
       podman-tui
       # pureref
 
