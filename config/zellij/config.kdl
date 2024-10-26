@@ -1,15 +1,10 @@
 theme "Catppuccin Mocha"
 
-ui {
-    pane_frames {
-        rounded_corners true
-    }
-}
+pane_frames false
 
 keybinds {
-    unbind "Ctrl q"
     shared_except "locked" {
-        bind "Ctrl q" {
+        bind "Alt q" {
             LaunchOrFocusPlugin "zj-quit" {
                 floating true
             }
@@ -22,10 +17,21 @@ keybinds {
             }
         }
     }
-    normal {
-        unbind "Ctrl p"
-        unbind "Ctrl n"
-        bind "Alt p" { SwitchToMode "Normal"; }
+    normal clear-defaults=true {
+        bind "Alt n" { NewPane; }
+        bind "Ctrl t" { SwitchToMode "Tmux"; }
+    }
+    tmux clear-defaults=true {
+        bind "Ctrl t" { Write 2; SwitchToMode "Normal"; }
+        bind "Esc" { SwitchToMode "Normal"; }
+        bind "g" { SwitchToMode "Locked"; }
+        bind "p" { SwitchToMode "Pane"; }
+        bind "t" { SwitchToMode "Tab"; }
+        bind "n" { SwitchToMode "Resize"; }
+        bind "h" { SwitchToMode "Move"; }
+        bind "s" { SwitchToMode "Scroll"; }
+        bind "o" { SwitchToMode "Session"; }
+        bind "q" { Quit; }
     }
 }
 
