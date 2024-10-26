@@ -1,132 +1,132 @@
 {
-    "cargo-compete": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./cargo-compete-6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c/Cargo.lock",
-                {}
-            ]
-        },
-        "date": "2024-06-08",
-        "extract": null,
-        "name": "cargo-compete",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "qryxip",
-            "repo": "cargo-compete",
-            "rev": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c",
-            "sha256": "sha256-qlRVHSUVOqdTx4H3pE19Fy634742veTisHm6IqfKBUQ=",
-            "type": "github"
-        },
-        "version": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c"
+  "cargo-compete": {
+    "cargoLocks": {
+      "Cargo.lock": [
+        "./cargo-compete-6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c/Cargo.lock",
+        {}
+      ]
     },
-    "harper-ls": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./harper-ls-d4b85d4146a66c3c8630c05a083599eb7ba27ff0/Cargo.lock",
-                {}
-            ]
-        },
-        "date": "2024-10-24",
-        "extract": null,
-        "name": "harper-ls",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "elijah-potter",
-            "repo": "harper",
-            "rev": "d4b85d4146a66c3c8630c05a083599eb7ba27ff0",
-            "sha256": "sha256-GPWRkrEo9KfXXUQAmVmVJK18t2f2+aqu4V4m62tWUtE=",
-            "type": "github"
-        },
-        "version": "d4b85d4146a66c3c8630c05a083599eb7ba27ff0"
+    "date": "2024-06-08",
+    "extract": null,
+    "name": "cargo-compete",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "deepClone": false,
+      "fetchSubmodules": false,
+      "leaveDotGit": false,
+      "name": null,
+      "owner": "qryxip",
+      "repo": "cargo-compete",
+      "rev": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c",
+      "sha256": "sha256-qlRVHSUVOqdTx4H3pE19Fy634742veTisHm6IqfKBUQ=",
+      "type": "github"
     },
-    "testing-language-server": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./testing-language-server-27bfdd02450ddb003af5b863e7bbb950ef2f8277/Cargo.lock",
-                {}
-            ]
-        },
-        "date": "2024-10-26",
-        "extract": null,
-        "name": "testing-language-server",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "kbwo",
-            "repo": "testing-language-server",
-            "rev": "27bfdd02450ddb003af5b863e7bbb950ef2f8277",
-            "sha256": "sha256-cgTK4HkiOrFMW85S98S6qFCw9KD/q+ltg/5wmzrARGY=",
-            "type": "github"
-        },
-        "version": "27bfdd02450ddb003af5b863e7bbb950ef2f8277"
+    "version": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c"
+  },
+  "harper-ls": {
+    "cargoLocks": {
+      "Cargo.lock": [
+        "./harper-ls-d4b85d4146a66c3c8630c05a083599eb7ba27ff0/Cargo.lock",
+        {}
+      ]
     },
-    "trane-cli": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./trane-cli-d2e456a791898381c890ffcbb92a92642614cf0d/Cargo.lock",
-                {}
-            ]
-        },
-        "date": "2024-08-10",
-        "extract": null,
-        "name": "trane-cli",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "trane-project",
-            "repo": "trane-cli",
-            "rev": "d2e456a791898381c890ffcbb92a92642614cf0d",
-            "sha256": "sha256-UDYY52PBvlnfXL+XnmdiTtjIf1sgnZvUwabtTy8QYbc=",
-            "type": "github"
-        },
-        "version": "d2e456a791898381c890ffcbb92a92642614cf0d"
+    "date": "2024-10-24",
+    "extract": null,
+    "name": "harper-ls",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "deepClone": false,
+      "fetchSubmodules": false,
+      "leaveDotGit": false,
+      "name": null,
+      "owner": "elijah-potter",
+      "repo": "harper",
+      "rev": "d4b85d4146a66c3c8630c05a083599eb7ba27ff0",
+      "sha256": "sha256-GPWRkrEo9KfXXUQAmVmVJK18t2f2+aqu4V4m62tWUtE=",
+      "type": "github"
     },
-    "zellij-room": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "zellij-room",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-wCGnvFaoaoyH6QFkIqaDj0j0lGe1DOAX4ZmUQOyT/eY=",
-            "type": "url",
-            "url": "https://github.com/rvcas/room/releases/download/v1.1.1/room.wasm"
-        },
-        "version": "v1.1.1"
+    "version": "d4b85d4146a66c3c8630c05a083599eb7ba27ff0"
+  },
+  "testing-language-server": {
+    "cargoLocks": {
+      "Cargo.lock": [
+        "./testing-language-server-27bfdd02450ddb003af5b863e7bbb950ef2f8277/Cargo.lock",
+        {}
+      ]
     },
-    "zellij-zj-quit": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "zellij-zj-quit",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-f1D3cDuLRZ5IqY3IGq6UYSEu1VK54TwmkmwWaxVQD2A=",
-            "type": "url",
-            "url": "https://github.com/cristiand391/zj-quit/releases/download/0.3.0/zj-quit.wasm"
-        },
-        "version": "0.3.0"
-    }
+    "date": "2024-10-26",
+    "extract": null,
+    "name": "testing-language-server",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "deepClone": false,
+      "fetchSubmodules": false,
+      "leaveDotGit": false,
+      "name": null,
+      "owner": "kbwo",
+      "repo": "testing-language-server",
+      "rev": "27bfdd02450ddb003af5b863e7bbb950ef2f8277",
+      "sha256": "sha256-cgTK4HkiOrFMW85S98S6qFCw9KD/q+ltg/5wmzrARGY=",
+      "type": "github"
+    },
+    "version": "27bfdd02450ddb003af5b863e7bbb950ef2f8277"
+  },
+  "trane-cli": {
+    "cargoLocks": {
+      "Cargo.lock": [
+        "./trane-cli-d2e456a791898381c890ffcbb92a92642614cf0d/Cargo.lock",
+        {}
+      ]
+    },
+    "date": "2024-08-10",
+    "extract": null,
+    "name": "trane-cli",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "deepClone": false,
+      "fetchSubmodules": false,
+      "leaveDotGit": false,
+      "name": null,
+      "owner": "trane-project",
+      "repo": "trane-cli",
+      "rev": "d2e456a791898381c890ffcbb92a92642614cf0d",
+      "sha256": "sha256-UDYY52PBvlnfXL+XnmdiTtjIf1sgnZvUwabtTy8QYbc=",
+      "type": "github"
+    },
+    "version": "d2e456a791898381c890ffcbb92a92642614cf0d"
+  },
+  "zellij-room": {
+    "cargoLocks": null,
+    "date": null,
+    "extract": null,
+    "name": "zellij-room",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "name": null,
+      "sha256": "sha256-wCGnvFaoaoyH6QFkIqaDj0j0lGe1DOAX4ZmUQOyT/eY=",
+      "type": "url",
+      "url": "https://github.com/rvcas/room/releases/download/v1.1.1/room.wasm"
+    },
+    "version": "v1.1.1"
+  },
+  "zellij-zj-quit": {
+    "cargoLocks": null,
+    "date": null,
+    "extract": null,
+    "name": "zellij-zj-quit",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "name": null,
+      "sha256": "sha256-f1D3cDuLRZ5IqY3IGq6UYSEu1VK54TwmkmwWaxVQD2A=",
+      "type": "url",
+      "url": "https://github.com/cristiand391/zj-quit/releases/download/0.3.0/zj-quit.wasm"
+    },
+    "version": "0.3.0"
+  }
 }
