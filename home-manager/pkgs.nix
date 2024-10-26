@@ -36,7 +36,6 @@ in
       deno
       difftastic
       dive
-      docker-compose
       duckdb
       duf
       dust
