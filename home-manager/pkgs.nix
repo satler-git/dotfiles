@@ -146,7 +146,6 @@ in
 
       yazi
 
-      zed-editor
       zola
       zoom-us
       zoxide
