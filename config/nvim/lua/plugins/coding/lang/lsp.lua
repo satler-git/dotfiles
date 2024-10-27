@@ -169,5 +169,11 @@ return {
     }
 
     lspconfig.testing_ls.setup({})
+    lspconfig.efm.setup({
+      settings = {
+        rootMarkers = { ".git/", ".jj/" },
+      },
+      filetypes = { "rust", "yaml" },
+    })
   end,
 }

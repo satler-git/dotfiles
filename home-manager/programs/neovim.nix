@@ -65,7 +65,7 @@ in
         haskellPackages.fast-tags
 
         # Lang-servers
-        # efm-langserver
+        efm-langserver
         elixir-ls
         lua-language-server
         nil
@@ -111,6 +111,9 @@ in
     ".bin/vime.sh" = {
       source = ../../config/bin/vime.sh;
       executable = true;
+    };
+    ".config/efm-langserver/config.yaml" = {
+      text = pkgs.lib.generators.toYAML {  } (import ./efm-config.nix { inherit pkgs; lib = pkgs.lib; });
     };
   };
 }
