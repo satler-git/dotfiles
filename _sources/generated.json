@@ -27,7 +27,7 @@
     "harper-ls": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./harper-ls-26c0a8438871086a4907406579f8a856390ff66a/Cargo.lock",
+                "./harper-ls-3ab45a05bc44018d7d2d9ae3e19b47d891fd28af/Cargo.lock",
                 {}
             ]
         },
@@ -43,11 +43,11 @@
             "name": null,
             "owner": "elijah-potter",
             "repo": "harper",
-            "rev": "26c0a8438871086a4907406579f8a856390ff66a",
-            "sha256": "sha256-oABHQBUrQsi7hNvx299tc+OB9ph3D/g1qQJhlnTjARU=",
+            "rev": "3ab45a05bc44018d7d2d9ae3e19b47d891fd28af",
+            "sha256": "sha256-JrmmScTJCah2gCW0KwyABWHV18EZ7jUrSiTx4Ix9jZM=",
             "type": "github"
         },
-        "version": "26c0a8438871086a4907406579f8a856390ff66a"
+        "version": "3ab45a05bc44018d7d2d9ae3e19b47d891fd28af"
     },
     "testing-language-server": {
         "cargoLocks": {

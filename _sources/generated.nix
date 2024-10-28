@@ -21,16 +21,16 @@
   };
   harper-ls = {
     pname = "harper-ls";
-    version = "26c0a8438871086a4907406579f8a856390ff66a";
+    version = "3ab45a05bc44018d7d2d9ae3e19b47d891fd28af";
     src = fetchFromGitHub {
       owner = "elijah-potter";
       repo = "harper";
-      rev = "26c0a8438871086a4907406579f8a856390ff66a";
+      rev = "3ab45a05bc44018d7d2d9ae3e19b47d891fd28af";
       fetchSubmodules = false;
-      sha256 = "sha256-oABHQBUrQsi7hNvx299tc+OB9ph3D/g1qQJhlnTjARU=";
+      sha256 = "sha256-JrmmScTJCah2gCW0KwyABWHV18EZ7jUrSiTx4Ix9jZM=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./harper-ls-26c0a8438871086a4907406579f8a856390ff66a/Cargo.lock;
+      lockFile = ./harper-ls-3ab45a05bc44018d7d2d9ae3e19b47d891fd28af/Cargo.lock;
       outputHashes = {
         
       };
