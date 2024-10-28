@@ -5,6 +5,9 @@
     settings = {
       user.email = "mitsclatw24@mbr.nifty.com";
       user.name = "satler-git";
+      core = {
+        fsmonitor = "watchman";
+      };
       ui = {
         paginate = "never";
         editor = "nvim";

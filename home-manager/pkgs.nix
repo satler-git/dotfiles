@@ -135,8 +135,9 @@ in
       vlc
 
       # wireshark
-      wl-clipboard
       # wolfram-engine
+      watchman
+      wl-clipboard
 
       grim # for screenshot in wayland
       slurp
