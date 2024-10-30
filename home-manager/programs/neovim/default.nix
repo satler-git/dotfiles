@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  harper-src = (pkgs.callPackages ../../_sources/generated.nix { }).harper-ls;
+  harper-src = (pkgs.callPackages ../../../_sources/generated.nix { }).harper-ls;
   harper-ls = pkgs.rustPlatform.buildRustPackage {
     pname = "harper-ls";
     version = "0.11.0";
@@ -10,7 +10,7 @@ let
   };
 
   testing-language-server-src =
-    (pkgs.callPackages ../../_sources/generated.nix { }).testing-language-server;
+    (pkgs.callPackages ../../../_sources/generated.nix { }).testing-language-server;
 
   testing-language-server = pkgs.rustPlatform.buildRustPackage {
     pname = "testing-language-server";
@@ -91,12 +91,12 @@ in
   home.file = {
     ".config/nvim/" = {
       target = ".config/nvim";
-      source = ../../config/nvim;
+      source = ../../../config/nvim;
       recursive = true;
     };
     ".config/nvim-ime/" = {
       target = ".config/nvim-ime";
-      source = ../../config/nvim-ime;
+      source = ../../../config/nvim-ime;
       recursive = true;
     };
     ".config/nvim-ime/lua/dicts.lua" = {
@@ -107,10 +107,6 @@ in
     };
     ".config/nvim/lua/extra.lua" = {
       text = "vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.so'";
-    };
-    ".bin/vime.sh" = {
-      source = ../../config/bin/vime.sh;
-      executable = true;
     };
     ".config/efm-langserver/config.yaml" = {
       text = pkgs.lib.generators.toYAML {  } (import ./efm-config.nix { inherit pkgs; lib = pkgs.lib; });
