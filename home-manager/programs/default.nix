@@ -4,18 +4,15 @@
     ./alacritty.nix
     ./direnv.nix
     ./gh-cli.nix
-    ./git.nix
+    ./git
     ./gpg.nix
     ./gtk.nix
-    ./hyprland
     ./i3
     ./jujutsu.nix
-    ./neovim.nix
+    ./neovim
     ./supercollider.nix
-    ./taskwarrior.nix
     ./tealdeer.nix
-    ./waybar.nix
-    ./wofi.nix
+    ./wm
     ./yazi.nix
     ./zellij.nix
     ./zoxide.nix
