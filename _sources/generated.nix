@@ -21,39 +21,39 @@
   };
   harper-ls = {
     pname = "harper-ls";
-    version = "3ab45a05bc44018d7d2d9ae3e19b47d891fd28af";
+    version = "1ee5fb64509e5483370375b456ec3bd90e71ca92";
     src = fetchFromGitHub {
       owner = "elijah-potter";
       repo = "harper";
-      rev = "3ab45a05bc44018d7d2d9ae3e19b47d891fd28af";
+      rev = "1ee5fb64509e5483370375b456ec3bd90e71ca92";
       fetchSubmodules = false;
-      sha256 = "sha256-JrmmScTJCah2gCW0KwyABWHV18EZ7jUrSiTx4Ix9jZM=";
+      sha256 = "sha256-HJceyUBj2lxqV6rw7fOHo9xxpLgvmn8+Wh2CaQQ3j8k=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./harper-ls-3ab45a05bc44018d7d2d9ae3e19b47d891fd28af/Cargo.lock;
+      lockFile = ./harper-ls-1ee5fb64509e5483370375b456ec3bd90e71ca92/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2024-10-27";
+    date = "2024-10-30";
   };
   testing-language-server = {
     pname = "testing-language-server";
-    version = "27bfdd02450ddb003af5b863e7bbb950ef2f8277";
+    version = "92dec010a852c289aafba606eb48c1cc5c3d4eac";
     src = fetchFromGitHub {
       owner = "kbwo";
       repo = "testing-language-server";
-      rev = "27bfdd02450ddb003af5b863e7bbb950ef2f8277";
+      rev = "92dec010a852c289aafba606eb48c1cc5c3d4eac";
       fetchSubmodules = false;
-      sha256 = "sha256-cgTK4HkiOrFMW85S98S6qFCw9KD/q+ltg/5wmzrARGY=";
+      sha256 = "sha256-ZsUJEZ7D3nRzzu0PGqtDQck3g7Xywxf9tl3En2q6IfE=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./testing-language-server-27bfdd02450ddb003af5b863e7bbb950ef2f8277/Cargo.lock;
+      lockFile = ./testing-language-server-92dec010a852c289aafba606eb48c1cc5c3d4eac/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2024-10-26";
+    date = "2024-10-30";
   };
   trane-cli = {
     pname = "trane-cli";
