@@ -17,6 +17,7 @@ return {
           { "ga", "<Cmd>Lspsaga code_action<CR>", desc = "Show and Run code actions" },
           { "gn", "<Cmd>Lspsaga rename<CR>", desc = "Rename identifier" },
           { "gd", "<Cmd>Lspsaga peek_definition<CR>" },
+          { "gr", "<Cmd>Lspsaga finder" },
 
           { "ge", "<Cmd>Lspsaga show_line_diagnostics<CR>" },
           { "[e", "<Cmd>Lspsaga diagnostic_jump_next<CR>" },
