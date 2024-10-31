@@ -9,18 +9,18 @@
   ...
 }:
 let
-  boot = import ./modules/boot.nix;
-  environment = import ./modules/environment.nix;
-  fonts = import ./modules/fonts.nix;
-  hardware = import ./modules/hardware;
-  i18n = import ./modules/i18n.nix;
-  nix = import ./modules/nix.nix;
-  programs = import ./modules/programs.nix;
-  services = import ./modules/services.nix;
-  systemd = import ./modules/systemd.nix;
-  time = import ./modules/time.nix;
-  users = import ./modules/users.nix;
-  virtualisation = import ./modules/virtualisation;
+  boot = ./modules/boot.nix;
+  environment = ./modules/environment.nix;
+  fonts = ./modules/fonts.nix;
+  hardware = ./modules/hardware;
+  i18n = ./modules/i18n.nix;
+  nix = ./modules/nix.nix;
+  programs = ./modules/programs.nix;
+  services = ./modules/services.nix;
+  systemd = ./modules/systemd.nix;
+  time = ./modules/time.nix;
+  users = ./modules/users.nix;
+  virtualisation = ./modules/virtualisation;
 in
 {
   nixpkgs.config.allowUnfree = true;

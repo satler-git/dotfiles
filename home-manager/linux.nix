@@ -1,9 +1,9 @@
 { pkgs, inputs, ... }:
 let
   packages = import ./pkgs.nix { inherit pkgs inputs; };
-  programs = import ./programs;
-  services = import ./services;
-  modules = import ./modules;
+  programs = ./programs;
+  services = ./services;
+  modules = ./modules;
 in
 #  extPackages = import ./extraPkgs.nix;
 {
