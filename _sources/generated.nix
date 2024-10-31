@@ -21,21 +21,21 @@
   };
   harper-ls = {
     pname = "harper-ls";
-    version = "1ee5fb64509e5483370375b456ec3bd90e71ca92";
+    version = "8d4b9e743e239316667c63b8f9dd324bf45f4cca";
     src = fetchFromGitHub {
       owner = "elijah-potter";
       repo = "harper";
-      rev = "1ee5fb64509e5483370375b456ec3bd90e71ca92";
+      rev = "8d4b9e743e239316667c63b8f9dd324bf45f4cca";
       fetchSubmodules = false;
-      sha256 = "sha256-HJceyUBj2lxqV6rw7fOHo9xxpLgvmn8+Wh2CaQQ3j8k=";
+      sha256 = "sha256-tU5e0L0fxKFC8/IOU9MVwKJkZ4iP4M8V+xAuzOfVQtk=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./harper-ls-1ee5fb64509e5483370375b456ec3bd90e71ca92/Cargo.lock;
+      lockFile = ./harper-ls-8d4b9e743e239316667c63b8f9dd324bf45f4cca/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2024-10-30";
+    date = "2024-10-31";
   };
   testing-language-server = {
     pname = "testing-language-server";
