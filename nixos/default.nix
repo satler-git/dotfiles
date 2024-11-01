@@ -10,6 +10,7 @@
 }:
 let
   boot = ./modules/boot.nix;
+  documentation = ./modules/documentation.nix;
   environment = ./modules/environment.nix;
   fonts = ./modules/fonts.nix;
   hardware = ./modules/hardware;
@@ -17,6 +18,7 @@ let
   nix = ./modules/nix.nix;
   programs = ./modules/programs.nix;
   services = ./modules/services.nix;
+  stylix = ./modules/stylix.nix;
   systemd = ./modules/systemd.nix;
   time = ./modules/time.nix;
   users = ./modules/users.nix;
@@ -27,6 +29,7 @@ in
   system.stateVersion = "24.05"; # Don't change this
   imports = [
     boot
+    documentation
     environment
     fonts
     hardware
@@ -34,10 +37,10 @@ in
     nix
     programs
     services
+    stylix
     systemd
     time
     users
     virtualisation
-    ./modules/stylix.nix
   ];
 }
