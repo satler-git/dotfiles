@@ -10,11 +10,17 @@
         "docker"
         "input"
         "networkmanager"
-        "plugdev"
         "vboxusers"
         "wheel"
       ];
       shell = pkgs.zsh;
+    };
+    groups = {
+      plugdev = {
+        members = [
+          "satler"
+        ];
+      };
     };
   };
 }
