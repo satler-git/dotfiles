@@ -22,17 +22,21 @@
     zjstatus = {
       url = "github:dj95/zjstatus";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "stylix/flake-utils";
+      inputs.crane.follows = "xremap/crane";
     };
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
+      inputs.flake-compat.follows = "neovim-nightly-overlay/flake-compat";
     };
     xremap = {
       url = "github:xremap/nix-flake";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.treefmt-nix.follows = "treefmt-nix";
       inputs.home-manager.follows = "home-manager";
+      inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
     };
   };
 
