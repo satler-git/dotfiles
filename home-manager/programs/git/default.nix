@@ -17,6 +17,7 @@
     ignores = [
       ".env"
       "*.swp"
+      ".direnv/*"
     ];
     extraConfig = {
       core = {
