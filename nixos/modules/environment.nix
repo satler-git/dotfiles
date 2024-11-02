@@ -3,14 +3,10 @@
   environment = {
 
     systemPackages = with pkgs; [
-      alacritty
       dropbox-cli
-      egl-wayland
-      eza
+      egl-wayland # TODO: maybe Nvidia here
       nixfmt-rfc-style
-      nvidia-vaapi-driver
-      wget
-      wine
+      nvidia-vaapi-driver # TODO: Nvidia here
       polkit_gnome
     ];
 

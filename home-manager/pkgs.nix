@@ -13,6 +13,7 @@ in
     with pkgs;
     [
       act
+      alacritty
       alacritty-theme
       anki-bin
       # ardour
@@ -137,6 +138,7 @@ in
       # wireshark
       # wolfram-engine
       watchman
+      wget
       wl-clipboard
 
       grim # for screenshot in wayland
