@@ -118,21 +118,6 @@
         "type": "github"
       }
     },
-    "crane_2": {
-      "locked": {
-        "lastModified": 1727974419,
-        "narHash": "sha256-WD0//20h+2/yPGkO88d2nYbb23WMWYvnRyDQ9Dx4UHg=",
-        "owner": "ipetkov",
-        "repo": "crane",
-        "rev": "37e4f9f0976cb9281cd3f0c70081e5e0ecaee93f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ipetkov",
-        "repo": "crane",
-        "type": "github"
-      }
-    },
     "devshell": {
       "inputs": {
         "nixpkgs": "nixpkgs_2"
@@ -1007,7 +992,10 @@
     },
     "zjstatus": {
       "inputs": {
-        "crane": "crane_2",
+        "crane": [
+          "xremap",
+          "crane"
+        ],
         "flake-utils": [
           "stylix",
           "flake-utils"
