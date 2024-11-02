@@ -6,12 +6,13 @@
       isNormalUser = true;
       description = "satler";
       extraGroups = [
-        "networkmanager"
-        "wheel"
+        "audio"
         "docker"
         "input"
-        "audio"
+        "networkmanager"
+        "plugdev"
         "vboxusers"
+        "wheel"
       ];
       shell = pkgs.zsh;
     };
