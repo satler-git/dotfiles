@@ -20,6 +20,13 @@ let
     ];
     root-markers = [ ".github" ];
   };
+  hadolint-lint = {
+    prefix = "hadolint";
+    lint-command = "${lib.getExe pkgs.hadolint}";
+    lint-formats = [
+      "%f:%l %m"
+    ];
+  };
   clippy-lint = {
     prefix = "clippy";
     lint-command = "${lib.getExe pkgs.clippy}";
@@ -45,7 +52,7 @@ in
   ];
 
   tools = {
-    inherit actionlint-lint yamllint-lint clippy-lint;
+    inherit actionlint-lint yamllint-lint hadolint-lint clippy-lint;
   };
 
   languages = {
@@ -55,6 +62,9 @@ in
     ];
     rust = [
       clippy-lint
+    ];
+    dockerfile = [
+      hadolint-lint
     ];
   };
 }
