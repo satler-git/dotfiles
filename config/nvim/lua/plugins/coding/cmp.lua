@@ -96,6 +96,7 @@ return {
     dependencies = { "hrsh7th/nvim-cmp", "nvim-lua/plenary.nvim" },
     ft = { "gitcommit", "octo", "gitrebase", "jj" },
     opts = {
+      filetypes = { "gitcommit", "octo", "gitrebase", "jj" },
       git = {
         commits = {
           limit = 0,
