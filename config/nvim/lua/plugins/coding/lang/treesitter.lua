@@ -17,6 +17,10 @@ return {
           "rust",
           "proto",
           "sql",
+          "vimdoc",
+          "typst",
+          "dockerfile",
+          "editorconfig",
           -- haskell
           "haskell",
           "haskell_persistent",
