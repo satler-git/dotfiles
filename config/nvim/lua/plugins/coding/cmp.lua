@@ -96,7 +96,11 @@ return {
     dependencies = { "hrsh7th/nvim-cmp", "nvim-lua/plenary.nvim" },
     ft = { "gitcommit", "octo", "gitrebase", "jj" },
     opts = {
-      -- options go here
+      git = {
+        commits = {
+          limit = 0,
+        },
+      },
     },
     init = function()
       table.insert(require("cmp").get_config().sources, { name = "git" })
