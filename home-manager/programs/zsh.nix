@@ -67,20 +67,9 @@
       };
     };
   };
-  programs.dircolors = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-  programs.eza = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-  programs.atuin = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-  programs.thefuck = {
-    enable = true;
-    enableZshIntegration = true;
-  };
+  programs.dircolors.enable = true;
+  programs.eza.enable = true;
+  programs.atuin.enable = true;
+  programs.thefuck.enable = true;
+  programs.starship.enable = true;
 }
