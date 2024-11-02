@@ -8,7 +8,6 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope-ghq.nvim",
-      "sakuemon/telescope-overseer.nvim",
       {
         "danielfalk/smart-open.nvim",
         branch = "0.2.x",
@@ -61,12 +60,10 @@ return {
       { "<Space>ff", "<Cmd>Telescope smart_open<CR>" },
       { "<Space>fi", "<Cmd>Telescope lsp_workspace_symbols<CR>" },
       { "<Space>fp", "<Cmd>Telescope ghq<CR>" },
-      { "<Space>ft", "<Cmd>Telescope overseer<CR>" },
       { "<Space>fw", "<Cmd>Telescope live_grep<CR>" },
     },
     config = function()
       require("telescope").load_extension("ghq")
-      require("telescope").load_extension("overseer")
       require("telescope").load_extension("smart_open")
     end,
   },

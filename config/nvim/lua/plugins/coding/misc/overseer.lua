@@ -6,6 +6,10 @@ return {
       "stevearc/dressing.nvim",
     },
     cmd = { "OverseerRun" },
+    keys = {
+      { "<Space>tr", "<Cmd>OverseerRun<CR>" },
+      { "<Space>tb", "<Cmd>OverseerBuild<CR>" },
+    },
     opts = {
       strategy = "toggleterm",
     },
