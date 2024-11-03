@@ -34,6 +34,13 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    xremap = {
+      url = "github:xremap/nix-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.treefmt-nix.follows = "treefmt-nix";
+      inputs.home-manager.follows = "home-manager";
+      inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
+    };
   };
 
   outputs =
@@ -47,6 +54,7 @@
       zjstatus,
       stylix,
       sops-nix,
+      xremap,
       ...
     }@inputs:
     let
@@ -75,6 +83,7 @@
           modules = [
             stylix.nixosModules.stylix
             sops-nix.nixosModules.sops
+            xremap.nixosModules.default
             ./nixos
             home-manager.nixosModules.home-manager
             {
