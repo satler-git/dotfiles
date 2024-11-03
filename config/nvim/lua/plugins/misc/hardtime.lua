@@ -5,7 +5,7 @@ return {
     dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
     cmd = { "Hardtime" },
     opts = {
-      disabled_filetypes = { "qf", "lazy", "oil", "nofile" },
+      disabled_filetypes = { "qf", "lazy", "oil", "nofile", "trouble" },
     },
   },
 }
