@@ -8,6 +8,7 @@
     ./gpg.nix
     ./gtk.nix
     ./i3
+    ./irssi.nix
     ./jujutsu.nix
     ./neovim
     ./supercollider.nix
