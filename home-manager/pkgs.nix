@@ -138,6 +138,7 @@ in
       watchman
       wget
       wl-clipboard
+      wakatime
 
       grim # for screenshot in wayland
       slurp
