@@ -1,5 +1,5 @@
 (defsrc
-    a    s    d    f    g    h    j    k    l    ;
+    caps    a    s    d    f    g    h    j    k    l    ;
 )
 
 (defalias
@@ -15,6 +15,6 @@
 )
 
 (deflayer homerowmods
-    @met_a   @alt_s   @ctl_d   @sft_f   g   h   @sft_j   @ctl_k   @alt_l   @met_;
+    lctl   @met_a   @alt_s   @ctl_d   @sft_f   g   h   @sft_j   @ctl_k   @alt_l   @met_;
 )
 
