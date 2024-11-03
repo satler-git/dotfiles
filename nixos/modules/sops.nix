@@ -20,6 +20,7 @@ in
     };
     templates = {
       ".wegorc" = {
+        owner = "satler";
         content = ''
           backend=openweathermap
           location=${config.sops.placeholder.location}
