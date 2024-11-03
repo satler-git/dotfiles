@@ -52,7 +52,12 @@ in
   ];
 
   tools = {
-    inherit actionlint-lint yamllint-lint hadolint-lint clippy-lint;
+    inherit
+      actionlint-lint
+      yamllint-lint
+      hadolint-lint
+      clippy-lint
+      ;
   };
 
   languages = {

@@ -112,7 +112,12 @@ in
       text = "vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.so'";
     };
     ".config/efm-langserver/config.yaml" = {
-      text = pkgs.lib.generators.toYAML {  } (import ./efm-config.nix { inherit pkgs; lib = pkgs.lib; });
+      text = pkgs.lib.generators.toYAML { } (
+        import ./efm-config.nix {
+          inherit pkgs;
+          lib = pkgs.lib;
+        }
+      );
     };
   };
 }
