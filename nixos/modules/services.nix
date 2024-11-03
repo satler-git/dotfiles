@@ -57,11 +57,8 @@
       port = 8080;
     };
     xremap = {
-
       userName = "satler";
-
       serviceMode = "system";
-
       config = {
         modmap = [
           {
@@ -72,6 +69,19 @@
             };
           }
         ];
+      };
+    };
+    kmonad = {
+      enable = true;
+      keyboards = {
+        "CORSAIR_K70" = {
+          device = "/dev/input/by-id/usb-Corsair_CORSAIR_K70_RGB_PRO_Mechanical_Gaming_Keyboard_212B8130F5EE545B82043FB76B978C22-event-kbd";
+          defcfg = {
+            enable = true;
+            fallthrough = true;
+          };
+          config = builtins.readFile ../../config/kmonad/corsair.kbd;
+        };
       };
     };
   };

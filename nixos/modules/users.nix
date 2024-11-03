@@ -9,6 +9,7 @@
         "audio"
         "docker"
         "input"
+        "uinput"
         "networkmanager"
         "vboxusers"
         "wheel"

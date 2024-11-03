@@ -40,6 +40,11 @@
     };
     sops-nix = {
       url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    kmonad = {
+      url = "git+https://github.com/kmonad/kmonad?submodules=1&dir=nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -55,6 +60,7 @@
       stylix,
       xremap,
       sops-nix,
+      kmonad,
       ...
     }@inputs:
     let
@@ -83,6 +89,7 @@
           modules = [
             stylix.nixosModules.stylix
             xremap.nixosModules.default
+            kmonad.nixosModules.default
             sops-nix.nixosModules.sops
             ./nixos
             home-manager.nixosModules.home-manager
