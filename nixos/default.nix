@@ -18,6 +18,7 @@ let
   nix = ./modules/nix.nix;
   programs = ./modules/programs.nix;
   services = ./modules/services.nix;
+  sops = ./modules/sops.nix;
   stylix = ./modules/stylix.nix;
   systemd = ./modules/systemd.nix;
   time = ./modules/time.nix;
@@ -37,6 +38,7 @@ in
     nix
     programs
     services
+    sops
     stylix
     systemd
     time

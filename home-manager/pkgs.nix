@@ -12,14 +12,15 @@ in
   home.packages =
     with pkgs;
     [
+      # ardour
+      # audacity
       act
+      age
       alacritty
       alacritty-theme
       anki-bin
-      # ardour
       aria
       aseprite
-      # audacity
 
       # blender
       bat
@@ -105,6 +106,7 @@ in
       # pureref
 
       # spacedrive
+      sops
       src-cli
       stack
       sunvox

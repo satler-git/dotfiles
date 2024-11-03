@@ -1,0 +1,7 @@
+keys:
+  - &satler age1hzupn8kyur4pgzv26cx0h3y6s95pafvrhqdrsj8v8sa5vk54c3pqwrcx8z
+creation_rules:
+  - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - age:
+          - *satler

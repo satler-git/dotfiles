@@ -38,6 +38,9 @@
       inputs.home-manager.follows = "home-manager";
       inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
     };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+    };
   };
 
   outputs =
@@ -51,6 +54,7 @@
       zjstatus,
       stylix,
       xremap,
+      sops-nix,
       ...
     }@inputs:
     let
@@ -79,6 +83,7 @@
           modules = [
             stylix.nixosModules.stylix
             xremap.nixosModules.default
+            sops-nix.nixosModules.sops
             ./nixos
             home-manager.nixosModules.home-manager
             {
