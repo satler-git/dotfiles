@@ -29,7 +29,7 @@ end
 
 -- vim.opt.langmap = set_hjkl("k", "t", "n", "s")
 keymap("n", "U", "<C-r>", opts)
-keymap("n", "<Space>l", "<Cmd>noh<CR>", opts)
+keymap("n", "<Space>l", "<Cmd>nohlsearch<CR>", opts)
 
 -- ref: https://zenn.dev/vim_jp/articles/43d021f461f3a4
 keymap("o", "i<Space>", "iW", opts)

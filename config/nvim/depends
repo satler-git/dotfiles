@@ -1,8 +1,0 @@
-deno ripgrep fzf
-lazygit
-stylua rustfmt
-git
-luarocks
-
-ghq
-sqlite3
