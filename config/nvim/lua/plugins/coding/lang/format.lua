@@ -8,6 +8,8 @@ return {
       "rust",
       "lua",
       "haskell",
+      "nix",
+      "toml",
     },
     config = function()
       require("conform").setup({
@@ -17,6 +19,7 @@ return {
           rust = { "rustfmt", lsp_format = "fallback" },
           haskell = { "stylish-haskell" },
           nix = { "nixfmt" },
+          toml = { "taplo" },
         },
         format_on_save = {
           -- These options will be passed to conform.format()

@@ -107,8 +107,6 @@ in
       # spacedrive
       src-cli
       stack
-      stylish-haskell
-      stylua
       sunvox
       supercollider-with-sc3-plugins
 

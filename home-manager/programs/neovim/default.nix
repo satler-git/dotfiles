@@ -73,8 +73,11 @@ in
         vscode-langservers-extracted
         yaml-language-server
 
-        # Lint
-        # clippy
+        # Formatter
+        nixfmt-rfc-style
+        rustfmt
+        stylish-haskell
+        stylua
 
         # DAP
         haskellPackages.ghci-dap
