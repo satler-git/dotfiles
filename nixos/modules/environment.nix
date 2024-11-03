@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   environment = {
 
@@ -8,6 +8,10 @@
       nvidia-vaapi-driver # TODO: Nvidia here
       polkit_gnome
     ];
+
+    sessionVariables = rec {
+      WEGORC = "${config.sops.templates.".wegorc".path}";
+    };
 
     pathsToLink = [ "/share/zsh" ];
   };

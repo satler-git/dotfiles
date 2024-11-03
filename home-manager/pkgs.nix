@@ -138,9 +138,10 @@ in
       # wireshark
       # wolfram-engine
       watchman
+      wego
       wget
       wl-clipboard
-      wakatime
+      wakatime-cli
 
       grim # for screenshot in wayland
       slurp
