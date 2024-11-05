@@ -23,6 +23,7 @@
       core = {
         editor = "nvim";
       };
+      push.autoSetupRemote = true;
       init.defaultBranch = "main";
       commit.verbose = true;
       commit.template = "~/.gitmessage";
