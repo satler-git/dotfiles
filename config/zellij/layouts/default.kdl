@@ -17,6 +17,14 @@ layout {
                 mode_normal  "#[bg=blue] "
                 mode_tmux    "#[bg=#ffc387] "
 
+                mode_locked        "#[fg=#fb4934,bold]{name}"
+                mode_resize        "#[fg=#fabd2f,bold]{name}"
+                mode_pane          "#[fg=#d3869b,bold]{name}"
+                mode_tab           "#[fg=#83a598,bold]{name}"
+                mode_scroll        "#[fg=#8ec07c,bold]{name}"
+                mode_session       "#[fg=#fe8019,bold]{name}"
+                mode_move          "#[fg=#a89984,bold]{name}"
+
                 tab_normal   "#[fg=#6C7086] {name} "
                 tab_active   "#[fg=#9399B2,bold,italic] {name} "
 
