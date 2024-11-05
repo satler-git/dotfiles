@@ -22,7 +22,7 @@ return {
   ),
   s("test", fmt([[
     #[test]
-    fn []() -> Result<(), []> {
+    fn []() -> Result<(), Box<dyn std::error::Error>> {
       []
       Ok(())
     }

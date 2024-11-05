@@ -39,3 +39,6 @@ keymap("x", "y", "mzy`z", opts)
 keymap("x", "p", "P", opts)
 keymap("x", ">", ">gv", opts)
 keymap("x", "<", "<gv", opts)
+
+-- ref: https://zenn.dev/hidehic0/articles/6bde5d5398384a
+keymap("n", "x", '"_x', opts)
