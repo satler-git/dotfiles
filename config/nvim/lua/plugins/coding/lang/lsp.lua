@@ -34,6 +34,10 @@ return {
   },
   config = function()
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
+    capabilities.textDocument.foldingRange = { -- For nvim-ufo
+      dynamicRegistration = false,
+      lineFoldingOnly = true,
+    }
     local configs = require("lspconfig.configs")
     local lspconfig = require("lspconfig")
     local util = require("lspconfig/util")
