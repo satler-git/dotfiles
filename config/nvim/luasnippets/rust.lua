@@ -1,5 +1,38 @@
---[[ local s = ls.snippet
+local ls = require("luasnip")
+local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
- ]]
-return {}
+local fmt = require("luasnip.extras.fmt").fmt
+local fmta = require("luasnip.extras.fmt").fmta
+
+-- stylua: ignore
+return {
+  s(
+    "modtests",
+    fmta([[
+    #[cfg(test)]
+    mod tests {
+      <>
+    }
+    ]],
+      {
+        i(1)
+      }
+    )
+  ),
+  s("test", fmt([[
+    #[test]
+    fn []() -> Result<(), []> {
+      []
+      Ok(())
+    }
+    ]],
+      {
+        i(1, "name"),
+        i(2, "ErrorType"),
+        i(3, "todo!();")
+      },
+    { delimiters = "[]" }
+    )
+  ),
+}

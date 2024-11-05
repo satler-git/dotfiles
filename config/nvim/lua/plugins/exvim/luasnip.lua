@@ -8,7 +8,7 @@ return {
     lazy = true,
     -- build = "make install_jsregexp",
     config = function()
-      require("luasnip.loaders.from_lua").load()
+      require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/luasnippets/" })
 
       -- Load Haskell snipetts
       local haskell_snippets = require("haskell-snippets").all
