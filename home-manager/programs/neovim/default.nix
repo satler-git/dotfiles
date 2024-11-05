@@ -82,13 +82,19 @@ in
         # DAP
         haskellPackages.ghci-dap
         haskellPackages.haskell-debug-adapter
+
+        imagemagick
+        ueberzugpp
       ]
       ++ [
         harper-ls
         testing-language-server
         testing-ls-adapter
       ];
-    extraLuaPackages = ps: [ ps.jsregexp ];
+    extraLuaPackages = ps: [
+      ps.jsregexp
+      ps.magick
+    ];
   };
 
   home.file = {
