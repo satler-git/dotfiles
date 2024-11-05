@@ -93,6 +93,7 @@ in
       mpv
 
       nb
+      nix-output-monitor
       nix-your-shell
       # numbat
 
