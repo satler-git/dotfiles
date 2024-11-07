@@ -6,7 +6,7 @@ return {
       enable = true,
     },
     line_num = {
-      enable = true,
+      enable = false,
     },
     indent = {
       enable = true,
