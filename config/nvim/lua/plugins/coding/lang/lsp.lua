@@ -26,7 +26,7 @@ return {
         },
         opts = {
           symbol_in_winbar = {
-            enable = false,
+            enable = true,
           },
           lightbulb = {
             enable = false,
