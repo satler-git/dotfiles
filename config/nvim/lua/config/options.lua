@@ -31,7 +31,6 @@ vim.opt.autoindent = true
 
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
-vim.cmd("set termencoding=utf-8")
 
 vim.cmd('let $LANG = "ja"')
 

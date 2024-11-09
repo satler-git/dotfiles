@@ -28,23 +28,6 @@ return {
     },
   },
   {
-    "sindrets/diffview.nvim",
-    cmd = {
-      "DiffviewFileHistory",
-      "DiffviewOpen",
-      "DiffviewClose",
-      "DiffviewFocusFiles",
-      "DiffviewRefresh",
-    },
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    keys = {},
-    opts = {
-      keymaps = {
-        disable_defaults = true,
-      },
-    },
-  },
-  {
     "pwntester/octo.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",

@@ -59,29 +59,6 @@ return {
     config = true,
   },
   {
-    "RRethy/nvim-treesitter-textsubjects",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-    },
-    event = { "BufReadPost", "BufWritePost", "BufNewFile", "VeryLazy" },
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        textsubjects = {
-          enable = true,
-          prev_selection = ",", -- (Optional) keymap to select the previous selection
-          keymaps = {
-            ["."] = "textsubjects-smart",
-            [";"] = "textsubjects-container-outer",
-            ["i;"] = {
-              "textsubjects-container-inner",
-              desc = "Select inside containers (classes, functions, etc.)",
-            },
-          },
-        },
-      })
-    end,
-  },
-  {
     "Wansmer/treesj",
     keys = { "<space>m", "<space>j", "<space>s" }, -- m -> toggle, j -> join, s -> split
     cmd = { "TSJToggle", "TSJSplit", "TSJJoin" },

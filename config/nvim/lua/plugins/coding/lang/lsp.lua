@@ -139,7 +139,7 @@ return {
         },
       },
     })
-    lspconfig.bufls.setup({})
+    lspconfig.buf_ls.setup({})
     configs.testing_ls = {
       default_config = {
         cmd = { "testing-language-server" },
