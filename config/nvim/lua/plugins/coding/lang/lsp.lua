@@ -25,6 +25,9 @@ return {
           { "<Space><C-o>", "<Cmd>Lspsaga outline<CR>" },
         },
         opts = {
+          symbol_in_winbar = {
+            enable = false,
+          },
           lightbulb = {
             enable = false,
           },
