@@ -89,6 +89,7 @@
     "pin,class:^(firefox),title:^(ピクチャーインピクチャー)"
     "size 30% 30%, class:^(firefox),title:^(ピクチャーインピクチャー)"
     "immediate, class:^(osu!)$"
+    "immediate, class:^(ZenlessZoneZero)$"
     "float,class:^(FloatingVim)"
 
     # for xwaylandvideobridge
