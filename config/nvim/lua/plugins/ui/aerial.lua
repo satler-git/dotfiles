@@ -12,6 +12,13 @@ return {
     },
     keys = {
       { "<Space>a", "<Cmd>AerialToggle! right<CR>" },
+      {
+        "<Space>fa",
+        function()
+          require("telescope").load_extension("aerial")
+          require("telescope").extensions.aerial.aerial()
+        end,
+      },
     },
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
