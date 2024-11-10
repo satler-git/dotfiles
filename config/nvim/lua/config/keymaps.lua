@@ -30,6 +30,7 @@ end
 -- vim.opt.langmap = set_hjkl("k", "t", "n", "s")
 keymap("n", "U", "<C-r>", opts)
 keymap("n", "<Space>l", "<Cmd>nohlsearch<CR>", opts)
+keymap("n", "<Esc><Esc>", "<Cmd>nohlsearch<CR>", opts)
 
 -- ref: https://zenn.dev/vim_jp/articles/43d021f461f3a4
 keymap("o", "i<Space>", "iW", opts)
@@ -42,3 +43,16 @@ keymap("x", "<", "<gv", opts)
 
 -- ref: https://zenn.dev/hidehic0/articles/6bde5d5398384a
 keymap("n", "x", '"_x', opts)
+
+-- ref: https://lambdalisue.hatenablog.com/entry/2015/12/25/000046
+keymap("i", "<C-a>", "<C-o>^", opts)
+keymap("i", "<C-e>", "<C-o>$", opts)
+keymap("i", "<C-f>", "<C-o>w", opts)
+keymap("i", "<C-b>", "<C-o>b", opts)
+keymap("i", "<C-d>", "<C-o>x", opts)
+
+-- > Emacs 的じゃないけど、これも
+keymap("i", "<C-h>", "<C-o>h", opts)
+keymap("i", "<C-j>", "<C-o>j", opts)
+keymap("i", "<C-k>", "<C-o>k", opts)
+keymap("i", "<C-l>", "<C-o>l", opts)
