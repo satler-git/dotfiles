@@ -48,10 +48,6 @@ return {
               use_cwd = false,
               sorting = "frecency",
             },
-            ["overseer#overseer"] = {
-              disable = false,
-              sorting = "frecency",
-            },
           },
         },
       },
