@@ -77,19 +77,6 @@ return {
         },
       },
     })
-    lspconfig.elixirls.setup({
-      capabilities = capabilities,
-      cmd = { "elixir-ls" },
-    })
-    lspconfig.lua_ls.setup({
-      capabilities = capabilities,
-    })
-    lspconfig.nil_ls.setup({
-      capabilities = capabilities,
-    })
-    lspconfig.taplo.setup({
-      capabilities = capabilities,
-    })
     lspconfig.yamlls.setup({
       capabilities = capabilities,
       settings = {
@@ -108,14 +95,6 @@ return {
         },
       },
     })
-    -- lspconfig.remark_ls.setup({
-    --   settings = {
-    --     remark = {
-    --       requireConfig = true,
-    --     },
-    --   },
-    -- })
-    -- nixpkgsに見当たらない?
     lspconfig.harper_ls.setup({
       filetypes = { "markdown" },
       settings = {
@@ -142,7 +121,6 @@ return {
         },
       },
     })
-    lspconfig.buf_ls.setup({})
     configs.testing_ls = {
       default_config = {
         cmd = { "testing-language-server" },
@@ -176,12 +154,27 @@ return {
       },
     }
 
-    lspconfig.testing_ls.setup({})
     lspconfig.efm.setup({
       settings = {
         rootMarkers = { ".git/", ".jj/" },
       },
       filetypes = { "rust", "yaml" },
+    })
+
+    lspconfig.testing_ls.setup({})
+    lspconfig.buf_ls.setup({})
+    lspconfig.elixirls.setup({
+      capabilities = capabilities,
+      cmd = { "elixir-ls" },
+    })
+    lspconfig.lua_ls.setup({
+      capabilities = capabilities,
+    })
+    lspconfig.nil_ls.setup({
+      capabilities = capabilities,
+    })
+    lspconfig.taplo.setup({
+      capabilities = capabilities,
     })
   end,
 }
