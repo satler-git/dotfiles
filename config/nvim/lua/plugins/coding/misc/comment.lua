@@ -1,5 +1,9 @@
 return {
   "numToStr/Comment.nvim",
   config = true,
-  event = "VeryLazy",
+  keys = {
+    { "gc" },
+    { "gc", mode = "x" },
+  },
+  -- event = "VeryLazy",
 }

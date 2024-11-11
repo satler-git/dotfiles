@@ -14,5 +14,5 @@ return {
       lualine_z = { "location" },
     },
   },
-  event = "VeryLazy",
+  event = "UIEnter",
 }

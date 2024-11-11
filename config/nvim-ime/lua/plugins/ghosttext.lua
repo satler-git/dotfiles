@@ -1,3 +1,3 @@
 return {
-  { "gamoutatsumi/dps-ghosttext.vim", event = "VeryLazy" },
+  { "gamoutatsumi/dps-ghosttext.vim", cmd = "GhostStart" },
 }
