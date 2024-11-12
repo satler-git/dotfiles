@@ -30,7 +30,7 @@
       openFirewall = true;
       loadModels = [
         "llama3.2"
-        "qwen2.5-coder"
+        "qwen2.5-coder:14b"
         "qwen2.5:14b"
 
         "phi3.5:3.8b"
