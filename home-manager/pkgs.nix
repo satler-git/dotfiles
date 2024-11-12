@@ -136,6 +136,7 @@ in
 
       vlc
       vimgolf
+      vim
 
       # wireshark
       # wolfram-engine

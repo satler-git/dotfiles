@@ -53,7 +53,7 @@ in
     package = pkgs.neovim;
     defaultEditor = true;
     viAlias = true;
-    vimAlias = true;
+    # vimAlias = true;
     extraPackages =
       with pkgs;
       [
