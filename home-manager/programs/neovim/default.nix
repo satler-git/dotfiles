@@ -58,6 +58,7 @@ in
       with pkgs;
       [
         nodejs
+        deno
         python39
         sqlite
         sqlite.dev
