@@ -15,6 +15,7 @@ let
   fonts = ./modules/fonts.nix;
   hardware = ./modules/hardware;
   i18n = ./modules/i18n.nix;
+  network = ./modules/network.nix;
   nix = ./modules/nix.nix;
   programs = ./modules/programs.nix;
   services = ./modules/services.nix;
@@ -35,6 +36,7 @@ in
     fonts
     hardware
     i18n
+    network
     nix
     programs
     services
