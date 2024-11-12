@@ -135,6 +135,7 @@ in
       hledger
 
       vlc
+      vimgolf
 
       # wireshark
       # wolfram-engine
