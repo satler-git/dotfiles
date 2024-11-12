@@ -56,3 +56,6 @@ keymap("i", "<C-h>", "<C-o>h", opts)
 keymap("i", "<C-j>", "<C-o>j", opts)
 keymap("i", "<C-k>", "<C-o>k", opts)
 keymap("i", "<C-l>", "<C-o>l", opts)
+
+keymap("n", ">", ">>", opts)
+keymap("n", "<", "<<", opts)
