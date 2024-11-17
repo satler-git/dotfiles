@@ -1,14 +1,5 @@
 { pkgs, ... }:
 let
-  harper-src = (pkgs.callPackages ../../../_sources/generated.nix { }).harper-ls;
-  harper-ls = pkgs.rustPlatform.buildRustPackage {
-    pname = "harper-ls";
-    version = "0.11.0";
-
-    src = harper-src.src;
-    cargoLock.lockFile = harper-src.cargoLock."Cargo.lock".lockFile;
-  };
-
   testing-language-server-src =
     (pkgs.callPackages ../../../_sources/generated.nix { }).testing-language-server;
 
@@ -73,6 +64,7 @@ in
         taplo # Toml
         vscode-langservers-extracted
         yaml-language-server
+        harper # Spell
 
         # Formatter
         nixfmt-rfc-style
@@ -88,7 +80,6 @@ in
         ueberzugpp
       ]
       ++ [
-        harper-ls
         testing-language-server
         testing-ls-adapter
       ];
