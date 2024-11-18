@@ -101,6 +101,7 @@ in
 
       # spacedrive
       sops
+      spotify
       stack
       sunvox
       supercollider-with-sc3-plugins

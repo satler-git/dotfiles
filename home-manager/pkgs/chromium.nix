@@ -32,14 +32,13 @@ let
 
   obsidian = wrap { appName = "obsidian"; };
   slack = wrap { appName = "slack"; };
-  spotify = wrap { appName = "spotify"; };
 in
+# spotify = wrap { appName = "spotify"; };
 {
   home.packages = [
     discord
     google-chrome
     obsidian
     slack
-    spotify
   ];
 }
