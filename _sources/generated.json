@@ -24,31 +24,6 @@
         },
         "version": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c"
     },
-    "harper-ls": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./harper-ls-6668ee5af96c55610cf6e56c300a697be9321d14/Cargo.lock",
-                {}
-            ]
-        },
-        "date": "2024-11-04",
-        "extract": null,
-        "name": "harper-ls",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "elijah-potter",
-            "repo": "harper",
-            "rev": "6668ee5af96c55610cf6e56c300a697be9321d14",
-            "sha256": "sha256-wwtdDra1qrb3i03jm/mM5faUGyrxwEc3Opq3qguK360=",
-            "type": "github"
-        },
-        "version": "6668ee5af96c55610cf6e56c300a697be9321d14"
-    },
     "testing-language-server": {
         "cargoLocks": {
             "Cargo.lock": [
@@ -108,11 +83,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-wCGnvFaoaoyH6QFkIqaDj0j0lGe1DOAX4ZmUQOyT/eY=",
+            "sha256": "sha256-t6GPP7OOztf6XtBgzhLF+edUU294twnu0y5uufXwrkw=",
             "type": "url",
-            "url": "https://github.com/rvcas/room/releases/download/v1.1.1/room.wasm"
+            "url": "https://github.com/rvcas/room/releases/download/v1.2.0/room.wasm"
         },
-        "version": "v1.1.1"
+        "version": "v1.2.0"
     },
     "zellij-zj-quit": {
         "cargoLocks": null,
@@ -123,10 +98,10 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-f1D3cDuLRZ5IqY3IGq6UYSEu1VK54TwmkmwWaxVQD2A=",
+            "sha256": "sha256-JSYnGGN2SLNComhMg4P814dV3TV6jRvTv9fts9oTf5Q=",
             "type": "url",
-            "url": "https://github.com/cristiand391/zj-quit/releases/download/0.3.0/zj-quit.wasm"
+            "url": "https://github.com/cristiand391/zj-quit/releases/download/0.3.1/zj-quit.wasm"
         },
-        "version": "0.3.0"
+        "version": "0.3.1"
     }
 }

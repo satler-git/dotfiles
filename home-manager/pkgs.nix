@@ -14,13 +14,10 @@ in
     [
       # ardour
       # audacity
-      act
       age
       alacritty
-      alacritty-theme
       anki-bin
       aria
-      aseprite
 
       # blender
       bat
@@ -53,10 +50,8 @@ in
       foliate
       fzf
 
-      gcc
       gh
       ghc
-      ghq
       ghq
       gimp
       # gitbutler
@@ -77,7 +72,6 @@ in
       jq
       # just
 
-      k9s
       kalker
       # kicad
       koreader
@@ -92,7 +86,6 @@ in
       mindustry-wayland
       mpv
 
-      nb
       nix-output-monitor
       nix-your-shell
       # numbat
@@ -108,7 +101,6 @@ in
 
       # spacedrive
       sops
-      src-cli
       stack
       sunvox
       supercollider-with-sc3-plugins
@@ -121,9 +113,7 @@ in
 
       ueberzugpp
       unzip
-      uxn
 
-      obs-studio
       osu-lazer-bin
       oxker
 
@@ -157,7 +147,6 @@ in
       zola
       zoom-us
       zoxide
-      zrythm
     ]
     ++ [
       superdirt-install

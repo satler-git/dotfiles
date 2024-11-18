@@ -19,24 +19,6 @@
     };
     date = "2024-06-08";
   };
-  harper-ls = {
-    pname = "harper-ls";
-    version = "6668ee5af96c55610cf6e56c300a697be9321d14";
-    src = fetchFromGitHub {
-      owner = "elijah-potter";
-      repo = "harper";
-      rev = "6668ee5af96c55610cf6e56c300a697be9321d14";
-      fetchSubmodules = false;
-      sha256 = "sha256-wwtdDra1qrb3i03jm/mM5faUGyrxwEc3Opq3qguK360=";
-    };
-    cargoLock."Cargo.lock" = {
-      lockFile = ./harper-ls-6668ee5af96c55610cf6e56c300a697be9321d14/Cargo.lock;
-      outputHashes = {
-        
-      };
-    };
-    date = "2024-11-04";
-  };
   testing-language-server = {
     pname = "testing-language-server";
     version = "b8054f6594ca888c4a6a9f98c985dc3df79378d9";
@@ -75,18 +57,18 @@
   };
   zellij-room = {
     pname = "zellij-room";
-    version = "v1.1.1";
+    version = "v1.2.0";
     src = fetchurl {
-      url = "https://github.com/rvcas/room/releases/download/v1.1.1/room.wasm";
-      sha256 = "sha256-wCGnvFaoaoyH6QFkIqaDj0j0lGe1DOAX4ZmUQOyT/eY=";
+      url = "https://github.com/rvcas/room/releases/download/v1.2.0/room.wasm";
+      sha256 = "sha256-t6GPP7OOztf6XtBgzhLF+edUU294twnu0y5uufXwrkw=";
     };
   };
   zellij-zj-quit = {
     pname = "zellij-zj-quit";
-    version = "0.3.0";
+    version = "0.3.1";
     src = fetchurl {
-      url = "https://github.com/cristiand391/zj-quit/releases/download/0.3.0/zj-quit.wasm";
-      sha256 = "sha256-f1D3cDuLRZ5IqY3IGq6UYSEu1VK54TwmkmwWaxVQD2A=";
+      url = "https://github.com/cristiand391/zj-quit/releases/download/0.3.1/zj-quit.wasm";
+      sha256 = "sha256-JSYnGGN2SLNComhMg4P814dV3TV6jRvTv9fts9oTf5Q=";
     };
   };
 }
