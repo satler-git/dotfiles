@@ -6,10 +6,12 @@ in
   stylix = {
     enable = true;
 
-    image = let
-        wallpaper = name: "${pkgs.nixos-artwork.wallpapers.${name}}/share/backgrounds/nixos/nix-wallpaper-${name}.png";
+    image =
+      let
+        wallpaper =
+          name: "${pkgs.nixos-artwork.wallpapers.${name}}/share/backgrounds/nixos/nix-wallpaper-${name}.png";
       in
-        wallpaper "nineish";
+      wallpaper "nineish";
 
     cursor.package = pkgs.bibata-cursors;
     cursor.name = "Bibata-Modern-Ice";

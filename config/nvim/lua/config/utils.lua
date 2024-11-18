@@ -21,10 +21,12 @@ end
 function M.langmap(origin, to, origin_shift, to_shift)
   -- ref: https://vim-jp.org/vimdoc-ja/options.html#'langmap'
   return vim.fn.join({
-      -- | `to` should be first     | `from` should be second
-      t(to) .. ';' .. t(origin_shift),
-      t(to_shift) .. ';' .. t(origin_shift),
-  }, ',')
-end 
+    -- | `to` should be first     | `from` should be second
+    t(to)
+      .. ";"
+      .. t(origin_shift),
+    t(to_shift) .. ";" .. t(origin_shift),
+  }, ",")
+end
 
 return M
