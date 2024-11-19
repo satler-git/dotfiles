@@ -48,6 +48,7 @@ in
     extraPackages =
       with pkgs;
       [
+        gcc # for Tree sitter
         nodejs
         deno
         python39
