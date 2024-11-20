@@ -11,11 +11,6 @@
       ui = {
         paginate = "never";
         editor = "nvim";
-        diff-editor = [
-          "nvim"
-          "-c"
-          "DiffEditor $left $right $output"
-        ];
         diff = {
           format = "git";
           tool = [
