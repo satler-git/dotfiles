@@ -21,16 +21,16 @@
   };
   testing-language-server = {
     pname = "testing-language-server";
-    version = "c61aaac03e5bc3eaea454f1914bdcee1fd10fe20";
+    version = "16074f3b4a451c626e142c2995f567d8b8b0a679";
     src = fetchFromGitHub {
       owner = "kbwo";
       repo = "testing-language-server";
-      rev = "c61aaac03e5bc3eaea454f1914bdcee1fd10fe20";
+      rev = "16074f3b4a451c626e142c2995f567d8b8b0a679";
       fetchSubmodules = false;
-      sha256 = "sha256-+eM54ZNWVE8e4MtbG3L9EdWIS81XXmrgQX1KRc9Cx7Y=";
+      sha256 = "sha256-qM1kFFCemlBuDIFLmiNPiZZ1xSgA7T9QfCGsnm9lpG0=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./testing-language-server-c61aaac03e5bc3eaea454f1914bdcee1fd10fe20/Cargo.lock;
+      lockFile = ./testing-language-server-16074f3b4a451c626e142c2995f567d8b8b0a679/Cargo.lock;
       outputHashes = {
         
       };
