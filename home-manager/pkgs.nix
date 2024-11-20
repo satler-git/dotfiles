@@ -24,8 +24,6 @@ in
       bibata-cursors
       bottom
       buf
-      delta
-      difftastic
 
       cabal-install
       # calibre # disable temp FIXME
@@ -33,6 +31,7 @@ in
       clipse
 
       deno
+      delta
       difftastic
       dive
       duckdb
