@@ -15,7 +15,6 @@
     ./wm
     ./yazi.nix
     ./zellij.nix
-    ./zoxide.nix
     ./zsh.nix
   ];
 }
