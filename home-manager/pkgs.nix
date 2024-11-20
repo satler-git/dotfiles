@@ -50,11 +50,12 @@ in
       foliate
       fzf
 
+      # gitbutler
+      gcc
       gh
       ghc
       ghq
       gimp
-      # gitbutler
       gnumake
       graalvm-ce
       gst_all_1.gst-plugins-bad
