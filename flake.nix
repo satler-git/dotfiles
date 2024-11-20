@@ -3,6 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs-unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -45,6 +47,7 @@
 
   outputs =
     {
+      self,
       nixpkgs,
       home-manager,
       tidalcycles,
@@ -64,7 +67,8 @@
         (final: prev: {
           zjstatus = zjstatus.packages.${prev.system}.default;
         })
-      ];
+      ] ++ (import nixpkgs { inherit system; }).lib.attrValues self.overlays;
+
       pkgs = import nixpkgs {
         config.allowUnfree = true;
         inherit system;
@@ -74,6 +78,8 @@
       treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
     in
     {
+      overlays = import ./overlays { inherit inputs; };
+
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
@@ -81,6 +87,9 @@
             inherit inputs;
           };
           modules = [
+            {
+              nixpkgs.pkgs = pkgs;
+            }
             stylix.nixosModules.stylix
             sops-nix.nixosModules.sops
             xremap.nixosModules.default
@@ -96,6 +105,7 @@
           ];
         };
       };
+
       formatter.x86_64-linux = treefmtEval.config.build.wrapper;
 
       checks.x86_64-linux = {
