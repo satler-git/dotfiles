@@ -27,7 +27,6 @@ let
   virtualisation = ./modules/virtualisation;
 in
 {
-  nixpkgs.config.allowUnfree = true;
   system.stateVersion = "24.05"; # Don't change this
   imports = [
     boot

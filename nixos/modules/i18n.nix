@@ -23,7 +23,7 @@
     fcitx5.addons = with pkgs; [
       # fcitx5-mozc
       fcitx5-gtk
-      # fcitx5-mozc-ut
+      fcitx5-mozc-ut
       fcitx5-skk
       fcitx5-tokyonight
     ];

@@ -31,6 +31,17 @@ let
     prefix = "clippy";
     lint-command = "${lib.getExe pkgs.clippy}";
   };
+
+  shellcheck-lint = {
+    prefix = "shellcheck";
+    lint-command = "${lib.getExe pkgs.shellcheck} -s bash -f gcc -x -";
+    lint-stdin = true;
+    lint-formats = [
+      "%f:%l:%c: %trror: %m"
+      "%f:%l:%c: %tarning: %m"
+      "%f:%l:%c: %tote: %m"
+    ];
+  };
 in
 {
   version = 2;
@@ -57,6 +68,7 @@ in
       yamllint-lint
       hadolint-lint
       clippy-lint
+      shellcheck-lint
       ;
   };
 
@@ -70,6 +82,9 @@ in
     ];
     dockerfile = [
       hadolint-lint
+    ];
+    sh = [
+      shellcheck-lint
     ];
   };
 }
