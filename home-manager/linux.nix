@@ -1,15 +1,12 @@
 { pkgs, inputs, ... }:
 let
-  packages = import ./pkgs.nix { inherit pkgs inputs; };
   programs = ./programs;
   services = ./services;
   modules = ./modules;
 in
-#  extPackages = import ./extraPkgs.nix;
 {
   imports = [
     ./stylix.nix
-    packages
     programs
     services
     modules
