@@ -20,18 +20,18 @@ in
 
     fonts = {
       serif = {
-        package = pkgs.noto-fonts-cjk-serif;
-        name = "Noto Serif CJK JP";
+        package = pkgs.ibm-plex;
+        name = "IBM Plex Sans JP";
       };
 
       sansSerif = {
-        package = pkgs.noto-fonts-cjk-serif;
-        name = "Noto Sans CJK JP";
+        package = pkgs.ibm-plex;
+        name = "IBM Plex Sans JP";
       };
 
       monospace = {
-        package = pkgs.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
+        package = pkgs.monaspace;
+        name = "Monaspace Argon";
       };
 
       emoji = {

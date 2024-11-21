@@ -17,14 +17,17 @@
     fontconfig = {
       defaultFonts = {
         serif = [
+          "IBM Plex Sans JP"
           "Noto Serif CJK JP"
           "Noto Color Emoji"
         ];
         sansSerif = [
+          "IBM Plex Sans JP"
           "Noto Sans CJK JP"
           "Noto Color Emoji"
         ];
         monospace = [
+          "Monaspace Argon"
           "JetBrainsMono Nerd Font"
           "Noto Color Emoji"
         ];
