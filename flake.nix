@@ -96,11 +96,15 @@
             ./nixos
             home-manager.nixosModules.home-manager
             {
-              nixpkgs.overlays = overlays;
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
-              home-manager.users.satler = import ./home-manager/linux.nix { inherit pkgs inputs; };
+              home-manager.users.satler = ./home-manager/linux.nix;
+            }
+            {
+              home-manager.extraSpecialArgs = {
+                inherit inputs;
+              };
             }
           ];
         };
