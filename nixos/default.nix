@@ -22,6 +22,6 @@
     ./modules/systemd.nix
     ./modules/time.nix
     ./modules/users.nix
-    ./moduls/virtualisation.nix
+    ./modules/virtualisation
   ];
 }
