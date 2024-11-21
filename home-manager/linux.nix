@@ -6,6 +6,7 @@ let
 in
 {
   imports = [
+    ./pkgs.nix
     ./stylix.nix
     programs
     services
