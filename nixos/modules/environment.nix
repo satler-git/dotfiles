@@ -9,8 +9,11 @@
       polkit_gnome
     ];
 
-    sessionVariables = rec {
+    sessionVariables = {
       WEGORC = "${config.sops.templates.".wegorc".path}";
+
+      GTK_IM_MODULE = "${config.i18n.inputMethod.type}";
+      QT_IM_MODULE = "${config.i18n.inputMethod.type}";
     };
 
     pathsToLink = [ "/share/zsh" ];
