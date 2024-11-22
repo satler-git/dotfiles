@@ -43,7 +43,6 @@
 
         "phi3.5:3.8b"
         "gemma2:9b"
-        "gemma2:27b"
         "codestral:22b"
       ];
     };
