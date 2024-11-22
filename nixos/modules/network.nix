@@ -4,8 +4,8 @@
 
     hosts = {
       "0.0.0.0" = [
-        "x.com"
-        "twitter.com"
+        # "x.com"
+        # "twitter.com"
       ];
     };
 
