@@ -145,7 +145,6 @@ in
 
       yazi
 
-      zola
       zoom-us
       zoxide
     ]
