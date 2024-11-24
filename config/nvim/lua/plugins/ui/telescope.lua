@@ -45,6 +45,7 @@ return {
     keys = {
       { "<Space>fi", "<Cmd>Telescope lsp_workspace_symbols<CR>" },
       { "<Space>fw", "<Cmd>Telescope live_grep<CR>" },
+      { "<Space>fl", "<Cmd>Telescope current_buffer_fuzzy_find<CR>" },
       { "<Space>fh", "<Cmd>Telescope help_tags<CR>" },
     },
   },
