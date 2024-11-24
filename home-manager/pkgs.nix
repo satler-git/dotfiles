@@ -105,6 +105,7 @@ in
       stack
       sunvox
       supercollider-with-sc3-plugins
+      superfile
 
       tetrio-desktop
       thunderbird
