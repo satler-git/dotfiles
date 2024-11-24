@@ -29,10 +29,10 @@ keymap("i", "<C-b>", "<C-o>b", opts)
 keymap("i", "<C-d>", "<C-o>x", opts)
 
 -- > Emacs 的じゃないけど、これも
-keymap("i", "<C-h>", "<C-o>h", opts)
-keymap("i", "<C-j>", "<C-o>j", opts)
-keymap("i", "<C-k>", "<C-o>k", opts)
-keymap("i", "<C-l>", "<C-o>l", opts)
+-- keymap("i", "<C-h>", "<C-o>h", opts)
+-- keymap("i", "<C-j>", "<C-o>j", opts)
+-- keymap("i", "<C-k>", "<C-o>k", opts)
+-- keymap("i", "<C-l>", "<C-o>l", opts)
 
 keymap("n", ">", ">>", opts)
 keymap("n", "<", "<<", opts)
