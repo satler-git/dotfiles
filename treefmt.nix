@@ -5,5 +5,7 @@
     nixfmt.enable = true;
     stylua.enable = true;
     jsonfmt.enable = true;
+    taplo.enable = true;
+    yamlfmt.enable = true;
   };
 }

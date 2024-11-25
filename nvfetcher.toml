@@ -6,7 +6,7 @@ cargo_locks = ["Cargo.lock"]
 [cargo-compete]
 src.git = "https://github.com/qryxip/cargo-compete.git"
 fetch.github = "qryxip/cargo-compete"
-cargo_locks = [ "Cargo.lock" ]
+cargo_locks = ["Cargo.lock"]
 
 [testing-language-server]
 src.git = "https://github.com/kbwo/testing-language-server.git"
