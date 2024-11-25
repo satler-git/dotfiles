@@ -1,7 +1,7 @@
 return {
   {
     "m4xshen/hardtime.nvim",
-    enable = false,
+    enabled = false,
     event = "VeryLazy",
     dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
     cmd = { "Hardtime" },
