@@ -5,7 +5,7 @@
   ...
 }:
 let
-  appName = "anki-bin";
+  appName = "anki";
   ime = osConfig.i18n.inputMethod.type;
 
   wrappedAnki = pkgs.symlinkJoin {
