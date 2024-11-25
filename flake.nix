@@ -98,14 +98,14 @@
             xremap.nixosModules.default
             home-manager.nixosModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.backupFileExtension = "backup";
-              home-manager.users.satler = ./home-manager/linux.nix;
-            }
-            {
-              home-manager.extraSpecialArgs = {
-                inherit inputs;
+              home-manager = {
+                extraSpecialArgs = {
+                  inherit inputs;
+                };
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                backupFileExtension = "backup";
+                users.satler = ./home-manager/linux.nix;
               };
             }
           ];
