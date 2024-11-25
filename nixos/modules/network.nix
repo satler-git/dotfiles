@@ -1,7 +1,5 @@
 {
   networking = {
-    hostName = "satlerdev"; # Define your hostname.
-
     hosts = {
       "0.0.0.0" = [
         # "x.com"
@@ -9,7 +7,6 @@
       ];
     };
 
-    # Enable networking
     networkmanager.enable = true;
 
     nameservers = [
