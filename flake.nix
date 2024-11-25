@@ -43,6 +43,7 @@
       inputs.home-manager.follows = "home-manager";
       inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
     };
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
   };
 
   outputs =
@@ -90,10 +91,11 @@
             {
               nixpkgs.pkgs = pkgs;
             }
+            ./hosts/desktop
+            ./nixos
             stylix.nixosModules.stylix
             sops-nix.nixosModules.sops
             xremap.nixosModules.default
-            ./nixos
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;

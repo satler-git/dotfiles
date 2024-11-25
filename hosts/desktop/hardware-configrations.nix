@@ -8,15 +8,9 @@
   modulesPath,
   ...
 }:
-let
-  nvidia = import ./nvidia.nix { inherit config; };
-  udev = import ./udev.nix;
-in
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
-    nvidia
-    udev
   ];
 
   boot.initrd.availableKernelModules = [

@@ -11,7 +11,6 @@
     ./modules/documentation.nix
     ./modules/environment.nix
     ./modules/fonts.nix
-    ./modules/hardware
     ./modules/i18n.nix
     ./modules/network.nix
     ./modules/nix.nix

@@ -11,12 +11,7 @@
     "HYPRCURSOR_SIZE,25"
     "XCURSOR_THEME,Bibata-Modern-Ice"
     "XCURSOR_SIZE,25"
-    # for nvidia, see https://wiki.hyprland.org/Nvidia/
-    "LIBVA_DRIVER_NAME,nvidia"
     "XDG_SESSION_TYPE,wayland"
-    "GBM_BACKEND,nvidia-drm"
-    "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-    "NVD_BACKEND,direct"
     "ELECTRON_OZONE_PLATFORM_HINT,auto"
     "NIXOS_OZONE_WL,1" # hint for electron apps
   ];

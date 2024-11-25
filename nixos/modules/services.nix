@@ -34,7 +34,6 @@
     };
     ollama = {
       enable = true;
-      acceleration = "cuda";
       openFirewall = true;
       loadModels = [
         "llama3.2"
