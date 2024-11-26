@@ -1,12 +1,14 @@
 { pkgs, ... }:
-let
-  config = import ./config.nix;
-in
 {
+  imports = [
+    ../waybar
+    ../wofi
+    ./config.nix
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    settings = config;
   };
 
   home.file.".bin/vime.sh" = {

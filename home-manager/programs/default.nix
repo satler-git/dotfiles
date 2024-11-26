@@ -7,12 +7,12 @@
     ./git
     ./gpg.nix
     ./gtk.nix
-    ./i3
     ./jujutsu.nix
     ./neovim
     ./supercollider.nix
     ./tealdeer.nix
-    ./wm
+    ./wm/hyprland
+    ./wm/i3
     ./yazi.nix
     ./zellij.nix
     ./zsh.nix
