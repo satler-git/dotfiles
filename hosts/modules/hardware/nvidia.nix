@@ -49,5 +49,5 @@ in
     };
 
   services.ollama.acceleration = lib.mkDefault "cuda";
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = lib.mkBefore [ "nvidia" ];
 }
