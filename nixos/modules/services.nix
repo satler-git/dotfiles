@@ -1,5 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
+  imports = [
+    inputs.xremap.nixosModules.default
+  ];
+
   services = {
     xserver = {
       enable = true;

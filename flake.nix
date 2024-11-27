@@ -58,7 +58,6 @@
       zjstatus,
       stylix,
       sops-nix,
-      xremap,
       ...
     }@inputs:
     let
@@ -95,7 +94,6 @@
             ./nixos
             stylix.nixosModules.stylix
             sops-nix.nixosModules.sops
-            xremap.nixosModules.default
             home-manager.nixosModules.home-manager
             {
               home-manager = {
