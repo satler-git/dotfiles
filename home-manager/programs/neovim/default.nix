@@ -90,7 +90,7 @@ in
     ];
   };
 
-  xdg.config = {
+  xdg.configFile = {
     "nvim/" = {
       target = "nvim";
       source = ../../../config/nvim;
