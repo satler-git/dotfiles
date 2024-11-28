@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   xdg = {
-    enable = true;
     portal = {
       enable = true;
       configPackages = with pkgs; [

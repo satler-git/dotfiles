@@ -9,7 +9,7 @@ in
     enable = true;
     enableZshIntegration = true;
   };
-  xdg.config = {
+  xdg.configFile = {
     zellij-main = {
       target = "zellij/config.kdl";
       source = pkgs.substituteAll {
