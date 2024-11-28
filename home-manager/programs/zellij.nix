@@ -9,9 +9,9 @@ in
     enable = true;
     enableZshIntegration = true;
   };
-  home.file = {
+  xdg.config = {
     zellij-main = {
-      target = ".config/zellij/config.kdl";
+      target = "zellij/config.kdl";
       source = pkgs.substituteAll {
         src = ../../config/zellij/config.kdl;
         zj_quit_location = "${zellij-zj-quit.src}";
@@ -19,7 +19,7 @@ in
       };
     };
     zellij-layout-default = {
-      target = ".config/zellij/layouts/default.kdl";
+      target = "zellij/layouts/default.kdl";
       source = pkgs.substituteAll {
         src = ../../config/zellij/layouts/default.kdl;
         zjstatus_location = "${pkgs.zjstatus}/bin/zjstatus.wasm";

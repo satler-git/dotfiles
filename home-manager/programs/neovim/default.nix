@@ -90,27 +90,27 @@ in
     ];
   };
 
-  home.file = {
-    ".config/nvim/" = {
-      target = ".config/nvim";
+  xdg.config = {
+    "nvim/" = {
+      target = "nvim";
       source = ../../../config/nvim;
       recursive = true;
     };
-    ".config/nvim-ime/" = {
-      target = ".config/nvim-ime";
+    "nvim-ime/" = {
+      target = "nvim-ime";
       source = ../../../config/nvim-ime;
       recursive = true;
     };
-    ".config/nvim-ime/lua/dicts.lua" = {
+    "nvim-ime/lua/dicts.lua" = {
       text = dicts_lua;
     };
-    ".config/nvim/lua/dicts.lua" = {
+    "nvim/lua/dicts.lua" = {
       text = dicts_lua;
     };
-    ".config/nvim/lua/extra.lua" = {
+    "nvim/lua/extra.lua" = {
       text = "vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.so'";
     };
-    ".config/efm-langserver/config.yaml" = {
+    "efm-langserver/config.yaml" = {
       text = pkgs.lib.generators.toYAML { } (
         import ./efm-config.nix {
           inherit pkgs;
