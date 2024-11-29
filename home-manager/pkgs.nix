@@ -56,6 +56,7 @@ in
       ghq
       gimp
       gnumake
+      gnutar
       graalvm-ce
       gst_all_1.gst-plugins-bad
       gst_all_1.gst-plugins-base
@@ -88,6 +89,8 @@ in
 
       nix-output-monitor
       nix-your-shell
+      nix-init
+      nix-update
       # numbat
 
       p7zip
