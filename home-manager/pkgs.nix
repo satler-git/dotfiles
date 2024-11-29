@@ -26,6 +26,7 @@ in
       buf
 
       cabal-install
+      chafa
       # calibre # disable temp FIXME
       cargo-nextest
       clipse
