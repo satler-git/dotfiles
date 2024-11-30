@@ -7,7 +7,7 @@ return {
       vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
       vim.cmd([[colorscheme aura-soft-dark-soft-text]])
     end,
-    enabled = false,
+    enabled = true,
   },
   {
     "rebelot/kanagawa.nvim",
@@ -17,6 +17,6 @@ return {
       require("kanagawa").setup({})
       vim.cmd([[colorscheme kanagawa]])
     end,
-    enabled = true,
+    enabled = false,
   },
 }
