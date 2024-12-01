@@ -8,15 +8,15 @@
       migmix
       monaspace
 
-      nerd-fonts.monaspace
-      nerd-fonts.jetbrains-mono
-      nerd-fonts.fira-code
-
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
       noto-fonts-emoji
 
       source-han-sans-vf-ttf
+    ] ++ with pkgs.nerd-fonts; [
+      monaspace
+      jetbrains-mono
+      fira-code
     ];
     fontDir.enable = true;
     fontconfig = {
