@@ -13,10 +13,10 @@
       noto-fonts-emoji
 
       source-han-sans-vf-ttf
-    ] ++ with pkgs.nerd-fonts; [
-      monaspace
-      jetbrains-mono
-      fira-code
+
+      nerd-fonts.fira-code
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.monaspace
     ];
     fontDir.enable = true;
     fontconfig = {
