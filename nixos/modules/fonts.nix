@@ -7,10 +7,15 @@
       material-design-icons
       migmix
       monaspace
-      nerdfonts
+
+      nerd-fonts.monaspace
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.fira-code
+
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
       noto-fonts-emoji
+
       source-han-sans-vf-ttf
     ];
     fontDir.enable = true;
