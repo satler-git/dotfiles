@@ -21,21 +21,21 @@
   };
   testing-language-server = {
     pname = "testing-language-server";
-    version = "aa4883e038af61a5f0840e64524fbef289345b18";
+    version = "c511c02107ce4a0836565d889da4389ec1a15e9b";
     src = fetchFromGitHub {
       owner = "kbwo";
       repo = "testing-language-server";
-      rev = "aa4883e038af61a5f0840e64524fbef289345b18";
+      rev = "c511c02107ce4a0836565d889da4389ec1a15e9b";
       fetchSubmodules = false;
-      sha256 = "sha256-HzV35y4ispqBjVl00RliQ6qY0KsCAAt8azkPnjN5j8U=";
+      sha256 = "sha256-RObq1iP4SOBpbQ7Gm/uwqa86lvMbo4ca6lTQuQyX35c=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./testing-language-server-aa4883e038af61a5f0840e64524fbef289345b18/Cargo.lock;
+      lockFile = ./testing-language-server-c511c02107ce4a0836565d889da4389ec1a15e9b/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2024-11-30";
+    date = "2024-12-02";
   };
   trane-cli = {
     pname = "trane-cli";
