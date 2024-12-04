@@ -11,7 +11,7 @@
     xwayland.enable = true;
   };
 
-  home.file.".bin/vime.sh" = {
+  home.file.".local/bin/vime.sh" = {
     source = ../../../../config/bin/vime.sh;
     executable = true;
   };

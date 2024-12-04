@@ -14,5 +14,7 @@
     };
 
     pathsToLink = [ "/share/zsh" ];
+
+    localBinInPath = true;
   };
 }
