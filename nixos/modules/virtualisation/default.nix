@@ -17,7 +17,6 @@
 
       autoPrune.enable = true;
     };
-    waydroid.enable = true;
     oci-containers.backend = "podman";
     libvirtd.enable = true;
   };
