@@ -24,7 +24,7 @@ in
     };
 
     sessionPath = [
-      "~/.cargo/bin"
+      "${homeDirectory}/.cargo/bin"
     ];
   };
 }
