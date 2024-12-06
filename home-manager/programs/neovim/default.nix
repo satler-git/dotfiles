@@ -81,7 +81,6 @@ in
       ];
     extraLuaPackages = ps: [
       ps.jsregexp
-      ps.magick
     ];
   };
 
