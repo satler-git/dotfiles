@@ -27,15 +27,10 @@ let
 
   dicts_lua = ''
     -- SKKELETON's JISYO
-    vim.api.nvim_exec(
-      [[
-        call skkeleton#config({
-          \   'globalDictionaries': ['${pkgs.skkDictionaries.l}/share/skk/SKK-JISYO.L'],
-          \   'eggLikeNewline': v:true,
-          \ })
-      ]],
-    false
-    )
+    vim.fn['skkeleton#config']({
+      globalDictionaries = {'${pkgs.skkDictionaries.l}/share/skk/SKK-JISYO.L'},
+      eggLikeNewline = true,
+    })
   '';
 in
 {
