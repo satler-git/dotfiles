@@ -1,6 +1,7 @@
 return {
   {
     "mfussenegger/nvim-dap",
+    enable = false,
     dependencies = {
       "neovim/nvim-lspconfig",
     },
@@ -17,6 +18,7 @@ return {
   },
   {
     "rcarriga/nvim-dap-ui",
+    enable = false,
     dependencies = {
       "mfussenegger/nvim-dap",
       "nvim-neotest/nvim-nio",

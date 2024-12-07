@@ -10,8 +10,6 @@ return {
       { "<Space>tr", "<Cmd>OverseerRun<CR>" },
       { "<Space>tb", "<Cmd>OverseerBuild<CR>" },
     },
-    opts = {
-      strategy = "toggleterm",
-    },
+    opts = {},
   },
 }
