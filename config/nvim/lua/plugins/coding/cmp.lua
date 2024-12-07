@@ -112,7 +112,7 @@ return {
         },
       },
     },
-    init = function()
+    config = function()
       table.insert(require("cmp").get_config().sources, { name = "git" })
     end,
   },
