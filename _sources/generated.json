@@ -27,11 +27,11 @@
     "testing-language-server": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./testing-language-server-c511c02107ce4a0836565d889da4389ec1a15e9b/Cargo.lock",
+                "./testing-language-server-91db91a22950a0a50f14b8f111bbe731c488fc4e/Cargo.lock",
                 {}
             ]
         },
-        "date": "2024-12-02",
+        "date": "2024-12-07",
         "extract": null,
         "name": "testing-language-server",
         "passthru": null,
@@ -43,11 +43,11 @@
             "name": null,
             "owner": "kbwo",
             "repo": "testing-language-server",
-            "rev": "c511c02107ce4a0836565d889da4389ec1a15e9b",
-            "sha256": "sha256-RObq1iP4SOBpbQ7Gm/uwqa86lvMbo4ca6lTQuQyX35c=",
+            "rev": "91db91a22950a0a50f14b8f111bbe731c488fc4e",
+            "sha256": "sha256-6RmGfEL8nRP2AeF4yqWmUKHqXZDa1wAmO3P5HXpbRQE=",
             "type": "github"
         },
-        "version": "c511c02107ce4a0836565d889da4389ec1a15e9b"
+        "version": "91db91a22950a0a50f14b8f111bbe731c488fc4e"
     },
     "trane-cli": {
         "cargoLocks": {
