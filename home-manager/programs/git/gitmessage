@@ -1,22 +1,24 @@
 
 @comment@ ==================== Format ====================
-@comment@ :emoji: (scope?) Subject
+@comment@ <type>[optional scope]: <description>
 
-@comment@ Commit body...
+@comment@ [optional body]
 
-@comment@ ==================== Emojis ====================
-@comment@ 🎉  :tada: 初めてのコミット（Initial Commit）
-@comment@ 🔖  :bookmark: バージョンタグ（Version Tag）
-@comment@ ✨  :sparkles: 新機能（New Feature）
-@comment@ 🐛  :bug: バグ修正（Bugfix）
-@comment@ ♻️  :recycle: リファクタリング(Refactoring)
-@comment@ 📚  :books: ドキュメント（Documentation）
-@comment@ ⚡️  :zap: パフォーマンス（Performance）
-@comment@ 🔧  :wrench: ツール（Tooling）
-@comment@ 🚨  :rotating_light: テスト（Tests）
-@comment@ 💩  :hankey: 非推奨追加（Deprecation）
-@comment@ 👷  :construction_worker: CI(Chore/ci)
-@comment@ 🗑️  :wastebasket: 削除（Removal）
-@comment@ ⏪️  :rewind: 巻き戻し(Revert)
-@comment@ ⬆️  :arrow_up: 依存関係のアップデート (Upgrade dependencies)
-@comment@ ➕  :heavy_plus_sign: 依存関係の追加 (Add a dependency)
+@comment@ [optional footer(s)]
+
+@comment@ ==================== Types =====================
+@comment@ feat     新しい機能の追加
+@comment@ fix      バグの修正
+@comment@ refactor リファクタリング
+@comment@ perf     パフォーマンスの向上
+@comment@ docs     ドキュメントに関して
+@comment@ test     テストの変更、追加
+@comment@ ci       CIの変更など
+@comment@ style    フォーマットなどスタイルの変更
+@comment@ chore    その他の雑多なこと
+
+@comment@ Based on [Conventional Commits](https://www.conventionalcommits.org/ja/v1.0.0/) and @commitlint/config-conventional
+
+@comment@ GitHub Issue #123 (オプション)
+@comment@ 関係のあるGitHub Issueの番号を含めることが出来ます。例：
+@comment@ Closes #123
