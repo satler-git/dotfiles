@@ -65,6 +65,10 @@
     hoogle = {
       enable = true;
       port = 8080;
+      packages =
+        hp: with hp; [
+          lens
+        ];
     };
     xremap = {
       userName = "satler";
