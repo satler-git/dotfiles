@@ -137,11 +137,12 @@ in
 
       # wireshark
       # wolfram-engine
+      wakatime-cli
       watchman
+      webcord-vencord
       wego
       wget
       wl-clipboard
-      wakatime-cli
 
       grim # for screenshot in wayland
       slurp

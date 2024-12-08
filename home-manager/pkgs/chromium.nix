@@ -36,7 +36,7 @@ in
 # spotify = wrap { appName = "spotify"; };
 {
   home.packages = [
-    discord
+    # discord
     google-chrome
     obsidian
     slack
