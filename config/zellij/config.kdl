@@ -19,7 +19,7 @@ keybinds {
     }
     normal clear-defaults=true {
         bind "Alt n" { NewPane; }
-        bind "Ctrl a" { SwitchToMode "Tmux"; }
+        bind "Alt a" { SwitchToMode "Tmux"; }
     }
     tmux clear-defaults=true {
         bind "Ctrl t" { Write 2; SwitchToMode "Normal"; }
