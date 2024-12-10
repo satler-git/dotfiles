@@ -2,29 +2,15 @@
   description = "My dotfiles for NixOS";
 
   inputs = {
+    # nixpkgs
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
     nixpkgs-unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
+
+    # NixOS Modules
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    tidalcycles = {
-      url = "github:mitchmindtree/tidalcycles.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    neovim-nightly-overlay = {
-      url = "github:nix-community/neovim-nightly-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    treefmt-nix = {
-      url = "github:numtide/treefmt-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    zjstatus = {
-      url = "github:dj95/zjstatus";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "stylix/flake-utils";
     };
     stylix = {
       url = "github:danth/stylix";
@@ -45,10 +31,30 @@
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
+    # Overlays
+    tidalcycles = {
+      url = "github:mitchmindtree/tidalcycles.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    neovim-nightly-overlay = {
+      url = "github:nix-community/neovim-nightly-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    zjstatus = {
+      url = "github:dj95/zjstatus";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "stylix/flake-utils";
+    };
     nix-gaming = {
       url = "github:fufexan/nix-gaming";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
+    };
+
+    # utils
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -78,6 +84,7 @@
     }@inputs:
     let
       system = "x86_64-linux";
+
       overlays = [
         inputs.neovim-nightly-overlay.overlays.default
         (final: prev: {
@@ -103,6 +110,7 @@
           specialArgs = {
             inherit inputs;
           };
+
           modules = [
             {
               nixpkgs.pkgs = pkgs;
