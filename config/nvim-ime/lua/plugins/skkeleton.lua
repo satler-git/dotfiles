@@ -1,8 +1,12 @@
 return {
-  { "delphinus/skkeleton_indicator.nvim", opts = {} },
+  {
+    "delphinus/skkeleton_indicator.nvim",
+    lazy = false,
+    opts = {},
+  },
   {
     "vim-skk/skkeleton",
-    -- event = "VeryLazy",
+    lazy = false,
     dependencies = {
       "vim-denops/denops.vim",
       "delphinus/skkeleton_indicator.nvim",
