@@ -23,6 +23,7 @@ in
       bat
       bibata-cursors
       bottom
+      btop
       buf
 
       cabal-install
