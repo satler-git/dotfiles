@@ -26,7 +26,6 @@ keymap("i", "<C-a>", "<C-o>^", opts)
 keymap("i", "<C-e>", "<C-o>$", opts)
 keymap("i", "<C-f>", "<C-o>w", opts)
 keymap("i", "<C-b>", "<C-o>b", opts)
-keymap("i", "<C-d>", "<C-o>x", opts)
 
 -- > Emacs 的じゃないけど、これも
 -- keymap("i", "<C-h>", "<C-o>h", opts)
