@@ -6,7 +6,6 @@ local keymap = vim.api.nvim_set_keymap
 -- keymap("n", "<Space>", "<Cmd><CR>", opts)
 
 keymap("n", "U", "<C-r>", opts)
-keymap("n", "<Space>l", "<Cmd>nohlsearch<CR>", opts)
 keymap("n", "<Esc><Esc>", "<Cmd>nohlsearch<CR>", opts)
 
 -- ref: https://zenn.dev/vim_jp/articles/43d021f461f3a4
