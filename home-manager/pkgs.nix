@@ -26,10 +26,11 @@ in
       btop
       buf
 
+      calibre
       cabal-install
-      chafa
-      # calibre # disable temp FIXME
       cargo-nextest
+      chafa
+      # cinny-desktop # Insecure
       clipse
 
       deno
@@ -40,7 +41,6 @@ in
       duf
       dust
 
-      # element-desktop
       elixir_1_16
       eva
       evcxr
