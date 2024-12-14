@@ -1,32 +1,112 @@
 return {
   {
     "mfussenegger/nvim-dap",
-    enable = false,
     dependencies = {
       "neovim/nvim-lspconfig",
     },
-    lazy = true,
     keys = {
-      { "<F5>", ":lua require'dap'.continue()<CR>" },
-      { "<F10>", ":lua require'dap'.step_over()<CR>" },
-      { "<F11>", ":lua require'dap'.step_into()<CR>" },
-      { "<F12>", ":lua require'dap'.step_out()<CR>" },
-      { "<Space>b", ":lua require'dap'.toggle_breakpoint()<CR>" },
-      { "<Space>bc", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>" },
-      { "<Space>l", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>" },
+      {
+        "<F1>",
+        "<Cmd>require('dap').terminate()<CR>",
+      },
+      {
+        "<F5>",
+        "<Cmd>require('dap').continue()<CR>",
+      },
+      {
+        "<F9>",
+        "<Cmd>require('dap').pause()<CR>",
+      },
+      {
+        "<F10>",
+        "<Cmd>require('dap').step_over()<CR>",
+      },
+      {
+        "<F11>",
+        "<Cmd>require('dap').step_into()<CR>",
+      },
+      {
+        "<F12>",
+        "<Cmd>require('dap').step_out()<CR>",
+      },
+      {
+        "<F56>", -- <A-F8>
+        "<Cmd>require('dap').down()<CR>",
+      },
+      {
+        "<F57>", -- <A-F9>
+        "<Cmd>require('dap').up()<CR>",
+      },
+      {
+        "<Space>b",
+        "<Cmd>require('dap').toggle_breakpoint()<CR>",
+      },
+      -- {
+      --   "<Space>bc",
+      --   function()
+      --     require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
+      --   end,
+      -- },
+      -- {
+      --   "<Space>l",
+      --   function()
+      --     require("dap").set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
+      --   end,
+      -- },
     },
   },
   {
     "rcarriga/nvim-dap-ui",
-    enable = false,
     dependencies = {
       "mfussenegger/nvim-dap",
+      "jonboh/nvim-dap-rr",
       "nvim-neotest/nvim-nio",
     },
     keys = {
-      { "<Space>d", ":lua require'dapui'.toggle()<CR>" },
-      { "<Space><Space>df", ":lua require'dapui'.eval()<CR>" },
+      {
+        "<Space>d",
+        "<Cmd>require('dapui').toggle()<CR>",
+      },
+      {
+        "<Space><Space>df",
+        "<Cmd>require('dapui').eval()<CR>",
+      },
     },
     opts = {},
+  },
+  {
+    "jonboh/nvim-dap-rr",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "nvim-telescope/telescope.nvim",
+    },
+    config = function()
+      local dap = require("dap")
+      local rr_dap = require("nvim-dap-rr")
+
+      table.insert(dap.configurations.rust, rr_dap.get_rust_config())
+
+      rr_dap.setup({
+        mappings = {
+          continue = "<F5>",
+          reverse_continue = "<F17>", -- <S-F5>
+
+          step_over = "<F10>",
+          step_over_i = "<F34>", -- <C-F10>
+          reverse_step_over = "<F22>", -- <S-F10>
+          reverse_step_over_i = "<F46>", -- <SC-F10>
+
+          step_into = "<F11>",
+          step_into_i = "<F36>", -- <C-F11>
+          reverse_step_into = "<F23>", -- <S-F11>
+          reverse_step_into_i = "<F47>", -- <SC-F11>
+
+          step_out = "<F12>",
+          step_out_i = "<F36>", -- <C-F12>
+          reverse_step_out = "<F24>", -- <S-F12>
+          reverse_step_out_i = "<F48>", -- <SC-F12>
+        },
+      })
+    end,
   },
 }

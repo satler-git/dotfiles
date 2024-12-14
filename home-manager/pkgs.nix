@@ -125,9 +125,10 @@ in
       osu-lazer-bin
       oxker
 
+      reversal-icon-theme
       ripgrep
       ripgrep-all
-      reversal-icon-theme
+      rr
       rustup
 
       hledger
