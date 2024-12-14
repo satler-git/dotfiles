@@ -60,7 +60,6 @@ in
         taplo # Toml
         vscode-langservers-extracted
         yaml-language-server
-        harper # Spell
 
         # Formatter
         nixfmt-rfc-style
