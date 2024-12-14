@@ -9,6 +9,28 @@ return {
     event = { "BufReadPost", "BufWritePost", "BufNewFile" },
   },
   {
+    "lambdalisue/vim-gin",
+    event = "VeryLazy",
+    cmd = {
+      "Gin",
+      "GinBuffer",
+      "GinBranch",
+      "GinBrowse",
+      "GinCd",
+      "GinLcd",
+      "GinTcd",
+      "GinChaperon",
+      "GinDiff",
+      "GinEdit",
+      "GinLog",
+      "GinPatch",
+      "GinStatus",
+    },
+    dependencies = {
+      "vim-denops/denops.vim",
+    },
+  },
+  {
     "kdheepak/lazygit.nvim",
     cmd = {
       "LazyGit",
@@ -17,12 +39,9 @@ return {
       "LazyGitFilter",
       "LazyGitFilterCurrentFile",
     },
-    -- optional for floating window border decoration
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
-    -- setting the keybinding for LazyGit with 'keys' is recommended in
-    -- order to load the plugin when the command is run for the first time
     keys = {
       { "<Space>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
     },
