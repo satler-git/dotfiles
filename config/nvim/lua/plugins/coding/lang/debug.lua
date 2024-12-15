@@ -7,39 +7,39 @@ return {
     keys = {
       {
         "<F1>",
-        "<Cmd>require('dap').terminate()<CR>",
+        "<Cmd>lua require('dap').terminate()<CR>",
       },
       {
         "<F5>",
-        "<Cmd>require('dap').continue()<CR>",
+        "<Cmd>lua require('dap').continue()<CR>",
       },
       {
         "<F9>",
-        "<Cmd>require('dap').pause()<CR>",
+        "<Cmd>lua require('dap').pause()<CR>",
       },
       {
         "<F10>",
-        "<Cmd>require('dap').step_over()<CR>",
+        "<Cmd>lua require('dap').step_over()<CR>",
       },
       {
         "<F11>",
-        "<Cmd>require('dap').step_into()<CR>",
+        "<Cmd>lua require('dap').step_into()<CR>",
       },
       {
         "<F12>",
-        "<Cmd>require('dap').step_out()<CR>",
+        "<Cmd>lua require('dap').step_out()<CR>",
       },
       {
         "<F56>", -- <A-F8>
-        "<Cmd>require('dap').down()<CR>",
+        "<Cmd>lua require('dap').down()<CR>",
       },
       {
         "<F57>", -- <A-F9>
-        "<Cmd>require('dap').up()<CR>",
+        "<Cmd>lua require('dap').up()<CR>",
       },
       {
         "<Space>b",
-        "<Cmd>require('dap').toggle_breakpoint()<CR>",
+        "<Cmd>lua require('dap').toggle_breakpoint()<CR>",
       },
       -- {
       --   "<Space>bc",
@@ -65,11 +65,11 @@ return {
     keys = {
       {
         "<Space>d",
-        "<Cmd>require('dapui').toggle()<CR>",
+        "<Cmd>lua require('dapui').toggle()<CR>",
       },
       {
         "<Space><Space>df",
-        "<Cmd>require('dapui').eval()<CR>",
+        "<Cmd>lua require('dapui').eval()<CR>",
       },
     },
     opts = {},
@@ -90,7 +90,7 @@ return {
         command = vim.g.cpptools_path,
       }
 
-      table.insert(dap.configurations.rust, rr_dap.get_rust_config())
+      dap.configurations.rust = { rr_dap.get_rust_config() }
 
       rr_dap.setup({
         mappings = {
