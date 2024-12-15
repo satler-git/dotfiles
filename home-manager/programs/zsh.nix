@@ -58,7 +58,7 @@
         ll = "eza -F -l";
         la = "eza -F -a";
         lla = "eza -F -l -a";
-        rr = "rm -rf";
+        rrf = "rm -rf";
         v = "nvim";
         e = "nvim";
         lg = "lazygit";
