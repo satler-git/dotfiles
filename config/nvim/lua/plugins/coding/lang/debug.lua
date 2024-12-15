@@ -84,6 +84,12 @@ return {
       local dap = require("dap")
       local rr_dap = require("nvim-dap-rr")
 
+      dap.adapters.cppdbg = {
+        id = "cppdbg",
+        type = "executable",
+        command = vim.g.cpptools_path,
+      }
+
       table.insert(dap.configurations.rust, rr_dap.get_rust_config())
 
       rr_dap.setup({

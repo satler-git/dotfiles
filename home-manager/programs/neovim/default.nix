@@ -101,7 +101,10 @@ in
       text = dicts_lua;
     };
     "nvim/lua/extra.lua" = {
-      text = "vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.so'";
+      text = ''
+        vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.so'
+        vim.g.cpptools_path = "${pkgs.vscode-extensions.ms-vscode.cpptools}/share/vscode/extensions/ms-vscode.cpptools/debugAdapters/bin/OpenDebugAD7"
+      '';
     };
     "efm-langserver/config.yaml" = {
       text = pkgs.lib.generators.toYAML { } (
