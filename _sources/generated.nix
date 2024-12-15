@@ -37,24 +37,6 @@
     };
     date = "2024-12-07";
   };
-  trane-cli = {
-    pname = "trane-cli";
-    version = "d2e456a791898381c890ffcbb92a92642614cf0d";
-    src = fetchFromGitHub {
-      owner = "trane-project";
-      repo = "trane-cli";
-      rev = "d2e456a791898381c890ffcbb92a92642614cf0d";
-      fetchSubmodules = false;
-      sha256 = "sha256-UDYY52PBvlnfXL+XnmdiTtjIf1sgnZvUwabtTy8QYbc=";
-    };
-    cargoLock."Cargo.lock" = {
-      lockFile = ./trane-cli-d2e456a791898381c890ffcbb92a92642614cf0d/Cargo.lock;
-      outputHashes = {
-        
-      };
-    };
-    date = "2024-08-10";
-  };
   zellij-room = {
     pname = "zellij-room";
     version = "v1.2.0";
