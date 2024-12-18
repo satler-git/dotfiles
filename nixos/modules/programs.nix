@@ -12,9 +12,5 @@
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
     };
-    nh = {
-      enable = true;
-      flake = "/home/satler/dotfiles";
-    };
   };
 }

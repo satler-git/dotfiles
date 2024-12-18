@@ -1,82 +1,82 @@
 {
-    "cargo-compete": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./cargo-compete-6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c/Cargo.lock",
-                {}
-            ]
-        },
-        "date": "2024-06-08",
-        "extract": null,
-        "name": "cargo-compete",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "qryxip",
-            "repo": "cargo-compete",
-            "rev": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c",
-            "sha256": "sha256-qlRVHSUVOqdTx4H3pE19Fy634742veTisHm6IqfKBUQ=",
-            "type": "github"
-        },
-        "version": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c"
+  "cargo-compete": {
+    "cargoLocks": {
+      "Cargo.lock": [
+        "./cargo-compete-6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c/Cargo.lock",
+        {}
+      ]
     },
-    "testing-language-server": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./testing-language-server-91db91a22950a0a50f14b8f111bbe731c488fc4e/Cargo.lock",
-                {}
-            ]
-        },
-        "date": "2024-12-07",
-        "extract": null,
-        "name": "testing-language-server",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "kbwo",
-            "repo": "testing-language-server",
-            "rev": "91db91a22950a0a50f14b8f111bbe731c488fc4e",
-            "sha256": "sha256-6RmGfEL8nRP2AeF4yqWmUKHqXZDa1wAmO3P5HXpbRQE=",
-            "type": "github"
-        },
-        "version": "91db91a22950a0a50f14b8f111bbe731c488fc4e"
+    "date": "2024-06-08",
+    "extract": null,
+    "name": "cargo-compete",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "deepClone": false,
+      "fetchSubmodules": false,
+      "leaveDotGit": false,
+      "name": null,
+      "owner": "qryxip",
+      "repo": "cargo-compete",
+      "rev": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c",
+      "sha256": "sha256-qlRVHSUVOqdTx4H3pE19Fy634742veTisHm6IqfKBUQ=",
+      "type": "github"
     },
-    "zellij-room": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "zellij-room",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-t6GPP7OOztf6XtBgzhLF+edUU294twnu0y5uufXwrkw=",
-            "type": "url",
-            "url": "https://github.com/rvcas/room/releases/download/v1.2.0/room.wasm"
-        },
-        "version": "v1.2.0"
+    "version": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c"
+  },
+  "testing-language-server": {
+    "cargoLocks": {
+      "Cargo.lock": [
+        "./testing-language-server-91db91a22950a0a50f14b8f111bbe731c488fc4e/Cargo.lock",
+        {}
+      ]
     },
-    "zellij-zj-quit": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "zellij-zj-quit",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-JSYnGGN2SLNComhMg4P814dV3TV6jRvTv9fts9oTf5Q=",
-            "type": "url",
-            "url": "https://github.com/cristiand391/zj-quit/releases/download/0.3.1/zj-quit.wasm"
-        },
-        "version": "0.3.1"
-    }
+    "date": "2024-12-07",
+    "extract": null,
+    "name": "testing-language-server",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "deepClone": false,
+      "fetchSubmodules": false,
+      "leaveDotGit": false,
+      "name": null,
+      "owner": "kbwo",
+      "repo": "testing-language-server",
+      "rev": "91db91a22950a0a50f14b8f111bbe731c488fc4e",
+      "sha256": "sha256-6RmGfEL8nRP2AeF4yqWmUKHqXZDa1wAmO3P5HXpbRQE=",
+      "type": "github"
+    },
+    "version": "91db91a22950a0a50f14b8f111bbe731c488fc4e"
+  },
+  "zellij-room": {
+    "cargoLocks": null,
+    "date": null,
+    "extract": null,
+    "name": "zellij-room",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "name": null,
+      "sha256": "sha256-t6GPP7OOztf6XtBgzhLF+edUU294twnu0y5uufXwrkw=",
+      "type": "url",
+      "url": "https://github.com/rvcas/room/releases/download/v1.2.0/room.wasm"
+    },
+    "version": "v1.2.0"
+  },
+  "zellij-zj-quit": {
+    "cargoLocks": null,
+    "date": null,
+    "extract": null,
+    "name": "zellij-zj-quit",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "name": null,
+      "sha256": "sha256-JSYnGGN2SLNComhMg4P814dV3TV6jRvTv9fts9oTf5Q=",
+      "type": "url",
+      "url": "https://github.com/cristiand391/zj-quit/releases/download/0.3.1/zj-quit.wasm"
+    },
+    "version": "0.3.1"
+  }
 }

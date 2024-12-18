@@ -53,6 +53,7 @@ in
         haskellPackages.fast-tags
 
         # Lang-servers
+        buf
         efm-langserver
         elixir-ls
         lua-language-server

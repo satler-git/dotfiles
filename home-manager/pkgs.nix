@@ -9,154 +9,113 @@ in
     ./pkgs/anki.nix
   ];
 
-  home.packages =
-    with pkgs;
-    [
-      # ardour
-      # audacity
-      age
-      alacritty
-      aria
+  home.packages = with pkgs; [
+    # audacity
+    age
+    aria
 
-      # blender
-      bat
-      bibata-cursors
-      bottom
-      btop
-      buf
+    # blender
+    bottom
 
-      calibre
-      cabal-install
-      cargo-nextest
-      chafa
-      # cinny-desktop # Insecure
-      clipse
+    calibre
+    cabal-install
+    cargo-nextest
 
-      deno
-      delta
-      difftastic
-      dive
-      duckdb
-      duf
-      dust
+    deno
+    delta
+    duckdb
+    duf
+    dust
 
-      elixir_1_16
-      eva
-      evcxr
-      eza
+    elixir_1_16
+    evcxr
 
-      fd
-      ffmpeg_7-full
-      foliate
-      fzf
+    fd
+    ffmpeg_7-full
+    foliate
+    fzf
 
-      # gitbutler
-      gcc
-      gh
-      ghc
-      ghq
-      gimp
-      gnumake
-      gnutar
-      graalvm-ce
-      gst_all_1.gst-plugins-bad
-      gst_all_1.gst-plugins-base
-      gst_all_1.gst-plugins-ugly
+    gcc
+    gh
+    ghc
+    ghq
+    gimp
+    gnumake
+    gnutar
+    graalvm-ce
+    gst_all_1.gst-plugins-bad
+    gst_all_1.gst-plugins-base
+    gst_all_1.gst-plugins-ugly
+    gst_all_1.gstreamer
 
-      haskell-language-server
-      haskellPackages.hoogle
-      haskellPackages.tidal
+    haskell-language-server
 
-      ihp-new
-      imhex
-      inkscape
+    imhex
+    inkscape
 
-      jq
-      # just
+    jq
+    # just
 
-      kalker
-      # kicad
-      koreader
-      krita
+    kalker
+    # kicad
+    koreader
+    krita
 
-      libsForQt5.xp-pen-deco-01-v2-driver
-      libsForQt5.xwaylandvideobridge
-      lmms
-      luajit
-      lutris
+    libsForQt5.xp-pen-deco-01-v2-driver
+    luajit
+    lutris
 
-      mindustry-wayland
-      mpv
+    mindustry-wayland
+    mpv
 
-      nix-output-monitor
-      nix-your-shell
-      nix-init
-      nix-update
-      # numbat
+    nix-output-monitor
+    nix-your-shell
+    nix-init
+    nix-update
+    # numbat
 
-      p7zip
-      pandoc
-      peazip
-      playerctl
-      podman-compose
-      podman-desktop
-      podman-tui
-      # pureref
+    p7zip
+    pandoc
+    peazip
+    playerctl
+    podman-compose
 
-      # spacedrive
-      sops
-      spotify
-      stack
-      sunvox
-      supercollider-with-sc3-plugins
-      superfile
+    sops
+    spotify
+    stack
 
-      tetrio-desktop
-      thunderbird
-      tig
-      tre-command
-      treefmt
-      typst
+    tetrio-desktop
+    thunderbird
+    tre-command
+    typst
 
-      ueberzugpp
-      unzip
+    ueberzugpp
+    unzip
 
-      osu-lazer-bin
-      oxker
+    osu-lazer-bin
 
-      reversal-icon-theme
-      ripgrep
-      ripgrep-all
-      rr
-      rustup
+    ripgrep
+    ripgrep-all
+    rr
+    rustup
 
-      hledger
+    hledger
 
-      vlc
-      vimgolf
-      vim
+    vlc
 
-      # wireshark
-      # wolfram-engine
-      wakatime-cli
-      watchman
-      webcord-vencord
-      wego
-      wget
-      wl-clipboard
+    # wireshark
+    # wolfram-engine
+    wakatime-cli
+    watchman
+    webcord-vencord
+    wego
+    wget
 
-      grim # for screenshot in wayland
-      slurp
+    xh
 
-      xclip
-      xh
+    yazi
 
-      yazi
-
-      zoom-us
-      zoxide
-    ]
-    ++ [
-      superdirt-install
-    ];
+    zoom-us
+    zoxide
+  ];
 }
