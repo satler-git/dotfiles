@@ -10,13 +10,14 @@ return {
       "rouge8/neotest-rust",
       "MrcJkb/neotest-haskell",
     },
-    opts = { -- TODO: add keymaps
-      adapters = {
-        require("neotest-plenary"),
-        require("neotest-rust"),
-        require("neotest-haskell"),
-      },
-    },
+    opts = function(_)
+      return {
+        adapters = {
+          require("neotest-rust"),
+          require("neotest-haskell"),
+        },
+      }
+    end,
     -- stylua: ignore
     keys = {
       { "<Space>ta", function() require("neotest").run.run(".") end },
