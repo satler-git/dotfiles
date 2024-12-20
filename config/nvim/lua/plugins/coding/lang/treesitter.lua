@@ -60,7 +60,7 @@ return {
   },
   {
     "Wansmer/treesj",
-    keys = { "<space>m", "<space>j", "<space>s" }, -- m -> toggle, j -> join, s -> split
+    keys = { "<Space>m" }, -- m -> toggle
     cmd = { "TSJToggle", "TSJSplit", "TSJJoin" },
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {},
