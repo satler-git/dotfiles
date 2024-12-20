@@ -74,6 +74,8 @@ in
 
         imagemagick
         ueberzugpp
+
+        cargo-nextest # neotest-rust
       ]
       ++ [
         testing-language-server
