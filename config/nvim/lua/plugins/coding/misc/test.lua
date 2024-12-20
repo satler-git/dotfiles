@@ -23,6 +23,7 @@ return {
       { "<Space>tt", function() require("neotest").run.run(vim.fn.expand("%")) end },
       -- { "<Space>tt", function() require("neotest").run.run() end },
       { "<Space>ts", function() require("neotest").run.stop() end },
+      { "<Space>tw", function() require("neotest").watch.toggle(vim.fn.expand("%")) end },
     },
     cmd = { "Neotest" },
   },
