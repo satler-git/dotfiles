@@ -19,6 +19,10 @@
       "*.swp"
       ".direnv/*"
     ];
+    aliases = {
+      s = "status";
+      d = "diff";
+    };
     extraConfig = {
       core = {
         editor = "nvim";
