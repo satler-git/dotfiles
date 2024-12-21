@@ -6,7 +6,7 @@ let
 in
 {
   programs.zellij = {
-    enable = true;
+    enable = false;
     enableZshIntegration = true;
   };
   xdg.configFile = {
