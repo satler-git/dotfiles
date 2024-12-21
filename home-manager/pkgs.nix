@@ -66,6 +66,7 @@ in
     lutris
 
     mindustry-wayland
+    mission-center
     mpv
 
     nix-output-monitor
