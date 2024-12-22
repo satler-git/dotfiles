@@ -14,7 +14,6 @@
     ./wm/hyprland
     ./wm/i3
     ./yazi.nix
-    ./zellij.nix
     ./zsh.nix
   ];
 }

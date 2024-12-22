@@ -40,11 +40,6 @@
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    zjstatus = {
-      url = "github:dj95/zjstatus";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "stylix/flake-utils";
-    };
     nix-gaming = {
       url = "github:fufexan/nix-gaming";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -88,7 +83,6 @@
       overlays = [
         inputs.neovim-nightly-overlay.overlays.default
         (final: prev: {
-          zjstatus = inputs.zjstatus.packages.${prev.system}.default;
           osu-lazer-bin = inputs.nix-gaming.packages.${prev.system}.osu-lazer-bin;
         })
       ] ++ (import nixpkgs { inherit system; }).lib.attrValues self.overlays;

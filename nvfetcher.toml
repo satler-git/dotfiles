@@ -7,12 +7,3 @@ cargo_locks = ["Cargo.lock"]
 src.git = "https://github.com/kbwo/testing-language-server.git"
 fetch.github = "kbwo/testing-language-server"
 cargo_locks = ["Cargo.lock"]
-
-# Zellij plugins
-[zellij-room]
-src.github = "rvcas/room"
-fetch.url = "https://github.com/rvcas/room/releases/download/$ver/room.wasm"
-
-[zellij-zj-quit]
-src.github = "cristiand391/zj-quit"
-fetch.url = "https://github.com/cristiand391/zj-quit/releases/download/$ver/zj-quit.wasm"
