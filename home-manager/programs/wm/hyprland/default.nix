@@ -15,6 +15,8 @@
 
     grim # for screenshot in wayland
     slurp
+
+    hyprland-qtutils
   ];
 
   wayland.windowManager.hyprland = {

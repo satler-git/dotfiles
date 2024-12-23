@@ -46,6 +46,11 @@
       inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
     };
 
+    hyprland-qtutils = {
+      url = "github:hyprwm/hyprland-qtutils";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # utils
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
@@ -55,10 +60,11 @@
 
   nixConfig = {
     extra-substituters = [
-      "https://nix-community.cachix.org"
+      "https://hyprland.cachix.org"
       "https://miso-haskell.cachix.org"
-      "https://numtide.cachix.org"
+      "https://nix-community.cachix.org"
       "https://nix-gaming.cachix.org"
+      "https://numtide.cachix.org"
     ];
 
     extra-trusted-public-keys = [
@@ -66,6 +72,7 @@
       "miso-haskell.cachix.org-1:6N2DooyFlZOHUfJtAx1Q09H0P5XXYzoxxQYiwn6W1e8="
       "numtide.cachix.org-1:2ps1kLBUWjxIneOy1Ik6cQjb41X0iXVXeHigGmycPPE="
       "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
+      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
     ];
   };
 
@@ -82,6 +89,7 @@
 
       overlays = [
         inputs.neovim-nightly-overlay.overlays.default
+        inputs.hyprland-qtutils.overlays.default
         (final: prev: {
           osu-lazer-bin = inputs.nix-gaming.packages.${prev.system}.osu-lazer-bin;
         })
