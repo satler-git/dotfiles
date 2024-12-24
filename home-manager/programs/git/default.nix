@@ -18,6 +18,7 @@
       ".env"
       "*.swp"
       ".direnv/*"
+      "memo.md"
     ];
     aliases = {
       s = "status";
