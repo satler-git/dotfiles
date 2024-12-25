@@ -27,11 +27,11 @@
     "testing-language-server": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./testing-language-server-91db91a22950a0a50f14b8f111bbe731c488fc4e/Cargo.lock",
+                "./testing-language-server-5b8862fe5decbab5c7b7d04e0124bddc30e0065a/Cargo.lock",
                 {}
             ]
         },
-        "date": "2024-12-07",
+        "date": "2024-12-24",
         "extract": null,
         "name": "testing-language-server",
         "passthru": null,
@@ -43,10 +43,30 @@
             "name": null,
             "owner": "kbwo",
             "repo": "testing-language-server",
-            "rev": "91db91a22950a0a50f14b8f111bbe731c488fc4e",
-            "sha256": "sha256-6RmGfEL8nRP2AeF4yqWmUKHqXZDa1wAmO3P5HXpbRQE=",
+            "rev": "5b8862fe5decbab5c7b7d04e0124bddc30e0065a",
+            "sha256": "sha256-b0jeHPGCZjfmRT4WGY8HvM02ABWC3C2NgVas/QRLNhA=",
             "type": "github"
         },
-        "version": "91db91a22950a0a50f14b8f111bbe731c488fc4e"
+        "version": "5b8862fe5decbab5c7b7d04e0124bddc30e0065a"
+    },
+    "yazi-plugins": {
+        "cargoLocks": null,
+        "date": "2024-12-24",
+        "extract": null,
+        "name": "yazi-plugins",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "yazi-rs",
+            "repo": "plugins",
+            "rev": "71c4fc2e6fa1d6f70c85bf525842d6888d1ffa46",
+            "sha256": "sha256-X3R5bsnzGv1TVXOKdhAyspDMguVAyc9tvCxJlypUUAA=",
+            "type": "github"
+        },
+        "version": "71c4fc2e6fa1d6f70c85bf525842d6888d1ffa46"
     }
 }

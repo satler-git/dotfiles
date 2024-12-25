@@ -7,3 +7,7 @@ cargo_locks = ["Cargo.lock"]
 src.git = "https://github.com/kbwo/testing-language-server.git"
 fetch.github = "kbwo/testing-language-server"
 cargo_locks = ["Cargo.lock"]
+
+[yazi-plugins]
+src.git = "https://github.com/yazi-rs/plugins.git"
+fetch.github = "yazi-rs/plugins"
