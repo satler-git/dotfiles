@@ -26,6 +26,7 @@ return {
           "haskell_persistent",
           -- utils
           "json",
+          "jsonc",
           "kdl",
           "ledger",
           "markdown",
