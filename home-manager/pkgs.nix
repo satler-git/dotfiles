@@ -1,7 +1,4 @@
 { pkgs, inputs, ... }:
-let
-  superdirt-install = inputs.tidalcycles.packages.x86_64-linux.superdirt-install;
-in
 {
   imports = [
     ./pkgs/chromium.nix
@@ -10,6 +7,9 @@ in
   ];
 
   home.packages = with pkgs; [
+    # Overlays
+    inputs.ghostty.packages.${pkgs.system}.default
+
     # audacity
     age
     aria
