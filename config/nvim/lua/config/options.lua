@@ -36,3 +36,4 @@ vim.opt.fileencoding = "utf-8"
 vim.cmd('let $LANG = "ja"')
 
 vim.opt.autoread = true
+vim.opt.undofile = true
