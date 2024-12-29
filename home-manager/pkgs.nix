@@ -27,7 +27,6 @@
     duf
     dust
 
-    elixir_1_16
     evcxr
 
     fd
