@@ -22,6 +22,9 @@
 
       setopt no_beep
 
+      autoload -U promptinit; promptinit
+      prompt pure
+
       if command -v nix-your-shell > /dev/null; then
         nix-your-shell zsh | source /dev/stdin
       fi
@@ -35,6 +38,10 @@
           rev = "0.35.0";
           sha256 = "sha256-GFHlZjIHUWwyeVoCpszgn4AmLPSSE8UVNfRmisnhkpg=";
         };
+      }
+      {
+        name = "pure";
+        src = "${pkgs.pure-prompt}/share/zsh/site-functions";
       }
     ];
     autosuggestion = {
@@ -69,6 +76,6 @@
   programs.eza.enable = true;
   programs.atuin.enable = true;
   programs.thefuck.enable = true;
-  programs.starship.enable = true;
+  # programs.starship.enable = true;
   programs.zoxide.enable = true;
 }
