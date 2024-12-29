@@ -19,14 +19,6 @@
       };
       videoDrivers = [ "vmware" ];
     };
-    printing = {
-      enable = true;
-      drivers = with pkgs; [
-        gutenprint
-        epson-escpr
-        epson-escpr2
-      ];
-    };
     pipewire = {
       enable = true;
       alsa = {

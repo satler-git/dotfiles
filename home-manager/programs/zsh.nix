@@ -80,6 +80,7 @@
         v = "nvim";
         e = "nvim";
         lg = "lazygit";
+        jd = "jj desc";
       };
     };
   };
