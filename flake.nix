@@ -49,10 +49,6 @@
       url = "github:hyprwm/hyprland-qtutils";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    ghostty = {
-      url = "github:ghostty-org/ghostty";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     # utils
     treefmt-nix = {

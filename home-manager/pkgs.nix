@@ -7,9 +7,6 @@
   ];
 
   home.packages = with pkgs; [
-    # Overlays
-    inputs.ghostty.packages.${pkgs.system}.default
-
     # audacity
     age
     aria

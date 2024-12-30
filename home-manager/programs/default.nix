@@ -4,7 +4,6 @@
     ./alacritty.nix
     ./direnv.nix
     ./gh-cli.nix
-    ./ghostty.nix
     ./git
     ./gpg.nix
     ./gtk.nix
