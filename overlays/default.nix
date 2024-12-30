@@ -6,6 +6,7 @@
       epson-escpr
       epson-escpr2
       blender
+      kicad
       ;
   };
 

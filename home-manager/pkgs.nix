@@ -14,7 +14,7 @@
     age
     aria
 
-    # blender
+    blender
     bottom
 
     calibre
@@ -56,7 +56,7 @@
     # just
 
     kalker
-    # kicad
+    kicad
     koreader
     krita
 
