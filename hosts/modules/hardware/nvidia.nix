@@ -17,8 +17,6 @@ in
     enable = lib.mkDefault true;
   };
 
-  hardware.opengl.enable = lib.mkDefault true;
-
   hardware.nvidia-container-toolkit.enable = lib.mkDefault true;
 
   hardware.nvidia = {
