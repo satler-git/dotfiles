@@ -78,7 +78,7 @@
         lla = "eza -F -l -a";
         rrf = "rm -rf";
         v = "nvim";
-        e = "nvim";
+        n = "nvim";
         lg = "lazygit";
         jd = "jj desc";
         sudow = "sudo env WAYLAND_DISPLAY=\"$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY\" XDG_RUNTIME_DIR=/user/run/0 QT_QPA_PLATFORM=wayland ";
