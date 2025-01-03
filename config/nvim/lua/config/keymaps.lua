@@ -35,3 +35,12 @@ keymap("i", "<C-b>", "<C-o>b", opts)
 
 keymap("n", ">", ">>", opts)
 keymap("n", "<", "<<", opts)
+
+-- https://zenn.dev/mattn/articles/83c2d4c7645faa
+keymap("n", "gj", "gj<SID>g", { noremap = false, silent = true })
+keymap("n", "gk", "gk<SID>g", { noremap = false, silent = true })
+
+keymap("n", "<SID>gj", "gj<SID>g", { noremap = true, silent = true, script = true })
+keymap("n", "<SID>gk", "gk<SID>g", { noremap = true, silent = true, script = true })
+
+keymap("n", "<SID>g", "<Nop>", { noremap = false, silent = true })
