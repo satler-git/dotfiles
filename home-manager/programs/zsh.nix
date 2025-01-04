@@ -29,7 +29,6 @@
       PURE_CMD_MAX_EXEC_TIME=10
 
       zstyle :prompt:pure:git:stash show yes
-      zstyle ':prompt:pure:prompt:success' color green
       zstyle ':prompt:pure:prompt:suspended_jobs' color magenta
 
       prompt pure
