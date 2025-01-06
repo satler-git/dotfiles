@@ -21,32 +21,32 @@
   };
   testing-language-server = {
     pname = "testing-language-server";
-    version = "87d463c36e2635749317eb7db74e66da399e3108";
+    version = "48af0e012ceda9440d3b5e15bb23403cc2c20ec5";
     src = fetchFromGitHub {
       owner = "kbwo";
       repo = "testing-language-server";
-      rev = "87d463c36e2635749317eb7db74e66da399e3108";
+      rev = "48af0e012ceda9440d3b5e15bb23403cc2c20ec5";
       fetchSubmodules = false;
-      sha256 = "sha256-ks/96H1OaaUfKcu2SDsXYyl7Oa6lBp6JCo7Mt9ilVLg=";
+      sha256 = "sha256-udifieFnGIVqXwCL8EwcYrwh9JxKkhweg18pXdXAqoY=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./testing-language-server-87d463c36e2635749317eb7db74e66da399e3108/Cargo.lock;
+      lockFile = ./testing-language-server-48af0e012ceda9440d3b5e15bb23403cc2c20ec5/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2024-12-25";
+    date = "2025-01-04";
   };
   yazi-plugins = {
     pname = "yazi-plugins";
-    version = "71c4fc2e6fa1d6f70c85bf525842d6888d1ffa46";
+    version = "600614a9dc59a12a63721738498c5541c7923873";
     src = fetchFromGitHub {
       owner = "yazi-rs";
       repo = "plugins";
-      rev = "71c4fc2e6fa1d6f70c85bf525842d6888d1ffa46";
+      rev = "600614a9dc59a12a63721738498c5541c7923873";
       fetchSubmodules = false;
-      sha256 = "sha256-X3R5bsnzGv1TVXOKdhAyspDMguVAyc9tvCxJlypUUAA=";
+      sha256 = "sha256-mQkivPt9tOXom78jgvSwveF/8SD8M2XCXxGY8oijl+o=";
     };
-    date = "2024-12-24";
+    date = "2025-01-02";
   };
 }
