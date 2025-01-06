@@ -86,7 +86,12 @@
   };
   programs.dircolors.enable = true;
   programs.eza.enable = true;
-  programs.atuin.enable = true;
+  programs.atuin = {
+    enable = true;
+    settings = {
+      style = "full";
+    };
+  };
   programs.thefuck.enable = true;
   # programs.starship.enable = true;
   programs.zoxide.enable = true;
