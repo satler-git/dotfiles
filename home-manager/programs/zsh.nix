@@ -1,8 +1,12 @@
 { pkgs, ... }:
 {
+  imports = [
+    ./carapace.nix
+  ];
+
   programs.zsh = {
     enable = true;
-    enableCompletion = true;
+    # enableCompletion = true;
     completionInit = ''
       # Completion
       autoload -Uz compinit; compinit
