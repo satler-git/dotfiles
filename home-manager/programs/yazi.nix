@@ -14,6 +14,7 @@ let
     paths = [
       (w "chmod.yazi" "${yazi-plugins-src}/chmod.yazi")
       (w "full-border.yazi" "${yazi-plugins-src}/full-border.yazi")
+      (w "git.yazi" "${yazi-plugins-src}/git.yazi")
     ];
   };
 
@@ -28,6 +29,23 @@ in
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
+
+    settings = {
+      plugin = {
+        prepend_fetchers = [
+          {
+            id = "git";
+            name = "*";
+            run = "git";
+          }
+          {
+            id = "git";
+            name = "*/";
+            run = "git";
+          }
+        ];
+      };
+    };
 
     keymap = {
       manager.prepend_keymap = [
