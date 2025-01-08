@@ -13,6 +13,7 @@ let
     name = "yazi-plugins";
     paths = [
       (w "chmod.yazi" "${yazi-plugins-src}/chmod.yazi")
+      (w "full-border.yazi" "${yazi-plugins-src}/full-border.yazi")
     ];
   };
 
@@ -55,6 +56,9 @@ in
     "yazi/plugins" = {
       source = plugins;
       recursive = true;
+    };
+    "yazi/init.lua" = {
+      source = ../../config/yazi/init.lua;
     };
   };
 }
