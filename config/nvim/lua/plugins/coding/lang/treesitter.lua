@@ -64,6 +64,8 @@ return {
     keys = { "<Space>m" }, -- m -> toggle
     cmd = { "TSJToggle", "TSJSplit", "TSJJoin" },
     dependencies = { "nvim-treesitter/nvim-treesitter" },
-    opts = {},
+    opts = {
+      notify = true,
+    },
   },
 }
