@@ -65,6 +65,16 @@ in
           run = "shell \"${print_command}\""; # lp -d
           desc = "Print out selected files";
         }
+        {
+          on = [
+            "y"
+          ];
+          run = [
+            "shell 'for path in \"$@\"; do echo \"file://$path\"; done | wl-copy -t text/uri-list'"
+            "yank"
+          ];
+          desc = "Yank(Also yank in the system clipboard)";
+        }
       ];
     };
   };
