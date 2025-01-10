@@ -20,7 +20,6 @@
     ./modules/sops.nix
     ./modules/stylix.nix
     ./modules/systemd.nix
-    ./modules/time.nix
     ./modules/users.nix
     ./modules/virtualisation
     # keep-sorted end

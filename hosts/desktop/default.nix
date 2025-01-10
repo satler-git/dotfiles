@@ -4,7 +4,8 @@
     ./hardware-configrations.nix
 
     ../modules/libvirt.nix
+    ../modules/common
   ];
 
-  networking.hostName = "satlerdev"; # Define your hostname.
+  my.hostName = "satlerdev";
 }
