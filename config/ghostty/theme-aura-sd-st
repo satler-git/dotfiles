@@ -1,0 +1,22 @@
+background = 15141b
+foreground = bdbdbd
+selection-foreground = bdbdbd
+selection-background = 29263c
+cursor-color = 8464c6
+palette = 0=1c1b22
+palette = 8=4d4d4d
+palette = 1=c55858
+palette = 9=c7a06f
+palette = 2=54c59f
+palette = 10=8464c6
+palette = 3=c7a06f
+palette = 11=c7a06f
+palette = 4=8464c6
+palette = 12=8464c6
+palette = 5=8464c6
+palette = 13=8464c6
+palette = 6=54c59f
+palette = 14=54c59f
+palette = 7=54c59f
+palette = 15=54c59f
+

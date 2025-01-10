@@ -1,0 +1,7 @@
+font-family = "Monaspace Argon"
+font-size = 11.25
+theme = "aura-soft-dark-soft-text"
+shell-integration-features = no-cursor
+cursor-style = block
+
+background-opacity = 0.95

@@ -7,5 +7,6 @@
     jsonfmt.enable = true;
     taplo.enable = true;
     yamlfmt.enable = true;
+    keep-sorted.enable = true;
   };
 }
