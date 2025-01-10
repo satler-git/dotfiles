@@ -6,6 +6,7 @@
     nix-ld.enable = true;
     vim.enable = true;
     zsh.enable = true;
+    localsend.enable = true;
 
     steam = {
       enable = true;
