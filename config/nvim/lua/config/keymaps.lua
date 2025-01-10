@@ -35,12 +35,3 @@ keymap("i", "<C-b>", "<C-o>b", opts)
 
 keymap("n", ">", ">>", opts)
 keymap("n", "<", "<<", opts)
-
--- https://zenn.dev/mattn/articles/83c2d4c7645faa
-keymap("n", "gj", "gj<UniquePrefix>g", opts)
-keymap("n", "gk", "gk<UniquePrefix>g", opts)
-
-keymap("n", "<UniquePrefix>gj", "gj<UniquePrefix>g", { noremap = true, silent = true })
-keymap("n", "<UniquePrefix>gk", "gk<UniquePrefix>g", { noremap = true, silent = true })
-
-keymap("n", "<UniquePrefix>g", "<Nop>", opts)
