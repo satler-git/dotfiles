@@ -5,8 +5,8 @@
     ./alacritty.nix
     ./direnv.nix
     ./gh-cli.nix
-    ./git
     ./ghostty.nix
+    ./git
     ./gpg.nix
     ./gtk.nix
     ./jujutsu.nix

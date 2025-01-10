@@ -7,6 +7,7 @@
 {
   system.stateVersion = "24.05"; # Don't change this
   imports = [
+    # keep-sorted start
     ./modules/boot.nix
     ./modules/documentation.nix
     ./modules/environment.nix
@@ -22,5 +23,6 @@
     ./modules/time.nix
     ./modules/users.nix
     ./modules/virtualisation
+    # keep-sorted end
   ];
 }
