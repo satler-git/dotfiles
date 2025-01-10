@@ -8,6 +8,7 @@
     ./gpg.nix
     ./gtk.nix
     ./jujutsu.nix
+    ./kalker.nix
     ./neovim
     ./supercollider.nix
     ./tealdeer.nix

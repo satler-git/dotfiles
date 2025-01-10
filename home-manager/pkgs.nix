@@ -52,7 +52,6 @@
     jq
     # just
 
-    kalker
     kicad
     koreader
     krita
