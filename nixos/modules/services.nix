@@ -37,6 +37,7 @@
         "qwen2.5:14b"
 
         "phi3.5:3.8b"
+        "phi4:14b"
         "gemma2:9b"
         "codestral:22b"
       ];
