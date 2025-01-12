@@ -7,3 +7,4 @@ cursor-style = block
 background-opacity = 0.95
 
 keybind = clear
+keybind = ctrl+shift+v=paste_from_clipboard
