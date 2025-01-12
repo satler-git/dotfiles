@@ -5,7 +5,6 @@
   ...
 }:
 {
-  system.stateVersion = "24.05"; # Don't change this
   imports = [
     # keep-sorted start
     ./modules/boot.nix
