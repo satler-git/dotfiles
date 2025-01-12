@@ -1,7 +1,4 @@
 {
-  imports = [
-    # ./grimoire.nix
-  ];
   virtualisation = {
     containers.enable = true;
     podman = {

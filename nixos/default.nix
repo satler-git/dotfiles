@@ -20,7 +20,7 @@
     ./modules/stylix.nix
     ./modules/systemd.nix
     ./modules/users.nix
-    ./modules/virtualisation
+    ./modules/virtualisation.nix
     # keep-sorted end
   ];
 }
