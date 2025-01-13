@@ -67,6 +67,14 @@ in
         }
         {
           on = [
+            "p" # Shell command prefix
+            "g"
+          ];
+          run = "shell \"gh gist create $@\"";
+          desc = "Create a gist that contains all selected files";
+        }
+        {
+          on = [
             "y"
           ];
           run = [
