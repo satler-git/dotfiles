@@ -32,6 +32,9 @@ let
       eggLikeNewline = true,
     })
   '';
+
+  denops_server_addr = "127.0.0.1";
+  denops_server_port = 32123;
 in
 {
   programs.neovim = {
@@ -86,6 +89,12 @@ in
     ];
   };
 
+  my.services.denopsSharedServer = {
+    enable = true;
+    port = denops_server_port;
+    hostName = denops_server_addr;
+  };
+
   xdg.configFile = {
     "nvim/" = {
       target = "nvim";
@@ -107,6 +116,7 @@ in
       text = ''
         vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.so'
         vim.g.cpptools_path = "${pkgs.vscode-extensions.ms-vscode.cpptools}/share/vscode/extensions/ms-vscode.cpptools/debugAdapters/bin/OpenDebugAD7"
+        vim.g.denops_server_addr = "${denops_server_addr}:${toString denops_server_port}"
       '';
     };
     "efm-langserver/config.yaml" = {
