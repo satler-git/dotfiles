@@ -9,9 +9,9 @@
 
     env = [
       "HYPRCURSOR_THEME,Bibata-Modern-Ice"
-      "HYPRCURSOR_SIZE,25"
+      "HYPRCURSOR_SIZE,24"
       "XCURSOR_THEME,Bibata-Modern-Ice"
-      "XCURSOR_SIZE,25"
+      "XCURSOR_SIZE,24"
       "XDG_SESSION_TYPE,wayland"
       "ELECTRON_OZONE_PLATFORM_HINT,auto"
       "NIXOS_OZONE_WL,1" # hint for electron apps

@@ -1,4 +1,10 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  inputs,
+  lib,
+  config,
+  ...
+}:
 {
   imports = [
     inputs.xremap.nixosModules.default
@@ -6,19 +12,30 @@
 
   services = {
     xserver = {
-      enable = true;
-      displayManager = {
-        gdm.enable = true;
-      };
-      desktopManager = {
-        gnome.enable = false;
-      };
-      xkb = {
-        layout = "jp";
-        variant = "";
-      };
+      #   enable = true;
+      #   displayManager = {
+      #     gdm.enable = true;
+      #   };
+      #   desktopManager = {
+      #     gnome.enable = false;
+      #   };
+      #   xkb = {
+      #     layout = "jp";
+      #     variant = "";
+      #   };
       videoDrivers = [ "vmware" ];
     };
+
+    greetd = {
+      enable = true;
+      settings = {
+        default_session = {
+          command = "${lib.getExe pkgs.greetd.tuigreet} --cmd ${lib.getExe config.programs.hyprland.package}";
+          user = "satler";
+        };
+      };
+    };
+
     pipewire = {
       enable = true;
       alsa = {

@@ -1,5 +1,5 @@
 {
   xsession.windowManager.i3 = {
-    enable = true;
+    # enable = true;
   };
 }
