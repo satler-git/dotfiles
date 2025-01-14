@@ -63,18 +63,26 @@ in
       Service = {
         Type = "simple";
         Restart = "always";
-        ExecStart = lib.strings.concatStringsSep " " (
-          [
-            "${lib.getExe cfg.denoPackage}"
-            "run"
-          ]
-          ++ cfg.denoArgs
-          ++ [
-            "${cfg.denops-vim-src}/${cfg.cliPath}"
-            "--hostname=${cfg.hostName}"
-            "--port=${toString cfg.port}"
-          ]
-        );
+        ExecStart =
+          let
+            denops-vim = pkgs.vimUtils.buildVimPlugin {
+              pname = "denops-vim";
+              version = cfg.denops-vim-src.rev;
+              src = cfg.denops-vim-src;
+            };
+          in
+          lib.strings.concatStringsSep " " (
+            [
+              "${lib.getExe cfg.denoPackage}"
+              "run"
+            ]
+            ++ cfg.denoArgs
+            ++ [
+              "${denops-vim}/${cfg.cliPath}"
+              "--hostname=${cfg.hostName}"
+              "--port=${toString cfg.port}"
+            ]
+          );
       };
     };
   };
