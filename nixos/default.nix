@@ -7,7 +7,6 @@
 {
   imports = [
     # keep-sorted start
-    ./modules/boot.nix
     ./modules/documentation.nix
     ./modules/environment.nix
     ./modules/fonts.nix

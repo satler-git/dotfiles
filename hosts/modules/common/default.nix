@@ -1,5 +1,4 @@
 {
-  pkgs,
   lib,
   config,
   ...
@@ -8,6 +7,10 @@ let
   cfg = config.my;
 in
 {
+  imports = [
+    ./boot.nix
+  ];
+
   options.my = {
     hostName = lib.mkOption {
       type = lib.types.str;

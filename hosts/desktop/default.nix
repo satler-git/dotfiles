@@ -1,3 +1,4 @@
+{ pkgs, lib, ... }:
 {
   imports = [
     ./hardware.nix
@@ -16,4 +17,6 @@
   system.stateVersion = "24.05"; # Don't change this
 
   my.hostName = "satlerdev";
+
+  boot.kernelPackages = lib.mkForce pkgs.linuxKernel.packages.linux_zen;
 }

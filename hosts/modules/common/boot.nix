@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+# { lib, pkgs, ... }:
 {
   boot = {
-    kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+    # kernelPackages = lib.mkDefault pkgs.linuxKernel.packages.linux_zen;
 
     loader = {
       systemd-boot = {
