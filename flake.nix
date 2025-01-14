@@ -123,11 +123,6 @@
             inputs.stylix.nixosModules.stylix
             inputs.sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                users.satler = ./home-manager/linux.nix;
-              };
-            }
           ];
         };
       };

@@ -19,7 +19,6 @@
     ./modules/sops.nix
     ./modules/stylix.nix
     ./modules/systemd.nix
-    ./modules/users.nix
     ./modules/virtualisation.nix
     # keep-sorted end
   ];

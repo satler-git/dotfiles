@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   users = {
-    # Define a user account. Don't forget to set a password with ‘passwd’.
     users.satler = {
       isNormalUser = true;
       description = "satler";
@@ -11,17 +10,14 @@
         "input"
         "uinput"
         "networkmanager"
-        "vboxusers"
         "wheel"
+        "plugdev"
       ];
       shell = pkgs.zsh;
     };
-    groups = {
-      plugdev = {
-        members = [
-          "satler"
-        ];
-      };
-    };
+  };
+
+  home-manager = {
+    users.satler = ../../../home-manager/linux.nix;
   };
 }
