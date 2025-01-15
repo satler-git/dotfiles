@@ -19,7 +19,7 @@
 
     "$terminal" = "alacritty";
     "$browser" = "firefox";
-    "$fileManager" = "alacritty --command=\"yazi\"";
+    "$fileManager" = "alacritty --embed=\"zsh -c\" --command=\"yazi\"";
     "$launcher" = "wofi --show drun";
 
     input = {
