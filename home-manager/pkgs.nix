@@ -71,7 +71,6 @@
 
     p7zip
     pandoc
-    peazip
     playerctl
     podman-compose
 
