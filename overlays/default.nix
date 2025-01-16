@@ -10,8 +10,10 @@
       ;
   };
 
-  # temporary-fix = final: prev: {
-  #   inherit (inputs.nixpkgs-unstable-small.legacyPackages.${final.stdenv.hostPlatform.system})
-  #     ;
-  # };
+  temporary-fix = final: prev: {
+    inherit (inputs.nixpkgs-unstable-small.legacyPackages.${final.stdenv.hostPlatform.system})
+      # https://nixpk.gs/pr-tracker.html?pr=373582 待ち
+      alacritty
+      ;
+  };
 }
