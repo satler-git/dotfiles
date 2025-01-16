@@ -118,7 +118,7 @@
       "$mainMod, Return, exec, $terminal"
       "Alt, Space, exec, $launcher"
       "$mainMod, q, killactive"
-      # bind = $mainMod, m, exit,
+      "$mainMod SHIFT, q, exec, wlogout"
       "$mainMod, e, exec, $fileManager"
       "$mainMod, f, togglefloating"
       "$mainMod, f, pin,"

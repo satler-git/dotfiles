@@ -15,6 +15,7 @@
     ./supercollider.nix
     ./tealdeer.nix
     ./wm/hyprland
+    ./wm/wlogout.nix
     ./wm/i3
     ./yazi.nix
     ./zsh.nix
