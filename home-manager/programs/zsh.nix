@@ -42,6 +42,10 @@
       if command -v nix-your-shell > /dev/null; then
         nix-your-shell zsh | source /dev/stdin
       fi
+
+      reload_denops() {
+        systemctl --user reload-or-restart denops-shared-server.service
+      }
     '';
     plugins = [
       {
