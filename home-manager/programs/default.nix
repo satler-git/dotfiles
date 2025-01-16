@@ -7,8 +7,8 @@
     ./gh-cli.nix
     ./ghostty.nix
     ./git
-    ./gpg.nix
     ./gtk.nix
+    ./keybase.nix
     ./jujutsu.nix
     ./kalker.nix
     ./neovim
