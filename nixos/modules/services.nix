@@ -26,16 +26,6 @@
       videoDrivers = [ "vmware" ];
     };
 
-    greetd = {
-      enable = true;
-      settings = {
-        default_session = {
-          command = "${lib.getExe pkgs.greetd.tuigreet} --cmd ${lib.getExe config.programs.hyprland.package}";
-          user = "satler";
-        };
-      };
-    };
-
     pipewire = {
       enable = true;
       alsa = {

@@ -1,4 +1,9 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 {
   imports = [
     ./hardware.nix
@@ -19,4 +24,14 @@
   my.hostName = "satlerdev";
 
   boot.kernelPackages = lib.mkForce pkgs.linuxKernel.packages.linux_zen;
+
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${lib.getExe pkgs.greetd.tuigreet} --cmd ${lib.getExe config.programs.hyprland.package}";
+        user = "satler";
+      };
+    };
+  };
 }
