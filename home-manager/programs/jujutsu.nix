@@ -28,6 +28,7 @@
       };
       ui = {
         paginate = "never";
+        default-command = "log";
         editor = "nvim";
         diff = {
           format = "git";
