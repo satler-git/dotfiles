@@ -1,9 +1,9 @@
 {
   imports = [
     # keep-sorted start
+    ./denops.nix
     ./kalker.nix
     ./xdg.nix
-    ./denops.nix
     # keep-sorted end
   ];
 }
