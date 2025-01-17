@@ -64,6 +64,7 @@ in
         taplo # Toml
         vscode-langservers-extracted
         yaml-language-server
+        tinymist # For typst
 
         # Formatter
         nixfmt-rfc-style

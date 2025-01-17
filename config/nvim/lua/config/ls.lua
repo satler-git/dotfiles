@@ -117,3 +117,6 @@ lspconfig.nil_ls.setup({
 lspconfig.taplo.setup({
   capabilities = capabilities,
 })
+lspconfig.tinymist.setup({
+  capabilities = capabilities,
+})
