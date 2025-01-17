@@ -8,7 +8,6 @@
 
   home.packages = with pkgs; [
     # audacity
-    age
     aria
 
     blender
@@ -74,7 +73,6 @@
     playerctl
     podman-compose
 
-    sops
     spotify
     stack
 

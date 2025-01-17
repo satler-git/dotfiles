@@ -132,5 +132,12 @@
       checks.x86_64-linux = {
         format = treefmtEval.config.build.wrapper;
       };
+
+      devShells.x86_64-linux.default = pkgs.mkShell {
+        buildInputs = with pkgs; [
+          sops
+          age
+        ];
+      };
     };
 }
