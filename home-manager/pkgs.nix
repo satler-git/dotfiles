@@ -109,6 +109,7 @@
 
     yazi
 
+    zip
     zoom-us
     zoxide
   ];
