@@ -1,6 +1,7 @@
 { pkgs, ... }:
 let
   yazi-plugins-src = (pkgs.callPackages ../../_sources/generated.nix { }).yazi-plugins.src;
+  yazi-compress-src = (pkgs.callPackages ../../_sources/generated.nix { }).yazi-compress.src;
 
   w =
     name: src:
@@ -15,6 +16,7 @@ let
       (w "chmod.yazi" "${yazi-plugins-src}/chmod.yazi")
       (w "full-border.yazi" "${yazi-plugins-src}/full-border.yazi")
       (w "git.yazi" "${yazi-plugins-src}/git.yazi")
+      (w "compress.yazi" yazi-compress-src)
     ];
   };
 
@@ -59,7 +61,7 @@ in
         }
         {
           on = [
-            "p" # Shell command prefix
+            "c"
             "p"
           ];
           run = "shell \"${print_command}\""; # lp -d
@@ -67,11 +69,19 @@ in
         }
         {
           on = [
-            "p" # Shell command prefix
+            "c"
             "g"
           ];
           run = "shell \"gh gist create $@\"";
           desc = "Create a gist that contains all selected files";
+        }
+        {
+          on = [
+            "c"
+            "a"
+          ];
+          run = "plugin compress";
+          desc = "Archive selected files";
         }
         {
           on = [

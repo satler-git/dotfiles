@@ -11,3 +11,7 @@ cargo_locks = ["Cargo.lock"]
 [yazi-plugins]
 src.git = "https://github.com/yazi-rs/plugins.git"
 fetch.github = "yazi-rs/plugins"
+
+[yazi-compress]
+src.git = "https://github.com/KKV9/compress.yazi"
+fetch.github = "KKV9/compress.yazi"

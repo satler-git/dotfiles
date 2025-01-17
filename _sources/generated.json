@@ -1,72 +1,92 @@
 {
-  "cargo-compete": {
-    "cargoLocks": {
-      "Cargo.lock": [
-        "./cargo-compete-6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c/Cargo.lock",
-        {}
-      ]
+    "cargo-compete": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./cargo-compete-6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c/Cargo.lock",
+                {}
+            ]
+        },
+        "date": "2024-06-08",
+        "extract": null,
+        "name": "cargo-compete",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "qryxip",
+            "repo": "cargo-compete",
+            "rev": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c",
+            "sha256": "sha256-qlRVHSUVOqdTx4H3pE19Fy634742veTisHm6IqfKBUQ=",
+            "type": "github"
+        },
+        "version": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c"
     },
-    "date": "2024-06-08",
-    "extract": null,
-    "name": "cargo-compete",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "qryxip",
-      "repo": "cargo-compete",
-      "rev": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c",
-      "sha256": "sha256-qlRVHSUVOqdTx4H3pE19Fy634742veTisHm6IqfKBUQ=",
-      "type": "github"
+    "testing-language-server": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./testing-language-server-48af0e012ceda9440d3b5e15bb23403cc2c20ec5/Cargo.lock",
+                {}
+            ]
+        },
+        "date": "2025-01-04",
+        "extract": null,
+        "name": "testing-language-server",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "kbwo",
+            "repo": "testing-language-server",
+            "rev": "48af0e012ceda9440d3b5e15bb23403cc2c20ec5",
+            "sha256": "sha256-udifieFnGIVqXwCL8EwcYrwh9JxKkhweg18pXdXAqoY=",
+            "type": "github"
+        },
+        "version": "48af0e012ceda9440d3b5e15bb23403cc2c20ec5"
     },
-    "version": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c"
-  },
-  "testing-language-server": {
-    "cargoLocks": {
-      "Cargo.lock": [
-        "./testing-language-server-48af0e012ceda9440d3b5e15bb23403cc2c20ec5/Cargo.lock",
-        {}
-      ]
+    "yazi-compress": {
+        "cargoLocks": null,
+        "date": "2024-08-10",
+        "extract": null,
+        "name": "yazi-compress",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "KKV9",
+            "repo": "compress.yazi",
+            "rev": "60b24af23d1050f1700953a367dd4a2990ee51aa",
+            "sha256": "sha256-Yf5R3H8t6cJBMan8FSpK3BDSG5UnGlypKSMOi0ZFqzE=",
+            "type": "github"
+        },
+        "version": "60b24af23d1050f1700953a367dd4a2990ee51aa"
     },
-    "date": "2025-01-04",
-    "extract": null,
-    "name": "testing-language-server",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "kbwo",
-      "repo": "testing-language-server",
-      "rev": "48af0e012ceda9440d3b5e15bb23403cc2c20ec5",
-      "sha256": "sha256-udifieFnGIVqXwCL8EwcYrwh9JxKkhweg18pXdXAqoY=",
-      "type": "github"
-    },
-    "version": "48af0e012ceda9440d3b5e15bb23403cc2c20ec5"
-  },
-  "yazi-plugins": {
-    "cargoLocks": null,
-    "date": "2025-01-02",
-    "extract": null,
-    "name": "yazi-plugins",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "yazi-rs",
-      "repo": "plugins",
-      "rev": "600614a9dc59a12a63721738498c5541c7923873",
-      "sha256": "sha256-mQkivPt9tOXom78jgvSwveF/8SD8M2XCXxGY8oijl+o=",
-      "type": "github"
-    },
-    "version": "600614a9dc59a12a63721738498c5541c7923873"
-  }
+    "yazi-plugins": {
+        "cargoLocks": null,
+        "date": "2025-01-02",
+        "extract": null,
+        "name": "yazi-plugins",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "yazi-rs",
+            "repo": "plugins",
+            "rev": "600614a9dc59a12a63721738498c5541c7923873",
+            "sha256": "sha256-mQkivPt9tOXom78jgvSwveF/8SD8M2XCXxGY8oijl+o=",
+            "type": "github"
+        },
+        "version": "600614a9dc59a12a63721738498c5541c7923873"
+    }
 }
