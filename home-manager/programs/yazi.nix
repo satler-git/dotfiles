@@ -33,6 +33,24 @@ in
     enableZshIntegration = true;
 
     settings = {
+      open.prepend_rules = [
+        {
+          name = "*.html";
+          use = [
+            "open"
+            "edit"
+          ];
+        }
+      ];
+      opener = {
+        edit = [
+          {
+            run = "nvim \"$@\"";
+            block = true;
+            for = "unix";
+          }
+        ];
+      };
       plugin = {
         prepend_fetchers = [
           {
