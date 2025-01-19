@@ -43,7 +43,7 @@
         nix-your-shell zsh | source /dev/stdin
       fi
 
-      reload_denops() {
+      denops-reload() {
         systemctl --user reload-or-restart denops-shared-server.service
       }
     '';
