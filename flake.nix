@@ -97,7 +97,12 @@
       ] ++ (import nixpkgs { inherit system; }).lib.attrValues self.overlays;
 
       pkgs = import nixpkgs {
-        config.allowUnfree = true;
+        config = {
+          allowUnfree = true;
+          permittedInsecurePackages = [
+            "electron-31.7.7"
+          ];
+        };
         inherit system;
         inherit overlays;
       };
