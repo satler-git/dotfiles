@@ -8,15 +8,15 @@
     ./ghostty.nix
     ./git
     ./gtk.nix
-    ./keybase.nix
     ./jujutsu.nix
     ./kalker.nix
+    ./keybase.nix
     ./neovim
     ./supercollider.nix
     ./tealdeer.nix
     ./wm/hyprland
-    ./wm/wlogout.nix
     ./wm/i3
+    ./wm/wlogout.nix
     ./yazi.nix
     ./zsh.nix
     # keep-sorted end
