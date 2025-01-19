@@ -12,6 +12,7 @@ in
     services
     modules
   ];
+
   programs.home-manager.enable = true;
   home = rec {
     username = "satler";
