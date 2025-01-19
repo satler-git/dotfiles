@@ -37,6 +37,14 @@
 
       prompt pure
 
+      function clear_screen() {
+          clear
+          zle reset-prompt
+      }
+
+      zle -N clear_screen
+      bindkey '^L' clear_screen
+
       # nix-your-shell
 
       if command -v nix-your-shell > /dev/null; then
