@@ -39,3 +39,5 @@ vim.opt.autoread = true
 vim.opt.undofile = true
 
 vim.opt.termguicolors = true
+
+vim.o.guifont = "Monaspace Argon"

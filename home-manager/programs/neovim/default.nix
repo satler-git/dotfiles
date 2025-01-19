@@ -37,6 +37,10 @@ let
   denops_server_port = 32123;
 in
 {
+  imports = [
+    ./neovide.nix
+  ];
+
   programs.neovim = {
     enable = true;
     package = pkgs.neovim;

@@ -7,7 +7,7 @@
         "${pkgs.alacritty-theme}/aura.toml"
       ];
       font.normal = {
-        family = "monaspace Argon";
+        family = "Monaspace Argon";
         style = "Regular";
       };
     };
