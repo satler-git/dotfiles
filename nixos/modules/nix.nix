@@ -1,5 +1,10 @@
+{ inputs, ... }:
 {
   nix = {
+    registry = {
+      nixpkgs.flake = inputs.nixpkgs;
+    };
+
     settings = {
       trusted-users = [
         "root"
