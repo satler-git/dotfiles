@@ -9,6 +9,7 @@ in
 {
   imports = [
     ./boot.nix
+    ./network.nix
   ];
 
   options.my = {

@@ -34,4 +34,16 @@
       };
     };
   };
+
+  networking = {
+    firewall = {
+      allowedTCPPorts = [
+        17500 # Dropbox
+      ];
+      allowedUDPPorts = [
+        17500 # Dropbox
+        57120 # SuperColider
+      ];
+    };
+  };
 }
