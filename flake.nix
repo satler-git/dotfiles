@@ -94,7 +94,7 @@
         (final: prev: {
           osu-lazer-bin = inputs.nix-gaming.packages.${prev.system}.osu-lazer-bin;
         })
-      ] ++ (import nixpkgs { inherit system; }).lib.attrValues self.overlays;
+      ] ++ nixpkgs.lib.attrValues self.overlays;
 
       pkgs = import nixpkgs {
         config = {
