@@ -78,6 +78,7 @@
 
     tetrio-desktop
     thunderbird
+    trash-cli
     tre-command
     typst
 

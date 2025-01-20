@@ -84,6 +84,9 @@
       ignoreAllDups = true;
       extended = true;
     };
+    shellAliases = {
+      rm = "echo \"This is not the command you are looking for.\"; false'";
+    };
     zsh-abbr = {
       enable = true;
       abbreviations = {
@@ -91,11 +94,12 @@
         ll = "eza -F -l";
         la = "eza -F -a";
         lla = "eza -F -l -a";
-        rrf = "rm -rf";
+        # rrf = "rm -rf";
         v = "nvim";
         n = "nvim";
         lg = "lazygit";
         jd = "jj desc";
+        put = "trash-put";
         sudow = "sudo env WAYLAND_DISPLAY=\"$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY\" XDG_RUNTIME_DIR=/user/run/0 QT_QPA_PLATFORM=wayland ";
       };
     };
