@@ -20,6 +20,7 @@ return {
           haskell = { "stylish-haskell" },
           nix = { "nixfmt" },
           toml = { "taplo" },
+          json = { "deno_fmt" },
         },
         format_on_save = {
           -- These options will be passed to conform.format()

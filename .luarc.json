@@ -3,5 +3,9 @@
     "globals": [
       "vim"
     ]
-  }
+  },
+  "workspace.ignoreDir": [
+    "!config",
+    "**"
+  ]
 }

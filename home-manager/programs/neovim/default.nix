@@ -97,6 +97,9 @@ in
   my.services.denopsSharedServer = {
     enable = true;
     port = denops_server_port;
+    denoArgs = [
+      # "--unstable-ffi" # For ddt-ui-shell
+    ];
     hostName = denops_server_addr;
   };
 
