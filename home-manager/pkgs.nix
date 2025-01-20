@@ -88,7 +88,7 @@
 
     ripgrep
     ripgrep-all
-    rr
+    # rr
     rustup
 
     hledger
