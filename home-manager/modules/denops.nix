@@ -43,6 +43,10 @@ in
           "--no-lock"
         ];
       };
+      extraDenoArgs = mkOption {
+        type = with types; listOf str;
+        default = [ ];
+      };
       cliPath = mkOption {
         type = types.str;
         default = "denops/@denops-private/cli.ts";
@@ -77,6 +81,7 @@ in
               "run"
             ]
             ++ cfg.denoArgs
+            ++ cfg.extraDenoArgs
             ++ [
               "${denops-vim}/${cfg.cliPath}"
               "--hostname=${cfg.hostName}"
