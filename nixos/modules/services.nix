@@ -39,14 +39,16 @@
       enable = true;
       openFirewall = true;
       loadModels = [
-        "llama3.2"
+        "llama3.3"
         "qwen2.5-coder:14b"
         "qwen2.5:14b"
 
-        "phi3.5:3.8b"
         "phi4:14b"
         "gemma2:9b"
         "codestral:22b"
+
+        "deepseek-r1:8b"
+        "deepseek-r1:14b"
       ];
     };
     open-webui = {
