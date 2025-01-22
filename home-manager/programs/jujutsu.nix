@@ -40,11 +40,11 @@
             "$right"
           ];
         };
-        signing = {
-          sign-all = true;
-          backend = "gpg";
-          key = "1DB0252A735D5BAC";
-        };
+      };
+      signing = {
+        sign-all = true;
+        backend = "gpg";
+        key = "1DB0252A735D5BAC";
       };
     };
   };
