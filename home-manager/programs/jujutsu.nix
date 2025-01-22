@@ -3,8 +3,8 @@
   programs.jujutsu = {
     enable = true;
     settings = {
-      user.email = "mitsclatw24@mbr.nifty.com";
-      user.name = "satler-git";
+      user.email = "satler@satler.dev";
+      user.name = "satler";
       core = {
         fsmonitor = "watchman";
       };
@@ -43,7 +43,7 @@
         signing = {
           sign-all = true;
           backend = "gpg";
-          key = "97A7F4C53C4121DD";
+          key = "1DB0252A735D5BAC";
         };
       };
     };

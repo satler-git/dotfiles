@@ -5,11 +5,11 @@
   programs.git = {
     enable = true;
     lfs.enable = true;
-    userEmail = "mitsclatw24@mbr.nifty.com";
-    userName = "satler-git";
+    userEmail = "satler@satler.dev";
+    userName = "satler";
     signing = {
       signByDefault = true;
-      key = "97A7F4C53C4121DD";
+      key = "1DB0252A735D5BAC";
     };
     delta = {
       enable = true;
