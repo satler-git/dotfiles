@@ -47,8 +47,8 @@
         "gemma2:9b"
         "codestral:22b"
 
-        "deepseek-r1:8b"
-        "deepseek-r1:14b"
+        "deepseek-r1:1.5b"
+        "deepseek-r1:7b"
       ];
     };
     open-webui = {
