@@ -13,6 +13,13 @@
     };
 
     keybase.enable = true;
+    kbfs = {
+      enable = true;
+
+      extraFlags = [
+        "-label kbfs"
+      ];
+    };
   };
 
   home.packages = with pkgs; [
