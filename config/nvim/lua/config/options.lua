@@ -40,4 +40,4 @@ vim.opt.undofile = true
 
 vim.opt.termguicolors = true
 
-vim.o.guifont = "Monaspace Argon"
+vim.o.guifont = "Monaspace Argon:h11.25"
