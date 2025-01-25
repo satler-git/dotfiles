@@ -103,6 +103,44 @@
         "type": "github"
       }
     },
+    "cargo-compete": {
+      "inputs": {
+        "cargo-compete-src": "cargo-compete-src",
+        "flake-parts": "flake-parts",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1737774750,
+        "narHash": "sha256-V9h5CI0o6Yg2OhXfeYu0oT8D0vzuzxTySbG1Yl/xicE=",
+        "owner": "satler-git",
+        "repo": "sb-nix-cargo-compete",
+        "rev": "2d7a5c5bbd8a958e12c1d206debc9cab4a492795",
+        "type": "github"
+      },
+      "original": {
+        "owner": "satler-git",
+        "repo": "sb-nix-cargo-compete",
+        "type": "github"
+      }
+    },
+    "cargo-compete-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1717848747,
+        "narHash": "sha256-qlRVHSUVOqdTx4H3pE19Fy634742veTisHm6IqfKBUQ=",
+        "owner": "qryxip",
+        "repo": "cargo-compete",
+        "rev": "6d675a03e1373e5dd14dfdcb7cf8c40bb0bdb56c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "qryxip",
+        "repo": "cargo-compete",
+        "type": "github"
+      }
+    },
     "crane": {
       "locked": {
         "lastModified": 1734808813,
@@ -218,6 +256,24 @@
     },
     "flake-parts": {
       "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib"
+      },
+      "locked": {
+        "lastModified": 1736143030,
+        "narHash": "sha256-+hu54pAoLDEZT9pjHlqL9DNzWz0NbUn8NEAHP7PQPzU=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "b905f6fc23a9051a6e1b741e1438dbfc0634c6de",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-parts_2": {
+      "inputs": {
         "nixpkgs-lib": [
           "neovim-nightly-overlay",
           "nixpkgs"
@@ -237,7 +293,7 @@
         "type": "github"
       }
     },
-    "flake-parts_2": {
+    "flake-parts_3": {
       "inputs": {
         "nixpkgs-lib": [
           "neovim-nightly-overlay",
@@ -430,7 +486,7 @@
     },
     "hercules-ci-effects": {
       "inputs": {
-        "flake-parts": "flake-parts_2",
+        "flake-parts": "flake-parts_3",
         "nixpkgs": [
           "neovim-nightly-overlay",
           "nixpkgs"
@@ -711,7 +767,7 @@
     "neovim-nightly-overlay": {
       "inputs": {
         "flake-compat": "flake-compat",
-        "flake-parts": "flake-parts",
+        "flake-parts": "flake-parts_2",
         "git-hooks": "git-hooks",
         "hercules-ci-effects": "hercules-ci-effects",
         "neovim-src": "neovim-src",
@@ -806,6 +862,18 @@
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
+      }
+    },
+    "nixpkgs-lib": {
+      "locked": {
+        "lastModified": 1735774519,
+        "narHash": "sha256-CewEm1o2eVAnoqb6Ml+Qi9Gg/EfNAxbRx1lANGVyoLI=",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/e9b51731911566bbf7e4895475a87fe06961de0b.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/e9b51731911566bbf7e4895475a87fe06961de0b.tar.gz"
       }
     },
     "nixpkgs-stable": {
@@ -915,6 +983,7 @@
     },
     "root": {
       "inputs": {
+        "cargo-compete": "cargo-compete",
         "home-manager": "home-manager",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nix-gaming": "nix-gaming",

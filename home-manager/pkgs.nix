@@ -2,7 +2,6 @@
 {
   imports = [
     ./pkgs/chromium.nix
-    ./pkgs/cargo-compete.nix
     ./pkgs/anki.nix
   ];
 
@@ -47,6 +46,7 @@
 
     imhex
     inkscape
+    inputs.cargo-compete.packages.${pkgs.stdenv.hostPlatform.system}.cargo-compete
 
     jq
     # just

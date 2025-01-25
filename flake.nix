@@ -47,6 +47,11 @@
       inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
     };
 
+    cargo-compete = {
+      url = "github:satler-git/sb-nix-cargo-compete";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # utils
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
@@ -138,6 +143,7 @@
         buildInputs = with pkgs; [
           sops
           age
+          nvfetcher
         ];
       };
     };
