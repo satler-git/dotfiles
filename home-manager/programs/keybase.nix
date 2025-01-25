@@ -7,8 +7,10 @@
   services = {
     gpg-agent = {
       enable = true;
-      defaultCacheTtl = 600;
-      maxCacheTtl = (60 * 60) * 2;
+      defaultCacheTtl = 3600;
+      defaultCacheTtlSsh = 3600;
+      maxCacheTtl = 3600;
+      maxCacheTtlSsh = 3600;
       pinentryPackage = pkgs.pinentry-qt;
     };
 
