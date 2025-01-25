@@ -92,7 +92,7 @@
 
       overlays = [
         inputs.neovim-nightly-overlay.overlays.default
-        (final: prev: {
+        (_: prev: {
           osu-lazer-bin = inputs.nix-gaming.packages.${prev.system}.osu-lazer-bin;
         })
       ] ++ nixpkgs.lib.attrValues self.overlays;

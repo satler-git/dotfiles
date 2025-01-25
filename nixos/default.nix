@@ -1,10 +1,4 @@
 {
-  config,
-  pkgs,
-  lib,
-  ...
-}:
-{
   imports = [
     # keep-sorted start
     ./modules/documentation.nix

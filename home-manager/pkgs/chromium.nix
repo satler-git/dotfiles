@@ -16,7 +16,6 @@ let
       ];
     };
 
-  discord = wrap { appName = "discord"; };
   google-chrome = pkgs.symlinkJoin {
     name = "google-chrome-stable";
     paths = [ pkgs.google-chrome ];
@@ -31,14 +30,10 @@ let
   };
 
   obsidian = wrap { appName = "obsidian"; };
-  slack = wrap { appName = "slack"; };
 in
-# spotify = wrap { appName = "spotify"; };
 {
   home.packages = [
-    # discord
     google-chrome
     obsidian
-    slack
   ];
 }

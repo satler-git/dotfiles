@@ -1,7 +1,7 @@
 { config, ... }:
 let
   secretHome = ../../secrets;
-  password = "${secretHome}/password.yaml";
+  # password = "${secretHome}/password.yaml";
   secrets = "${secretHome}/secrets.yaml";
   api-keys = "${secretHome}/api-keys.yaml";
 in

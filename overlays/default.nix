@@ -1,6 +1,6 @@
 { inputs }:
 {
-  stable = final: prev: {
+  stable = final: _: {
     inherit (inputs.nixpkgs-stable.legacyPackages.${final.stdenv.hostPlatform.system})
       gutenprint
       epson-escpr

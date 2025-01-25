@@ -1,4 +1,3 @@
-{ pkgs, inputs, ... }:
 let
   programs = ./programs;
   services = ./services;
