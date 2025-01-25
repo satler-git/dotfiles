@@ -45,10 +45,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
     };
-    hyprland-qtutils = {
-      url = "github:hyprwm/hyprland-qtutils";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     # utils
     treefmt-nix = {
@@ -90,7 +86,6 @@
 
       overlays = [
         inputs.neovim-nightly-overlay.overlays.default
-        inputs.hyprland-qtutils.overlays.default
         (final: prev: {
           osu-lazer-bin = inputs.nix-gaming.packages.${prev.system}.osu-lazer-bin;
         })
