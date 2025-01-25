@@ -1,0 +1,220 @@
+# yaml-language-server: $schema=https://carapace.sh/schemas/command.json
+
+name: cargo-compete
+description: A Cargo subcommand for competitive programming
+persistentflags:
+  -h, --help: Prints help information
+  -V, --version: Prints version information  # もしかしたらflagsの方が適正かも?
+commands:
+  -
+    name: init
+    description: Create `compete.toml` and some files
+    aliases: [i]
+    flags:
+      --color=: Coloring
+    completion:
+      flag:
+        color: &color ["auto", "always", "never"]
+      positional:
+        - &platform ["atcoder", "codeforces", "yukicoder"]
+        - ["$directories"]
+  -
+    name: migrate
+    description: Migrate existing packages
+    aliases: [m]
+    commands:
+      -
+        name: cargo-atcoder
+        aliases: [c]
+        flags:
+          --glob-case-insensitive: Process glob patterns given with the `--glob` flag case insensitively
+          -g, --glob=: Include or exclude manifest paths. For more detail, see the help of ripgrep
+          --color=: Coloring
+        completion:
+          flag:
+            color: *color
+          dash:
+            - ["$files"]
+            - ["$directories"]
+
+      -
+        name: help
+        description: Prints this message or the help of the given subcommand(s)
+  -
+    name: login
+    description: Login to a platform
+    aliases: [l]
+    flags:
+      --color=: Coloring
+    completion:
+      flag:
+        color: *color
+      positional:
+        - *platform
+  -
+    name: participate
+    description: Register to a contest
+    aliases: [p]
+    flags:
+      --color=: Coloring
+    completion:
+      flag:
+        color: *color
+      positional:
+        - *platform
+        - ["$usage(Contest ID)"]
+  -
+    name: new
+    description: Retrieve test cases and create a package
+    aliases: [n]
+    flags:
+      --full: Retrieve system test cases
+      --open: Open URLs and files
+      --problems=: Retrieve only the problems
+      --config=: Path to `compete.toml`
+      --color=: Coloring
+    completion:
+      flag:
+        color: *color
+        config: ["$files([.toml, compete.toml])"]
+      positional:
+        - ["$usage(Contest ID. Required for some platforms)"]
+  -
+    name: add
+    aliases: [a]
+    flags:
+      --full: Retrieve system test cases
+      --open: Open URLs and files
+      -p, --package=: Package (see `cargo help pkgid`)
+      --manifest-path=: Path to Cargo.toml
+      --color=: Coloring
+    completion:
+      flag:
+        color: *color
+        manifest-path: &manifest-path ["$files([.toml, Cargo.toml])"]
+  -
+    name: retrieve
+    description: Retrieve data
+    aliases: [r]
+    commands:
+      - name: testcases
+        description: Retrieve test cases
+        aliases: [t]
+        flags:
+          --full: Retrieve system test cases
+          --overwrite: Overwrites the existing test files
+          --manifest-path=: Path to Cargo.toml
+          --color=: Coloring
+          --bin=: Retrieve only the problems for the binary target
+          --example=: Retrieve only the problems for the example target
+          -p, --package=: Package (see `cargo help pkgid`)
+        completion:
+          flag:
+            color: *color
+            manifest-path: *manifest-path
+            bin: ["$usage(NAME_OR_ALIAS)"]
+            example: ["$usage(NAME_OR_ALIAS)"]
+            package: ["$usage(SPEC)"]
+      - name: submission-summaries
+        description: Retrieve submission summaries
+        aliases: [ss]
+        flags:
+          --manifest-path=: Path to Cargo.toml
+          --color=: Coloring
+          -p, --package=: Package (see `cargo help pkgid`)
+        completion:
+          flag:
+            color: *color
+            manifest-path: *manifest-path
+            package: ["$usage(SPEC)"]
+          positional:
+            - ["$usage(Name or alias for a binary)"]
+      - name: help
+        description: Prints this message or the help of the given subcommand(s)
+  -
+    name: download
+    description: Alias for `retrieve testcases`
+    aliases: [d]
+    run: "[cargo, compete, retrieve, testcases]"
+  -
+    name: watch
+    description: Watch items
+    aliases: [w]
+    commands:
+      - name: submissions
+        description: Watch submissions
+        aliases: [s]
+        flags:
+          --color: Coloring
+        completion:
+          flag:
+            color: *color
+          positional:
+            - ["atcoder"]
+            - ["$usage(Contest ID)"]
+      - name: help
+        description: Prints this message or the help of the given subcommand(s)
+  -
+    name: open
+    description: Open URLs and files
+    aliases: [o]
+    flags:
+      --full: Retrieves system test cases
+      --manifest-path=: Path to Cargo.toml
+      --color=: Coloring
+      --bin=: Open for only binary targets
+      --example=: Open for only example targets
+      -p, --package=: Package (see `cargo help pkgid`)
+    completion:
+      flag:
+        color: *color
+        manifest-path: *manifest-path
+        bin: ["$usage(NAME_OR_ALIAS)"]
+        example: ["$usage(NAME_OR_ALIAS)"]
+        package: ["$usage(SPEC)"]
+  -
+    name: test
+    description: Test your code
+    aliases: [t]
+    flags:
+      --debug: Build in debug mode. Overrides `test.profile` in compete.toml
+      --release: Build in release mode. Overrides `test.profile` in compete.toml
+      --color=: Coloring
+      --manifest-path=: Path to Cargo.toml
+      -p, --package=: Package (see `cargo help pkgid`)
+      --display-limit=: "Display limit (default: 4KiB)"
+      --src=: Path to the source code
+      --testcases=: Test for only the test cases
+    completion:
+      flag:
+        color: *color
+        manifest-path: *manifest-path
+        src: ["$files(.rs)"]
+      positional:
+        - ["$(cargo metadata --format-version 1 | jq -r '.packages[0].targets[] | select(.kind[] == \"bin\") | .name')"]
+  -
+    name: submit
+    description: Submit your code
+    aliases: [s]
+    flags:
+      --debug: Build in debug mode. Overrides `test.profile` in compete.toml
+      --release: Build in release mode. Overrides `test.profile` in compete.toml
+      --no-test: Do not test before submitting
+      --no-watch: Do not watch the submission
+      --color=: Coloring
+      --manifest-path=: Path to Cargo.toml
+      -p, --package=: Package (see `cargo help pkgid`)
+      --display-limit=: "Display limit (default: 4KiB)"
+      --src=: Path to the source code
+      --testcases=: Test for only the test cases
+    completion:
+      flag:
+        color: *color
+        manifest-path: *manifest-path
+        src: ["$files(.rs)"]
+      positional:
+        - ["$(cargo metadata --format-version 1 | jq -r '.packages[0].targets[] | select(.kind[] == \"bin\") | .name')"]
+  -
+    name: help
+    description: Prints this message or the help of the given subcommand(s)
+    aliases: [s]
