@@ -112,11 +112,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1737774750,
-        "narHash": "sha256-V9h5CI0o6Yg2OhXfeYu0oT8D0vzuzxTySbG1Yl/xicE=",
+        "lastModified": 1737796974,
+        "narHash": "sha256-Y8/YzR7sygo94urfNbAtG86uMi/VFOt5Q7UPJugKCNo=",
         "owner": "satler-git",
         "repo": "sb-nix-cargo-compete",
-        "rev": "2d7a5c5bbd8a958e12c1d206debc9cab4a492795",
+        "rev": "f998cd75bbbc56c0b8f514dd7a771ab2c0594dc9",
         "type": "github"
       },
       "original": {
@@ -930,11 +930,11 @@
     },
     "nixpkgs-unstable-small": {
       "locked": {
-        "lastModified": 1737706285,
-        "narHash": "sha256-k/f1rAyCjGkNu4BnlnUGEvQPSnYVG7UHoOeaQQcjQps=",
+        "lastModified": 1737752946,
+        "narHash": "sha256-f8LHV0Qb8IYvs5kKsjH517qtI0qnSrn94F0AWY7VVIQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "dcb7446a099fe1c95b3694fdb7a4dda8f19d6ba8",
+        "rev": "3a7f97d9e5e613d5a4e4794b464c5aaa8b869127",
         "type": "github"
       },
       "original": {
