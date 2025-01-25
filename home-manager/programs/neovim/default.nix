@@ -63,12 +63,13 @@ in
         buf
         efm-langserver
         elixir-ls
+        haskell-language-server
         lua-language-server
         nil
         taplo # Toml
+        tinymist # For typst
         vscode-langservers-extracted
         yaml-language-server
-        tinymist # For typst
 
         # Formatter
         nixfmt-rfc-style

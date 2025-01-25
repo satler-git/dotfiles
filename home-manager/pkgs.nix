@@ -13,7 +13,6 @@
     bottom
 
     calibre
-    cabal-install
     cargo-nextest
 
     deno
@@ -29,9 +28,7 @@
     foliate
     fzf
 
-    gcc
     gh
-    ghc
     ghq
     gimp
     gnumake
@@ -41,8 +38,6 @@
     gst_all_1.gst-plugins-base
     gst_all_1.gst-plugins-ugly
     gst_all_1.gstreamer
-
-    haskell-language-server
 
     imhex
     inkscape
@@ -55,7 +50,6 @@
     koreader
     krita
 
-    luajit
     lutris
 
     mindustry-wayland
@@ -74,7 +68,6 @@
     podman-compose
 
     spotify
-    stack
 
     tetrio-desktop
     thunderbird
