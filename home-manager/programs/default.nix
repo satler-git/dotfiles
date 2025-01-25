@@ -11,6 +11,7 @@
     ./kalker.nix
     ./keybase.nix
     ./neovim
+    ./nix-index-db.nix
     ./supercollider.nix
     ./tealdeer.nix
     ./wm/hyprland

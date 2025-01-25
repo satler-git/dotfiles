@@ -47,6 +47,11 @@
       inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
     };
 
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     cargo-compete = {
       url = "github:satler-git/sb-nix-cargo-compete";
       inputs.nixpkgs.follows = "nixpkgs";
