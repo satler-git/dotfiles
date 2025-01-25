@@ -2,16 +2,12 @@
   wayland.windowManager.hyprland.settings = {
     # many configs are copied from https://github.com/Comamoca/dotfiles/blob/main/config/home-manager/hyprland.nix
     # Thanks !
-    monitor = [
-      "HDMI-A-1,1920x1080@60.00Hz,auto,auto"
-      "DP-1,1920x1080@165.00Hz,auto,auto"
-    ];
-
     env = [
       "HYPRCURSOR_THEME,Bibata-Modern-Ice"
       "HYPRCURSOR_SIZE,24"
       "XCURSOR_THEME,Bibata-Modern-Ice"
       "XCURSOR_SIZE,24"
+
       "XDG_SESSION_TYPE,wayland"
       "ELECTRON_OZONE_PLATFORM_HINT,auto"
       "NIXOS_OZONE_WL,1" # hint for electron apps
@@ -88,7 +84,7 @@
       "float,class:^(firefox),title:^(Picture-in-Picture)"
       "pin,class:^(firefox),title:^(Picture-in-Picture)"
       "size 30% 30%, class:^(firefox),title:^(Picture-in-Picture)"
-      "immediate, class:^(osu!)$"
+      # "immediate, class:^(osu!)$"
       "immediate, class:^(ZenlessZoneZero)$"
       "float,class:^(FloatingVim)"
     ];
