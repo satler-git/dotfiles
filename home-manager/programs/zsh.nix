@@ -54,6 +54,16 @@
       denops-reload() {
         systemctl --user reload-or-restart denops-shared-server.service
       }
+
+      # https://zenn.dev/yuys13/articles/fish-plugins-2025
+      __list_directory_contents () {
+        if [[ -o interactive ]]; then
+          if [ "$(fd --max-depth 1 --exclude '.*' | wc -l)" -le 20 ]; then
+            eza
+          fi
+        fi
+      }
+      add-zsh-hook chpwd __list_directory_contents
     '';
     plugins = [
       {
