@@ -64,6 +64,7 @@ in
         efm-langserver
         elixir-ls
         haskell-language-server
+        ghc # needed by haskell-language-server
         lua-language-server
         nil
         taplo # Toml
