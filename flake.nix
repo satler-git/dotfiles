@@ -30,6 +30,10 @@
       inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware";
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.2";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Overlays
     tidalcycles = {
@@ -154,6 +158,7 @@
           sops
           age
           nvfetcher
+          sbctl
         ];
       };
     };
