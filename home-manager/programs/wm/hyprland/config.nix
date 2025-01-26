@@ -86,6 +86,7 @@
       "size 30% 30%, class:^(firefox),title:^(Picture-in-Picture)"
       # "immediate, class:^(osu!)$"
       "immediate, class:^(ZenlessZoneZero)$"
+      "immediate, class:^(A Dance of Fire and Ice)$"
       "float,class:^(FloatingVim)"
     ];
 
