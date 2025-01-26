@@ -70,6 +70,7 @@ in
         tinymist # For typst
         vscode-langservers-extracted
         yaml-language-server
+        rust-analyzer-nightly
 
         # Formatter
         nixfmt-rfc-style

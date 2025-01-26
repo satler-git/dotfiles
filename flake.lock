@@ -190,6 +190,27 @@
         "type": "github"
       }
     },
+    "fenix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-analyzer-src": "rust-analyzer-src"
+      },
+      "locked": {
+        "lastModified": 1737786656,
+        "narHash": "sha256-ubCW9Jy7ZUOF354bWxTgLDpVnTvIpNr6qR4H/j7I0oo=",
+        "owner": "nix-community",
+        "repo": "fenix",
+        "rev": "2f721f527886f801403f389a9cabafda8f1e3b7f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "fenix",
+        "type": "github"
+      }
+    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -1004,6 +1025,7 @@
     "root": {
       "inputs": {
         "cargo-compete": "cargo-compete",
+        "fenix": "fenix",
         "home-manager": "home-manager",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nix-gaming": "nix-gaming",
@@ -1017,6 +1039,23 @@
         "tidalcycles": "tidalcycles",
         "treefmt-nix": "treefmt-nix",
         "xremap": "xremap"
+      }
+    },
+    "rust-analyzer-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1737728869,
+        "narHash": "sha256-U4pl3Hi0lT6GP4ecN3q9wdD2sdaKMbmD/5NJ1NdJ9AM=",
+        "owner": "rust-lang",
+        "repo": "rust-analyzer",
+        "rev": "6e4c29f7ce18cea7d3d31237a4661ab932eab636",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rust-lang",
+        "ref": "nightly",
+        "repo": "rust-analyzer",
+        "type": "github"
       }
     },
     "sops-nix": {

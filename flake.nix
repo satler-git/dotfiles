@@ -51,6 +51,10 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     cargo-compete = {
       url = "github:satler-git/sb-nix-cargo-compete";
@@ -97,6 +101,7 @@
 
       overlays = [
         inputs.neovim-nightly-overlay.overlays.default
+        inputs.fenix.overlays.default
         (_: prev: {
           osu-lazer-bin = inputs.nix-gaming.packages.${prev.system}.osu-lazer-bin;
         })
