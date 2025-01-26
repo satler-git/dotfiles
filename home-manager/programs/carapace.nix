@@ -4,7 +4,7 @@
   };
   home.sessionVariables = {
     CARAPACE_MATCH = "1";
-    CARAPACE_EXCLUDES = "tar";
+    CARAPACE_EXCLUDES = "tar,gpg";
     CARAPACE_BRIDGES = "zsh";
   };
 
