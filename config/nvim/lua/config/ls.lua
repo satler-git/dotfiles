@@ -120,3 +120,12 @@ lspconfig.taplo.setup({
 lspconfig.tinymist.setup({
   capabilities = capabilities,
 })
+lspconfig.astro.setup({
+  capabilities = capabilities,
+})
+lspconfig.biome.setup({
+  capabilities = capabilities,
+})
+lspconfig.ts_ls.setup({
+  capabilities = capabilities,
+})

@@ -60,18 +60,25 @@ in
         haskellPackages.fast-tags
 
         # Lang-servers
-        buf
         efm-langserver
+
+        buf
         elixir-ls
-        haskell-language-server
         ghc # needed by haskell-language-server
+        haskell-language-server
         lua-language-server
+        rust-analyzer-nightly
+
+        tinymist # For typst
+
         nil
         taplo # Toml
-        tinymist # For typst
         vscode-langservers-extracted
         yaml-language-server
-        rust-analyzer-nightly
+
+        astro-language-server
+        biome
+        typescript-language-server
 
         # Formatter
         nixfmt-rfc-style

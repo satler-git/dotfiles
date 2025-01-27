@@ -21,6 +21,10 @@ return {
           "typst",
           "dockerfile",
           "editorconfig",
+          "typescript",
+          "javascript",
+          "css",
+          "astro",
           -- haskell
           "haskell",
           "haskell_persistent",
