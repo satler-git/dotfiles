@@ -122,6 +122,9 @@ lspconfig.tinymist.setup({
 })
 lspconfig.astro.setup({
   capabilities = capabilities,
+  typescript = {
+    tsdk = vim.g.astro_tsdk,
+  },
 })
 lspconfig.biome.setup({
   capabilities = capabilities,
