@@ -122,7 +122,6 @@
       style = "full";
     };
   };
-  programs.thefuck.enable = true;
-  # programs.starship.enable = true;
+
   programs.zoxide.enable = true;
 }
