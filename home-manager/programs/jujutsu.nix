@@ -41,6 +41,32 @@
           ];
         };
       };
+      aliases = {
+        stat = [
+          "show"
+          "--stat"
+        ];
+        fulllog = [
+          "log"
+          "-r"
+          "root()::"
+        ];
+        llog = [
+          "log"
+          "-r"
+          "main@origin.."
+        ];
+        d = [ "desc" ];
+      };
+      fix.tools = {
+        nixfmt = {
+          command = [
+            "nix"
+            "fmt"
+          ];
+          patterns = [ "glob:**/*.*" ];
+        };
+      };
       signing = {
         sign-all = true;
         backend = "gpg";
