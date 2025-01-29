@@ -1,4 +1,7 @@
 { pkgs, inputs, ... }:
+let
+  inherit (pkgs.stdenv.hostPlatform) system;
+in
 {
   imports = [
     ./pkgs/chromium.nix
@@ -47,7 +50,8 @@
 
     imhex
     inkscape
-    inputs.cargo-compete.packages.${pkgs.stdenv.hostPlatform.system}.cargo-compete
+    inputs.cargo-compete.packages.${system}.cargo-compete
+    inputs.isd.packages.${system}.default
 
     jq
     # just
@@ -56,6 +60,7 @@
     koreader
     krita
 
+    lnav
     lutris
 
     mindustry-wayland
