@@ -85,6 +85,7 @@ in
         rustfmt
         stylish-haskell
         stylua
+        biome
 
         # DAP
         haskellPackages.ghci-dap

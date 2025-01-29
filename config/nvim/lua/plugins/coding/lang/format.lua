@@ -4,13 +4,7 @@ return {
     dependencies = {
       "neovim/nvim-lspconfig",
     },
-    ft = {
-      "rust",
-      "lua",
-      "haskell",
-      "nix",
-      "toml",
-    },
+    event = { "BufWritePre" },
     config = function()
       require("conform").setup({
         formatters_by_ft = {
@@ -20,7 +14,9 @@ return {
           haskell = { "stylish-haskell" },
           nix = { "nixfmt" },
           toml = { "taplo" },
-          json = { "deno_fmt" },
+          json = { "biome" },
+          typescript = { "biome" },
+          javascript = { "biome" },
         },
         format_on_save = {
           -- These options will be passed to conform.format()
