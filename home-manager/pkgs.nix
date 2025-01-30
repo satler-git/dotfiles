@@ -9,7 +9,7 @@ in
   ];
 
   home.packages = with pkgs; [
-    # buildPackages.stdenv.cc
+    buildPackages.stdenv.cc
     (fenix.combine [
       fenix.stable.toolchain
       fenix.targets.wasm32-unknown-unknown.stable.rust-std
