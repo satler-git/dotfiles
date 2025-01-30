@@ -17,6 +17,7 @@ return {
           json = { "biome" },
           typescript = { "biome" },
           javascript = { "biome" },
+          astro = { "biome" },
         },
         format_on_save = {
           -- These options will be passed to conform.format()
