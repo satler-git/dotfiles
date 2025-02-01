@@ -16,7 +16,7 @@
 
     ../modules/users/satler.nix
 
-    ../modules/plymouth.nix
+    ../modules/boot/plymouth.nix
     # ../modules/secureboot.nix
   ];
 

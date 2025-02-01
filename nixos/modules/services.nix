@@ -8,21 +8,6 @@
   ];
 
   services = {
-    xserver = {
-      #   enable = true;
-      #   displayManager = {
-      #     gdm.enable = true;
-      #   };
-      #   desktopManager = {
-      #     gnome.enable = false;
-      #   };
-      #   xkb = {
-      #     layout = "jp";
-      #     variant = "";
-      #   };
-      videoDrivers = [ "vmware" ];
-    };
-
     pipewire = {
       enable = true;
       alsa = {

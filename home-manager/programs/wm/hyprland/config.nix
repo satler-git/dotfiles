@@ -103,11 +103,6 @@
       workspace_swipe = "off";
     };
 
-    device = {
-      name = "ydotoold-virtual-device";
-      kb_layout = "us";
-    };
-
     "$mainMod" = "SUPER";
 
     bind = [
@@ -119,7 +114,6 @@
       "$mainMod, e, exec, $fileManager"
       "$mainMod, f, togglefloating"
       "$mainMod, f, pin,"
-      "$mainMod, space, exec, $menu"
       "$mainMod, P, pseudo" # dwindle
       "$mainMod, J, togglesplit," # dwindle
       "$mainMod, b, exec, $browser"
@@ -127,7 +121,7 @@
       "Control_L, Print, exec, grim -g \"$(slurp -d)\" - | wl-copy; dunstify \"A rect screenshot is copied!\""
       "Alt,Print, exec, hyprctl -j activewindow | jq -r '\"\\(.at[0]),\\(.at[1]) \\(.size[0])x\\(.size[1])\"' | grim -g - - | wl-copy; dunstify \"A winwdow screenshot is copied!\""
 
-      ",Eisu_toggle, exec, ~/.local/bin/vime.sh"
+      # ",Eisu_toggle, exec, ~/.local/bin/vime.sh"
 
       # Move focus with mainMod + arrow keys
       "$mainMod, h, movefocus, l"
