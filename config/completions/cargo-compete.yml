@@ -4,10 +4,9 @@ name: cargo-compete
 description: A Cargo subcommand for competitive programming
 persistentflags:
   -h, --help: Prints help information
-  -V, --version: Prints version information  # もしかしたらflagsの方が適正かも?
+  -V, --version: Prints version information # もしかしたらflagsの方が適正かも?
 commands:
-  -
-    name: init
+  - name: init
     description: Create `compete.toml` and some files
     aliases: [i]
     flags:
@@ -18,13 +17,11 @@ commands:
       positional:
         - &platform ["atcoder", "codeforces", "yukicoder"]
         - ["$directories"]
-  -
-    name: migrate
+  - name: migrate
     description: Migrate existing packages
     aliases: [m]
     commands:
-      -
-        name: cargo-atcoder
+      - name: cargo-atcoder
         aliases: [c]
         flags:
           --glob-case-insensitive: Process glob patterns given with the `--glob` flag case insensitively
@@ -36,12 +33,9 @@ commands:
           dash:
             - ["$files"]
             - ["$directories"]
-
-      -
-        name: help
+      - name: help
         description: Prints this message or the help of the given subcommand(s)
-  -
-    name: login
+  - name: login
     description: Login to a platform
     aliases: [l]
     flags:
@@ -51,8 +45,7 @@ commands:
         color: *color
       positional:
         - *platform
-  -
-    name: participate
+  - name: participate
     description: Register to a contest
     aliases: [p]
     flags:
@@ -63,8 +56,7 @@ commands:
       positional:
         - *platform
         - ["$usage(Contest ID)"]
-  -
-    name: new
+  - name: new
     description: Retrieve test cases and create a package
     aliases: [n]
     flags:
@@ -79,8 +71,7 @@ commands:
         config: ["$files([.toml, compete.toml])"]
       positional:
         - ["$usage(Contest ID. Required for some platforms)"]
-  -
-    name: add
+  - name: add
     aliases: [a]
     flags:
       --full: Retrieve system test cases
@@ -92,8 +83,7 @@ commands:
       flag:
         color: *color
         manifest-path: &manifest-path ["$files([.toml, Cargo.toml])"]
-  -
-    name: retrieve
+  - name: retrieve
     description: Retrieve data
     aliases: [r]
     commands:
@@ -131,13 +121,11 @@ commands:
             - ["$usage(Name or alias for a binary)"]
       - name: help
         description: Prints this message or the help of the given subcommand(s)
-  -
-    name: download
+  - name: download
     description: Alias for `retrieve testcases`
     aliases: [d]
     run: "[cargo, compete, retrieve, testcases]"
-  -
-    name: watch
+  - name: watch
     description: Watch items
     aliases: [w]
     commands:
@@ -154,8 +142,7 @@ commands:
             - ["$usage(Contest ID)"]
       - name: help
         description: Prints this message or the help of the given subcommand(s)
-  -
-    name: open
+  - name: open
     description: Open URLs and files
     aliases: [o]
     flags:
@@ -172,8 +159,7 @@ commands:
         bin: ["$usage(NAME_OR_ALIAS)"]
         example: ["$usage(NAME_OR_ALIAS)"]
         package: ["$usage(SPEC)"]
-  -
-    name: test
+  - name: test
     description: Test your code
     aliases: [t]
     flags:
@@ -192,8 +178,7 @@ commands:
         src: ["$files(.rs)"]
       positional:
         - ["$(cargo metadata --format-version 1 | jq -r '.packages[0].targets[] | select(.kind[] == \"bin\") | .name')"]
-  -
-    name: submit
+  - name: submit
     description: Submit your code
     aliases: [s]
     flags:
@@ -214,7 +199,6 @@ commands:
         src: ["$files(.rs)"]
       positional:
         - ["$(cargo metadata --format-version 1 | jq -r '.packages[0].targets[] | select(.kind[] == \"bin\") | .name')"]
-  -
-    name: help
+  - name: help
     description: Prints this message or the help of the given subcommand(s)
     aliases: [s]
