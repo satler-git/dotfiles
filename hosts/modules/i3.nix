@@ -2,7 +2,6 @@
 {
   services.xserver = {
     enable = lib.mkDefault true;
-    videoDrivers = [ "vmware" ];
     xkb = {
       layout = lib.mkDefault "jp";
     };

@@ -57,6 +57,8 @@
           "main@origin.."
         ];
         d = [ "desc" ];
+        # jj bookmark m --to @- main && jj git push
+        # jj git init --colocate && jj bookmark track main@origin
       };
       fix.tools = {
         nixfmt = {

@@ -1,5 +1,6 @@
 {
   inputs,
+  pkgs,
   ...
 }:
 
@@ -25,4 +26,39 @@
       };
     }
   ];
+
+  services.xserver = {
+    displayManager.setupCommands = ''
+      ${pkgs.xlibs.xrandr}/bin/xrandr --output DP-1 --right-of HDMI-A-1
+    '';
+
+    xrandrHeads = [
+      {
+        output = "HDMI-A-1";
+
+        monitorConfig = ''
+          Option "PreferredMode" "1920x1080"
+          Option "PreferredRefresh" "60"
+          Option "Position" "1920x0"
+        '';
+      }
+      {
+        output = "DP-1";
+        primary = true;
+
+        monitorConfig = ''
+          Option "PreferredMode" "1920x1080"
+          Option "PreferredRefresh" "165"
+          Option "Position" "1920x0"
+        '';
+      }
+    ];
+
+    resolutions = [
+      {
+        x = 1920;
+        y = 1080;
+      }
+    ];
+  };
 }
