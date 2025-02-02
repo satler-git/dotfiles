@@ -67,10 +67,11 @@ in
     mission-center
     mpv
 
-    nix-output-monitor
-    nix-your-shell
     nix-init
+    nix-output-monitor
     nix-update
+    nix-your-shell
+    nomacs
     # numbat
 
     p7zip

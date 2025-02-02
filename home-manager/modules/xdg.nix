@@ -11,6 +11,9 @@
         "x-scheme-handler/https" = "firefox.desktop";
         "text/html" = "firefox.desktop";
         "application/pdf" = "firefox.desktop";
+        "image/*" = "nomacs.desktop";
+        "audio/*" = "mpv.desktop";
+        "video/*" = "mpv.desktop";
       };
     };
     portal = {
