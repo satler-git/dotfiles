@@ -9,5 +9,7 @@
     windowManager.i3 = {
       enable = lib.mkDefault true;
     };
+
+    displayManager.startx.enable = true;
   };
 }
