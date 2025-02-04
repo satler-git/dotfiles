@@ -29,7 +29,7 @@
 
   services.xserver = {
     displayManager.setupCommands = ''
-      ${pkgs.xlibs.xrandr}/bin/xrandr --output DP-1 --right-of HDMI-A-1
+      # ${pkgs.xlibs.xrandr}/bin/xrandr --output DP-1 --right-of HDMI-A-1
     '';
 
     xrandrHeads = [
@@ -39,7 +39,7 @@
         monitorConfig = ''
           Option "PreferredMode" "1920x1080"
           Option "PreferredRefresh" "60"
-          Option "Position" "1920x0"
+          Option "Position" "0x0"
         '';
       }
       {
