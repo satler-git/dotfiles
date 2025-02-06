@@ -19,8 +19,10 @@
     ../modules/boot/plymouth.nix
     # ../modules/secureboot.nix
 
-    ../modules/i3.nix
-    ../modules/hyprland.nix
+    ../modules/apps/i3.nix
+    ../modules/apps/hyprland.nix
+
+    ../modules/apps/llm.nix
   ];
 
   system.stateVersion = "24.05"; # Don't change this
