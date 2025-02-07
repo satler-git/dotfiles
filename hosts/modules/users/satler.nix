@@ -7,6 +7,7 @@
       extraGroups = [
         "audio"
         "docker"
+        "podman"
         "input"
         "uinput"
         "networkmanager"
