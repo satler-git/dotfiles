@@ -17,6 +17,10 @@
     };
   };
 
+  nix.settings.trusted-users = [
+    "satler"
+  ];
+
   home-manager = {
     users.satler = ../../../home-manager/linux.nix;
   };

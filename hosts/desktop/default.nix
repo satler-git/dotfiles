@@ -9,8 +9,8 @@
     ./hardware.nix
     ./hardware-configrations.nix
 
-    ../modules/libvirt.nix
-    ../modules/common
+    ../modules/common/common.nix
+    ../modules/common/desktop.nix
 
     ../modules/home-manager.nix
 
@@ -19,10 +19,7 @@
     ../modules/boot/plymouth.nix
     # ../modules/secureboot.nix
 
-    ../modules/apps/i3.nix
-    ../modules/apps/hyprland.nix
-
-    ../modules/apps/llm.nix
+    ./apps.nix
   ];
 
   system.stateVersion = "24.05"; # Don't change this
@@ -38,18 +35,6 @@
         command = "${lib.getExe pkgs.greetd.tuigreet} -t -r --remember-session --asterisks --cmd ${lib.getExe config.programs.hyprland.package}";
         user = "satler";
       };
-    };
-  };
-
-  networking = {
-    firewall = {
-      allowedTCPPorts = [
-        17500 # Dropbox
-      ];
-      allowedUDPPorts = [
-        17500 # Dropbox
-        57120 # SuperColider
-      ];
     };
   };
 }

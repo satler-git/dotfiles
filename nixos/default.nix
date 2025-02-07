@@ -1,12 +1,7 @@
 {
   imports = [
     # keep-sorted start
-    ./modules/documentation.nix
-    ./modules/environment.nix
     ./modules/fonts.nix
-    ./modules/i18n.nix
-    ./modules/nix.nix
-    ./modules/programs.nix
     ./modules/services.nix
     ./modules/sops.nix
     ./modules/stylix.nix

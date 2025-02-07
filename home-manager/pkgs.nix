@@ -105,7 +105,6 @@ in
     wakatime-cli
     watchman
     webcord-vencord
-    wego
     wget
 
     xh
