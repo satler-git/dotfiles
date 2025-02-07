@@ -19,6 +19,7 @@
       "*.swp"
       ".direnv/*"
       "memo.md"
+      ".goosehints"
     ];
     aliases = {
       s = "status";
