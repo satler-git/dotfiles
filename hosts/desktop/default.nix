@@ -13,6 +13,9 @@
     ../modules/common/desktop.nix
 
     ../modules/home-manager.nix
+    ../modules/sops.nix
+    ../modules/stylix.nix
+    ../modules/xremap.nix
 
     ../modules/users/satler.nix
 
@@ -21,6 +24,8 @@
 
     ./apps.nix
   ];
+
+  services.xremap.userName = "satler";
 
   system.stateVersion = "24.05"; # Don't change this
 
