@@ -6,20 +6,21 @@
     ../modules/apps/libvirt.nix
     ../modules/apps/llm.nix
     ../modules/apps/wego.nix
-    ../modules/apps/openhands.nix
+    # ../modules/apps/openhands.nix
   ];
 
   my.services.dropbox.enable = true;
 
-  my.services.openhands = {
-    enable = true;
-    extraRuntimePackages = with pkgs; [
-      buildPackages.stdenv.cc
-      (fenix.combine [
-        fenix.stable.toolchain
-      ])
-    ];
-  };
+  # my.services.openhands = {
+  #   enable = true;
+  #   extraRuntimePackages = with pkgs; [
+  #     buildPackages.stdenv.cc
+  #     (fenix.combine [
+  #       fenix.stable.toolchain
+  #     ])
+  #   ];
+  # };
+  # べつにいらないというかうまくできない
 
   programs = {
     firefox.enable = true;
