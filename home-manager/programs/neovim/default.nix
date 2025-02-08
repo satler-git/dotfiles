@@ -79,6 +79,7 @@ in
         astro-language-server
         biome
         typescript-language-server
+        vtsls
 
         # Formatter
         nixfmt-rfc-style
