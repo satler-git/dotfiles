@@ -2,10 +2,10 @@
 {
   stable = final: _: {
     inherit (inputs.nixpkgs-stable.legacyPackages.${final.stdenv.hostPlatform.system})
-      gutenprint
+      blender
       epson-escpr
       epson-escpr2
-      blender
+      gutenprint
       kicad
       ;
   };

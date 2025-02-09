@@ -63,7 +63,8 @@
     # packages (not in nixpkgs)
     cargo-compete = {
       url = "github:satler-git/sb-nix-cargo-compete";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # Hashがかわる
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
     isd = {
       url = "github:isd-project/isd";
