@@ -13,10 +13,6 @@ in
     inputs.nixos-hardware.nixosModules.common-gpu-nvidia-nonprime
   ];
 
-  hardware.graphics = {
-    enable = lib.mkDefault true;
-  };
-
   hardware.nvidia-container-toolkit.enable = lib.mkDefault true;
 
   hardware.nvidia = {
