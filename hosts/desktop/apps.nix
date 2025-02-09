@@ -3,12 +3,13 @@
   imports = [
     # keep-sorted start
     ../modules/apps/dropbox.nix
+    ../modules/apps/hoogle.nix
     ../modules/apps/i3.nix
     ../modules/apps/libvirt.nix
     ../modules/apps/llm.nix
-    ../modules/apps/wego.nix
     ../modules/apps/podman.nix
-    ../modules/apps/hoogle.nix
+    ../modules/apps/tailscale.nix
+    ../modules/apps/wego.nix
     # ../modules/apps/openhands.nix
     # keep-sorted end
   ];
