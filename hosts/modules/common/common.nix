@@ -11,7 +11,6 @@ in
   options.my = {
     hostName = lib.mkOption {
       type = lib.types.str;
-      default = "nixos";
     };
   };
 
