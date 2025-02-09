@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, lib, ... }:
 {
   sops.secrets.tailscale = { };
 
@@ -9,4 +9,8 @@
       "--operator=satler"
     ];
   };
+
+  networking.nameservers = lib.mkBefore [
+    "100.100.100.100"
+  ];
 }
