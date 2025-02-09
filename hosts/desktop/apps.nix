@@ -28,15 +28,11 @@
   # べつにいらないというかうまくできない
 
   programs = {
+    # keep-sorted start
     firefox.enable = true;
-    localsend.enable = true;
-
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true;
-      dedicatedServer.openFirewall = true;
-    };
-
     hyprland.enable = true;
+    localsend.enable = true;
+    steam.enable = true;
+    # keep-sorted end
   };
 }
