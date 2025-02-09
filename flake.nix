@@ -85,6 +85,7 @@
       "https://nix-gaming.cachix.org"
       "https://numtide.cachix.org"
       "https://ghostty.cachix.org"
+      "https://satler.cachix.org"
     ];
 
     extra-trusted-public-keys = [
@@ -94,6 +95,7 @@
       "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
       "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
       "ghostty.cachix.org-1:QB389yTa6gTyneehvqG58y0WnHjQOqgnA+wBnpWWxns="
+      "satler.cachix.org-1:qPh5WfP6bZGq/dGK4DsoYRfZqbDAxPwO9l8v+x+ET04="
     ];
   };
 
