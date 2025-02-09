@@ -9,7 +9,7 @@
     ./hardware.nix
     ./hardware-configrations.nix
 
-    ../modules/common/desktop.nix
+    ../modules/common/desktop
 
     ../modules/home-manager.nix
     ../modules/sops.nix

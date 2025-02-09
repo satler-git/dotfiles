@@ -65,6 +65,8 @@ in
       LC_ALL = "en_US.UTF-8";
     };
 
+    security.polkit.enable = true;
+
     nix = {
       registry = {
         nixpkgs.flake = inputs.nixpkgs;

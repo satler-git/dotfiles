@@ -1,12 +1,9 @@
-{
-  inputs,
-  ...
-}:
+{ lib, ... }:
 {
   services = {
     hoogle = {
       enable = true;
-      port = 8081;
+      port = lib.mkDefault 8081;
       packages =
         hp: with hp; [
           lens

@@ -6,7 +6,8 @@
 }:
 {
   imports = [
-    ./common.nix
+    ../common.nix
+    ./fonts.nix
   ];
 
   hardware.graphics = {

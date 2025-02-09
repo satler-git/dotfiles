@@ -144,7 +144,6 @@
               nixpkgs.pkgs = pkgs;
             }
             ./hosts/desktop
-            ./nixos
             inputs.stylix.nixosModules.stylix
             inputs.sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager
