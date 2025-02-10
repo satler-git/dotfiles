@@ -2,6 +2,7 @@
   lib,
   config,
   inputs,
+  pkgs,
   ...
 }:
 let
@@ -67,6 +68,8 @@ in
     security.polkit.enable = true;
 
     nix = {
+      package = pkgs.lix;
+
       registry = {
         nixpkgs.flake = inputs.nixpkgs;
       };
@@ -82,6 +85,7 @@ in
           "flakes"
         ];
       };
+
       gc = {
         automatic = true;
         dates = "weekly";
