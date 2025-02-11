@@ -123,9 +123,13 @@
 
       # Move focus with mainMod + arrow keys
       "$mainMod, h, movefocus, l"
+      "$mainMod, Left, movefocus, l"
       "$mainMod, l, movefocus, r"
+      "$mainMod, Right, movefocus, r"
       "$mainMod, k, movefocus, u"
+      "$mainMod, Up, movefocus, u"
       "$mainMod, j, movefocus, d"
+      "$mainMod, Down, movefocus, d"
 
       # bind = $mainMod, g, movefocus, d
 
@@ -160,10 +164,14 @@
       "$mainMod, w, togglespecialworkspace, magic"
       "$mainMod SHIFT, w, movetoworkspace, special:magic"
 
-      "$mainMod SHIFT, l, movewindow, r"
-      "$mainMod SHIFT, k, movewindow, u"
-      "$mainMod SHIFT, j, movewindow, d"
       "$mainMod SHIFT, h, movewindow, l"
+      "$mainMod SHIFT, Left, movewindow, l"
+      "$mainMod SHIFT, j, movewindow, d"
+      "$mainMod SHIFT, Down, movewindow, d"
+      "$mainMod SHIFT, l, movewindow, r"
+      "$mainMod SHIFT, Right, movewindow, r"
+      "$mainMod SHIFT, k, movewindow, u"
+      "$mainMod SHIFT, Up, movewindow, u"
 
       # Change window size
       "$mainMod ctrl, l, resizeactive, 100 100"
