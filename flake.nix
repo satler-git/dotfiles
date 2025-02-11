@@ -59,6 +59,10 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    yazi = {
+      url = "github:sxyazi/yazi";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # packages (not in nixpkgs)
     cargo-compete = {
@@ -79,23 +83,25 @@
 
   nixConfig = {
     extra-substituters = [
+      "https://ghostty.cachix.org"
       "https://hyprland.cachix.org"
       "https://miso-haskell.cachix.org"
       "https://nix-community.cachix.org"
       "https://nix-gaming.cachix.org"
       "https://numtide.cachix.org"
-      "https://ghostty.cachix.org"
       "https://satler.cachix.org"
+      "https://yazi.cachix.org"
     ];
 
     extra-trusted-public-keys = [
-      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-      "miso-haskell.cachix.org-1:6N2DooyFlZOHUfJtAx1Q09H0P5XXYzoxxQYiwn6W1e8="
-      "numtide.cachix.org-1:2ps1kLBUWjxIneOy1Ik6cQjb41X0iXVXeHigGmycPPE="
-      "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
-      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
       "ghostty.cachix.org-1:QB389yTa6gTyneehvqG58y0WnHjQOqgnA+wBnpWWxns="
+      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+      "miso-haskell.cachix.org-1:6N2DooyFlZOHUfJtAx1Q09H0P5XXYzoxxQYiwn6W1e8="
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+      "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
+      "numtide.cachix.org-1:2ps1kLBUWjxIneOy1Ik6cQjb41X0iXVXeHigGmycPPE="
       "satler.cachix.org-1:qPh5WfP6bZGq/dGK4DsoYRfZqbDAxPwO9l8v+x+ET04="
+      "yazi.cachix.org-1:Dcdz63NZKfvUCbDGngQDAZq6kOroIrFoyO064uvLh8k="
     ];
   };
 
@@ -111,8 +117,9 @@
       system = "x86_64-linux";
 
       overlays = [
-        inputs.neovim-nightly-overlay.overlays.default
         inputs.fenix.overlays.default
+        inputs.neovim-nightly-overlay.overlays.default
+        inputs.yazi.overlays.default
         (_: prev: {
           osu-lazer-bin = inputs.nix-gaming.packages.${prev.system}.osu-lazer-bin;
         })
