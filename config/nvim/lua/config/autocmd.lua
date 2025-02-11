@@ -15,10 +15,10 @@ local function two_space(pattern)
 end
 
 local function set_ft(pattern, filetype)
-  vim.api.nvim_create_autocmd("BufReadPre", {
+  vim.api.nvim_create_autocmd({ "BufReadPre", "BufNewFile" }, {
     pattern = pattern,
     callback = function(_)
-      vim.opt_local.filetype = filetype
+      vim.bo.filetype = filetype
     end,
   })
 end
@@ -27,4 +27,4 @@ two_space("nix")
 two_space("json")
 two_space("sh")
 
-set_ft("hujson", "json5")
+set_ft("*.hujson", "json5")
