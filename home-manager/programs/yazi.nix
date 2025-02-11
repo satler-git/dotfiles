@@ -1,21 +1,21 @@
 { pkgs, ... }:
 let
-  yazi-plugins-src = (pkgs.callPackages ../../_sources/generated.nix { }).yazi-plugins.src;
-  yazi-compress-src = (pkgs.callPackages ../../_sources/generated.nix { }).yazi-compress.src;
+  plugins =
+    let
+      yazi-plugins-src = (pkgs.callPackages ../../_sources/generated.nix { }).yazi-plugins.src;
+      yazi-compress-src = (pkgs.callPackages ../../_sources/generated.nix { }).yazi-compress.src;
 
-  w = name: path: {
-    inherit name path;
-  };
-
-  plugins = pkgs.linkFarm "yazi-plugins" [
-    (w "chmod.yazi" "${yazi-plugins-src}/chmod.yazi")
-    (w "full-border.yazi" "${yazi-plugins-src}/full-border.yazi")
-    (w "git.yazi" "${yazi-plugins-src}/git.yazi")
-    (w "compress.yazi" yazi-compress-src)
-  ];
-
-  printer_name = "EPSON_EP-705A_Series"; # TODO: printer selector
-  print_command = "lp -d ${printer_name} $@";
+      w = name: path: {
+        inherit name path;
+      };
+    in
+    pkgs.linkFarm "yazi-plugins" [
+      (w "chmod.yazi" "${yazi-plugins-src}/chmod.yazi")
+      (w "full-border.yazi" "${yazi-plugins-src}/full-border.yazi")
+      (w "git.yazi" "${yazi-plugins-src}/git.yazi")
+      (w "compress.yazi" yazi-compress-src)
+      (w "print.yazi" ../../config/yazi/plugins/print.yazi)
+    ];
 in
 {
   home.packages = with pkgs; [
@@ -76,7 +76,7 @@ in
             "c"
             "p"
           ];
-          run = "shell \"${print_command}\""; # lp -d
+          run = "plugin print";
           desc = "Print out selected files";
         }
         {

@@ -15,6 +15,8 @@
         "plugdev"
       ];
       shell = pkgs.zsh;
+
+      initialHashedPassword = "$y$j9T$jrEwC7ZZUCFpS16P4/3l0/$4nLI6Jn5rqjE3dJ702AcPJPPvP6GRMvFMqH3on4FCm4";
     };
   };
 

@@ -2,6 +2,7 @@
   lib,
   config,
   inputs,
+  pkgs,
   ...
 }:
 let
@@ -11,7 +12,6 @@ in
   options.my = {
     hostName = lib.mkOption {
       type = lib.types.str;
-      default = "nixos";
     };
   };
 
@@ -68,6 +68,8 @@ in
     security.polkit.enable = true;
 
     nix = {
+      package = pkgs.lix;
+
       registry = {
         nixpkgs.flake = inputs.nixpkgs;
       };
@@ -83,6 +85,7 @@ in
           "flakes"
         ];
       };
+
       gc = {
         automatic = true;
         dates = "weekly";

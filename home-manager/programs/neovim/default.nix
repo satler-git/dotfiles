@@ -66,6 +66,7 @@ in
         elixir-ls
         ghc # needed by haskell-language-server
         haskell-language-server
+        luajit
         lua-language-server
         rust-analyzer-nightly
 

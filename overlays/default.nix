@@ -7,6 +7,9 @@
       epson-escpr2
       gutenprint
       kicad
+
+      open-webui
+      reversal-icon-theme
       ;
   };
 

@@ -24,8 +24,6 @@
     ./apps.nix
   ];
 
-  services.xremap.userName = "satler";
-
   system.stateVersion = "24.05"; # Don't change this
 
   my.hostName = "satlerdev";
