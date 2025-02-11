@@ -10,7 +10,12 @@
     ];
   };
 
-  networking.nameservers = lib.mkBefore [
-    "100.100.100.100"
-  ];
+  networking = {
+    firewall.allowedTCPPorts = lib.mkBefore [
+      22
+    ];
+    nameservers = lib.mkBefore [
+      "100.100.100.100"
+    ];
+  };
 }
