@@ -82,6 +82,7 @@ in
 
     spotify
 
+    teip
     tetrio-desktop
     thunderbird
     trash-cli
