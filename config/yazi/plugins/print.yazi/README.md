@@ -1,7 +1,5 @@
 # print.yazi
 
-TODO: move to main.lua
-
 (on your init.lua)Set selecting keys like this:
 
 ```lua
