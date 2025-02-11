@@ -12,11 +12,12 @@ let
     (w "full-border.yazi" "${yazi-plugins-src}/full-border.yazi")
     (w "git.yazi" "${yazi-plugins-src}/git.yazi")
     (w "compress.yazi" yazi-compress-src)
+    (w "print.yazi" ../../config/yazi/plugins/print.yazi)
   ];
 
-  printer_name = "EPSON_EP-705A_Series"; # TODO: printer selector
-  print_command = "lp -d ${printer_name} $@";
 in
+# printer_name = "EPSON_EP-705A_Series"; # TODO: printer selector
+# print_command = "lp -d ${printer_name} $@";
 {
   home.packages = with pkgs; [
     exiftool
@@ -76,7 +77,7 @@ in
             "c"
             "p"
           ];
-          run = "shell \"${print_command}\""; # lp -d
+          run = "plugin print";
           desc = "Print out selected files";
         }
         {
