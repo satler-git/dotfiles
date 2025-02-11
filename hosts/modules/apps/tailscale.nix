@@ -6,7 +6,6 @@
     enable = true;
     authKeyFile = config.sops.secrets.tailscale.path;
     extraUpFlags = [
-      "--operator=satler"
       "--ssh"
     ];
   };
