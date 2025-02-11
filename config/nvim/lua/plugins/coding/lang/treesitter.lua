@@ -31,7 +31,7 @@ return {
           -- utils
           "json",
           "jsonc",
-          "json5"
+          "json5",
           "kdl",
           "ledger",
           "markdown",
