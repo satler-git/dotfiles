@@ -21,7 +21,7 @@ local selected_or_hovered = ya.sync(function()
 end)
 
 local function make_cands(keys)
-  local output, err = Command("lpstat"):args({ "-v" }):output()
+  local output, err = Command("lpstat"):arg("-v"):output() -- TODO:
 
   if not output then
     error(tostring(err), 2)
@@ -30,7 +30,7 @@ local function make_cands(keys)
 
   local printers = {}
 
-  for line in output.lines() do
+  for line in output.stdout:gmatch("([^\n]+)") do
     local fields = {}
     for field in line:gmatch("%S+") do
       table.insert(fields, field)
@@ -94,17 +94,22 @@ local function entry(self, job)
     })
   end
 
-  local cand = ya.which({
-    cands = cands,
-    -- silent = true, -- TODO: diff
-  })
+  local printer = nil
+  if #cands == 1 then
+    printer = cands[1]["desc"]
+  else
+    local cand = ya.which({
+      cands = cands,
+      -- silent = true, -- TODO: diff
+    })
 
-  if not cand then
-    return
+    if not cand then
+      return
+    end
+    printer = cands[cand]["desc"]
   end
 
-  local printer = cands[cand]["desc"]
-  local status, err = Command("lp"):arg({ "-d", printer }):args(paths):status()
+  local status, err = Command("lp"):args({ "-d", printer }):args(paths):status()
   if not status or not status.success then
     ya.notify({
       title = "Print",
