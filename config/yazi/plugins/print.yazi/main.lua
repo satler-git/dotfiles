@@ -1,11 +1,5 @@
 --- @since 25.2.7
 
----@param printer_name string
----@return string
-local function print(printer_name)
-  return "lp -d" .. printer_name .. "$@"
-end
-
 -- https://github.com/yazi-rs/plugins/blob/main/chmod.yazi/main.lua
 -- MIT License
 -- Copyright (c) 2023 yazi-rs
@@ -21,7 +15,7 @@ local selected_or_hovered = ya.sync(function()
 end)
 
 local function make_cands(keys)
-  local output, err = Command("lpstat"):arg("-v"):output() -- TODO:
+  local output, err = Command("lpstat"):arg("-v"):output()
 
   if not output then
     error(tostring(err), 2)
