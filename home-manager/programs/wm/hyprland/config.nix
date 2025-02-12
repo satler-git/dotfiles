@@ -174,8 +174,14 @@
       "$mainMod SHIFT, Up, movewindow, u"
 
       # Change window size
-      "$mainMod ctrl, l, resizeactive, 100 100"
-      "$mainMod ctrl, h, resizeactive, -100 100"
+      "$mainMod ctrl, h, resizeactive, -100 0"
+      "$mainMod ctrl, Left, resizeactive, -100 0"
+      "$mainMod ctrl, j, resizeactive, 0 100"
+      "$mainMod ctrl, Down, resizeactive, 0 100"
+      "$mainMod ctrl, k, resizeactive, 0 -100"
+      "$mainMod ctrl, Up, resizeactive, 0 -100"
+      "$mainMod ctrl, l, resizeactive, 100 0"
+      "$mainMod ctrl, Right, resizeactive, 100 0"
     ];
 
     # map media keys
