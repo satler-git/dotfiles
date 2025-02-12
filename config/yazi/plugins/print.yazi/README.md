@@ -8,7 +8,7 @@ require("print"):setup({
 })
 ```
 
-# Copyrights
+# Credits
 
 ## yazi-rs/plugins/chmod.yazi
 
