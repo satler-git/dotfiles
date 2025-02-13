@@ -5,6 +5,7 @@ let
 in
 {
   imports = [
+    ./apps
     ./pkgs.nix
     ./stylix.nix
     programs

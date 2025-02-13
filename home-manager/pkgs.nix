@@ -5,16 +5,9 @@ in
 {
   imports = [
     ./pkgs/chromium.nix
-    ./pkgs/anki.nix
   ];
 
   home.packages = with pkgs; [
-    buildPackages.stdenv.cc
-    (fenix.combine [
-      fenix.stable.toolchain
-      fenix.targets.wasm32-unknown-unknown.stable.rust-std
-    ])
-
     # audacity
     aria
 
@@ -22,7 +15,6 @@ in
     bottom
 
     calibre
-    cargo-nextest
 
     deno
     delta
@@ -51,7 +43,6 @@ in
 
     imhex
     inkscape
-    inputs.cargo-compete.packages.${system}.cargo-compete
     inputs.isd.packages.${system}.default
 
     jq
