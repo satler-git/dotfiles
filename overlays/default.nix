@@ -32,4 +32,10 @@
       '';
     });
   };
+
+  neovimMold = final: prev: {
+    neovim = prev.neovim.override (old: {
+      stdenv = final.useMoldLinker final.clangStdenv;
+    });
+  };
 }
