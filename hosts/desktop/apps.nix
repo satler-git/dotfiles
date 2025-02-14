@@ -14,6 +14,8 @@
     # keep-sorted end
   ];
 
+  my.openFirewall = true;
+
   my.services.dropbox.enable = true;
 
   # my.services.openhands = {

@@ -9,11 +9,19 @@ let
   cfg = config.my;
 in
 {
-  options.my = {
-    hostName = lib.mkOption {
-      type = lib.types.str;
+  options.my =
+    let
+      inherit (lib) mkOption types;
+    in
+    {
+      hostName = mkOption {
+        type = types.str;
+      };
+      openFirewall = mkOption {
+        type = types.bool;
+        default = false;
+      };
     };
-  };
 
   config = {
     programs = {

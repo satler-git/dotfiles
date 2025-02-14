@@ -18,7 +18,7 @@ in
       };
       openFirewall = mkOption {
         type = types.bool;
-        default = true;
+        default = config.my.openFirewall;
       };
     };
   };

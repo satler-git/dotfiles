@@ -1,8 +1,12 @@
+{ config, ... }:
+let
+  inherit (config.my) openFirewall;
+in
 {
   services = {
     ollama = {
       enable = true;
-      openFirewall = true;
+      inherit openFirewall;
       loadModels = [
         "llama3.2"
         "qwen2.5-coder:14b"
@@ -18,7 +22,7 @@
     };
     open-webui = {
       enable = true;
-      openFirewall = true;
+      inherit openFirewall;
       port = 2222;
       environment = {
         ANONYMIZED_TELEMETRY = "False";
