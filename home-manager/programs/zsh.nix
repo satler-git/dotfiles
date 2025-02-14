@@ -58,8 +58,10 @@
       # https://zenn.dev/yuys13/articles/fish-plugins-2025
       __list_directory_contents () {
         if [[ -o interactive ]]; then
-          if [ "$(fd --max-depth 1 --exclude '.*' | wc -l)" -le 20 ]; then
-            eza
+          if output=$(timeout 0.2s fd --max-depth 1 --exclude '.*' | wc -l); then
+            if [ "$output" -le 20 ]; then
+              eza
+            fi
           fi
         fi
       }
