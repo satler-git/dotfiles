@@ -31,6 +31,10 @@ in
     # standard rust compiler(rustc and cargo and tools(rustfmt, cargo-clippy, ...))
     (fenix.combine [
       fenix.stable.toolchain
+
+      fenix.minimal.toolchain
+      fenix.latest.rustc-codegen-cranelift-preview
+
       fenix.targets.wasm32-unknown-unknown.stable.rust-std
     ])
 
