@@ -66,6 +66,8 @@
         fi
       }
       add-zsh-hook chpwd __list_directory_contents
+
+      disable r
     '';
     plugins = [
       {
