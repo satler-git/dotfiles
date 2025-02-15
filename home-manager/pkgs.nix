@@ -43,7 +43,6 @@
     inputs.isd.packages.${system}.default
 
     jq
-    # just
 
     kicad
     koreader
@@ -61,7 +60,7 @@
     nix-update
     nix-your-shell
     nomacs
-    # numbat
+    numbat
 
     p7zip
     pandoc
@@ -90,7 +89,6 @@
     vlc
 
     # wireshark
-    # wolfram-engine
     wakatime-cli
     watchman
     webcord-vencord
