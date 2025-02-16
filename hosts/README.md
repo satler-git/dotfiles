@@ -1,6 +1,6 @@
 # Hosts
 
-## 🖥️ desktop(hostname: `satlerdev`)
+## 🖥️ luka(prev: `desktop`)(hostname: `luka`)
 
 ### Hardware
 

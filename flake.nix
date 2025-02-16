@@ -143,7 +143,7 @@
       overlays = import ./overlays { inherit inputs; };
 
       nixosConfigurations = {
-        desktop = nixpkgs.lib.nixosSystem {
+        luka = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = {
             inherit inputs;
@@ -153,7 +153,7 @@
             {
               nixpkgs.pkgs = pkgs;
             }
-            ./hosts/desktop
+            ./hosts/luka
             inputs.stylix.nixosModules.stylix
             inputs.sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager

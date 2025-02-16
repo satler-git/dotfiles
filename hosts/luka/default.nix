@@ -26,7 +26,7 @@
 
   system.stateVersion = "24.05"; # Don't change this
 
-  my.hostName = "satlerdev";
+  my.hostName = "luka";
 
   boot.kernelPackages = lib.mkForce pkgs.linuxKernel.packages.linux_zen;
 

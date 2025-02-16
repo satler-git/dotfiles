@@ -1,5 +1,5 @@
 keys:
-  - &desktop age1hzupn8kyur4pgzv26cx0h3y6s95pafvrhqdrsj8v8sa5vk54c3pqwrcx8z
+  - &luka age1hzupn8kyur4pgzv26cx0h3y6s95pafvrhqdrsj8v8sa5vk54c3pqwrcx8z
   - &satler 651823BF9272D62D67E7B6501DB0252A735D5BAC
 creation_rules:
   - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
@@ -7,4 +7,4 @@ creation_rules:
       - pgp:
           - *satler
         age:
-          - *desktop
+          - *luka
