@@ -30,6 +30,7 @@
         paginate = "never";
         default-command = "log";
         editor = "nvim";
+        movement.edit = true;
         diff = {
           format = "git";
           tool = [
