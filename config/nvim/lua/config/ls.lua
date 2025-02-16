@@ -1,7 +1,19 @@
--- Disable virtual_text since it's redundant due to lsp_lines.
 vim.diagnostic.config({
   virtual_text = false,
+
+  virtual_lines = {
+    format = function(diagnostic)
+      return string.format("%s \n(%s: %s)", diagnostic.message, diagnostic.source, diagnostic.code)
+    end,
+  },
 })
+
+vim.cmd([[
+  highlight DiagnosticUnderlineError gui=undercurl cterm=undercurl
+  highlight DiagnosticUnderlineWarn  gui=undercurl cterm=undercurl
+  highlight DiagnosticUnderlineInfo  gui=undercurl cterm=undercurl
+  highlight DiagnosticUnderlineHint  gui=undercurl cterm=undercurl
+]])
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 capabilities.textDocument.foldingRange = { -- For nvim-ufo
@@ -12,6 +24,7 @@ local configs = require("lspconfig.configs")
 local lspconfig = require("lspconfig")
 local util = require("lspconfig/util")
 local schemastore = require("schemastore")
+
 lspconfig.rust_analyzer.setup({
   capabilities = capabilities,
   on_attach = function(_, _)

@@ -9,13 +9,6 @@ return {
         "b0o/schemastore.nvim",
         "j-hui/fidget.nvim",
         {
-          "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-          config = function()
-            require("lsp_lines").setup()
-            vim.keymap.set("", "<Leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
-          end,
-        },
-        {
           "nvimdev/lspsaga.nvim",
           dependencies = {
             "nvim-treesitter/nvim-treesitter",
