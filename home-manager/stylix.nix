@@ -41,11 +41,14 @@ in
     };
 
     # 無効にするターゲット
-    targets.alacritty.enable = false;
-    targets.firefox.enable = false;
-    targets.neovim.enable = false;
-    targets.waybar.enable = false;
-    targets.gnome.enable = false;
-    targets.zellij.enable = false;
+    targets = {
+      alacritty.enable = false;
+      firefox.enable = false;
+      neovim.enable = false;
+      waybar.enable = false;
+      gnome.enable = false;
+      zellij.enable = false;
+      gnome-text-editor.enable = false;
+    };
   };
 }
