@@ -21,10 +21,19 @@ return {
         end,
       },
     },
-    ---@type snacks.Config
+    init = function()
+      vim.ui.input = function(...)
+        require("snacks").input.enable()
+
+        return vim.ui.select(...)
+      end
+    end,
     opts = {
       scratch = {},
       gitbrowse = {},
+      input = {
+        relative = "cursor",
+      },
     },
   },
 }

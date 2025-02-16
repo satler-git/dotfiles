@@ -76,4 +76,21 @@ return {
       require("telescope").load_extension("ghq")
     end,
   },
+  {
+    "nvim-telescope/telescope-ui-select.nvim",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+    },
+    init = function()
+      vim.ui.select = function(...)
+        -- telescope-ui-select 拡張をロード
+        require("telescope").load_extension("ui-select")
+        -- 呼び出しを続行
+        return vim.ui.select(...)
+      end
+    end,
+    config = function()
+      -- require("telescope").load_extension("ui-select")
+    end,
+  },
 }
