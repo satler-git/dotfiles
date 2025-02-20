@@ -54,6 +54,7 @@
       denops-reload() {
         systemctl --user reload-or-restart denops-shared-server.service
       }
+      denops-reload
 
       # https://zenn.dev/yuys13/articles/fish-plugins-2025
       __list_directory_contents () {
