@@ -1,4 +1,3 @@
-{ config, ... }:
 let
   secretHome = ../../secrets;
   secrets = "${secretHome}/secrets.yaml";

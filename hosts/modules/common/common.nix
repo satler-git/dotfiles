@@ -75,6 +75,29 @@ in
 
     security.polkit.enable = true;
 
+    sops =
+      let
+        secretHome = ../../../secrets;
+        api-keys = "${secretHome}/api-keys.yaml";
+      in
+      {
+        secrets = {
+          github_pat = {
+            sopsFile = api-keys;
+          };
+        };
+
+        templates = {
+          "extra-nix-config" = {
+            owner = "satler";
+            mode = "0400";
+            content = ''
+              extra-access-tokens = github.com=${config.sops.placeholder.github_pat}
+            '';
+          };
+        };
+      };
+
     nix = {
       package = pkgs.lix;
 
@@ -93,6 +116,10 @@ in
           "flakes"
         ];
       };
+
+      extraOptions = ''
+        !include ${config.sops.templates."extra-nix-config".path}
+      '';
 
       gc = {
         automatic = true;
