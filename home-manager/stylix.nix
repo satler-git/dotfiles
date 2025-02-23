@@ -44,11 +44,13 @@ in
     targets = {
       alacritty.enable = false;
       firefox.enable = false;
-      neovim.enable = false;
-      waybar.enable = false;
-      gnome.enable = false;
-      zellij.enable = false;
       gnome-text-editor.enable = false;
+      gnome.enable = false;
+      neovim.enable = false;
+      vscode.enable = false;
+      waybar.enable = false;
+      wpaperd.enable = false;
+      zellij.enable = false;
     };
   };
 }
