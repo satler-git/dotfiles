@@ -33,8 +33,11 @@
     });
   };
 
-  neovimMold = final: prev: {
+  mold = final: prev: {
     neovim = prev.neovim.override (old: {
+      stdenv = final.useMoldLinker final.clangStdenv;
+    });
+    yazi-unwrapped = prev.yazi-unwrapped.override (old: {
       stdenv = final.useMoldLinker final.clangStdenv;
     });
   };
