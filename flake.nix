@@ -169,10 +169,18 @@
 
       devShells.x86_64-linux.default = pkgs.mkShell {
         buildInputs = with pkgs; [
-          sops
+          # crypt
           age
-          nvfetcher
+          sops
+
+          # secureboot
           sbctl
+
+          # nix tools
+          deadnix
+
+          # mics
+          nvfetcher
         ];
       };
     };

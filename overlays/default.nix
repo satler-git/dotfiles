@@ -36,10 +36,10 @@
   };
 
   mold = final: prev: {
-    neovim = prev.neovim.override (old: {
+    neovim = prev.neovim.override ({
       stdenv = final.useMoldLinker final.clangStdenv;
     });
-    yazi-unwrapped = prev.yazi-unwrapped.override (old: {
+    yazi-unwrapped = prev.yazi-unwrapped.override ({
       stdenv = final.useMoldLinker final.clangStdenv;
     });
   };
