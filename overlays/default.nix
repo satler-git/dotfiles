@@ -10,6 +10,8 @@
 
       open-webui
       reversal-icon-theme
+
+      biome
       ;
   };
 
