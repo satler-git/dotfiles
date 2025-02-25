@@ -32,8 +32,8 @@ jobs:
           docker-images: true
           swap-storage: true
       - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@main
+        uses: DeterminateSystems/nix-installer-action@a48face58194521af687ce7df4c802b1b558e743
       - name: Setup Cache
-        uses: DeterminateSystems/magic-nix-cache-action@main
+        uses: DeterminateSystems/magic-nix-cache-action@599341bab96cc4db2dc9188b3c21ce3018c9210b
       - name: Build Nix Flake
         run: nix --experimental-features 'nix-command flakes' build .#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel -L --no-link
