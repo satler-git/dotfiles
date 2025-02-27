@@ -27,11 +27,17 @@ return {
             end
 
             while node do
+              -- print(node:type())
               if
                 vim.tbl_contains({
                   "trait_bounds",
                   "type_arguments",
                   "type_parameters",
+                  -- あんまりこれは関係なくて、tree-sitterの仕様上?
+                  -- A: |,
+                  -- のように,がないとtrait_bounds判定にならない
+                  -- TODO:
+                  "where_clause",
                 }, node:type())
               then
                 in_type_parameters = true
@@ -39,6 +45,9 @@ return {
               end
               node = node:parent()
             end
+
+            -- print(before_borrowing)
+            -- print(in_type_parameters)
 
             return in_type_parameters or before_borrowing
           end,
