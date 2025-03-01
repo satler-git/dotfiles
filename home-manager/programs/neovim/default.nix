@@ -38,7 +38,7 @@ let
 in
 {
   imports = [
-    ./neovide.nix
+    # ./neovide.nix
   ];
 
   programs.neovim = {
