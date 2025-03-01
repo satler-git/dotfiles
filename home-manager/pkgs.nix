@@ -66,6 +66,7 @@
     pandoc
     playerctl
     podman-compose
+    prismlauncher
 
     spotify
 
