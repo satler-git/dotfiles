@@ -84,6 +84,7 @@
 
     ripgrep
     ripgrep-all
+    rquickshare
 
     hledger
 
