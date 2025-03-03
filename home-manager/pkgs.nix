@@ -75,6 +75,7 @@
     thunderbird
     trash-cli
     tre-command
+    typos
     typst
 
     ueberzugpp
