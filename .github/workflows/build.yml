@@ -21,16 +21,17 @@ jobs:
           - desktop
     steps:
       - uses: actions/checkout@v4
-      - name: Free Disk Space (Ubuntu)
-        uses: jlumbroso/free-disk-space@main
+      - uses: easimon/maximize-build-space@master
         with:
-          tool-cache: true
-          android: true
-          dotnet: true
-          haskell: true
-          large-packages: true
-          docker-images: true
-          swap-storage: true
+          root-reserve-mb: 8192
+          swap-size-mb: 1024
+          temp-reserve-mb: 1024
+          build-mount-path: "/nix/store"
+          remove-dotnet: true
+          remove-android: true
+          remove-haskell: true
+          remove-codeql: true
+          remove-docker-images: true
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@a48face58194521af687ce7df4c802b1b558e743
       - name: Setup Cache
