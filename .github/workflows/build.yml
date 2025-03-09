@@ -36,4 +36,4 @@ jobs:
       - name: Setup Cache
         uses: DeterminateSystems/magic-nix-cache-action@599341bab96cc4db2dc9188b3c21ce3018c9210b
       - name: Build Nix Flake
-        run: nix --experimental-features 'nix-command flakes' build .#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel -L --no-link
+        run: nix --experimental-features 'nix-command flakes' build .#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel -L --no-link --accept-flake-config
