@@ -32,8 +32,7 @@ jobs:
           remove-haskell: true
           remove-codeql: true
           remove-docker-images: true
-      - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@a48face58194521af687ce7df4c802b1b558e743
+      - uses: cachix/install-nix-action@v30
       - name: Setup Cache
         uses: DeterminateSystems/magic-nix-cache-action@599341bab96cc4db2dc9188b3c21ce3018c9210b
       - name: Build Nix Flake
