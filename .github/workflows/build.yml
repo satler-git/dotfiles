@@ -18,10 +18,9 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         host:
-          - desktop
+          - luka
     steps:
-      - uses: actions/checkout@v4
-      - uses: easimon/maximize-build-space@master
+      - uses: easimon/maximize-build-space@fc881a613ad2a34aca9c9624518214ebc21dfc0c # master 2025/3/10
         with:
           root-reserve-mb: 8192
           swap-size-mb: 1024
@@ -32,8 +31,12 @@ jobs:
           remove-haskell: true
           remove-codeql: true
           remove-docker-images: true
+      - uses: actions/checkout@v4
       - uses: cachix/install-nix-action@v30
-      - name: Setup Cache
-        uses: DeterminateSystems/magic-nix-cache-action@599341bab96cc4db2dc9188b3c21ce3018c9210b
-      - name: Build Nix Flake
-        run: nix --experimental-features 'nix-command flakes' build .#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel -L --no-link --accept-flake-config
+        with:
+          extra_nix_config: |
+            accept-flake-config = true
+            http-connections = 100
+            stalled-download-timeout = 15
+      - name: Build check
+        run: nix build --no-link ".#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel"
