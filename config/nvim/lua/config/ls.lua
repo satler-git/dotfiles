@@ -150,3 +150,6 @@ lspconfig.ts_ls.setup({
 lspconfig.vtsls.setup({
   capabilities = capabilities,
 })
+lspconfig.typos_lsp.setup({
+  capabilities = capabilities,
+})

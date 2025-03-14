@@ -62,6 +62,8 @@ in
         # Lang-servers
         efm-langserver
 
+        typos-lsp
+
         buf
         elixir-ls
         ghc # needed by haskell-language-server
