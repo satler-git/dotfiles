@@ -88,6 +88,7 @@
     rquickshare
 
     hledger
+    hyperfine
 
     vlc
 
