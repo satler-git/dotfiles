@@ -19,6 +19,9 @@ in
         type = types.package;
         default = pkgs.deno;
       };
+      enableZshIntegration = mkEnableOption "Zsh integration" // {
+        default = true;
+      };
       denops-vim-src = mkOption {
         type = types.package;
         default = pkgs.fetchFromGitHub {
@@ -56,6 +59,13 @@ in
   };
 
   config = lib.mkIf cfg.enable {
+    programs.zsh.initExtra = lib.mkIf cfg.enableZshIntegration ''
+      denops-reload() {
+        systemctl --user reload-or-restart denops-shared-server.service
+      }
+      denops-reload
+    '';
+
     systemd.user.services.denops-shared-server = {
       Unit = {
         Description = "Denops Shared Server";
