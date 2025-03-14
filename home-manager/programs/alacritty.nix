@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       general.import = [
-        "${pkgs.alacritty-theme}/aura.toml"
+        "${pkgs.alacritty-theme}/share/alacritty-theme/aura.toml"
       ];
       font.normal = {
         family = "Monaspace Argon";
