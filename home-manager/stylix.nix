@@ -15,6 +15,7 @@ in
 
     cursor.package = pkgs.bibata-cursors;
     cursor.name = "Bibata-Modern-Ice";
+    cursor.size = 24;
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
 
