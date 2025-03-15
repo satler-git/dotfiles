@@ -33,7 +33,11 @@
     firefox.enable = true;
     hyprland.enable = true;
     localsend.enable = true;
-    steam.enable = true;
+
+    steam = {
+      remotePlay.openFirewall = true;
+      enable = true;
+    };
     # keep-sorted end
   };
 }
