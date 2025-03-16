@@ -3,7 +3,6 @@ on:
   workflow_dispatch: # allows manual triggering
   schedule:
     - cron: '0 0 * * *'
-
 jobs:
   lockfile:
     runs-on: ubuntu-latest
@@ -16,7 +15,7 @@ jobs:
         uses: DeterminateSystems/update-flake-lock@208d8b0fa49c6d36ad96202cf6f9aa00c7242046
         with:
           pr-title: "Update flake.lock" # Title of PR to be created
-          pr-labels: |                  # Labels to be set on the PR
+          pr-labels: | # Labels to be set on the PR
             dependencies
             automated
           token: ${{ secrets.GH_TOKEN_FOR_UPDATES }}

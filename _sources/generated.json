@@ -1,70 +1,70 @@
 {
-    "testing-language-server": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./testing-language-server-c53cdb6a6b5f8ee6b337c640a16ee3565fac94f2/Cargo.lock",
-                {}
-            ]
-        },
-        "date": "2025-01-29",
-        "extract": null,
-        "name": "testing-language-server",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "kbwo",
-            "repo": "testing-language-server",
-            "rev": "c53cdb6a6b5f8ee6b337c640a16ee3565fac94f2",
-            "sha256": "sha256-8Nbn4JSVwkyufXMEgcEaCyjT6h7fd/Ypg6Uj2a0F7k0=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "c53cdb6a6b5f8ee6b337c640a16ee3565fac94f2"
+  "testing-language-server": {
+    "cargoLocks": {
+      "Cargo.lock": [
+        "./testing-language-server-c53cdb6a6b5f8ee6b337c640a16ee3565fac94f2/Cargo.lock",
+        {}
+      ]
     },
-    "yazi-compress": {
-        "cargoLocks": null,
-        "date": "2024-08-10",
-        "extract": null,
-        "name": "yazi-compress",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "KKV9",
-            "repo": "compress.yazi",
-            "rev": "60b24af23d1050f1700953a367dd4a2990ee51aa",
-            "sha256": "sha256-Yf5R3H8t6cJBMan8FSpK3BDSG5UnGlypKSMOi0ZFqzE=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "60b24af23d1050f1700953a367dd4a2990ee51aa"
+    "date": "2025-01-29",
+    "extract": null,
+    "name": "testing-language-server",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "deepClone": false,
+      "fetchSubmodules": false,
+      "leaveDotGit": false,
+      "name": null,
+      "owner": "kbwo",
+      "repo": "testing-language-server",
+      "rev": "c53cdb6a6b5f8ee6b337c640a16ee3565fac94f2",
+      "sha256": "sha256-8Nbn4JSVwkyufXMEgcEaCyjT6h7fd/Ypg6Uj2a0F7k0=",
+      "sparseCheckout": [],
+      "type": "github"
     },
-    "yazi-plugins": {
-        "cargoLocks": null,
-        "date": "2025-03-08",
-        "extract": null,
-        "name": "yazi-plugins",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "yazi-rs",
-            "repo": "plugins",
-            "rev": "2bf70d880e02db95394de360668325b46f804791",
-            "sha256": "sha256-0A5UVbrP9+GRvX14VQm4Yxw+P9Ca5gtlk9qkLCVf5+Q=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "2bf70d880e02db95394de360668325b46f804791"
-    }
+    "version": "c53cdb6a6b5f8ee6b337c640a16ee3565fac94f2"
+  },
+  "yazi-compress": {
+    "cargoLocks": null,
+    "date": "2024-08-10",
+    "extract": null,
+    "name": "yazi-compress",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "deepClone": false,
+      "fetchSubmodules": false,
+      "leaveDotGit": false,
+      "name": null,
+      "owner": "KKV9",
+      "repo": "compress.yazi",
+      "rev": "60b24af23d1050f1700953a367dd4a2990ee51aa",
+      "sha256": "sha256-Yf5R3H8t6cJBMan8FSpK3BDSG5UnGlypKSMOi0ZFqzE=",
+      "sparseCheckout": [],
+      "type": "github"
+    },
+    "version": "60b24af23d1050f1700953a367dd4a2990ee51aa"
+  },
+  "yazi-plugins": {
+    "cargoLocks": null,
+    "date": "2025-03-08",
+    "extract": null,
+    "name": "yazi-plugins",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "deepClone": false,
+      "fetchSubmodules": false,
+      "leaveDotGit": false,
+      "name": null,
+      "owner": "yazi-rs",
+      "repo": "plugins",
+      "rev": "2bf70d880e02db95394de360668325b46f804791",
+      "sha256": "sha256-0A5UVbrP9+GRvX14VQm4Yxw+P9Ca5gtlk9qkLCVf5+Q=",
+      "sparseCheckout": [],
+      "type": "github"
+    },
+    "version": "2bf70d880e02db95394de360668325b46f804791"
+  }
 }

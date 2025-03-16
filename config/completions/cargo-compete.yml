@@ -1,5 +1,4 @@
 # yaml-language-server: $schema=https://carapace.sh/schemas/command.json
-
 name: cargo-compete
 description: A Cargo subcommand for competitive programming
 persistentflags:

@@ -30,10 +30,10 @@
 
   programs = {
     # keep-sorted start
+
     firefox.enable = true;
     hyprland.enable = true;
     localsend.enable = true;
-
     steam = {
       remotePlay.openFirewall = true;
       enable = true;

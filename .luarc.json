@@ -1,6 +1,12 @@
 {
-	"diagnostics": {
-		"globals": ["vim", "require"]
-	},
-	"workspace.ignoreDir": ["!config", "**"]
+  "diagnostics": {
+    "globals": [
+      "vim",
+      "require"
+    ]
+  },
+  "workspace.ignoreDir": [
+    "!config",
+    "**"
+  ]
 }
