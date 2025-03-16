@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   imports = [
     # keep-sorted start
@@ -16,6 +17,14 @@
   my.openFirewall = true;
 
   my.services.dropbox.enable = true;
+
+  services.tailscale = {
+    useRoutingFeatures = "both";
+
+    extraUpFlags = lib.mkAfter [
+      "--advertise-exit-node"
+    ];
+  };
 
   # my.services.openhands = {
   #   enable = true;
