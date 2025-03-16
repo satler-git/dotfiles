@@ -41,3 +41,6 @@ vim.opt.undofile = true
 vim.opt.termguicolors = true
 
 vim.o.guifont = "Monaspace Argon:h11.25"
+
+vim.o.formatoptions = "croq"
+vim.o.textwidth = 80
