@@ -8,16 +8,8 @@ in
       enable = true;
       inherit openFirewall;
       loadModels = [
-        "llama3.2"
-        "qwen2.5-coder:14b"
-        "qwen2.5:14b"
-
-        "phi4:14b"
-        "gemma2:9b"
-        "codestral:22b"
-
-        "deepseek-r1:1.5b"
-        "deepseek-r1:7b"
+        "gemma3:12b"
+        "qwq:32b"
       ];
     };
     open-webui = {
