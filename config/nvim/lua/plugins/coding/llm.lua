@@ -8,25 +8,25 @@ return {
       panel = { enabled = false },
     },
   },
-  {
-    "zbirenbaum/copilot-cmp",
-    event = { "InsertEnter", "LspAttach" },
-
-    config = function()
-      -- lspkind.lua
-      local lspkind = require("lspkind")
-      lspkind.init({
-        symbol_map = {
-          Copilot = "",
-        },
-      })
-
-      vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
-
-      table.insert(require("cmp").get_config().sources, { name = "copilot" })
-      require("copilot_cmp").setup()
-    end,
-  },
+  -- {
+  --   "zbirenbaum/copilot-cmp",
+  --   event = { "InsertEnter", "LspAttach" },
+  --
+  --   config = function()
+  --     -- lspkind.lua
+  --     local lspkind = require("lspkind")
+  --     lspkind.init({
+  --       symbol_map = {
+  --         Copilot = "",
+  --       },
+  --     })
+  --
+  --     vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
+  --
+  --     table.insert(require("cmp").get_config().sources, { name = "copilot" })
+  --     require("copilot_cmp").setup()
+  --   end,
+  -- },
   -- {
   --   "yetone/avante.nvim",
   --   event = "VeryLazy",
