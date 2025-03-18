@@ -83,6 +83,7 @@
 
     osu-lazer-bin
 
+    rdfind
     ripgrep
     ripgrep-all
     rquickshare
