@@ -8,7 +8,7 @@ in
       enable = true;
       inherit openFirewall;
       loadModels = [
-        "gemma3:12b"
+        "gemma3:12b-it-q4_K_M"
         "qwq:32b"
       ];
     };
