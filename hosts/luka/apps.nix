@@ -8,6 +8,7 @@
     ../modules/apps/libvirt.nix
     ../modules/apps/llm.nix
     ../modules/apps/podman.nix
+    ../modules/apps/syncthing.nix
     ../modules/apps/tailscale.nix
     ../modules/apps/wego.nix
     # ../modules/apps/openhands.nix
