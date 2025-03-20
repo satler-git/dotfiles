@@ -10,7 +10,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@a48face58194521af687ce7df4c802b1b558e743
+        uses: DeterminateSystems/nix-installer-action@37dc9ba6c4bd58da00a2f31c3c546eb5cb71045e
       - name: Update flake.lock
         uses: DeterminateSystems/update-flake-lock@208d8b0fa49c6d36ad96202cf6f9aa00c7242046
         with:
