@@ -89,6 +89,7 @@ in
     cargo-compete
     cargo-expand
     cargo-nextest
+    cargo-show-asm
     cargo-tauri
     # keep-sorted end
   ];
