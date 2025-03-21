@@ -12,6 +12,8 @@
       reversal-icon-theme
 
       biome
+
+      hyprland
       ;
   };
 
