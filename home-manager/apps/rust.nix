@@ -61,7 +61,7 @@ in
   home.sessionVariables.SCCACHE_CACHE_SIZE = "50G";
 
   home.packages = with pkgs; [
-    # faster compilling
+    # faster compiling
     clang
     mold-wrapped
     sccache
@@ -77,7 +77,14 @@ in
 
     # cargo subcomannds
     # keep-sorted start
-    (cargo-nightly fenix.minimal.toolchain)
+    (cargo-nightly (
+      fenix.combine [
+        fenix.minimal.toolchain
+        (fenix.complete.withComponents [
+          "miri"
+        ])
+      ]
+    ))
     cargo-audit
     cargo-compete
     cargo-expand
