@@ -73,6 +73,8 @@
     teip
     tetrio-desktop
     thunderbird
+    todoist
+    todoist-electron
     trash-cli
     tre-command
     typos
