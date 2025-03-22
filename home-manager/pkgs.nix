@@ -68,6 +68,7 @@
     podman-compose
     prismlauncher
 
+    smartmontools
     spotify
 
     teip
