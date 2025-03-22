@@ -74,6 +74,10 @@
       url = "github:isd-project/isd";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    yurf = {
+      url = "github:satler-git/yurf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # utils
     treefmt-nix = {

@@ -41,6 +41,7 @@
     imhex
     inkscape
     inputs.isd.packages.${system}.default
+    inputs.yurf.packages.${system}.default
 
     jq
 
