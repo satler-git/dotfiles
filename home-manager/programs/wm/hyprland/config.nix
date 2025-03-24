@@ -109,7 +109,7 @@
     "$terminal" = "alacritty";
     "$browser" = "firefox";
     "$fileManager" = "alacritty -e zsh -c yazi";
-    "$launcher" = "alacritty --class yurf -e zsh -c \"yurf --fullscreen\"";
+    "$launcher" = "alacritty --class yurf -e zsh -c \"yurf --fullscreen && disown\"";
 
     bind = [
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
