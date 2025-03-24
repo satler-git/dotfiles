@@ -2,7 +2,7 @@
 {
   imports = [
     ../waybar
-    ../wofi
+    # ../wofi
     ./config.nix
   ];
 

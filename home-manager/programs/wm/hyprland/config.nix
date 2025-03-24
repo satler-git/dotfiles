@@ -70,19 +70,25 @@
     };
 
     windowrulev2 = [
-      "float, class:(clipse)"
-      "size 622 652, class:(clipse)"
-      "opacity 0.8, class:(clipse)"
       "float,class:^(firefox),title:^(ピクチャーインピクチャー)"
       "pin,class:^(firefox),title:^(ピクチャーインピクチャー)"
       "size 30% 30%, class:^(firefox),title:^(ピクチャーインピクチャー)"
       "float,class:^(firefox),title:^(Picture-in-Picture)"
       "pin,class:^(firefox),title:^(Picture-in-Picture)"
       "size 30% 30%, class:^(firefox),title:^(Picture-in-Picture)"
+
       # "immediate, class:^(osu!)$"
       "immediate, class:^(ZenlessZoneZero)$"
       "immediate, class:^(A Dance of Fire and Ice)$"
+
+      "float, class:(clipse)"
+      "size 622 652, class:(clipse)"
+      "opacity 0.8, class:(clipse)"
+
       "float,class:^(FloatingVim)"
+
+      "float, class:(yurf)"
+      "size 622 652, class:(yurf)"
     ];
 
     dwindle = {
@@ -102,8 +108,8 @@
 
     "$terminal" = "alacritty";
     "$browser" = "firefox";
-    "$fileManager" = "alacritty --embed=\"zsh -c\" --command=\"yazi\"";
-    "$launcher" = "wofi --show drun";
+    "$fileManager" = "alacritty -e zsh -c yazi";
+    "$launcher" = "alacritty --class yurf -e zsh -c \"yurf --fullscreen\"";
 
     bind = [
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more

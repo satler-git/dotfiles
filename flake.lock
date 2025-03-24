@@ -2105,11 +2105,11 @@
         "rust-overlay": "rust-overlay_3"
       },
       "locked": {
-        "lastModified": 1742705760,
-        "narHash": "sha256-L0DZd3+RWAWItY1kwxdPWJVbvq37SLDSysbKAZxfhb8=",
+        "lastModified": 1742796947,
+        "narHash": "sha256-wpOIoyRk+E0qsF/ZS5sX0fPUvx2HOmzq7Jkl1sm58Zk=",
         "owner": "satler-git",
         "repo": "yurf",
-        "rev": "3b27d04fc9d9b2f273ed00344a55634ab2c73e77",
+        "rev": "7edffbb34f1f599f4c96cac56f58a54e6f637d0b",
         "type": "github"
       },
       "original": {
