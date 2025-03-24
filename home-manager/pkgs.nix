@@ -12,6 +12,7 @@
     bottom
 
     calibre
+    code-cursor
 
     deno
     delta
