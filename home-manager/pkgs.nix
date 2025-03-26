@@ -12,6 +12,7 @@
     bottom
 
     calibre
+    charm-freeze
     code-cursor
 
     deno
