@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@300844e532328f196bda4a361d78002cae0e9480
+        uses: DeterminateSystems/nix-installer-action@dc965b7805a7e4ab53422dc903932dd376d03b9e
       - name: Update with nvfetcher
         run: nix run nixpkgs#nvfetcher
       - name: Diff
