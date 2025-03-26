@@ -86,6 +86,7 @@
     ueberzugpp
     unzip
 
+    obs-studio
     osu-lazer-bin
 
     rdfind
