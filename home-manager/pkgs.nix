@@ -13,6 +13,7 @@
 
     calibre
     charm-freeze
+    claude-code
     code-cursor
 
     deno
@@ -33,7 +34,6 @@
     gimp
     gnumake
     gnutar
-    goose-cli
     graalvm-ce
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-base
