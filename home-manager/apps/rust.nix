@@ -91,7 +91,7 @@ in
     cargo-nextest
     cargo-show-asm
     cargo-tauri
-    cargo-watch
+    bacon
     # keep-sorted end
   ];
 }
