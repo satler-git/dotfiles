@@ -71,6 +71,7 @@
     playerctl
     podman-compose
     prismlauncher
+    pympress
 
     smartmontools
     spotify
