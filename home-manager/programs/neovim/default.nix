@@ -85,11 +85,12 @@ in
         vtsls
 
         # Formatter
+        biome
         nixfmt-rfc-style
         rustfmt
         stylish-haskell
         stylua
-        biome
+        typstyle
 
         # DAP
         haskellPackages.ghci-dap

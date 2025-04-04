@@ -8,16 +8,18 @@ return {
     config = function()
       require("conform").setup({
         formatters_by_ft = {
-          lua = { "stylua" },
-          -- You can customize some of the format options for the filetype (:help conform.format)
-          rust = { "rustfmt", lsp_format = "fallback" },
-          haskell = { "stylish-haskell" },
-          nix = { "nixfmt" },
-          toml = { "taplo" },
-          json = { "biome" },
-          typescript = { "biome" },
-          javascript = { "biome" },
+          -- keep-sorted start
           astro = { "biome" },
+          haskell = { "stylish-haskell" },
+          javascript = { "biome" },
+          json = { "biome" },
+          lua = { "stylua" },
+          nix = { "nixfmt" },
+          rust = { "rustfmt", lsp_format = "fallback" },
+          toml = { "taplo" },
+          typescript = { "biome" },
+          typst = { "typstyle" },
+          -- keep-sorted end
         },
         format_on_save = {
           -- These options will be passed to conform.format()
