@@ -34,6 +34,10 @@
       url = "github:nix-community/lanzaboote/v0.4.2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    disko = {
+      url = "github:nix-community/disko/latest";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Overlays
     tidalcycles = {
@@ -148,6 +152,23 @@
 
       nixosConfigurations = {
         luka = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = {
+            inherit inputs self;
+          };
+
+          modules = [
+            {
+              nixpkgs.pkgs = pkgs;
+            }
+            ./hosts/luka
+            inputs.stylix.nixosModules.stylix
+            inputs.sops-nix.nixosModules.sops
+            home-manager.nixosModules.home-manager
+          ];
+        };
+        tau = nixpkgs.lib.nixosSystem {
+          # Laptop
           system = "x86_64-linux";
           specialArgs = {
             inherit inputs self;

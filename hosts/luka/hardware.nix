@@ -8,7 +8,6 @@
   imports = [
     ../modules/hardware/nvidia.nix
     ../modules/hardware/microbit.nix
-    ../modules/hardware/nvidia.nix
     ../modules/hardware/xp-pen-pentab.nix
     ../modules/hardware/printer.nix
 

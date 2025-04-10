@@ -8,6 +8,12 @@
 sudo nixos-install --flake github:satler-git/dotfiles#luka
 ```
 
+### In `tau`
+
+```shell
+sudo nixos-install --flake github:satler-git/dotfiles#tau
+```
+
 ## Apply
 
 ### :desktop_computer: In `luka`(prev: desktop)
@@ -15,6 +21,13 @@ sudo nixos-install --flake github:satler-git/dotfiles#luka
 ```shell
 sudo nixos-rebuild switch --flake .#luka
 ```
+
+### In `tau`
+
+```shell
+sudo nixos-rebuild switch --flake .#tau
+```
+
 
 # Credits
 

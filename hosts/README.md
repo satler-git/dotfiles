@@ -7,6 +7,15 @@
 - AMD CPU
 - NVIDIA GPU(Ampere)
 
+## tau(hostname: `tau`)
+
+Thinkpad E14 Gen6 Amd + SSD(512GB)
+
+### Hardware
+
+- AMD CPU & GPU
+- Two SSD
+
 # Add a host
 
 1. `mkdir <hostname>`
