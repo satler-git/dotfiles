@@ -4,8 +4,9 @@
 }:
 {
   imports = [
-    ../modules/hardware/xp-pen-pentab.nix
+    ../modules/hardware/bluetooth.nix
     ../modules/hardware/printer.nix
+    ../modules/hardware/xp-pen-pentab.nix
 
     inputs.nixos-hardware.nixosModules.lenovo-thinkpad-e14-amd
   ];
