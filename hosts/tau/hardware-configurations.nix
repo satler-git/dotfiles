@@ -16,7 +16,7 @@
     disk = {
       main = {
         type = "disk";
-        device = "/dev/disk/by-id/eui.8ce38e0405655b92";
+        device = "/dev/disk/by-id/nvme-KBG6AZNT512G_LA_KIOXIA_2FSPT0XMZ2B4";
         content = {
           type = "gpt";
           partitions = {
@@ -51,7 +51,7 @@
       };
       home = {
         type = "disk";
-        device = "/dev/disk/by-id/KIOXIA-EXCERIA_G2_SSD_54OA43Z7K71S";
+        device = "/dev/disk/by-id/nvme-KIOXIA-EXCERIA_G2_SSD_54OA43Z7K71S";
         content = {
           type = "gpt";
           partitions = {
