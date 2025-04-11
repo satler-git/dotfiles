@@ -1,4 +1,4 @@
-{ lib, ... }:
+# { ... }:
 {
   imports = [
     # keep-sorted start
