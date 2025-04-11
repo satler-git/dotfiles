@@ -178,7 +178,7 @@
             {
               nixpkgs.pkgs = pkgs;
             }
-            ./hosts/luka
+            ./hosts/tau
             inputs.stylix.nixosModules.stylix
             inputs.sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager
