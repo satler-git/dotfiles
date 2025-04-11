@@ -179,9 +179,10 @@
               nixpkgs.pkgs = pkgs;
             }
             ./hosts/tau
-            inputs.stylix.nixosModules.stylix
-            inputs.sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager
+            inputs.disko.nixosModules.disko
+            inputs.sops-nix.nixosModules.sops
+            inputs.stylix.nixosModules.stylix
           ];
         };
       };

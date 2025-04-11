@@ -9,7 +9,7 @@
 
   imports = [
     ./hardware.nix
-    ./hardware-configurations.nix # TODO:
+    ./hardware-configurations.nix
 
     ../modules/common/desktop
 

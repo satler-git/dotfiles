@@ -11,7 +11,6 @@
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
-    inputs.disko.nixosModules.disko
   ];
 
   disko.devices = {
