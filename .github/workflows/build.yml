@@ -19,6 +19,7 @@ jobs:
         os: [ubuntu-latest]
         host:
           - luka
+          - tau
     steps:
       - uses: easimon/maximize-build-space@fc881a613ad2a34aca9c9624518214ebc21dfc0c # master 2025/3/10
         with:

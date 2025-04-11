@@ -9,8 +9,6 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        host:
-          - desktop
     steps:
       - uses: actions/checkout@v4
       - name: Install Nix
