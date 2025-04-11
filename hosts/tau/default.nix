@@ -9,7 +9,7 @@
 
   imports = [
     ./hardware.nix
-    # ./hardware-configrations.nix # TODO:
+    ./hardware-configurations.nix # TODO:
 
     ../modules/common/desktop
 
@@ -23,7 +23,7 @@
     ./apps.nix
   ];
 
-  # system.stateVersion = "24.05"; # Don't change this # TODO:
+  system.stateVersion = "24.11"; # Don't change this
 
   my.hostName = "tau";
 
