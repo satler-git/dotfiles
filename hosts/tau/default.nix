@@ -23,6 +23,45 @@
     ./apps.nix
   ];
 
+  sops = {
+    secrets = {
+      home_ssid = { };
+      home_key = { };
+    };
+
+    templates.wifi = {
+      content = ''
+        HOME_WIFI_SSID = ${config.sops.placeholder.home_ssid}
+        HOME_WIFI_PASSWORD = ${config.sops.placeholder.home_key}
+      '';
+    };
+  };
+
+  networking = {
+    networkmanager = {
+      ensureProfiles = {
+        environmentFiles = [ config.sops.templates.wifi.path ];
+        profiles = {
+          home = {
+            connection = {
+              id = "$HOME_WIFI_SSID";
+              type = "wifi";
+            };
+            wifi = {
+              mode = "infrastructure";
+              ssid = "$HOME_WIFI_SSID";
+            };
+            wifi-security = {
+              auth-alg = "open";
+              key-mgmt = "wpa-psk";
+              psk = "$HOME_WIFI_PASSWORD"; # $HOME_WIFI_PASSWORD
+            };
+          };
+        };
+      };
+    };
+  };
+
   system.stateVersion = "24.11"; # Don't change this
 
   my.hostName = "tau";
