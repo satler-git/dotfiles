@@ -13,7 +13,7 @@
 
       biome
 
-      hyprland
+      # hyprland
       ;
   };
 
