@@ -18,6 +18,7 @@
         monitor = [
           "eDP-1, preferred, 0x0, 1.15"
         ];
+        exec-once = lib.mkAfter [ "hypridle" ];
       };
     }
     {

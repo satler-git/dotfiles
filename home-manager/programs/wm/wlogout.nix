@@ -16,8 +16,14 @@
       }
       {
         label = "lock";
-        action = "loginctl lock-session";
+        action = "hyprlock";
         text = "Lock";
+        keybind = "l";
+      }
+      {
+        label = "suspend";
+        action = "systemctl suspend";
+        text = "Sleep";
         keybind = "l";
       }
       {
