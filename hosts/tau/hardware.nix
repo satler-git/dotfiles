@@ -18,8 +18,8 @@
         monitor = [
           "eDP-1, preferred, 0x0, 1.25"
         ];
-        exec-once = lib.mkAfter [ "hypridle" ];
       };
+      services.hypridle.enable = true;
     }
     {
       programs.waybar.settings.mainBar.modules-right = lib.mkBefore [

@@ -29,7 +29,6 @@
   };
 
   services.hypridle = {
-    enable = true;
     settings = {
       general = {
         lock_cmd = "pidof hyprlock || hyprlock";
@@ -54,6 +53,8 @@
       ];
     };
   };
+
+  my.services.hyprsunset.enable = true;
 
   home.file.".local/bin/vime.sh" = {
     source = ../../../../config/bin/vime.sh;
