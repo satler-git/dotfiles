@@ -49,7 +49,7 @@
             warning = 30;
             critical = 15;
           };
-          format = "{capacity}% {icon}";
+          format = "{capacity}% {time} {icon}";
           format-icons = [
             ""
             ""

@@ -26,6 +26,10 @@
       accel_profile = "flat";
     };
 
+    "device[syna8020:00-06cb:ce5c-touchpad]" = {
+      sensitivity = 0.3;
+    };
+
     cursor = {
       no_hardware_cursors = true;
     };
