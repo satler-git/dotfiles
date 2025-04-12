@@ -16,12 +16,12 @@
     {
       wayland.windowManager.hyprland.settings = {
         monitor = [
-          "eDP-1, preferred, 0x0, 1"
+          "eDP-1, preferred, 0x0, 1.15"
         ];
       };
     }
     {
-      programs.waybar.settings.mainBar.modules-right = lib.mkAfter [
+      programs.waybar.settings.mainBar.modules-right = lib.mkBefore [
         "battery"
       ];
     }

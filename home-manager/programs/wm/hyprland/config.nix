@@ -3,8 +3,6 @@
     # many configs are copied from https://github.com/Comamoca/dotfiles/blob/main/config/home-manager/hyprland.nix
     # Thanks !
 
-    "debug:disable_logs" = false;
-
     env = [
       "HYPRCURSOR_THEME,Bibata-Modern-Ice"
       "HYPRCURSOR_SIZE,24"
