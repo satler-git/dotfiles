@@ -7,12 +7,13 @@
       extraGroups = [
         "audio"
         "docker"
-        "podman"
         "input"
-        "uinput"
         "networkmanager"
-        "wheel"
         "plugdev"
+        "podman"
+        "uinput"
+        "video"
+        "wheel"
       ];
       shell = pkgs.zsh;
 
