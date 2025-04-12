@@ -5,11 +5,11 @@
   ...
 }:
 {
-  # TODO: add age key and gpg key
-
   imports = [
     ./hardware.nix
     ./hardware-configurations.nix
+
+    ../modules/boot/plymouth.nix
 
     ../modules/common/desktop
 
