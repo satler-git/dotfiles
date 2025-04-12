@@ -13,7 +13,7 @@ let
 in
 {
   xsession.windowManager.i3.config = {
-    modifier = "Mod1";
+    modifier = "Mod4";
     terminal = "${terminal}";
 
     keybindings = {
