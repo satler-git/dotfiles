@@ -69,6 +69,8 @@
     };
   };
 
+  fileSystems."/home".neededForBoot = true;
+
   boot.initrd.availableKernelModules = [
     "nvme"
     "xhci_pci"
