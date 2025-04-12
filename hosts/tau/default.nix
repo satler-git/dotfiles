@@ -31,14 +31,16 @@
 
     templates.wifi = {
       content = ''
-        HOME_WIFI_SSID = ${config.sops.placeholder.home_ssid}
-        HOME_WIFI_PASSWORD = ${config.sops.placeholder.home_key}
+        HOME_WIFI_SSID=${config.sops.placeholder.home_ssid}
+        HOME_WIFI_PASSWORD=${config.sops.placeholder.home_key}
       '';
     };
   };
 
   networking = {
     networkmanager = {
+      wifi.backend = "iwd";
+
       ensureProfiles = {
         environmentFiles = [ config.sops.templates.wifi.path ];
         profiles = {
@@ -54,7 +56,7 @@
             wifi-security = {
               auth-alg = "open";
               key-mgmt = "wpa-psk";
-              psk = "$HOME_WIFI_PASSWORD"; # $HOME_WIFI_PASSWORD
+              psk = "$HOME_WIFI_PASSWORD";
             };
           };
         };
