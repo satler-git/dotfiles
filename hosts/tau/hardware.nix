@@ -1,5 +1,6 @@
 {
   inputs,
+  lib,
   ...
 }:
 {
@@ -18,6 +19,11 @@
           "eDP-1, preferred, 0x0, 1"
         ];
       };
+    }
+    {
+      programs.waybar.settings.mainBar.modules-right = lib.mkAfter [
+        "battery"
+      ];
     }
   ];
 }
