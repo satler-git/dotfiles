@@ -33,7 +33,7 @@ in
 
   config =
     let
-      hyprsunset = "${lib.getBin pkgs.hyprland}/hyprctl hyprsunset";
+      hyprsunset = "${pkgs.hyprland}/hyprctl hyprsunset";
 
       on = "${hyprsunset} temperature ${builtins.toString cfg.temperature}";
       off = "${hyprsunset} identity";
@@ -50,6 +50,8 @@ in
         hyprsunset-on = {
           Unit = {
             Description = "Enable hyprsunset blue‑light filter";
+            After = [ "hyprland-session.target" ];
+            Requires = [ "hyprland-session.target" ];
           };
 
           Install.WantedBy = [ "default.target" ];
@@ -63,6 +65,8 @@ in
         hyprsunset-off = {
           Unit = {
             Description = "Disable hyprsunset blue‑light filter";
+            After = [ "hyprland-session.target" ];
+            Requires = [ "hyprland-session.target" ];
           };
 
           Install.WantedBy = [ "default.target" ];
