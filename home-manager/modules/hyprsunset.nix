@@ -33,7 +33,7 @@ in
 
   config =
     let
-      hyprsunset = "${pkgs.hyprland}/hyprctl hyprsunset";
+      hyprsunset = "${lib.getBin pkgs.hyprland}/bin/hyprctl hyprsunset";
 
       on = "${hyprsunset} temperature ${builtins.toString cfg.temperature}";
       off = "${hyprsunset} identity";
