@@ -53,7 +53,6 @@ in
         gcc # for Tree sitter
         nodejs
         deno
-        python39
         sqlite
         sqlite.dev
 
