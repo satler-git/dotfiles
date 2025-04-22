@@ -13,7 +13,9 @@
 
       biome
 
-      # hyprland
+      kalker
+
+      pympress
       ;
   };
 
