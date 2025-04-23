@@ -101,8 +101,8 @@ in
         cargo-nextest # neotest-rust
       ]
       ++ [
-        testing-language-server
-        testing-ls-adapter
+        # testing-language-server
+        # testing-ls-adapter
       ];
     extraLuaPackages = ps: [
       ps.jsregexp

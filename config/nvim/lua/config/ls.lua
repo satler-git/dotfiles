@@ -115,7 +115,7 @@ lspconfig.efm.setup({
   filetypes = { "rust", "yaml" },
 })
 
-lspconfig.testing_ls.setup({})
+-- lspconfig.testing_ls.setup({})
 lspconfig.buf_ls.setup({})
 lspconfig.elixirls.setup({
   capabilities = capabilities,
