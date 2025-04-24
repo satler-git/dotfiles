@@ -17,7 +17,7 @@
 
       source <(jj util completion zsh)
     '';
-    initExtra = ''
+    initContent = ''
       setopt auto_param_slash
       setopt auto_param_keys
 
