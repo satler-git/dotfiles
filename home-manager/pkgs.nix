@@ -53,7 +53,6 @@
     krita
 
     lnav
-    lutris
 
     mindustry-wayland
     mission-center
