@@ -1,6 +1,8 @@
-{ lib, ... }:
+{ lib, inputs, ... }:
 {
   imports = [
+    inputs.aagl.nixosModules.default
+
     # keep-sorted start
     ../modules/apps/dropbox.nix
     ../modules/apps/hoogle.nix
@@ -11,7 +13,6 @@
     ../modules/apps/syncthing.nix
     ../modules/apps/tailscale.nix
     ../modules/apps/wego.nix
-    # ../modules/apps/openhands.nix
     # keep-sorted end
   ];
 
@@ -27,27 +28,18 @@
     ];
   };
 
-  # my.services.openhands = {
-  #   enable = true;
-  #   extraRuntimePackages = with pkgs; [
-  #     buildPackages.stdenv.cc
-  #     (fenix.combine [
-  #       fenix.stable.toolchain
-  #     ])
-  #   ];
-  # };
-  # べつにいらないというかうまくできない
-
   programs = {
     # keep-sorted start
-
     firefox.enable = true;
     hyprland.enable = true;
     localsend.enable = true;
+    # keep-sorted end
+
+    # gaming
     steam = {
       remotePlay.openFirewall = true;
       enable = true;
     };
-    # keep-sorted end
+    sleepy-launcher.enable = true;
   };
 }
