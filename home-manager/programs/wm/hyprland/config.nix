@@ -114,12 +114,14 @@
     "$terminal" = "alacritty";
     "$browser" = "firefox";
     "$fileManager" = "alacritty -e zsh -c yazi";
-    "$launcher" = "alacritty --class yurf -e zsh -c \"yurf --fullscreen && disown\"";
+    "$launcher" = "alacritty --class yurf -e zsh -c \"yurf --fullscreen launch && disown\"";
+    "$task" = "alacritty --class yurf -e zsh -c \"yurf --fullscreen task && disown\"";
 
     bind = [
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       "$mainMod, Return, exec, $terminal"
       "Alt, Space, exec, $launcher"
+      "$mainMod, Space, exec, $task"
       "$mainMod, q, killactive"
       "$mainMod SHIFT, q, exec, wlogout"
       "$mainMod, e, exec, $fileManager"
@@ -129,9 +131,6 @@
       "$mainMod, v, exec, alacritty --class clipse -e clipse"
       "Control_L, Print, exec, grim -g \"$(slurp -d)\" - | wl-copy; dunstify \"A rect screenshot is copied!\""
       "Alt,Print, exec, hyprctl -j activewindow | jq -r '\"\\(.at[0]),\\(.at[1]) \\(.size[0])x\\(.size[1])\"' | grim -g - - | wl-copy; dunstify \"A winwdow screenshot is copied!\""
-
-      "$mainMod, s, exec, playerctl next"
-      "$mainMod SHIFT, s, exec, playerctl previous"
 
       # ",Eisu_toggle, exec, ~/.local/bin/vime.sh"
 
