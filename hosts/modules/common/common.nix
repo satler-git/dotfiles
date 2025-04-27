@@ -27,7 +27,7 @@ in
     programs = {
       nix-ld.enable = true;
       git.enable = true;
-      vim.enable = true;
+      neovim.enable = true;
       zsh.enable = true;
     };
 
