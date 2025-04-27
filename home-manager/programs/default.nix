@@ -18,6 +18,7 @@
     ./wm/i3
     ./wm/wlogout.nix
     ./yazi.nix
+    ./yurf.nix
     ./zsh.nix
     # keep-sorted end
   ];
