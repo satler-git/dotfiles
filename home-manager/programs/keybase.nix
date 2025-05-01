@@ -12,7 +12,7 @@
       maxCacheTtl = 3600;
       maxCacheTtlSsh = 3600;
       enableSshSupport = true;
-      pinentryPackage = pkgs.pinentry-qt;
+      pinentry.package = pkgs.pinentry-qt;
     };
 
     keybase.enable = true;
