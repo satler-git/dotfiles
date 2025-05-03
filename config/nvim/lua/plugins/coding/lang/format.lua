@@ -11,13 +11,14 @@ return {
           -- keep-sorted start
           astro = { "biome" },
           haskell = { "stylish-haskell" },
-          javascript = { "biome" },
           json = { "biome" },
           lua = { "stylua" },
           nix = { "nixfmt" },
           rust = { "rustfmt", lsp_format = "fallback" },
           toml = { "taplo" },
           typescript = { "biome" },
+          javascript = { "biome" },
+          tsx = { "biome" },
           typst = { "typstyle" },
           -- keep-sorted end
         },
