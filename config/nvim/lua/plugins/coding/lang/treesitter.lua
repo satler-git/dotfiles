@@ -22,6 +22,7 @@ return {
           "dockerfile",
           "editorconfig",
           "typescript",
+          "tsx",
           "javascript",
           "css",
           "astro",
