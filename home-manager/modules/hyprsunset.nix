@@ -7,15 +7,10 @@
 let
   inherit (lib) mkEnableOption mkOption types;
   cfg = config.my.services.hyprsunset;
-in
-{
-  options = {
-    my.services.hyprsunset = {
+
+  autoSwitchModule = types.submodule {
+    options = {
       enable = mkEnableOption "enable automated hyprsunset";
-      package = mkOption {
-        type = types.package;
-        default = pkgs.hyprsunset;
-      };
       temperature = mkOption {
         type = types.int;
         default = 2500;
@@ -30,12 +25,27 @@ in
       };
     };
   };
+in
+{
+  options = {
+    my.services.hyprsunset = {
+      enable = mkEnableOption "enable hyprsunset";
+      package = mkOption {
+        type = types.package;
+        default = pkgs.hyprsunset;
+      };
+      autoSwitch = mkOption {
+        type = autoSwitchModule;
+        default = { };
+      };
+    };
+  };
 
   config =
     let
       hyprsunset = "${lib.getBin pkgs.hyprland}/bin/hyprctl hyprsunset";
 
-      on = "${hyprsunset} temperature ${builtins.toString cfg.temperature}";
+      on = "${hyprsunset} temperature ${builtins.toString cfg.autoSwitch.temperature}";
       off = "${hyprsunset} identity";
     in
 
@@ -46,7 +56,7 @@ in
 
       wayland.windowManager.hyprland.settings.exec-once = [ "hyprsunset" ];
 
-      systemd.user.services = {
+      systemd.user.services = lib.mkIf cfg.autoSwitch.enable {
         hyprsunset-on = {
           Unit = {
             Description = "Enable hyprsunset blue‑light filter";
@@ -87,7 +97,7 @@ in
           Install.wantedBy = [ "timers.target" ];
 
           Timer = {
-            OnCalendar = cfg.on_at;
+            OnCalendar = cfg.autoSwitch.on_at;
             Persistent = true;
           };
         };
@@ -99,7 +109,7 @@ in
           Install.wantedBy = [ "timers.target" ];
 
           Timer = {
-            OnCalendar = cfg.off_at;
+            OnCalendar = cfg.autoSwitch.off_at;
             Persistent = true;
           };
         };

@@ -54,7 +54,10 @@
     };
   };
 
-  my.services.hyprsunset.enable = true;
+  my.services.hyprsunset = {
+    enable = true;
+    autoSwitch.enable = false;
+  };
 
   home.file.".local/bin/vime.sh" = {
     source = ../../../../config/bin/vime.sh;
