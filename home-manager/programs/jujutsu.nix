@@ -8,11 +8,17 @@
       core = {
         fsmonitor = "watchman";
       };
+
+      git = {
+        colocate = true;
+      };
+
       template-aliases = {
         "format_short_id(id)" = "id.shortest()";
         "commit_style_desc" = ''"${
           builtins.replaceStrings [ "@comment@" ] [ "JJ:" ] (builtins.readFile ./git/gitmessage)
         }"'';
+        "in_branch(commit)" = "commit.contained_in(\"immutable_heads()..bookmarks()\")";
       };
       templates = {
         draft_commit_description = ''
@@ -23,7 +29,19 @@
             indent("JJ:     ", diff.stat(72)),
           )
         '';
+        log_node = ''
+          if(self && !current_working_copy && !immutable && !conflict && in_branch(self),
+            "◇",
+            builtin_log_node
+          )
+        '';
       };
+      revset-aliases = {
+        "p(n)" = "p(@, n)";
+        "p(r, n)" = "roots(r | ancestors(r-, n))";
+        "user(x)" = "author(x) | committer(x)";
+      };
+
       ui = {
         paginate = "never";
         default-command = "log";
@@ -56,6 +74,7 @@
           "main@origin.."
         ];
         d = [ "desc" ];
+        n = [ "new" ];
         pushmain = [
           "util"
           "exec"
@@ -79,6 +98,14 @@
             jj git init --colocate && jj bookmark track main@origin
           ''}"
         ];
+        tug = [
+          "bookmark"
+          "move"
+          "--from"
+          "heads(::@- & bookmarks())"
+          "--to"
+          "@-"
+        ]; # pushmainの代わりに使えそう
       };
       fix.tools = {
         nixfmt = {
