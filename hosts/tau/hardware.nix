@@ -37,6 +37,10 @@
             name = "light: Decrease by 10";
             command = "light -U 10";
           }
+          {
+            name = "Open Bluetooth Manager";
+            command = "blueman-manager";
+          }
         ];
       };
     }
