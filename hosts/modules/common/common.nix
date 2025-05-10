@@ -44,6 +44,9 @@ in
 
       firewall = {
         enable = lib.mkDefault true;
+        allowedTCPPorts = [
+          21118 # Rustdesk
+        ];
       };
     };
 
