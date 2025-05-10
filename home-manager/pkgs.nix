@@ -94,6 +94,7 @@
     ripgrep
     ripgrep-all
     rquickshare
+    rustdesk-flutter
 
     hledger
     hyperfine

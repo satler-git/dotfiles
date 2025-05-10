@@ -42,7 +42,9 @@ in
       ];
       hostName = cfg.hostName;
 
-      firewall.enable = lib.mkDefault true;
+      firewall = {
+        enable = lib.mkDefault true;
+      };
     };
 
     boot = {
