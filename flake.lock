@@ -1432,6 +1432,22 @@
         "type": "github"
       }
     },
+    "oniux": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1746440232,
+        "narHash": "sha256-wWB/ch8DB2tO4+NuNDaGv8K4AbV5/MbyY01oRGai86A=",
+        "ref": "refs/heads/main",
+        "rev": "7830d623eef033436b30f4d99e079599c7cd7a61",
+        "revCount": 39,
+        "type": "git",
+        "url": "https://gitlab.torproject.org/tpo/core/oniux"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitlab.torproject.org/tpo/core/oniux"
+      }
+    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat_6",
@@ -1549,6 +1565,7 @@
         "nixpkgs": "nixpkgs_3",
         "nixpkgs-stable": "nixpkgs-stable_2",
         "nixpkgs-unstable-small": "nixpkgs-unstable-small",
+        "oniux": "oniux",
         "sops-nix": "sops-nix",
         "stylix": "stylix",
         "tidalcycles": "tidalcycles",

@@ -1,4 +1,16 @@
 { pkgs, inputs, ... }:
+let
+
+  oniux = pkgs.rustPlatform.buildRustPackage {
+    pname = "oniux";
+    version = "unstable-${inputs.oniux.shortRev}";
+
+    # doCheck = false; # ファイルを削除しようとして権限でテストが失敗する
+
+    src = inputs.oniux;
+    cargoHash = "sha256-tUOxs9bTcXS3Gq6cHYe+eAGAEYSRvf3JVGugBImbvJM=";
+  };
+in
 {
   imports = [
     ./pkgs/chromium.nix
@@ -88,6 +100,7 @@
     ueberzugpp
     unzip
 
+    oniux
     osu-lazer-bin
 
     rdfind
