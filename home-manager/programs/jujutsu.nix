@@ -11,6 +11,7 @@
 
       git = {
         colocate = true;
+        write-change-id-header = true;
       };
 
       template-aliases = {
