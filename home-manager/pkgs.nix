@@ -41,6 +41,7 @@ in
     foliate
     fzf
 
+    gg-jj
     gh
     ghq
     gimp
