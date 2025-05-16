@@ -4,7 +4,7 @@
     inputs.aagl.nixosModules.default
 
     # keep-sorted start
-    ../modules/apps/dropbox.nix
+    # ../modules/apps/dropbox.nix
     ../modules/apps/hoogle.nix
     ../modules/apps/i3.nix
     ../modules/apps/libvirt.nix
@@ -19,7 +19,7 @@
 
   my.openFirewall = true;
 
-  my.services.dropbox.enable = true;
+  # my.services.dropbox.enable = true;
 
   services.tailscale = {
     useRoutingFeatures = "both";

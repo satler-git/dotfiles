@@ -2,7 +2,7 @@
 {
   imports = [
     # keep-sorted start
-    ../modules/apps/dropbox.nix
+    # ../modules/apps/dropbox.nix
     ../modules/apps/i3.nix
     ../modules/apps/podman.nix
     ../modules/apps/tailscale.nix
@@ -11,7 +11,7 @@
 
   my.openFirewall = false;
 
-  my.services.dropbox.enable = true;
+  # my.services.dropbox.enable = true;
 
   services.tailscale = {
     useRoutingFeatures = "both";
