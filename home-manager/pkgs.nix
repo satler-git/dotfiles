@@ -8,7 +8,7 @@ let
     # doCheck = false; # ファイルを削除しようとして権限でテストが失敗する
 
     src = inputs.oniux;
-    cargoHash = "sha256-tUOxs9bTcXS3Gq6cHYe+eAGAEYSRvf3JVGugBImbvJM=";
+    cargoHash = "sha256-UJAQ7z+vEKSSNguWj6jMoStItm2E1fxQHWxVbvWxrgA=";
   };
 in
 {
