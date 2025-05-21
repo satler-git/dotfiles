@@ -87,11 +87,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    oniux = {
-      url = "git+https://gitlab.torproject.org/tpo/core/oniux";
-      flake = false;
-    };
-
     # utils
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
