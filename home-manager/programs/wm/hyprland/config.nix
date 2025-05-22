@@ -195,6 +195,10 @@
       "$mainMod ctrl, Up, resizeactive, 0 -100"
       "$mainMod ctrl, l, resizeactive, 100 0"
       "$mainMod ctrl, Right, resizeactive, 100 0"
+
+      "$mainMod , F1, exec, playerctl previous"
+      "$mainMod , F2, exec, playerctl next"
+      "$mainMod , F3, exec, playerctl play-pause"
     ];
 
     # map media keys
@@ -203,10 +207,11 @@
       ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
       ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     ];
+
     bindl = [
-      ", XF86AudioPlay, exec, playerctl play-pause"
       ", XF86AudioPrev, exec, playerctl previous"
       ", XF86AudioNext, exec, playerctl next"
+      ", XF86AudioPlay, exec, playerctl play-pause"
       ",switch:off:Lid Switch, exec, systemctl suspend"
     ];
 
