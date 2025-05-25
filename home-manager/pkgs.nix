@@ -6,6 +6,7 @@
 
   home.packages = with pkgs; [
     # audacity
+    aider-chat-full
     aria
 
     blender

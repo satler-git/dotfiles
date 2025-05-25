@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, osConfig, ... }:
 {
   imports = [
     ./carapace.nix
@@ -62,6 +62,8 @@
         fi
       }
       add-zsh-hook chpwd __list_directory_contents
+
+      export OPENROUTER_API_KEY=$(cat ${osConfig.sops.secrets.OPENROUTER_API_KEY.path})
 
       disable r
     '';
