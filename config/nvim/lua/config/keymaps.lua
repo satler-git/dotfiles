@@ -35,3 +35,5 @@ keymap("i", "<C-b>", "<C-o>b", opts)
 
 keymap("n", ">", ">>", opts)
 keymap("n", "<", "<<", opts)
+
+keymap("t", "<Esc>", "<C-\\><C-n>", opts)
