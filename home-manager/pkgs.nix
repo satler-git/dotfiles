@@ -25,6 +25,7 @@
 
     evcxr
 
+    f2
     fd
     ffmpeg_7-full
     foliate
