@@ -24,21 +24,6 @@
   #     ;
   # };
 
-  goose-cli = final: prev: {
-    goose-cli = prev.goose-cli.overrideAttrs (old: {
-      nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ [ final.makeWrapper ];
-      postInstall = ''
-        wrapProgram $out/bin/goose \
-          --prefix PATH : "${
-            final.lib.makeBinPath [
-              final.uv
-              final.nodejs
-            ]
-          }"
-      '';
-    });
-  };
-
   mold = final: prev: {
     neovim = prev.neovim.override ({
       stdenv = final.useMoldLinker final.clangStdenv;
