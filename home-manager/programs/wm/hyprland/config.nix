@@ -116,6 +116,8 @@
     "$fileManager" = "alacritty -e zsh -c yazi";
     "$launcher" = "alacritty --class yurf -e zsh -c \"yurf --fullscreen launch && disown\"";
     "$task" = "alacritty --class yurf -e zsh -c \"yurf --fullscreen task && disown\"";
+    "$notifs" =
+      "alacritty --class yurf -e zsh -c \"dunstctl history | jq -r '.data[0][].body.data' | yurf --fullscreen stdin\"";
 
     bind = [
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
@@ -129,6 +131,7 @@
       "$mainMod, f, pin,"
       "$mainMod, b, exec, $browser"
       "$mainMod, v, exec, alacritty --class clipse -e clipse"
+      "$mainMod, n, exec, $notifs"
       "Control_L, Print, exec, grim -g \"$(slurp -d)\" - | wl-copy; dunstify \"A rect screenshot is copied!\""
       "Alt,Print, exec, hyprctl -j activewindow | jq -r '\"\\(.at[0]),\\(.at[1]) \\(.size[0])x\\(.size[1])\"' | grim -g - - | wl-copy; dunstify \"A winwdow screenshot is copied!\""
 
