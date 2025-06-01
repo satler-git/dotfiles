@@ -10,6 +10,7 @@ return {
         formatters_by_ft = {
           -- keep-sorted start
           astro = { "biome" },
+          dart = { "dart_format" },
           haskell = { "stylish-haskell" },
           javascript = { "biome" },
           json = { "biome" },

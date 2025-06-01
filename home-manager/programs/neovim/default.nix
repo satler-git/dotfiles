@@ -61,6 +61,8 @@ in
         typescript-language-server
         vtsls
 
+        dart
+
         # Formatter
         biome
         nixfmt-rfc-style

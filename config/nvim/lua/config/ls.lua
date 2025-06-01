@@ -116,6 +116,11 @@ lspconfig.efm.setup({
 })
 
 -- lspconfig.testing_ls.setup({})
+vim.lsp.config("dartls", {
+  capabilities = capabilities,
+})
+vim.lsp.enable("dartls")
+
 lspconfig.buf_ls.setup({})
 lspconfig.elixirls.setup({
   capabilities = capabilities,
