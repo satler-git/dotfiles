@@ -5,6 +5,8 @@
       isNormalUser = true;
       description = "satler";
       extraGroups = [
+        # keep-sorted start
+        "adbusers"
         "audio"
         "docker"
         "input"
@@ -14,6 +16,7 @@
         "uinput"
         "video"
         "wheel"
+        # keep-sorted end
       ];
       shell = pkgs.zsh;
 

@@ -85,13 +85,13 @@ in
         ])
       ]
     ))
+    bacon
     cargo-audit
     cargo-compete
     cargo-expand
     cargo-nextest
     cargo-show-asm
     cargo-tauri
-    bacon
     # keep-sorted end
   ];
 }

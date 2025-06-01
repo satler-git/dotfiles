@@ -1,44 +1,44 @@
 {
-    "yazi-compress": {
-        "cargoLocks": null,
-        "date": "2024-08-10",
-        "extract": null,
-        "name": "yazi-compress",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "KKV9",
-            "repo": "compress.yazi",
-            "rev": "60b24af23d1050f1700953a367dd4a2990ee51aa",
-            "sha256": "sha256-Yf5R3H8t6cJBMan8FSpK3BDSG5UnGlypKSMOi0ZFqzE=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "60b24af23d1050f1700953a367dd4a2990ee51aa"
+  "yazi-compress": {
+    "cargoLocks": null,
+    "date": "2024-08-10",
+    "extract": null,
+    "name": "yazi-compress",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "deepClone": false,
+      "fetchSubmodules": false,
+      "leaveDotGit": false,
+      "name": null,
+      "owner": "KKV9",
+      "repo": "compress.yazi",
+      "rev": "60b24af23d1050f1700953a367dd4a2990ee51aa",
+      "sha256": "sha256-Yf5R3H8t6cJBMan8FSpK3BDSG5UnGlypKSMOi0ZFqzE=",
+      "sparseCheckout": [],
+      "type": "github"
     },
-    "yazi-plugins": {
-        "cargoLocks": null,
-        "date": "2025-05-26",
-        "extract": null,
-        "name": "yazi-plugins",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "yazi-rs",
-            "repo": "plugins",
-            "rev": "4df8f70eb643963f6b2d32045342fee311ea95fd",
-            "sha256": "sha256-PZcVDFuU8cQ8QO8nmwlHpDbT3p61shtREHnJZoC7oPI=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "4df8f70eb643963f6b2d32045342fee311ea95fd"
-    }
+    "version": "60b24af23d1050f1700953a367dd4a2990ee51aa"
+  },
+  "yazi-plugins": {
+    "cargoLocks": null,
+    "date": "2025-05-26",
+    "extract": null,
+    "name": "yazi-plugins",
+    "passthru": null,
+    "pinned": false,
+    "src": {
+      "deepClone": false,
+      "fetchSubmodules": false,
+      "leaveDotGit": false,
+      "name": null,
+      "owner": "yazi-rs",
+      "repo": "plugins",
+      "rev": "4df8f70eb643963f6b2d32045342fee311ea95fd",
+      "sha256": "sha256-PZcVDFuU8cQ8QO8nmwlHpDbT3p61shtREHnJZoC7oPI=",
+      "sparseCheckout": [],
+      "type": "github"
+    },
+    "version": "4df8f70eb643963f6b2d32045342fee311ea95fd"
+  }
 }
