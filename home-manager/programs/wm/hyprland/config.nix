@@ -117,7 +117,7 @@
     "$launcher" = "alacritty --class yurf -e zsh -c \"yurf --fullscreen launch && disown\"";
     "$task" = "alacritty --class yurf -e zsh -c \"yurf --fullscreen task && disown\"";
     "$notifs" =
-      "alacritty --class yurf -e zsh -c \"dunstctl history | jq -r '.data[0][].body.data' | yurf --fullscreen stdin\"";
+      "alacritty --class yurf -e zsh -c \"dunstctl history | jq -r '.data[0][].body.data' | sed '/^[[:space:]]*$/d' | yurf --copy --fullscreen stdin\"";
 
     bind = [
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
