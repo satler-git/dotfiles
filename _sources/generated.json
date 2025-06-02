@@ -1,44 +1,44 @@
 {
-  "yazi-compress": {
-    "cargoLocks": null,
-    "date": "2024-08-10",
-    "extract": null,
-    "name": "yazi-compress",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "KKV9",
-      "repo": "compress.yazi",
-      "rev": "60b24af23d1050f1700953a367dd4a2990ee51aa",
-      "sha256": "sha256-Yf5R3H8t6cJBMan8FSpK3BDSG5UnGlypKSMOi0ZFqzE=",
-      "sparseCheckout": [],
-      "type": "github"
+    "yazi-compress": {
+        "cargoLocks": null,
+        "date": "2025-06-02",
+        "extract": null,
+        "name": "yazi-compress",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "KKV9",
+            "repo": "compress.yazi",
+            "rev": "9fc8fe0bd82e564f50eb98b95941118e7f681dc8",
+            "sha256": "sha256-VKo4HmNp5LzOlOr+SwUXGx3WsLRUVTxE7RI7kIRKoVs=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "9fc8fe0bd82e564f50eb98b95941118e7f681dc8"
     },
-    "version": "60b24af23d1050f1700953a367dd4a2990ee51aa"
-  },
-  "yazi-plugins": {
-    "cargoLocks": null,
-    "date": "2025-05-26",
-    "extract": null,
-    "name": "yazi-plugins",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "yazi-rs",
-      "repo": "plugins",
-      "rev": "4df8f70eb643963f6b2d32045342fee311ea95fd",
-      "sha256": "sha256-PZcVDFuU8cQ8QO8nmwlHpDbT3p61shtREHnJZoC7oPI=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "4df8f70eb643963f6b2d32045342fee311ea95fd"
-  }
+    "yazi-plugins": {
+        "cargoLocks": null,
+        "date": "2025-05-31",
+        "extract": null,
+        "name": "yazi-plugins",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "yazi-rs",
+            "repo": "plugins",
+            "rev": "63f9650e522336e0010261dcd0ffb0bf114cf912",
+            "sha256": "sha256-ZCLJ6BjMAj64/zM606qxnmzl2la4dvO/F5QFicBEYfU=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "63f9650e522336e0010261dcd0ffb0bf114cf912"
+    }
 }
