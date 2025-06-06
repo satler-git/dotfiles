@@ -99,6 +99,10 @@
             jj git init --colocate && jj bookmark track main@origin
           ''}"
         ];
+        fe = [
+          "git"
+          "fetch"
+        ];
         tug = [
           "bookmark"
           "move"
