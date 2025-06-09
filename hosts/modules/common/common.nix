@@ -40,6 +40,7 @@ in
         "8.8.8.8"
         "4.4.4.4"
       ];
+
       hostName = cfg.hostName;
 
       firewall = {

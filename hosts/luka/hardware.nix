@@ -15,6 +15,14 @@
     inputs.nixos-hardware.nixosModules.common-cpu-amd
   ];
 
+  networking.hosts = {
+    "127.0.0.1" = [
+      "x.com"
+      "app.slack.com"
+      "youtube.com"
+    ];
+  };
+
   home-manager.sharedModules = [
     {
       wayland.windowManager.hyprland.settings = {
