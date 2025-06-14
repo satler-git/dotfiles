@@ -17,9 +17,10 @@
 
   networking.hosts = {
     "127.0.0.1" = [
-      "x.com"
-      "app.slack.com"
-      "youtube.com"
+      # "x.com"
+      # "app.slack.com"
+      # "youtube.com"
+      # "tv.dmm.com"
     ];
   };
 
