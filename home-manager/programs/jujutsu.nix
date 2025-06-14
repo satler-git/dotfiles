@@ -48,17 +48,16 @@
         default-command = "log";
         editor = "nvim";
         movement.edit = true;
-        diff = {
-          format = "git";
-          tool = [
-            "${lib.getExe pkgs.delta}"
-            "--no-gitconfig"
-            "--color-only"
-            "$left"
-            "$right"
-          ];
-        };
+
+        pager = "delta";
+        diff-formatter = ":git";
       };
+
+      merge-tools.delta.diff-expected-exit-codes = [
+        0
+        1
+      ];
+
       aliases = {
         stat = [
           "show"
