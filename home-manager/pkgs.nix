@@ -56,6 +56,7 @@
     koreader
     krita
 
+    lean4
     lnav
 
     mindustry-wayland
