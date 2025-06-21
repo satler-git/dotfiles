@@ -24,6 +24,7 @@
     duf
     dust
 
+    elan
     evcxr
 
     f2
@@ -56,7 +57,6 @@
     koreader
     krita
 
-    lean4
     lnav
 
     mindustry-wayland
