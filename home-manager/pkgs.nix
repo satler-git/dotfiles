@@ -6,7 +6,7 @@
 
   home.packages = with pkgs; [
     # audacity
-    aider-chat-full
+    # aider-chat-full
     android-studio
     aria
 
