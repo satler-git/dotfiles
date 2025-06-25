@@ -12,6 +12,8 @@
     inputs.nixos-hardware.nixosModules.lenovo-thinkpad-e14-amd
   ];
 
+  services.logind.lidSwitch = "suspend"; # default
+
   home-manager.sharedModules = [
     {
       wayland.windowManager.hyprland.settings = {

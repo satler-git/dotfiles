@@ -215,7 +215,6 @@
       ", XF86AudioPrev, exec, playerctl previous"
       ", XF86AudioNext, exec, playerctl next"
       ", XF86AudioPlay, exec, playerctl play-pause"
-      ",switch:off:Lid Switch, exec, systemctl suspend"
     ];
 
     exec-once = [
