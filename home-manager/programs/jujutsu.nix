@@ -75,19 +75,12 @@
         ];
         d = [ "desc" ];
         n = [ "new" ];
-        pushmain = [
+        push = [
           "util"
           "exec"
           "--"
           "${pkgs.writeShellScript "pushmain" ''
-            log_output=$(jj log --no-graph --template 'change_id ++ "\n"' -r 'bookmarks() & (main..@)')
-
-            if [ -n "$bookmark_commits" ]; then
-              echo "Changes with bookmarks tied to bookmarks other than main exist between main and the current change."
-              echo "pushmain has canceled"
-            else
-              jj bookmark m --to @- main && jj git push
-            fi
+            jj tug && jj git push
           ''}"
         ];
         inittrack = [
