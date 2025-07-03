@@ -51,6 +51,8 @@
 
         pager = "delta";
         diff-formatter = ":git";
+
+        diff-editor = ":builtin";
       };
 
       merge-tools.delta.diff-expected-exit-codes = [
