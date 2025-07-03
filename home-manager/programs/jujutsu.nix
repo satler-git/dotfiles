@@ -105,6 +105,11 @@
           "--to"
           "@-"
         ]; # pushmainの代わりに使えそう
+        fetch-all = [
+          "git"
+          "fetch"
+          "all-remotes"
+        ];
       };
       fix.tools = {
         nixfmt = {
