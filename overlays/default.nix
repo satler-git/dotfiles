@@ -18,6 +18,8 @@
       pympress
 
       deno # 2.3.5 crashes, denops
+
+      waybar
       ;
   };
 
