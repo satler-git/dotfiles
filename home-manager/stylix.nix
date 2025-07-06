@@ -13,9 +13,11 @@ in
       in
       wallpaper "nineish";
 
-    cursor.package = pkgs.bibata-cursors;
-    cursor.name = "Bibata-Modern-Ice";
-    cursor.size = 24;
+    cursor = {
+      name = "Bibata-Modern-Ice";
+      package = pkgs.bibata-cursors;
+      size = 24;
+    };
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
 
@@ -42,16 +44,20 @@ in
     };
 
     # 無効にするターゲット
-    targets = {
-      alacritty.enable = false;
-      firefox.enable = false;
-      gnome-text-editor.enable = false;
-      gnome.enable = false;
-      neovim.enable = false;
-      vscode.enable = false;
-      waybar.enable = false;
-      wpaperd.enable = false;
-      zellij.enable = false;
-    };
+    targets =
+      { }
+      // builtins.foldl' (acc: elem: acc // elem) { } (
+        builtins.map (x: { "${x}".enable = false; }) [
+          "alacritty"
+          "firefox"
+          "gnome"
+          "gnome-text-editor"
+          "neovim"
+          "vscode"
+          "waybar"
+          "wpaperd"
+          "zellij"
+        ]
+      );
   };
 }

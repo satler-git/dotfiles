@@ -7,7 +7,8 @@ in
     homeManagerIntegration.followSystem = false;
     homeManagerIntegration.autoImport = true;
 
-    enable = false;
+    enable = true;
+    autoEnable = false;
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
   };
