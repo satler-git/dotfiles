@@ -15,8 +15,6 @@
     stylix = {
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-      inputs.flake-compat.follows = "neovim-nightly-overlay/flake-compat";
     };
     sops-nix = {
       url = "github:Mic92/sops-nix";
