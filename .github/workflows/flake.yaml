@@ -12,7 +12,7 @@ jobs:
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@c723f3a885e3f1d866d91f4f0c33dd44b1fc7c60
       - name: Update flake.lock
-        uses: DeterminateSystems/update-flake-lock@9070c8924674eb79cc49246b8b6f2e14f4378eb0
+        uses: DeterminateSystems/update-flake-lock@c5930b397a673a70ca70be06020e943aeac310a1
         with:
           pr-title: "Update flake.lock" # Title of PR to be created
           pr-labels: | # Labels to be set on the PR
