@@ -39,16 +39,16 @@
       listener = [
         {
           timeout = 300;
-          on-timeout = "loginctl lock-session";
+          on-timeout = "systemd-ac-power || loginctl lock-session"; # so we lock if we are using battery
         }
         {
           timeout = 420;
-          on-timeout = "hyprctl dispatch dpms off";
-          on-resume = "hyprctl dispatch dpms on";
+          on-timeout = "systemd-ac-power || hyprctl dispatch dpms off";
+          on-resume = "systemd-ac-power || hyprctl dispatch dpms on";
         }
         {
           timeout = 600;
-          on-timeout = "systemctl suspend";
+          on-timeout = "systemd-ac-power || systemctl suspend";
         }
       ];
     };
