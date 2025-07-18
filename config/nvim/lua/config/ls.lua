@@ -158,3 +158,4 @@ lspconfig.vtsls.setup({
 lspconfig.typos_lsp.setup({
   capabilities = capabilities,
 })
+vim.lsp.enable("pest_ls")

@@ -63,6 +63,8 @@ in
 
         dart
 
+        pest-ide-tools
+
         # Formatter
         biome
         nixfmt-rfc-style
