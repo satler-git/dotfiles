@@ -11,8 +11,8 @@ in
   environment.systemPackages =
     with pkgs;
     lib.mkBefore [
-      virt-viewer
-      virt-top
+      # virt-viewer
+      # virt-top
     ];
 
   virtualisation.libvirtd = {
