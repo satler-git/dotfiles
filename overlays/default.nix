@@ -22,6 +22,8 @@
       waybar
 
       gimp
+
+      prismlauncher
       ;
   };
 
