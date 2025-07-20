@@ -39,6 +39,7 @@ lspconfig.rust_analyzer.setup({
         buildScripts = { -- For build.rs
           enable = true,
         },
+        loadOutDirsFromCheck = true,
       },
       procMacro = {
         enable = true,
