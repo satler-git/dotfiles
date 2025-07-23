@@ -160,3 +160,16 @@ lspconfig.typos_lsp.setup({
   capabilities = capabilities,
 })
 vim.lsp.enable("pest_ls")
+
+configs.sandls = {
+  default_config = {
+    cmd = { "sand", "lsp" },
+    filetypes = { "sand" },
+    root_dir = util.root_pattern(".git"),
+    init_options = {},
+  },
+}
+vim.lsp.config("sandls", {
+  capabilities = capabilities,
+})
+lspconfig.sandls.setup({})
