@@ -1,7 +1,13 @@
 { inputs }:
 {
   stable = final: _: {
-    inherit (inputs.nixpkgs-stable.legacyPackages.${final.stdenv.hostPlatform.system})
+    inherit
+      (import inputs.nixpkgs-stable {
+        config = {
+          allowUnfree = true;
+        };
+        system = final.stdenv.hostPlatform.system;
+      })
       blender
       epson-escpr
       epson-escpr2
