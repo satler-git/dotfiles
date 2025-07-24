@@ -50,6 +50,7 @@
     imhex
     inkscape
     inputs.isd.packages.${system}.default
+    inputs.sand.packages.${system}.default
 
     jq
 

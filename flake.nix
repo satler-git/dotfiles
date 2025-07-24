@@ -83,6 +83,13 @@
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sand = {
+      url = "github:satler-git/sand-markup";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.treefmt-nix.follows = "treefmt-nix";
+      inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
+
+    };
 
     # utils
     treefmt-nix = {
@@ -135,7 +142,8 @@
         (_: prev: {
           osu-lazer-bin = inputs.nix-gaming.packages.${prev.system}.osu-lazer-bin;
         })
-      ] ++ nixpkgs.lib.attrValues self.overlays;
+      ]
+      ++ nixpkgs.lib.attrValues self.overlays;
 
       pkgs = import nixpkgs {
         config = {
