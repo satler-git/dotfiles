@@ -16,6 +16,7 @@
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
       source <(jj util completion zsh)
+      source <(sand completions zsh)
     '';
     initContent = ''
       setopt auto_param_slash
