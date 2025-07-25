@@ -30,8 +30,6 @@
       gimp
 
       prismlauncher
-
-      steam
       ;
   };
 
