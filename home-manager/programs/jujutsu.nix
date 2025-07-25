@@ -85,6 +85,12 @@
             jj tug && jj git push
           ''}"
         ];
+        pushpr = [
+          "git"
+          "push"
+          "--change"
+          "@-"
+        ];
         inittrack = [
           "util"
           "exec"
