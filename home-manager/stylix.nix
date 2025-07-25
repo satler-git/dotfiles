@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  theme = "catppuccin-frappe";
+  theme = "catppuccin-mocha";
 in
 {
   stylix = {
