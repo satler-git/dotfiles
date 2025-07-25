@@ -1611,11 +1611,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1753371485,
-        "narHash": "sha256-p1ZnVAy46DkD0mUpJG+m91c/qEWv7cRigce2MkSwNN4=",
+        "lastModified": 1753436523,
+        "narHash": "sha256-cuZmWn0m0NdXBtvMKC4ojmmrNUsmr82msspmsNJ5vug=",
         "owner": "satler-git",
         "repo": "sand-markup",
-        "rev": "a14474c98e5c5f25c7aaf86e97b56db1715a8dce",
+        "rev": "43521d279bc2be0f4bddf8f40465e69dbc86a958",
         "type": "github"
       },
       "original": {
