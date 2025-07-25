@@ -81,6 +81,8 @@ in
         ueberzugpp
 
         cargo-nextest # neotest-rust
+
+        tree-sitter
       ]
       ++ [
         # testing-language-server

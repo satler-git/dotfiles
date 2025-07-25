@@ -4,6 +4,17 @@ return {
     build = ":TSUpdate",
     -- event = { "LazyFile", "VeryLazy" },
     config = function()
+      local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+
+      parser_config.sand = {
+        install_info = {
+          url = "https://github.com/satler-git/sand-markup",
+          files = { "tree-sitter/src/parser.c" },
+          branch = "main",
+        },
+        filetype = "sand",
+      }
+
       require("nvim-treesitter.configs").setup({
         ident = { enable = true },
         rainbow = {
@@ -43,6 +54,7 @@ return {
           -- git
           "gitignore",
           "gitcommit",
+          "sand",
         },
         highlight = { enable = true },
         indent = { enable = true },
