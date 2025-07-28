@@ -15,7 +15,7 @@
 
     calibre
     charm-freeze
-    claude-code
+    # claude-code
     code-cursor
 
     deno
