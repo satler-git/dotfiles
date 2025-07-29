@@ -14,6 +14,11 @@
 
   services.logind.lidSwitch = "suspend"; # default
 
+  services.thinkfan.enable = true;
+  boot.kernelParams = [
+    "thinkpad_acpi.fan_control=1"
+  ];
+
   home-manager.sharedModules = [
     {
       wayland.windowManager.hyprland.settings = {
