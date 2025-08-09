@@ -85,7 +85,7 @@
             jj tug && jj git push
           ''}"
         ];
-        pushpr = [
+        pch = [
           "git"
           "push"
           "--change"
