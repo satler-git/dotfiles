@@ -67,6 +67,28 @@
       export OPENROUTER_API_KEY=$(cat ${osConfig.sops.secrets.OPENROUTER_API_KEY.path})
 
       disable r
+
+      cftest() {
+        if [ -z "$1" ]; then
+          echo "usage: cftest <bin>"
+          return 1
+        fi
+
+        prog="$1"
+        inp="io/$\{prog}.input"
+        exp="io/$\{prog}.out"
+
+        if [ ! -f "$exp" ]; then
+          echo "expected file '$exp' not found"
+          return 1
+        fi
+
+        if [ -f "$inp" ]; then
+          cargo run --bin "$prog" --quiet --release < "$inp" | diff -u "$exp" -
+        else
+          cargo run --bin "$prog" --quiet --release | diff -u "$exp" -
+        fi
+      }
     '';
     plugins = [
       {
