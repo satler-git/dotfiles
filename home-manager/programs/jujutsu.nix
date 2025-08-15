@@ -59,6 +59,10 @@
       ];
 
       aliases = {
+        d = [ "desc" ];
+        n = [ "new" ];
+        s = [ "squash" ];
+
         stat = [
           "show"
           "--stat"
@@ -73,8 +77,6 @@
           "-r"
           "main@origin.."
         ];
-        d = [ "desc" ];
-        n = [ "new" ];
         push = [
           "util"
           "exec"
