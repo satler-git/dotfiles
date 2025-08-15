@@ -7,16 +7,16 @@
   home.packages = with pkgs; [
     # audacity
     # aider-chat-full
-    android-studio
+    # android-studio
     aria
 
-    blender
+    # blender
     bottom
 
-    calibre
+    # calibre
     charm-freeze
     # claude-code
-    code-cursor
+    # code-cursor
 
     deno
     delta
@@ -54,14 +54,14 @@
 
     jq
 
-    kicad
+    # kicad
     koreader
     krita
 
     lnav
 
-    mindustry-wayland
-    mission-center
+    # mindustry-wayland
+    # mission-center
     mpv
 
     nix-init
@@ -84,7 +84,7 @@
     teip
     tetrio-desktop
     thunderbird
-    todoist
+    # todoist
     todoist-electron
     trash-cli
     tre-command
@@ -95,13 +95,13 @@
     ueberzugpp
     unzip
 
-    osu-lazer-bin
+    # osu-lazer-bin
 
     rdfind
     ripgrep
     ripgrep-all
     rquickshare
-    rustdesk-flutter
+    # rustdesk-flutter
 
     hledger
     hyperfine
