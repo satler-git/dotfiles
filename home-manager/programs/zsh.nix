@@ -89,6 +89,11 @@
           cargo run --bin "$prog" --quiet --release | diff -u "$exp" -
         fi
       }
+
+      z() {
+        builtin dirs -c
+        __zoxide_z "$@"
+      }
     '';
     plugins = [
       {
