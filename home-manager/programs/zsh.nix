@@ -137,6 +137,8 @@
         put = "trash-put";
         sudow = "sudo env WAYLAND_DISPLAY=\"$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY\" XDG_RUNTIME_DIR=/user/run/0 QT_QPA_PLATFORM=wayland ";
         dev = "nix develop";
+        p = "pushd";
+        pq = "popd";
       };
     };
   };
