@@ -5,9 +5,7 @@
     settings = {
       user.email = "satler@satler.dev";
       user.name = "satler";
-      core = {
-        fsmonitor = "watchman";
-      };
+      fsmonitor.backend = "watchman";
 
       git = {
         colocate = true;
