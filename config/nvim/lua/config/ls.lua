@@ -16,17 +16,22 @@ vim.cmd([[
 ]])
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 capabilities.textDocument.foldingRange = { -- For nvim-ufo
   dynamicRegistration = false,
   lineFoldingOnly = true,
 }
+
 local configs = require("lspconfig.configs")
 local lspconfig = require("lspconfig")
 local util = require("lspconfig/util")
 local schemastore = require("schemastore")
 
-lspconfig.rust_analyzer.setup({
+vim.lsp.config("*", {
   capabilities = capabilities,
+})
+
+lspconfig.rust_analyzer.setup({
   on_attach = function(_, _)
     vim.lsp.inlay_hint.enable(true)
   end,
@@ -58,8 +63,8 @@ lspconfig.rust_analyzer.setup({
     },
   },
 })
+
 lspconfig.yamlls.setup({
-  capabilities = capabilities,
   settings = {
     yaml = {
       schemaStore = { enable = false },
@@ -67,8 +72,8 @@ lspconfig.yamlls.setup({
     },
   },
 })
+
 lspconfig.jsonls.setup({
-  capabilities = capabilities,
   settings = {
     json = {
       schemas = schemastore.json.schemas(),
@@ -76,6 +81,7 @@ lspconfig.jsonls.setup({
     },
   },
 })
+
 configs.testing_ls = {
   default_config = {
     cmd = { "testing-language-server" },
@@ -117,59 +123,41 @@ lspconfig.efm.setup({
 })
 
 -- lspconfig.testing_ls.setup({})
-vim.lsp.config("dartls", {
-  capabilities = capabilities,
-})
 vim.lsp.enable("dartls")
 
-lspconfig.buf_ls.setup({})
-lspconfig.elixirls.setup({
-  capabilities = capabilities,
+vim.lsp.enable("buf_ls")
+
+vim.lsp.config("elixirls", {
   cmd = { "elixir-ls" },
 })
-lspconfig.lua_ls.setup({
-  capabilities = capabilities,
-})
-lspconfig.nil_ls.setup({
-  capabilities = capabilities,
-})
-lspconfig.taplo.setup({
-  capabilities = capabilities,
-})
-lspconfig.tinymist.setup({
-  capabilities = capabilities,
-})
-lspconfig.astro.setup({
-  capabilities = capabilities,
+vim.lsp.enable("elixirls")
+
+vim.lsp.enable("lua_ls")
+vim.lsp.enable("nil_ls")
+vim.lsp.enable("taplo")
+vim.lsp.enable("tinymist")
+
+vim.lsp.config("astro", {
   init_options = {
     typescript = {
       tsdk = vim.g.astro_tsdk,
     },
   },
 })
-lspconfig.biome.setup({
-  capabilities = capabilities,
-})
-lspconfig.ts_ls.setup({
-  capabilities = capabilities,
-})
-lspconfig.vtsls.setup({
-  capabilities = capabilities,
-})
-lspconfig.typos_lsp.setup({
-  capabilities = capabilities,
-})
+vim.lsp.enable("astro")
+
+vim.lsp.enable("biome")
+vim.lsp.enable("ts_ls")
+vim.lsp.enable("vtsls")
+vim.lsp.enable("typos_lsp")
 vim.lsp.enable("pest_ls")
 
-configs.sandls = {
-  default_config = {
-    cmd = { "sand", "lsp" },
-    filetypes = { "sand" },
-    root_dir = util.root_pattern(".git"),
-    init_options = {},
-  },
-}
 vim.lsp.config("sandls", {
-  capabilities = capabilities,
+  cmd = { "sand", "lsp" },
+  filetypes = { "sand" },
+  root_dir = util.root_pattern(".git"),
+  init_options = {},
 })
-lspconfig.sandls.setup({})
+vim.lsp.enable("sandls")
+
+vim.lsp.enable("ocamllsp")

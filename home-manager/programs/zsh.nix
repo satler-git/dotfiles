@@ -94,6 +94,8 @@
         builtin dirs -c
         __zoxide_z "$@"
       }
+
+      eval $(opam env)
     '';
     plugins = [
       {

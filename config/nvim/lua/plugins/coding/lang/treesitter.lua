@@ -55,6 +55,8 @@ return {
           "gitignore",
           "gitcommit",
           "sand",
+          "ocaml",
+          "ocaml_interface",
         },
         highlight = { enable = true },
         indent = { enable = true },
