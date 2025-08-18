@@ -3,15 +3,15 @@
 {
   yazi-compress = {
     pname = "yazi-compress";
-    version = "9fc8fe0bd82e564f50eb98b95941118e7f681dc8";
+    version = "c2646395394f22b6c40bff64dc4c8c922d210570";
     src = fetchFromGitHub {
       owner = "KKV9";
       repo = "compress.yazi";
-      rev = "9fc8fe0bd82e564f50eb98b95941118e7f681dc8";
+      rev = "c2646395394f22b6c40bff64dc4c8c922d210570";
       fetchSubmodules = false;
-      sha256 = "sha256-VKo4HmNp5LzOlOr+SwUXGx3WsLRUVTxE7RI7kIRKoVs=";
+      sha256 = "sha256-qAuMD4YojLfVaywurk5uHLywRRF77U2F7ql+gR8B/lo=";
     };
-    date = "2025-06-02";
+    date = "2025-08-15";
   };
   yazi-plugins = {
     pname = "yazi-plugins";
