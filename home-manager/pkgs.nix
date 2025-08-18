@@ -71,6 +71,8 @@
     nomacs
     numbat
 
+    opam
+
     p7zip
     pandoc
     playerctl
