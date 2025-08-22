@@ -61,6 +61,11 @@
       aliases = {
         d = [ "desc" ];
         n = [ "new" ];
+        nb = [
+          "new"
+          "--insert-before"
+          "@"
+        ];
         s = [ "squash" ];
 
         stat = [
