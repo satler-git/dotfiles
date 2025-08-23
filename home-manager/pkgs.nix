@@ -9,6 +9,7 @@
     # aider-chat-full
     # android-studio
     aria
+    audio-sharing
 
     # blender
     bottom
