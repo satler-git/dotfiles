@@ -7,6 +7,7 @@ return {
     },
     dependencies = {
       "nvim-lua/plenary.nvim",
+      "folke/trouble.nvim",
       {
         "prochri/telescope-all-recent.nvim",
         dependencies = {
@@ -15,7 +16,7 @@ return {
         },
         opts = {
           default = {
-            disable = true, -- disable any unkown pickers (recommended)
+            disable = true, -- disable any unknown pickers (recommended)
             use_cwd = true, -- differentiate scoring for each picker based on cwd
             sorting = "recent", -- sorting: options: 'recent' and 'frecency'
           },
@@ -48,6 +49,21 @@ return {
       { "<Space>fl", "<Cmd>Telescope current_buffer_fuzzy_find<CR>" },
       { "<Space>fh", "<Cmd>Telescope help_tags<CR>" },
     },
+
+    config = function()
+      local telescope = require("telescope")
+
+      local open_with_trouble = require("trouble.sources.telescope").open
+
+      telescope.setup({
+        defaults = {
+          mappings = {
+            i = { ["<c-t>"] = open_with_trouble },
+            n = { ["<c-t>"] = open_with_trouble },
+          },
+        },
+      })
+    end,
   },
   {
     "danielfalk/smart-open.nvim",
