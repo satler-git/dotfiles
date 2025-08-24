@@ -47,7 +47,7 @@ in
         haskell-language-server
         luajit
         lua-language-server
-        rust-analyzer-nightly
+        fenix.stable.rust-analyzer
 
         tinymist # For typst
 
