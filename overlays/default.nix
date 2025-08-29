@@ -30,6 +30,8 @@
       gimp
 
       prismlauncher
+
+      anki
       ;
   };
 
