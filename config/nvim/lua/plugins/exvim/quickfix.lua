@@ -12,4 +12,10 @@ return {
     ft = "qf",
     config = true,
   },
+  {
+    "satler-git/qfsync.nvim",
+    ft = { "qf" },
+    cmd = { "QfSyncAll" },
+    config = true,
+  },
 }
