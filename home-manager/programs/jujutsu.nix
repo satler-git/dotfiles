@@ -61,12 +61,30 @@
       aliases = {
         d = [ "desc" ];
         n = [ "new" ];
+        ne = [ "new" ];
+
         nb = [
           "new"
           "--insert-before"
           "@"
         ];
+        na = [
+          "new"
+          "--insert-after"
+          "@"
+        ];
         s = [ "squash" ];
+        p = [ "push" ];
+        r = [ "rebase" ];
+        e = [ "edit" ];
+
+        f = [ "next" ];
+        b = [ "prev" ];
+
+        fetch = [
+          "git"
+          "fetch"
+        ];
 
         stat = [
           "show"
