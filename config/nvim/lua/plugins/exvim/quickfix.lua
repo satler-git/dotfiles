@@ -16,6 +16,14 @@ return {
     "satler-git/qfsync.nvim",
     ft = { "qf" },
     cmd = { "QfSyncAll" },
-    config = true,
+    keys = {
+      {
+        "<Space>qq",
+        function()
+          require("qfsync").sync_all()
+        end,
+        mode = { "n" },
+      },
+    },
   },
 }
