@@ -27,6 +27,35 @@
     (leaf-keywords-init)))
 ;; </leaf-install-code>
 
+(leaf cus-start
+  :tag "builtin" "internal"
+  :custom ((user-full-name . "satler")
+           (user-mail-address . "satler@satler.dev")
+           (user-login-name . "satler")))
+
+(leaf autorevert
+  :doc "revert buffers when files on disk change"
+  :global-minor-mode global-auto-revert-mode)
+
+(leaf paren
+  :doc "highlight matching paren"
+  :global-minor-mode show-paren-mode)
+
+(leaf backup
+  :setq ((make-backup-files . nil)
+         (auto-save-default . nil)
+         (auto-save-list-file-prefix . nil)
+         (create-lockfiles . nil)))
+
+(leaf startup
+  :doc "process Emacs shell arguments"
+  :custom `((auto-save-list-file-prefix . ,(locate-user-emacs-file "backup/.saves-"))))
+
+(leaf savehist
+  :doc "Save minibuffer history"
+  :custom `((savehist-file . ,(locate-user-emacs-file "savehist")))
+  :global-minor-mode t)
+
 (leaf leaf
   :ensure nil
   :config
@@ -40,11 +69,24 @@
   :ensure t
   :bind (("C-c e" . macrostep-expand)))
 
-(leaf cus-start
-  :tag "builtin" "internal"
-  :custom ((user-full-name . "satler")
-           (user-mail-address . "satler@satler.dev")
-           (user-login-name . "satler")))
+
+(leaf reformatter
+  :ensure t)
+;; TODO: rustfmt, stylua, taplo, yaml, json
+
+;; https://github.com/kuuote/nixconf/blob/main/home/emacs/init.org#reformatter
+(defmacro add-hook-lambda (hook &rest body)
+  (declare (indent defun))
+  `(add-hook ',hook (lambda () ,@body)))
+
+(defmacro reformatter-hook (hook name &rest reformatter-args)
+  (declare (indent defun))
+  `(add-hook-lambda ,hook
+     (require 'reformatter) ;; require load reformatter when executed byte compiled function
+     (reformatter-define
+       ,name
+       ,@reformatter-args)
+     (, (intern (concat (symbol-name name) "-on-save-mode")) 1)))
 
 ;; TODO: syntax highlight by lsp
 (leaf treesit
@@ -63,6 +105,8 @@
   (add-to-list 'auto-mode-alist '("\\.tml" . toml-ts-mode))
   (add-to-list 'auto-mode-alist '("Dockerfile" . dockerfile-ts-mode)))
 
+(reformatter-hook nix-mode-hook nix-format
+  :program "nixfmt")
 (leaf nix-mode
   :mode "\\.nix\\'"
   :hook
@@ -92,23 +136,6 @@
   :ensure t
   :config
   (editorconfig-mode 1))
-
-(leaf autorevert
-  :doc "revert buffers when files on disk change"
-  :global-minor-mode global-auto-revert-mode)
-
-(leaf paren
-  :doc "highlight matching paren"
-  :global-minor-mode show-paren-mode)
-
-(leaf startup
-  :doc "process Emacs shell arguments"
-  :custom `((auto-save-list-file-prefix . ,(locate-user-emacs-file "backup/.saves-"))))
-
-(leaf savehist
-  :doc "Save minibuffer history"
-  :custom `((savehist-file . ,(locate-user-emacs-file "savehist")))
-  :global-minor-mode t)
 
 (leaf git-gutter ;; TODO: diff-hl ?
   :ensure t
