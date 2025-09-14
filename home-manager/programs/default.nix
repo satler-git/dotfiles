@@ -2,6 +2,7 @@
   imports = [
     # keep-sorted start
     ./alacritty.nix
+    ./emacs.nix
     ./direnv.nix
     ./gh-cli.nix
     ./ghostty.nix
