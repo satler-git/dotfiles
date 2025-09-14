@@ -12,7 +12,7 @@
     inputs.nixos-hardware.nixosModules.lenovo-thinkpad-e14-amd
   ];
 
-  services.logind.lidSwitch = "suspend"; # default
+  services.logind.settings.Login.HandleLidSwitch = "suspend"; # default
 
   services.thinkfan.enable = true;
   boot.kernelParams = [
