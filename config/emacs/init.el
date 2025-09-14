@@ -114,6 +114,11 @@
   :require t
   :global-minor-mode global-git-gutter-mode)
 
+(leaf dmacro
+  :ensure t
+  :custom `((dmacro-key . ,(kbd "C-S-e")))
+  :global-minor-mode global-dmacro-mode)
+
 (add-hook 'emacs-startup-hook #'electric-pair-mode)
 (add-hook 'emacs-startup-hook
           #'(lambda ()
