@@ -109,12 +109,6 @@
   :custom `((savehist-file . ,(locate-user-emacs-file "savehist")))
   :global-minor-mode t)
 
-(leaf flymake
-  :doc "A universal on-the-fly syntax checker"
-  :bind ((prog-mode-map
-          ("M-n" . flymake-goto-next-error)
-          ("M-p" . flymake-goto-prev-error))))
-
 (add-hook 'emacs-startup-hook #'electric-pair-mode)
 (add-hook 'emacs-startup-hook
           #'(lambda ()
