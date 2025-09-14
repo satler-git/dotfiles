@@ -75,14 +75,7 @@
 
 (set-face-attribute 'default nil :family "Monaspace Argon" :height 112)
 
-(defun my/hybrid-line-numbers (line) ;; ChatGPTで生成してみた
-  "Return LINE as absolute number on current line, otherwise relative."
-  (let ((current (line-number-at-pos)))
-    (if (= line current)
-        (number-to-string line)
-      (number-to-string (abs (- line current))))))
-
-(setq display-line-numbers #'my/hybrid-line-numbers)
+(setq display-line-numbers 'relative)
 (global-display-line-numbers-mode)
 
 (leaf evil ;; TODO: replace with meow?
@@ -115,4 +108,3 @@
 (setq truncate-partial-width-windows t)
 
 (provide 'init)
-
