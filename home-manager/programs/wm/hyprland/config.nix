@@ -105,10 +105,6 @@
       force_default_wallpaper = -1;
     };
 
-    gestures = {
-      workspace_swipe = "off";
-    };
-
     "$mainMod" = "SUPER";
 
     "$terminal" = "alacritty";
