@@ -21,6 +21,7 @@
   (leaf leaf-keywords
     :ensure t
     :init
+    (leaf el-get :ensure t)
     :config
     ;; initialize leaf-keywords.el
     (leaf-keywords-init)))
