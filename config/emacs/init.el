@@ -109,6 +109,11 @@
   :custom `((savehist-file . ,(locate-user-emacs-file "savehist")))
   :global-minor-mode t)
 
+(leaf git-gutter ;; TODO: diff-hl ?
+  :ensure t
+  :require t
+  :global-minor-mode global-git-gutter-mode)
+
 (add-hook 'emacs-startup-hook #'electric-pair-mode)
 (add-hook 'emacs-startup-hook
           #'(lambda ()
