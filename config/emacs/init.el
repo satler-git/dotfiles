@@ -92,6 +92,29 @@
   :config
   (editorconfig-mode 1))
 
+(leaf autorevert
+  :doc "revert buffers when files on disk change"
+  :global-minor-mode global-auto-revert-mode)
+
+(leaf paren
+  :doc "highlight matching paren"
+  :global-minor-mode show-paren-mode)
+
+(leaf startup
+  :doc "process Emacs shell arguments"
+  :custom `((auto-save-list-file-prefix . ,(locate-user-emacs-file "backup/.saves-"))))
+
+(leaf savehist
+  :doc "Save minibuffer history"
+  :custom `((savehist-file . ,(locate-user-emacs-file "savehist")))
+  :global-minor-mode t)
+
+(leaf flymake
+  :doc "A universal on-the-fly syntax checker"
+  :bind ((prog-mode-map
+          ("M-n" . flymake-goto-next-error)
+          ("M-p" . flymake-goto-prev-error))))
+
 (add-hook 'emacs-startup-hook #'electric-pair-mode)
 (add-hook 'emacs-startup-hook
           #'(lambda ()
