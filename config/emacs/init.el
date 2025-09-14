@@ -94,6 +94,11 @@
   :config
   (evil-mode 1))
 
+(leaf editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
+
 (add-hook 'emacs-startup-hook #'electric-pair-mode)
 (add-hook 'emacs-startup-hook
           #'(lambda ()
