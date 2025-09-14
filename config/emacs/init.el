@@ -102,5 +102,12 @@
 (setq echo-keystrokes 0.1)
 (setq use-dialog-box nil)
 
+(setopt kill-ring-max 100000)
+
+(custom-set-variables '(savehist-additional-variables '(kill-ring)))
+
+(setq truncate-lines t)
+(setq truncate-partial-width-windows t)
+
 (provide 'init)
 
