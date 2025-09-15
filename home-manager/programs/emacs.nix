@@ -42,12 +42,12 @@
         pest-ide-tools
 
         # Formatter
-        biome
         nixfmt-rfc-style
         rustfmt
-        stylish-haskell
+        stylish-haskell # TODO:
         stylua
-        typstyle
+        typstyle # TODO:
+        yamlfmt
 
         # DAP
         haskellPackages.ghci-dap

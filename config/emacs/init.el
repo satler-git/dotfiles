@@ -72,21 +72,67 @@
 
 (leaf reformatter
   :ensure t)
-;; TODO: rustfmt, stylua, taplo, yaml, json
+;; TODO: yaml, json
 
-;; https://github.com/kuuote/nixconf/blob/main/home/emacs/init.org#reformatter
+;; ;; https://github.com/kuuote/nixconf/blob/main/home/emacs/init.org#reformatter
+;; (defmacro add-hook-lambda (hook &rest body)
+;;   (declare (indent defun))
+;;   `(add-hook ',hook (lambda () ,@body)))
+;;
+;; (defmacro reformatter-hook (hook name &rest reformatter-args)
+;;   (declare (indent defun))
+;;   `(add-hook-lambda ,hook
+;;      (require 'reformatter) ;; require load reformatter when executed byte compiled function
+;;      (reformatter-define
+;;        ,name
+;;        ,@reformatter-args)
+;;      (, (intern (concat (symbol-name name) "-on-save-mode")) 1)))
+
+;; generated with ChatGPT
 (defmacro add-hook-lambda (hook &rest body)
   (declare (indent defun))
-  `(add-hook ',hook (lambda () ,@body)))
+  (cond
+   ;; 引用されたリスト: '(a b)
+   ((and (listp hook) (eq (car hook) 'quote))
+    (let ((hooks (cadr hook)))
+      `(progn
+         ,@(mapcar (lambda (h)
+                     `(add-hook ',h (lambda () ,@body)))
+                   hooks))))
+   ;; ただのリスト: (a b)
+   ((listp hook)
+    `(progn
+       ,@(mapcar (lambda (h)
+                   `(add-hook ',h (lambda () ,@body)))
+                 hook)))
+   ;; 単一シンボル
+   (t
+    `(add-hook ',hook (lambda () ,@body)))))
 
 (defmacro reformatter-hook (hook name &rest reformatter-args)
   (declare (indent defun))
-  `(add-hook-lambda ,hook
-     (require 'reformatter) ;; require load reformatter when executed byte compiled function
-     (reformatter-define
-       ,name
-       ,@reformatter-args)
-     (, (intern (concat (symbol-name name) "-on-save-mode")) 1)))
+  (let ((mode-fn (intern (concat (symbol-name name) "-on-save-mode"))))
+    `(add-hook-lambda ,hook
+       (require 'reformatter)
+       (reformatter-define ,name ,@reformatter-args)
+       (,mode-fn 1))))
+
+(reformatter-hook rust-ts-mode-hook rustfmt
+  :program "rustfmt"
+  :args '("--color" "never" "--quiet"))
+(reformatter-hook lua-ts-mode-hook stylua
+  :program "stylua"
+  :args '("-"))
+(reformatter-hook toml-ts-mode-hook taplo
+  :program "taplo"
+  :args '("fmt"))
+(reformatter-hook yaml-ts-mode-hook yamlfmt
+  :program "yamlfmt"
+  :args '("-in"))
+( reformatter-hook
+  '(typescript-ts-mode-hook tsx-ts-mode-hook json-ts-mode-hook) biome
+  :program "biome"
+  :args `("format" "--stdin-file-path" ,(buffer-file-name)))
 
 ;; TODO: syntax highlight by lsp
 (leaf treesit
@@ -103,6 +149,8 @@
   (add-to-list 'auto-mode-alist '("\\.yml" . yaml-ts-mode))
   (add-to-list 'auto-mode-alist '("\\.toml" . toml-ts-mode))
   (add-to-list 'auto-mode-alist '("\\.tml" . toml-ts-mode))
+  (add-to-list 'auto-mode-alist '("\\.json" . json-ts-mode))
+  (add-to-list 'auto-mode-alist '("\\.lua" . lua-ts-mode))
   (add-to-list 'auto-mode-alist '("Dockerfile" . dockerfile-ts-mode)))
 
 (reformatter-hook nix-mode-hook nix-format
