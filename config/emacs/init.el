@@ -76,7 +76,26 @@
 
 (leaf macrostep
   :ensure t
-  :bind (("C-c e" . macrostep-expand)))
+  :bind (("C-c e" . macrostep-expand) ("C-c r" . macrostep-collapse)))
+
+(leaf vertico
+  :ensure t
+  :custom
+  ((vertico-cycle . t) (vertico-count . 20))
+  :init
+  (vertico-mode))
+
+(leaf marginalia
+  :ensure t
+  :init
+  (marginalia-mode))
+
+(leaf orderless
+  :ensure t
+  :after t
+  :custom
+  ((completion-styles . '(orderless basic))
+   (completion-category-defaults . nil)))
 
 (leaf reformatter
   :ensure t)
@@ -184,11 +203,12 @@
 (leaf evil ;; TODO: replace with meow?
   :ensure t
   :require t
+  :custom
+  ((evil-undo-system . 'undo-tree))
   :bind ((:evil-normal-state-map
           ("C-k" . evil-scroll-up)
           ("C-j" . evil-scroll-down)))
   :config
-  (setq evil-undo-system 'undo-tree)
   (evil-mode 1))
 
 (leaf editorconfig
