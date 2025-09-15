@@ -166,13 +166,30 @@
 (setq display-line-numbers 'relative) ;; TODO:
 (global-display-line-numbers-mode)
 
-(leaf evil ;; TODO: replace with meow? ;; TODO: redo(evil-undo-system)
+(leaf undo-tree
+  :ensure t
+  :require t
+  :config
+  (let ((undo-dir "~/.emacs.d/undo"))
+    (unless (file-exists-p undo-dir)
+	(make-directory undo-dir t))
+    (setq undo-tree-history-directory-alist `((".*" . ,undo-dir))))
+  (global-undo-tree-mode))
+
+(add-to-list 'display-buffer-alist
+  '("\\*undo-tree\\*"
+    (display-buffer-in-side-window)
+    (side . right)
+    (window-width . 0.25)))
+
+(leaf evil ;; TODO: replace with meow?
   :ensure t
   :require t
   :bind ((:evil-normal-state-map
           ("C-k" . evil-scroll-up)
           ("C-j" . evil-scroll-down)))
   :config
+  (setq evil-undo-system 'undo-tree)
   (evil-mode 1))
 
 (leaf editorconfig
