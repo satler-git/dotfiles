@@ -85,6 +85,15 @@
   :init
   (vertico-mode))
 
+(leaf prescient ;; TODO: corfu
+  :ensure t
+  :global-minor-mode prescient-persist-mode)
+
+(leaf vertico-prescient
+  :ensure t
+  :after vertico prescient
+  :global-minor-mode vertico-prescient-mode)
+
 (leaf marginalia
   :ensure t
   :init
