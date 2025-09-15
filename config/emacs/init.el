@@ -56,6 +56,15 @@
   :custom `((savehist-file . ,(locate-user-emacs-file "savehist")))
   :global-minor-mode t)
 
+(leaf tab-bar-mode
+  :bind (("C-c t" . tab-bar-new-tab)
+	 ("C-c n" . tab-bar-switch-to-next-tab)
+	 ("C-c p" . tab-bar-switch-to-prev-tab) ;; TODO: embark?を導入したら
+	 ("C-c 0" . tab-bar-switch-to-last-tab)
+	 ("M-c" . tab-bar-close-tab))
+  :custom ((tab-bar-new-tab-choice . "*scratch*"))
+  :global-minor-mode t)
+
 (leaf leaf
   :ensure nil
   :config
@@ -168,10 +177,10 @@
 
 (set-face-attribute 'default nil :family "Monaspace Argon" :height 112)
 
-(setq display-line-numbers 'relative)
+(setq display-line-numbers 'relative) ;; TODO:
 (global-display-line-numbers-mode)
 
-(leaf evil ;; TODO: replace with meow?
+(leaf evil ;; TODO: replace with meow? ;; TODO: redo(evil-undo-system)
   :ensure t
   :require t
   :bind ((:evil-normal-state-map
