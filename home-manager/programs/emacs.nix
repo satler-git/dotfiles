@@ -8,6 +8,8 @@
       (with epkgs; [
         leaf
 
+        doom-themes
+
         treesit-grammars.with-all-grammars
 
         nix-mode
@@ -60,6 +62,7 @@
 
   home.file = {
     ".emacs.d/init.el".source = ../../config/emacs/init.el;
+    ".emacs.d/themes/aura-soft-dark-soft-text-theme.el".source = ../../config/emacs/aura-theme.el; # TODO:
     ".emacs.d/early-init.el".source = ../../config/emacs/early-init.el;
   };
 }
