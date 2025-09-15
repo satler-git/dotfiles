@@ -7,13 +7,41 @@
       epkgs:
       (with epkgs; [
         leaf
+        leaf-keywords
+        leaf-convert
+        leaf-tree
 
-        doom-themes
+        # doom-themes
+
+        macrostep
+
+        vertico
+        prescient
+        vertico-prescient
+        marginalia
+        orderless
+
+        reformatter
 
         treesit-grammars.with-all-grammars
 
+        rainbow-mode
+
         nix-mode
         nix-ts-mode
+        hledger-mode
+
+        undo-tree
+
+        evil
+
+        editorconfig
+
+        git-gutter
+
+        dmacro
+
+        wakatime-mode
       ])
       ++ (with pkgs; [
         # TODO: neovimと共通化

@@ -12,18 +12,10 @@
                        ("gnu" . "https://elpa.gnu.org/packages/")))
   (package-initialize)
 
-  ;; (unless (package-installed-p 'leaf)
-  ;;   (package-refresh-contents)
-  ;;   (package-install 'leaf))
-
   (require 'leaf)
 
   (leaf leaf-keywords
-    :ensure t
-    :init
-    (leaf el-get :ensure t)
     :config
-    ;; initialize leaf-keywords.el
     (leaf-keywords-init)))
 ;; </leaf-install-code>
 
@@ -66,48 +58,39 @@
   :global-minor-mode t)
 
 (leaf leaf
-  :ensure nil
   :config
-  (leaf leaf-convert :ensure t)
+  (leaf leaf-convert)
   (leaf leaf-tree
-    :ensure t
     :custom ((imenu-list-size . 30)
              (imenu-list-position . 'left))))
 
 (leaf macrostep
-  :ensure t
   :bind (("C-c e" . macrostep-expand) ("C-c r" . macrostep-collapse)))
 
 (leaf vertico
-  :ensure t
   :custom
   ((vertico-cycle . t) (vertico-count . 20))
   :init
   (vertico-mode))
 
 (leaf prescient ;; TODO: corfu
-  :ensure t
   :global-minor-mode prescient-persist-mode)
 
 (leaf vertico-prescient
-  :ensure t
   :after vertico prescient
   :global-minor-mode vertico-prescient-mode)
 
 (leaf marginalia
-  :ensure t
   :init
   (marginalia-mode))
 
 (leaf orderless
-  :ensure t
   :after t
   :custom
   ((completion-styles . '(orderless basic))
    (completion-category-defaults . nil)))
 
-(leaf reformatter
-  :ensure t)
+(leaf reformatter)
 
 ;; original by https://github.com/kuuote/nixconf/blob/main/home/emacs/init.org#reformatter
 ;; generated with ChatGPT {{
@@ -177,7 +160,6 @@
   (add-to-list 'auto-mode-alist '("Dockerfile" . dockerfile-ts-mode)))
 
 (leaf rainbow-mode
-  :ensure t
   :hook (css-mode-hook web-mode-hook html-mode-hook js-mode-hook scss-mode-hook emacs-lisp-mode-hook))
 
 (reformatter-hook nix-mode-hook nix-format
@@ -194,7 +176,6 @@
 ;; typst-mode
 
 (leaf undo-tree
-  :ensure t
   :require t
   :config
   (let ((undo-dir "~/.emacs.d/undo"))
@@ -210,7 +191,6 @@
     (window-width . 0.25)))
 
 (leaf evil ;; TODO: replace with meow?
-  :ensure t
   :require t
   :custom
   ((evil-undo-system . 'undo-tree))
@@ -221,7 +201,6 @@
   (evil-mode 1))
 
 (leaf editorconfig
-  :ensure t
   :config
   (setq safe-local-variable-directories
     `(,(expand-file-name "~/dotfiles/")
@@ -230,17 +209,14 @@
   (editorconfig-mode 1))
 
 (leaf git-gutter ;; TODO: diff-hl ?
-  :ensure t
   :require t
   :global-minor-mode global-git-gutter-mode)
 
 (leaf dmacro
-  :ensure t
   :custom `((dmacro-key . ,(kbd "C-S-e")))
   :global-minor-mode global-dmacro-mode)
 
 (leaf wakatime-mode
-  :ensure t
   :global-minor-mode global-wakatime-mode)
 
 (set-face-attribute 'default nil :family "Monaspace Argon" :height 112)
