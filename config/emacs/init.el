@@ -98,19 +98,21 @@
     (vc-root-dir)
     default-directory))
 
+(setq consult-project-root-function #'my/vc-root-dir-or-def)
+
 (leaf consult
-  :after t embark
-  :require embark-consult
   :bind (("C-c l" . consult-line) ("C-c b" . consult-buffer))
-  :custom ((consult-find-command . "fd --color=never --full-path ARG OPTS") (consult-project-root-function . #'my/vc-root-dir-or-def)))
+  :custom ((consult-find-command . "fd --color=never --full-path ARG OPTS") ))
 
 (leaf embark-consult
+  :after embark consult
+  :require t
   :bind ((:minibuffer-mode-map
           ("M-." . embark-dwin)
           ("M-e" . embark-act))))
 
 (leaf consult-dir
-  :ensure t
+  :after consult
   :bind (("C-x C-d" . consult-dir)
 	 (vertico-map
 	  ("C-x C-d" . consult-dir)
