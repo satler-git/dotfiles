@@ -222,13 +222,50 @@
     (side . right)
     (window-width . 0.25)))
 
+(defun my/evil-shift-right-and-keep ()
+  (interactive)
+  (evil-shift-right (region-beginning) (region-end))
+  (evil-normal-state)
+  (evil-visual-restore)
+)
+
+(defun my/evil-shift-left-and-keep ()
+  (interactive)
+  (evil-shift-left (region-beginning) (region-end))
+  (evil-normal-state)
+  (evil-visual-restore)
+)
+
+(defun my/evil-shift-line-left ()
+  (interactive)
+  (evil-shift-left (line-beginning-position) (line-end-position))
+)
+
+(defun my/evil-shift-line-right ()
+  (interactive)
+  (evil-shift-right (line-beginning-position) (line-end-position))
+)
+
+(defun my/evil-delete-char ()
+  (interactive)
+  (let ((pos (point)))
+    (delete-char 1))
+)
+
 (leaf evil ;; TODO: replace with meow?
   :require t
   :custom
   ((evil-undo-system . 'undo-tree))
   :bind ((:evil-normal-state-map
           ("C-k" . evil-scroll-up)
-          ("C-j" . evil-scroll-down)))
+          ("C-j" . evil-scroll-down)
+          ("M" . evil-jump-item)
+	  (">" . #'my/evil-shift-line-right)
+	  ("<" . #'my/evil-shift-line-left))
+	  ("x" . #'my/evil-delete-char)
+	 (:evil-visual-state-map
+	  (">" . #'my/evil-shift-right-and-keep)
+	  ("<" . #'my/evil-shift-left-and-keep)))
   :config
   (evil-mode 1))
 
