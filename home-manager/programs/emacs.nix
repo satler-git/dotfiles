@@ -21,6 +21,12 @@
         marginalia
         orderless
 
+        embark
+        embark-consult # TODO: eglot?
+        consult # TODO: yasuni ghq? projectile?
+        consult-dir
+        affe
+
         reformatter
 
         treesit-grammars.with-all-grammars
