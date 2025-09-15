@@ -78,26 +78,11 @@
   :ensure t
   :bind (("C-c e" . macrostep-expand)))
 
-
 (leaf reformatter
   :ensure t)
-;; TODO: yaml, json
 
-;; ;; https://github.com/kuuote/nixconf/blob/main/home/emacs/init.org#reformatter
-;; (defmacro add-hook-lambda (hook &rest body)
-;;   (declare (indent defun))
-;;   `(add-hook ',hook (lambda () ,@body)))
-;;
-;; (defmacro reformatter-hook (hook name &rest reformatter-args)
-;;   (declare (indent defun))
-;;   `(add-hook-lambda ,hook
-;;      (require 'reformatter) ;; require load reformatter when executed byte compiled function
-;;      (reformatter-define
-;;        ,name
-;;        ,@reformatter-args)
-;;      (, (intern (concat (symbol-name name) "-on-save-mode")) 1)))
-
-;; generated with ChatGPT
+;; original by https://github.com/kuuote/nixconf/blob/main/home/emacs/init.org#reformatter
+;; generated with ChatGPT {{
 (defmacro add-hook-lambda (hook &rest body)
   (declare (indent defun))
   (cond
@@ -125,6 +110,7 @@
        (require 'reformatter)
        (reformatter-define ,name ,@reformatter-args)
        (,mode-fn 1))))
+;; }}
 
 (reformatter-hook rust-ts-mode-hook rustfmt
   :program "rustfmt"
@@ -138,7 +124,7 @@
 (reformatter-hook yaml-ts-mode-hook yamlfmt
   :program "yamlfmt"
   :args '("-in"))
-( reformatter-hook
+(reformatter-hook
   '(typescript-ts-mode-hook tsx-ts-mode-hook json-ts-mode-hook) biome
   :program "biome"
   :args `("format" "--stdin-file-path" ,(buffer-file-name)))
@@ -192,6 +178,10 @@
 (leaf editorconfig
   :ensure t
   :config
+  (setq safe-local-variable-directories
+    `(,(expand-file-name "~/dotfiles/")
+      ,(expand-file-name "~/repos/github.com/satler-git/")
+      ,(expand-file-name "~/repos/github.com/ltrait/")))
   (editorconfig-mode 1))
 
 (leaf git-gutter ;; TODO: diff-hl ?
