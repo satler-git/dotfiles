@@ -148,6 +148,10 @@
   (add-to-list 'auto-mode-alist '("\\.lua" . lua-ts-mode))
   (add-to-list 'auto-mode-alist '("Dockerfile" . dockerfile-ts-mode)))
 
+(leaf rainbow-mode
+  :ensure t
+  :hook (css-mode-hook web-mode-hook html-mode-hook js-mode-hook scss-mode-hook emacs-lisp-mode-hook))
+
 (reformatter-hook nix-mode-hook nix-format
   :program "nixfmt")
 (leaf nix-mode
