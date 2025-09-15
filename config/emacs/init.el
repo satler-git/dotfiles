@@ -210,6 +210,10 @@
   :custom `((dmacro-key . ,(kbd "C-S-e")))
   :global-minor-mode global-dmacro-mode)
 
+(leaf wakatime-mode
+  :ensure t
+  :global-minor-mode global-wakatime-mode)
+
 (set-face-attribute 'default nil :family "Monaspace Argon" :height 112)
 
 (setq display-line-numbers-type 'relative)
