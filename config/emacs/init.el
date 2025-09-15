@@ -161,11 +161,6 @@
 ;; TODO: typst-ts-mode
 ;; typst-mode
 
-(set-face-attribute 'default nil :family "Monaspace Argon" :height 112)
-
-(setq display-line-numbers 'relative) ;; TODO:
-(global-display-line-numbers-mode)
-
 (leaf undo-tree
   :ensure t
   :require t
@@ -210,6 +205,11 @@
   :ensure t
   :custom `((dmacro-key . ,(kbd "C-S-e")))
   :global-minor-mode global-dmacro-mode)
+
+(set-face-attribute 'default nil :family "Monaspace Argon" :height 112)
+
+(setq display-line-numbers-type 'relative)
+(global-display-line-numbers-mode)
 
 (add-hook 'emacs-startup-hook #'electric-pair-mode)
 (add-hook 'emacs-startup-hook
