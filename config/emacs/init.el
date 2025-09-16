@@ -356,4 +356,17 @@
 (setq truncate-lines t)
 (setq truncate-partial-width-windows t)
 
+(defun my/apply-gui-settings (frame)
+  (when (display-graphic-p frame)
+    (with-selected-frame frame
+      (set-face-attribute 'default nil :family "Monaspace Argon" :height 120)
+
+      (set-fontset-font t 'japanese-jisx0208 (font-spec :family "IBM Plex Sans JP") nil 'append)
+      (set-fontset-font t 'katakana-jisx0201 (font-spec :family "IBM Plex Sans JP") nil 'append))))
+
+(add-hook 'after-make-frame-functions #'my/apply-gui-settings)
+
+(when (display-graphic-p)
+  (my/apply-gui-settings (selected-frame)))
+
 (provide 'init)
