@@ -27,3 +27,10 @@
   (menu-bar-mode -1))
 
 (setq inhibit-startup-screen t)
+
+(defun my/apply-gui-settings (frame)
+  (with-selected-frame frame
+    (when window-system
+	(set-face-attribute 'default nil :family "Monaspace Argon" :height 112)
+      )))
+(add-hook 'after-make-frame-functions #'my/apply-gui-settings)

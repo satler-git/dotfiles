@@ -26,6 +26,8 @@
         kind-icon
         corfu-prescient
 
+        ddskk
+
         embark
         embark-consult # TODO: eglot?
         consult # TODO: yasuni ghq? projectile?
@@ -104,5 +106,8 @@
     ".emacs.d/init.el".source = ../../config/emacs/init.el;
     ".emacs.d/themes/aura-soft-dark-soft-text-theme.el".source = ../../config/emacs/aura-theme.el; # TODO:
     ".emacs.d/early-init.el".source = ../../config/emacs/early-init.el;
+    ".skk.el".text = ''
+      (setq skk-large-jisyo "${pkgs.skkDictionaries.l}/share/skk/SKK-JISYO.L")
+    '';
   };
 }

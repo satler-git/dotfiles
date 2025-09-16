@@ -162,6 +162,9 @@
   (text-mode-ispell-word-completion . nil)
   (read-extended-command-predicate . #'command-completion-default-include-p)))
 
+(leaf ddskk
+  :bind (("C-c j" . skk-mode)))
+
 ;; original by https://github.com/kuuote/nixconf/blob/main/home/emacs/init.org#reformatter
 ;; generated with ChatGPT {{
 (defmacro add-hook-lambda (hook &rest body)
@@ -331,7 +334,6 @@
 (leaf wakatime-mode
   :global-minor-mode global-wakatime-mode)
 
-(set-face-attribute 'default nil :family "Monaspace Argon" :height 112)
 
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
