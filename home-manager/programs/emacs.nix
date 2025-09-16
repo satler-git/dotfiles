@@ -40,6 +40,7 @@
         undo-tree
 
         evil
+        evil-surround
 
         editorconfig
 

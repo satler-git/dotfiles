@@ -269,6 +269,9 @@
 	  (">" . #'my/evil-shift-right-and-keep)
 	  ("<" . #'my/evil-shift-left-and-keep)))
   :config
+  (leaf evil-surround
+    :require t
+    :global-minor-mode global-evil-surround-mode)
   (evil-mode 1))
 
 (leaf editorconfig
