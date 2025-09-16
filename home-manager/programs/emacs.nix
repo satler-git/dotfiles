@@ -21,6 +21,11 @@
         marginalia
         orderless
 
+        corfu
+        cape
+        kind-icon
+        corfu-prescient
+
         embark
         embark-consult # TODO: eglot?
         consult # TODO: yasuni ghq? projectile?

@@ -68,12 +68,13 @@
   :bind (("C-c e" . macrostep-expand) ("C-c r" . macrostep-collapse)))
 
 (leaf vertico
+  :require vertico-directory
   :custom
   ((vertico-cycle . t) (vertico-count . 20))
   :init
   (vertico-mode))
 
-(leaf prescient ;; TODO: corfu
+(leaf prescient
   :global-minor-mode prescient-persist-mode)
 
 (leaf vertico-prescient
@@ -124,7 +125,42 @@
 	 (affe-regexp-function . 'orderless-pattern-compiler)
 	 (affe-find-command . "fd --color=never --full-path")))
 
-(leaf reformatter)
+(leaf corfu
+  :bind ((corfu-map ("C-e" . corfu-quit)) ())
+
+  :custom
+  ((corfu-cycle . t)
+  (corfu-quit-at-boundary . nil)
+  (corfu-quit-no-match . 'separator)
+  (corfu-auto . t))
+
+  :init
+  (global-corfu-mode)
+  (corfu-popupinfo-mode))
+
+(leaf corfu-prescient
+  :after corfu prescient
+  :global-minor-mode corfu-prescient-mode)
+
+(leaf cape
+  :after corfu
+  :init
+  (add-hook 'completion-at-point-functions #'cape-file)
+  (add-hook 'completion-at-point-functions #'cape-elisp-block)
+  (add-hook 'completion-at-point-functions #'cape-elisp-symbol)
+  (add-hook 'completion-at-point-functions #'cape-emoji))
+
+(leaf kind-icon
+  :after corfu
+  :custom (kind-icon-default-face 'corfu-default)
+  :config
+  (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
+
+(leaf emacs
+  :custom
+  ((tab-always-indent . 'complete)
+  (text-mode-ispell-word-completion . nil)
+  (read-extended-command-predicate . #'command-completion-default-include-p)))
 
 ;; original by https://github.com/kuuote/nixconf/blob/main/home/emacs/init.org#reformatter
 ;; generated with ChatGPT {{
@@ -157,22 +193,24 @@
        (,mode-fn 1))))
 ;; }}
 
-(reformatter-hook rust-ts-mode-hook rustfmt
-  :program "rustfmt"
-  :args '("--color" "never" "--quiet"))
-(reformatter-hook lua-ts-mode-hook stylua
-  :program "stylua"
-  :args '("-"))
-(reformatter-hook toml-ts-mode-hook taplo
-  :program "taplo"
-  :args '("fmt"))
-(reformatter-hook yaml-ts-mode-hook yamlfmt
-  :program "yamlfmt"
-  :args '("-in"))
-(reformatter-hook
-  '(typescript-ts-mode-hook tsx-ts-mode-hook json-ts-mode-hook) biome
-  :program "biome"
-  :args `("format" "--stdin-file-path" ,(buffer-file-name)))
+(leaf reformatter
+  :config
+  (reformatter-hook rust-ts-mode-hook rustfmt
+    :program "rustfmt"
+    :args '("--color" "never" "--quiet"))
+  (reformatter-hook lua-ts-mode-hook stylua
+    :program "stylua"
+    :args '("-"))
+  (reformatter-hook toml-ts-mode-hook taplo
+    :program "taplo"
+    :args '("fmt"))
+  (reformatter-hook yaml-ts-mode-hook yamlfmt
+    :program "yamlfmt"
+    :args '("-in"))
+  (reformatter-hook
+    '(typescript-ts-mode-hook tsx-ts-mode-hook json-ts-mode-hook) biome
+    :program "biome"
+    :args `("format" "--stdin-file-path" ,(buffer-file-name))))
 
 ;; TODO: syntax highlight by lsp
 (leaf treesit
