@@ -339,6 +339,17 @@
   :commands envrc-global-mode
   :hook ((after-init-hook . envrc-global-mode)))
 
+(leaf ghub)
+;; nixpkgs#nerd-fonts.symbols-only
+(leaf nerd-icons)
+
+(leaf doom-modeline
+  :require nerd-icons
+  :custom ((doom-modeline-github . t)
+	   `(doom-modeline-github-interval . ,(* 15 60))
+	   (doom-modeline-always-show-macro-register t))
+  :hook (after-init-hook))
+
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
 

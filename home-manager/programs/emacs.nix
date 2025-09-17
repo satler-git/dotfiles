@@ -58,6 +58,10 @@
         wakatime-mode
 
         envrc
+
+        doom-modeline
+        ghub
+        nerd-icons
       ])
       ++ (with pkgs; [
         # TODO: neovimと共通化
@@ -98,6 +102,8 @@
         # DAP
         haskellPackages.ghci-dap
         haskellPackages.haskell-debug-adapter
+
+        nerd-fonts.symbols-only
       ]);
   };
 
