@@ -1,116 +1,130 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
+let
+  extraPackages =
+    epkgs:
+    (with epkgs; [
+      leaf
+      leaf-keywords
+      leaf-convert
+      leaf-tree
+
+      # doom-themes
+
+      macrostep
+
+      vertico
+      prescient
+      vertico-prescient
+      marginalia
+      orderless
+
+      corfu
+      cape
+      kind-icon
+      corfu-prescient
+
+      ddskk
+
+      embark
+      embark-consult # TODO: eglot?
+      consult # TODO: yasuni ghq? projectile?
+      consult-dir
+      affe
+
+      reformatter
+
+      treesit-grammars.with-all-grammars
+
+      rainbow-mode
+
+      nix-mode
+      nix-ts-mode
+      hledger-mode
+
+      undo-tree
+
+      evil
+      evil-surround
+
+      editorconfig
+
+      git-gutter
+
+      dmacro
+
+      wakatime-mode
+
+      envrc
+
+      doom-modeline
+      ghub
+      nerd-icons
+
+      dashboard
+    ])
+    ++ (with pkgs; [
+      # TODO: neovimと共通化
+      typos-lsp
+
+      buf
+      elixir-ls
+      ghc
+      haskell-language-server
+      luajit
+      lua-language-server
+      fenix.stable.rust-analyzer
+
+      tinymist # For typst
+
+      nil
+      taplo # Toml
+      vscode-langservers-extracted
+      yaml-language-server
+
+      astro-language-server
+      biome
+      typescript-language-server
+      vtsls
+
+      dart
+
+      pest-ide-tools
+
+      # Formatter
+      nixfmt-rfc-style
+      rustfmt
+      stylish-haskell # TODO:
+      stylua
+      typstyle # TODO:
+      yamlfmt
+
+      # DAP
+      haskellPackages.ghci-dap
+      haskellPackages.haskell-debug-adapter
+
+      nerd-fonts.symbols-only
+
+      wakatime-cli
+    ])
+    ++ (config.programs.emacs.extraPackages epkgs);
+
+  emacsPkg = (pkgs.emacsPackagesFor pkgs.emacs).emacsWithPackages extraPackages;
+in
 {
   programs.emacs = {
     enable = true;
-
-    extraPackages =
-      epkgs:
-      (with epkgs; [
-        leaf
-        leaf-keywords
-        leaf-convert
-        leaf-tree
-
-        # doom-themes
-
-        macrostep
-
-        vertico
-        prescient
-        vertico-prescient
-        marginalia
-        orderless
-
-        corfu
-        cape
-        kind-icon
-        corfu-prescient
-
-        ddskk
-
-        embark
-        embark-consult # TODO: eglot?
-        consult # TODO: yasuni ghq? projectile?
-        consult-dir
-        affe
-
-        reformatter
-
-        treesit-grammars.with-all-grammars
-
-        rainbow-mode
-
-        nix-mode
-        nix-ts-mode
-        hledger-mode
-
-        undo-tree
-
-        evil
-        evil-surround
-
-        editorconfig
-
-        git-gutter
-
-        dmacro
-
-        wakatime-mode
-
-        envrc
-
-        doom-modeline
-        ghub
-        nerd-icons
-
-        dashboard
-      ])
-      ++ (with pkgs; [
-        # TODO: neovimと共通化
-        typos-lsp
-
-        buf
-        elixir-ls
-        ghc
-        haskell-language-server
-        luajit
-        lua-language-server
-        fenix.stable.rust-analyzer
-
-        tinymist # For typst
-
-        nil
-        taplo # Toml
-        vscode-langservers-extracted
-        yaml-language-server
-
-        astro-language-server
-        biome
-        typescript-language-server
-        vtsls
-
-        dart
-
-        pest-ide-tools
-
-        # Formatter
-        nixfmt-rfc-style
-        rustfmt
-        stylish-haskell # TODO:
-        stylua
-        typstyle # TODO:
-        yamlfmt
-
-        # DAP
-        haskellPackages.ghci-dap
-        haskellPackages.haskell-debug-adapter
-
-        nerd-fonts.symbols-only
-      ]);
+    package = emacsPkg;
   };
 
-  # TODO: deamon/emacsclient
-  # services.emacs = { };
+  services.emacs = {
+    enable = true;
+    package = emacsPkg;
+    client.enable = true;
+  };
+
+  programs.zsh.shellAliases = {
+    emacs = "emacsclient -c -a \"\"";
+  };
 
   home.file = {
     ".emacs.d/init.el".source = ../../config/emacs/init.el;

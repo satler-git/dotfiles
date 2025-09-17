@@ -1,7 +1,5 @@
 ;; -*- lexical-binding: t -*-
 
-(setq ring-bell-function 'ignore)
-
 ;; native comp
 
 (with-eval-after-load 'comp-run
@@ -27,3 +25,11 @@
   (menu-bar-mode -1))
 
 (setq inhibit-startup-screen t)
+(setq ring-bell-function 'ignore)
+
+;; GC
+
+(setq gc-cons-threshold (* 10 128 1024 1024))
+(setq garbage-collection-messages nil)
+
+(setq read-process-output-max (* 8 1024 1024))

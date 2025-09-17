@@ -388,6 +388,9 @@
     (with-selected-frame frame
       (set-face-attribute 'default nil :family "Monaspace Argon" :height 120)
 
+      (set-fontset-font t 'unicode (font-spec :family "Symbols Nerd Font Mono") nil 'prepend)
+      (set-fontset-font t 'symbol  (font-spec :family "Symbols Nerd Font Mono") nil 'prepend)
+
       (set-fontset-font t 'japanese-jisx0208 (font-spec :family "IBM Plex Sans JP") nil 'append)
       (set-fontset-font t 'katakana-jisx0201 (font-spec :family "IBM Plex Sans JP") nil 'append))))
 
