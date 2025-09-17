@@ -347,8 +347,18 @@
   :require nerd-icons
   :custom ((doom-modeline-github . t)
 	   `(doom-modeline-github-interval . ,(* 15 60))
-	   (doom-modeline-always-show-macro-register t))
+	   (doom-modeline-always-show-macro-register . t))
   :hook (after-init-hook))
+
+(leaf dashboard
+  :custom
+  ((dashboard-banner-logo-title . "Welcome to Emacs")
+   (dashboard-center-content . t)
+   (dashboard-vertically-center-content . t)
+   (dashboard-navigation-cycle . t)
+   (dashboard-startup-banner . "~/.emacs.d/etc/dashboard.txt"))
+  :config
+  (dashboard-setup-startup-hook))
 
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)

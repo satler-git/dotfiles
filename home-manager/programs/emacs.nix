@@ -62,6 +62,8 @@
         doom-modeline
         ghub
         nerd-icons
+
+        dashboard
       ])
       ++ (with pkgs; [
         # TODO: neovimと共通化
@@ -114,6 +116,7 @@
     ".emacs.d/init.el".source = ../../config/emacs/init.el;
     ".emacs.d/themes/aura-soft-dark-soft-text-theme.el".source = ../../config/emacs/aura-theme.el; # TODO:
     ".emacs.d/early-init.el".source = ../../config/emacs/early-init.el;
+    ".emacs.d/etc/dashboard.txt".source = ../../config/emacs/dashboard;
     ".skk.el".text = ''
       (setq skk-large-jisyo "${pkgs.skkDictionaries.l}/share/skk/SKK-JISYO.L")
     '';
