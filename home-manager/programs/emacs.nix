@@ -64,6 +64,9 @@ let
 
       vterm
       vterm-toggle
+
+      rainbow-delimiters
+      highlight-indent-guides
     ])
     ++ (with pkgs; [
       # TODO: neovimと共通化

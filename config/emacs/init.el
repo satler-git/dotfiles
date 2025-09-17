@@ -393,6 +393,17 @@
             (vterm)))
   )
 
+(leaf highlight-indent-guides
+  :hook (prog-mode-hook)
+  :custom ((highlight-indent-guides-method . 'character) (highlight-indent-guides-auto-enabled . nil))
+  :config
+  (set-face-background 'highlight-indent-guides-odd-face "darkgray")
+  (set-face-background 'highlight-indent-guides-even-face "dimgray")
+  (set-face-foreground 'highlight-indent-guides-character-face "dimgray"))
+
+(leaf rainbow-delimiters
+  :hook (prog-mode-hook))
+
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
 
