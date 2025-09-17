@@ -56,6 +56,8 @@
         dmacro
 
         wakatime-mode
+
+        envrc
       ])
       ++ (with pkgs; [
         # TODO: neovimと共通化

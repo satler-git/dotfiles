@@ -50,6 +50,7 @@
 
 (leaf tab-bar-mode
   :bind (("C-c t" . tab-bar-new-tab)
+         ("C-c g" . tab-bar-switch-to-tab)
 	 ("C-c n" . tab-bar-switch-to-next-tab)
 	 ("C-c p" . tab-bar-switch-to-prev-tab) ;; TODO: embark?を導入したら
 	 ("C-c 0" . tab-bar-switch-to-last-tab)
@@ -334,6 +335,9 @@
 (leaf wakatime-mode
   :global-minor-mode global-wakatime-mode)
 
+(leaf envrc
+  :commands envrc-global-mode
+  :hook ((after-init-hook . envrc-global-mode)))
 
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
