@@ -360,6 +360,39 @@
   :config
   (dashboard-setup-startup-hook))
 
+;; 感謝
+;; https://naokton.hatenablog.com/entry/2020/12/08/150130
+
+(leaf vterm
+  :custom
+  (vterm-max-scrollback . 10000)
+  (vterm-buffer-name-string . "vterm: %s")
+  (vterm-keymap-exceptions
+   . '("<f1>" "<f2>" "C-c" "C-x" "C-u" "C-g" "C-l" "M-x" "M-o" "C-v" "M-v" "C-y" "M-y")))
+
+(leaf vterm-toggle
+  :bind
+  ("<f2>" . vterm-toggle)
+  (vterm-mode-map
+   ("C-." . vterm-toggle-forward)
+   ("C-," . vterm-toggle-backward))
+  :custom
+  (vterm-toggle-scope . 'project)
+  :config
+  ;; Show vterm buffer in the window located at bottom
+  (add-to-list 'display-buffer-alist
+               '((lambda(bufname _) (with-current-buffer bufname (equal major-mode 'vterm-mode)))
+                 (display-buffer-reuse-window display-buffer-in-direction)
+                 (direction . bottom)
+                 (reusable-frames . visible)
+                 (window-height . 0.4)))
+  ;; Above display config affects all vterm command, not only vterm-toggle
+  (defun my/vterm-new-buffer-in-current-window()
+    (interactive)
+    (let ((display-buffer-alist nil))
+            (vterm)))
+  )
+
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
 
