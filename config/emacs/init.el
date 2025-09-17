@@ -366,6 +366,8 @@
 ;; (add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
 ;; (load-theme 'aura-soft-dark-soft-text t)
 
+(which-key-mode 1)
+
 (add-hook 'emacs-startup-hook #'electric-pair-mode)
 (add-hook 'emacs-startup-hook
           #'(lambda ()
