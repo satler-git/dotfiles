@@ -308,7 +308,8 @@
 	  (">" . #'my/evil-shift-line-right)
 	  ("<" . #'my/evil-shift-line-left)
 	  ("x" . #'my/evil-delete-char)
-	  ("gc" . comment-dwim)
+	  ("gcc" . comment-line)
+	  ("gca" . comment-dwim)
 	  )
 	 (:evil-visual-state-map
 	  (">" . #'my/evil-shift-right-and-keep)
