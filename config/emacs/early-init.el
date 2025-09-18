@@ -13,6 +13,9 @@
 (with-eval-after-load 'time
   (setopt display-time-24hr-format t))
 
+(native-compile-async "~/.emacs.d/early-init.el")
+(native-compile-async "~/.emacs.d/init.el")
+
 ;; disable
 
 (with-eval-after-load 'scroll-bar
