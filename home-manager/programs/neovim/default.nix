@@ -1,8 +1,5 @@
 { pkgs, ... }:
 let
-  testing-language-server-src =
-    (pkgs.callPackages ../../../_sources/generated.nix { }).testing-language-server;
-
   dicts_lua = ''
     -- SKKELETON's JISYO
     vim.fn['skkeleton#config']({
