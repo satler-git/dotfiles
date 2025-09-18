@@ -413,6 +413,26 @@
 (leaf rainbow-delimiters
   :hook (prog-mode-hook))
 
+(leaf hl-todo
+  :custom (hl-todo-keyword-faces .
+    '(("TODO"   . "#55DDE0")
+      ("FIXME"  . "#2081C3")
+      ("DEBUG"  . "#F6AE2D")
+      ("HACK" . "#F26419")
+      ("NOTE" . "#53FF45")
+      ("STUB"   . "#F7567C")))
+  :global-minor-mode global-hl-todo-mode)
+
+(leaf consult-todo
+  :custom (consult-todo--narrow .
+    '((?t . "TODO")
+      (?f . "FIXME")
+      (?d . "DEBUG")
+      (?h . "HACK")
+      (?n . "NOTE")
+      (?s . "STUB")))
+  :require t)
+
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
 

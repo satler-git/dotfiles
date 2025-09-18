@@ -67,6 +67,9 @@ let
 
       rainbow-delimiters
       highlight-indent-guides
+
+      hl-todo
+      consult-todo
     ])
     ++ (with pkgs; [
       # TODO: neovimと共通化
