@@ -1,6 +1,6 @@
 ;; -*- lexical-binding: t -*-
 
-;; init.el
+; init.el
 ;;
 ;; takeokunさんなど
 
@@ -305,20 +305,20 @@
           ("C-k" . evil-scroll-up)
           ("C-j" . evil-scroll-down)
           ("M" . evil-jump-item)
-	  (">" . #'my/evil-shift-line-right)
-	  ("<" . #'my/evil-shift-line-left)
-	  ("x" . #'my/evil-delete-char)
-	  ("gcc" . comment-line)
-	  ("gca" . comment-dwim)
-	  )
-	 (:evil-visual-state-map
-	  (">" . #'my/evil-shift-right-and-keep)
-	  ("<" . #'my/evil-shift-left-and-keep)
-	  ("gc" . comment-dwim)
-	  ("p" . evil-paste-before)
-	  ("P" . evil-paste-after)
-	  )
-	 )
+          (">" . #'my/evil-shift-line-right)
+          ("<" . #'my/evil-shift-line-left)
+          ("x" . #'my/evil-delete-char)
+          ("gcc" . comment-line)
+          ("gca" . comment-dwim)
+          )
+         (:evil-visual-state-map
+          (">" . #'my/evil-shift-right-and-keep)
+          ("<" . #'my/evil-shift-left-and-keep)
+          ("gc" . comment-dwim)
+          ("p" . evil-paste-before)
+          ("P" . evil-paste-after)
+          )
+         )
   :config
   (leaf evil-surround
     :require t
@@ -432,6 +432,13 @@
       (?n . "NOTE")
       (?s . "STUB")))
   :require t)
+
+(leaf ace-window
+  :after evil
+  :custom (aw-keys . '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
+  :bind (:evil-normal-state-map
+          ("C-w C-w" . ace-window)
+          ("C-w x"   . ace-swap-window)))
 
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)

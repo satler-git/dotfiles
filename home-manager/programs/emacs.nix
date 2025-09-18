@@ -70,6 +70,8 @@ let
 
       hl-todo
       consult-todo
+
+      ace-window
     ])
     ++ (with pkgs; [
       # TODO: neovimと共通化
