@@ -435,6 +435,7 @@
 
 (setq truncate-lines t)
 (setq truncate-partial-width-windows t)
+(setq show-trailing-whitespace t)
 
 (defun my/apply-gui-settings (frame)
   (when (display-graphic-p frame)
