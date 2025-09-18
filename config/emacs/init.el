@@ -191,11 +191,10 @@
 
 (defmacro reformatter-hook (hook name &rest reformatter-args)
   (declare (indent defun))
-  (let ((mode-fn (intern (concat (symbol-name name) "-on-save-mode"))))
     `(add-hook-lambda ,hook
        (require 'reformatter)
        (reformatter-define ,name ,@reformatter-args)
-       (,mode-fn 1))))
+       (,(intern (concat (symbol-name name) "-on-save-mode")) 1)))
 ;; }}
 
 (leaf reformatter
