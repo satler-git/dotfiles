@@ -76,6 +76,7 @@
   (vertico-mode))
 
 (leaf prescient
+  :custom (prescient-filter-method . '(fuzzy literal regexp initialism))
   :global-minor-mode prescient-persist-mode)
 
 (leaf vertico-prescient
@@ -305,11 +306,20 @@
           ("C-j" . evil-scroll-down)
           ("M" . evil-jump-item)
 	  (">" . #'my/evil-shift-line-right)
-	  ("<" . #'my/evil-shift-line-left))
+	  ("<" . #'my/evil-shift-line-left)
 	  ("x" . #'my/evil-delete-char)
+	  ("gc" . comment-dwim)
+	  ("p" . evil-paste-before)
+	  ("P" . evil-paste-after)
+	  )
 	 (:evil-visual-state-map
 	  (">" . #'my/evil-shift-right-and-keep)
-	  ("<" . #'my/evil-shift-left-and-keep)))
+	  ("<" . #'my/evil-shift-left-and-keep)
+	  ("gc" . comment-dwim)
+	  ("p" . evil-paste-before)
+	  ("P" . evil-paste-after)
+	  )
+	 )
   :config
   (leaf evil-surround
     :require t

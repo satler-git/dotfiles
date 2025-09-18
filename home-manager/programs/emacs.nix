@@ -114,7 +114,21 @@ let
     ])
     ++ (config.programs.emacs.extraPackages epkgs);
 
-  emacsPkg = (pkgs.emacsPackagesFor pkgs.emacs).emacsWithPackages extraPackages;
+  extraPackages' =
+    epkgs:
+    let
+      packages = extraPackages epkgs;
+
+      stylixConf = epkgs.trivialBuild {
+        pname = "default";
+        src = pkgs.writeText "default.el" config.programs.emacs.extraConfig; # stylix
+        version = "0.1.0";
+        packageRequires = packages;
+      };
+    in
+    packages ++ [ stylixConf ];
+
+  emacsPkg = (pkgs.emacsPackagesFor pkgs.emacs).emacsWithPackages extraPackages';
 in
 {
   programs.emacs = {
