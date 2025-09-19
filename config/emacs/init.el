@@ -51,10 +51,10 @@
 (leaf tab-bar-mode
   :bind (("C-c t" . tab-bar-new-tab)
          ("C-c g" . tab-bar-switch-to-tab)
-	 ("C-c n" . tab-bar-switch-to-next-tab)
-	 ("C-c p" . tab-bar-switch-to-prev-tab) ;; TODO: embark?を導入したら
-	 ("C-c 0" . tab-bar-switch-to-last-tab)
-	 ("M-c" . tab-bar-close-tab))
+         ("C-c n" . tab-bar-switch-to-next-tab)
+         ("C-c p" . tab-bar-switch-to-prev-tab) ;; TODO: embark?を導入したら
+         ("C-c 0" . tab-bar-switch-to-last-tab)
+         ("M-c" . tab-bar-close-tab))
   :custom ((tab-bar-new-tab-choice . "*scratch*"))
   :global-minor-mode t)
 
@@ -117,15 +117,15 @@
 (leaf consult-dir
   :after consult
   :bind (("C-x C-d" . consult-dir)
-	 (vertico-map
-	  ("C-x C-d" . consult-dir)
-	  ("C-x C-j" . consult-dir-jump-file))))
+    (vertico-map
+     ("C-x C-d" . consult-dir)
+     ("C-x C-j" . consult-dir-jump-file))))
 
 (leaf affe
   :bind (("C-c f" . affe-find))
   :custom ((affe-highlight-function . 'orderless-highlight-matches)
-	 (affe-regexp-function . 'orderless-pattern-compiler)
-	 (affe-find-command . "fd --color=never --full-path")))
+    (affe-regexp-function . 'orderless-pattern-compiler)
+    (affe-find-command . "fd --color=never --full-path")))
 
 (leaf corfu
   :bind ((corfu-map ("C-e" . corfu-quit)) ())
@@ -256,7 +256,7 @@
   :config
   (let ((undo-dir "~/.emacs.d/undo"))
     (unless (file-exists-p undo-dir)
-	(make-directory undo-dir t))
+    (make-directory undo-dir t))
     (setq undo-tree-history-directory-alist `((".*" . ,undo-dir))))
   (global-undo-tree-mode))
 
@@ -299,7 +299,8 @@
 (leaf evil ;; TODO: replace with meow?
   :require t
   :custom
-  ((evil-undo-system . 'undo-tree))
+  ((evil-undo-system . 'undo-tree)
+   (evil-mode-line-format . nil))
   :bind ((:evil-normal-state-map
           ("C-k" . evil-scroll-up)
           ("C-j" . evil-scroll-down)
@@ -316,6 +317,7 @@
           ("gc" . comment-dwim)
           ("p" . evil-paste-before)
           ("P" . evil-paste-after)
+          ("M" . evil-jump-item)
           )
          )
   :config
@@ -347,16 +349,55 @@
   :commands envrc-global-mode
   :hook ((after-init-hook . envrc-global-mode)))
 
-(leaf ghub)
 ;; nixpkgs#nerd-fonts.symbols-only
 (leaf nerd-icons)
 
-(leaf doom-modeline
-  :require nerd-icons
-  :custom ((doom-modeline-github . t)
-	   `(doom-modeline-github-interval . ,(* 15 60))
-	   (doom-modeline-always-show-macro-register . t))
-  :hook (after-init-hook))
+(leaf moody
+  :after evil
+  :config
+  (column-number-mode 1)
+
+  (setq-default mode-line-format '("%e" mode-line-front-space
+      (:propertize
+       (""
+        mode-line-mule-info
+        mode-line-client
+        mode-line-modified
+        mode-line-remote
+        mode-line-window-dedicated)
+        display (min-width (6.0)))
+
+      (evil-mode-line-tag evil-mode-line-tag)
+
+      mode-line-frame-identification
+      mode-line-buffer-identification
+      "   "
+      mode-line-position
+      (project-mode-line project-mode-line-format) ;; TODO: projectile
+      (vc-mode vc-mode) ;; TODO: diff?
+      "  "
+      mode-line-modes
+      mode-line-misc-info
+      mode-line-end-spaces))
+
+  (set-face-attribute 'mode-line-active nil
+                      :foreground "#a277ff"
+                      :background "#15141b"
+                      :box 'unspecified)
+  (set-face-attribute 'mode-line-inactive nil
+                      :foreground "#bdbdbd"
+                      :background "#15141b"
+                      :box 'unspecified)
+
+  (moody-replace-mode-line-front-space)
+  (moody-replace-mode-line-buffer-identification)
+  (moody-replace-vc-mode))
+
+(leaf minions
+  :after moody
+  :custom (minions-mode-line-lighter . "[+]")
+  :config
+  (minions-mode))
 
 (leaf dashboard
   :custom

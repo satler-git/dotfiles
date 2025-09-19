@@ -56,8 +56,8 @@ let
 
       envrc
 
-      doom-modeline
-      ghub
+      moody
+      minions
       nerd-icons
 
       dashboard
