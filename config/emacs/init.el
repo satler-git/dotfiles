@@ -300,7 +300,10 @@
   :require t
   :custom
   ((evil-undo-system . 'undo-tree)
-   (evil-mode-line-format . nil))
+   (evil-mode-line-format . nil)
+   (scroll-preserve-screen-position . t) ;; TODO: 絶対ここじゃない
+   (scroll-conservatively . 100)
+   (scroll-margin . 3))
   :bind ((:evil-normal-state-map
           ("C-k" . evil-scroll-up)
           ("C-j" . evil-scroll-down)
@@ -319,11 +322,24 @@
           ("P" . evil-paste-after)
           ("M" . evil-jump-item)
           )
+	 (:evil-insert-state-map
+	  ("C-j" . skk-mode)
+	  )
          )
   :config
   (leaf evil-surround
     :require t
+    :after evil
     :global-minor-mode global-evil-surround-mode)
+  (leaf evil-matchit
+    :after evil
+    :global-minor-mode global-evil-matchit-mode)
+  (leaf evil-collection
+    :after evil
+    :config
+    (evil-collection-init)
+    )
+
   (evil-mode 1))
 
 (leaf editorconfig

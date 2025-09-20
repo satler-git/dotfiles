@@ -45,6 +45,8 @@ let
 
       evil
       evil-surround
+      evil-matchit
+      evil-collection
 
       editorconfig
 
