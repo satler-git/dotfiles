@@ -413,6 +413,9 @@
 ;; https://naokton.hatenablog.com/entry/2020/12/08/150130
 
 (leaf vterm
+  :bind
+  (vterm-mode-map
+   ("C-q" . vterm-send-next-key))
   :custom
   (vterm-max-scrollback . 10000)
   (vterm-buffer-name-string . "vterm: %s")

@@ -146,7 +146,6 @@
         dev = "nix develop";
         p = "pushd";
         pq = "popd";
-        kill-emacs = "emacsclient -e '(kill-emacs)'";
       };
     };
   };
