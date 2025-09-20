@@ -59,6 +59,7 @@ let
       markdown-mode
       git-modes
       typst-ts-mode
+      websocket
       typst-preview
       web-mode
 

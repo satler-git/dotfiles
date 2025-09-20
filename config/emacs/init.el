@@ -218,7 +218,6 @@
     :program "biome"
     :args `("format" "--stdin-file-path" ,(buffer-file-name))))
 
-;; TODO: syntax highlight by lsp
 (leaf treesit
   :tag "builtin"
   :custom
@@ -285,7 +284,13 @@
 
 (add-to-list 'auto-mode-alist '("\\.sh\\'" . shell-script-mode))
 
+(leaf typst-ts-mode
+  :require t
+  :commands typst-ts-mode)
+
+(leaf websocket)
 (leaf typst-preview
+  :require t
   :commands typst-preview-mode
   :custom (typst-preview-browser . "firefox"))
 
