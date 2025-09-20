@@ -5,3 +5,13 @@ fetch.github = "yazi-rs/plugins"
 [yazi-compress]
 src.git = "https://github.com/KKV9/compress.yazi"
 fetch.github = "KKV9/compress.yazi"
+
+# Emacs
+
+[typst-ts-mode]
+src.git = "https://git.sr.ht/~meow_king/typst-ts-mode"
+fetch.git = "https://git.sr.ht/~meow_king/typst-ts-mode"
+
+[typst-preview]
+src.git = "https://github.com/havarddj/typst-preview.el"
+fetch.github = "havarddj/typst-preview.el"

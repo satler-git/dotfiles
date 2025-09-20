@@ -211,6 +211,8 @@
   (reformatter-hook yaml-ts-mode-hook yamlfmt
     :program "yamlfmt"
     :args '("-in"))
+  (reformatter-hook typst-ts-mode-hook typstyle
+    :program "typstyle")
   (reformatter-hook
     '(typescript-ts-mode-hook tsx-ts-mode-hook json-ts-mode-hook) biome
     :program "biome"
@@ -226,7 +228,8 @@
   (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-ts-mode))
   (add-to-list 'auto-mode-alist '("\\.tsx\\'" . tsx-ts-mode))
   (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-ts-mode))
-  (add-to-list 'auto-mode-alist '("\\.hledger" . hledger-mode)) ;; TODO:
+  (add-to-list 'auto-mode-alist '("\\.hledger" . hledger-mode))
+  (add-to-list 'auto-mode-alist '("\\.typ\\'" . typst-ts-mode))
   (add-to-list 'auto-mode-alist '("\\.yaml" . yaml-ts-mode))
   (add-to-list 'auto-mode-alist '("\\.yml" . yaml-ts-mode))
   (add-to-list 'auto-mode-alist '("\\.toml" . toml-ts-mode))
@@ -235,9 +238,6 @@
   (add-to-list 'auto-mode-alist '("\\.lua" . lua-ts-mode))
   (add-to-list 'auto-mode-alist '("Dockerfile" . dockerfile-ts-mode)))
 
-(leaf rainbow-mode
-  :hook (css-mode-hook web-mode-hook html-mode-hook js-mode-hook scss-mode-hook emacs-lisp-mode-hook))
-
 (reformatter-hook nix-mode-hook nix-format
   :program "nixfmt")
 (leaf nix-mode
@@ -245,11 +245,49 @@
   :hook
   (nix-ts-mode))
 
+(leaf markdown-mode
+  :mode
+    (("\\.\\(?:md\\|markdown\\|mkd\\|mdown\\|mkdn\\|mdwn\\)\\'" . markdown-mode) ;; TODO: autoloading したら自動でなるやつ。必要なのこれ?
+     ("README\\.md\\'" . gfm-mode))
+  :bind (markdown-mode-map
+    ("C-c C-e" . markdown-do))
+  ;; :config
+  ;; (add-to-list 'auto-mode-alist
+  ;;   '("\\.\\(?:md\\|markdown\\|mkd\\|mdown\\|mkdn\\|mdwn\\)\\'" . markdown-mode))
+  ;; (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+  )
+
+(leaf git-modes
+  :commands gitignore-mode gitconfig-mode gitattributes-mode)
+
 (leaf hledger-mode
   :mode ("\\.hledger\\'" "\\.ledger\\'" "\\.journal\\'"))
 
-;; TODO: typst-ts-mode
-;; typst-mode
+(reformatter-hook haskell-mode-hook stylish-haskell
+  :program "stylish-haskell")
+(leaf haskell-mode
+  :mode (("\\.[gh]s\\'" . haskell-mode) ;; TODO: autoloading したら自動でなるやつ。必要なのこれ?
+        ("\\.hsig\\'" . haskell-mode)
+        ("\\.l[gh]s\\'" . haskell-literate-mode)
+        ("\\.hsc\\'" . haskell-mode)))
+
+(leaf web-mode
+  :commands web-mode
+  :mode
+  ("\\.[sp]?html\\'"
+   "\\.tpl\\.php\\'"
+   "\\.jsp\\'"
+   "\\.as[cp]x\\'"
+   "\\.erb\\'"
+   "\\.tsx\\'"
+   "\\.js\\'"
+   "\\.css\\'"))
+
+(add-to-list 'auto-mode-alist '("\\.sh\\'" . shell-script-mode))
+
+(leaf typst-preview
+  :commands typst-preview-mode
+  :custom (typst-preview-browser . "firefox"))
 
 (leaf undo-tree
   :require t
@@ -469,6 +507,10 @@
   (set-face-background 'highlight-indent-guides-even-face "dimgray")
   (set-face-foreground 'highlight-indent-guides-character-face "dimgray"))
 
+
+(leaf rainbow-mode
+  :hook (css-mode-hook web-mode-hook html-mode-hook js-mode-hook scss-mode-hook emacs-lisp-mode-hook))
+
 (leaf rainbow-delimiters
   :hook (prog-mode-hook))
 
@@ -495,9 +537,10 @@
 (leaf ace-window
   :after evil
   :custom (aw-keys . '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
-  :bind (:evil-normal-state-map
+  :bind ((:evil-normal-state-map
+	  :package evil
           ("C-w C-w" . ace-window)
-          ("C-w x"   . ace-swap-window)))
+          ("C-w x"   . ace-swap-window))))
 
 (leaf dirvish
   :bind ((:dirvish-mode-map

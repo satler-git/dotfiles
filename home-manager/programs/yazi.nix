@@ -2,8 +2,11 @@
 let
   plugins =
     let
-      yazi-plugins-src = (pkgs.callPackages ../../_sources/generated.nix { }).yazi-plugins.src;
-      yazi-compress-src = (pkgs.callPackages ../../_sources/generated.nix { }).yazi-compress.src;
+
+      sources = (pkgs.callPackages ../../_sources/generated.nix { });
+
+      yazi-plugins-src = sources.yazi-plugins.src;
+      yazi-compress-src = sources.yazi-compress.src;
 
       w = name: path: {
         inherit name path;

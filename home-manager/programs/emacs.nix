@@ -1,7 +1,25 @@
 { pkgs, config, ... }:
 let
+
   extraPackages =
     epkgs:
+    let
+      sources = (pkgs.callPackages ../../_sources/generated.nix { });
+
+      typst-ts-mode = epkgs.trivialBuild {
+        pname = "typst-ts-mode";
+        version = "main";
+        src = sources.typst-ts-mode.src;
+        buildInputs = with epkgs; [ ];
+      };
+
+      typst-preview = epkgs.trivialBuild {
+        pname = "typst-preview";
+        version = "master";
+        src = sources.typst-preview.src;
+        buildInputs = with epkgs; [ websocket ];
+      };
+    in
     (with epkgs; [
       leaf
       leaf-keywords
@@ -38,6 +56,11 @@ let
       nix-mode
       nix-ts-mode
       hledger-mode
+      markdown-mode
+      git-modes
+      typst-ts-mode
+      typst-preview
+      web-mode
 
       undo-tree
 
@@ -106,9 +129,9 @@ let
       # Formatter
       nixfmt-rfc-style
       rustfmt
-      stylish-haskell # TODO:
+      stylish-haskell
       stylua
-      typstyle # TODO:
+      typstyle
       yamlfmt
 
       # DAP

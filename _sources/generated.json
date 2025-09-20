@@ -1,4 +1,45 @@
 {
+    "typst-preview": {
+        "cargoLocks": null,
+        "date": "2025-08-12",
+        "extract": null,
+        "name": "typst-preview",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "havarddj",
+            "repo": "typst-preview.el",
+            "rev": "4f3decb8d9b85b1a06b0dfbd0fccaa0d2d2c24b4",
+            "sha256": "sha256-rxXgIoILnxyn543keCkpuv80TLaSATN1T7hCvnM8inU=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "4f3decb8d9b85b1a06b0dfbd0fccaa0d2d2c24b4"
+    },
+    "typst-ts-mode": {
+        "cargoLocks": null,
+        "date": "2024-12-07",
+        "extract": null,
+        "name": "typst-ts-mode",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "1367003e2ad55a2f6f9e43178584683028ab56e9",
+            "sha256": "sha256-0RAJ/Td3G7FDvzf7t8csNs/uc07WUPGvMo8ako5iyl0=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://git.sr.ht/~meow_king/typst-ts-mode"
+        },
+        "version": "1367003e2ad55a2f6f9e43178584683028ab56e9"
+    },
     "yazi-compress": {
         "cargoLocks": null,
         "date": "2025-08-15",
@@ -22,7 +63,7 @@
     },
     "yazi-plugins": {
         "cargoLocks": null,
-        "date": "2025-09-15",
+        "date": "2025-09-16",
         "extract": null,
         "name": "yazi-plugins",
         "passthru": null,
@@ -34,11 +75,11 @@
             "name": null,
             "owner": "yazi-rs",
             "repo": "plugins",
-            "rev": "109b13df29f4b7d14fd8e1b38414b205e706c761",
-            "sha256": "sha256-u8gbZnA8xShsbH06yCZM/aXskMrSHKPcQtIMFp1Cdyo=",
+            "rev": "d1c8baab86100afb708694d22b13901b9f9baf00",
+            "sha256": "sha256-52Zn6OSSsuNNAeqqZidjOvfCSB7qPqUeizYq/gO+UbE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "109b13df29f4b7d14fd8e1b38414b205e706c761"
+        "version": "d1c8baab86100afb708694d22b13901b9f9baf00"
     }
 }
