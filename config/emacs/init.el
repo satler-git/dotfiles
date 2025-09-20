@@ -499,6 +499,23 @@
           ("C-w C-w" . ace-window)
           ("C-w x"   . ace-swap-window)))
 
+(leaf dirvish
+  :bind ((:dirvish-mode-map
+	  ("TAB" . dirvish-subtree-toggle)
+	  ("C-v" . dirvish-vc-menu)
+	  (";"   . dired-up-directory)
+	  ("?"   . dirvish-dispatch)
+	  ("f"   . dirvish-file-info-menu)
+	  ("h"   . dired-up-directory)
+	  ("l"   . dired-find-file)
+	  ))
+  :global-minor-mode dirvish-override-dired-mode
+  :config
+  (setq dirvish-attributes
+    (append
+     '(vc-state subtree-state nerd-icons collapse)
+     '(file-modes file-time file-size))))
+
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
 
