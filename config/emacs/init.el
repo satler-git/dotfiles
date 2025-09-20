@@ -335,7 +335,8 @@
 )
 
 (leaf evil ;; TODO: replace with meow?
-  :require t
+  :pre-setq ((evil-want-integration . t)
+	     (evil-want-keybinding . nil))
   :custom
   ((evil-undo-system . 'undo-tree)
    (evil-mode-line-format . nil)
@@ -364,6 +365,7 @@
 	  ("C-j" . skk-mode)
 	  )
          )
+  :require t
   :config
   (leaf evil-surround
     :require t
@@ -375,8 +377,7 @@
   (leaf evil-collection
     :after evil
     :config
-    (evil-collection-init)
-    )
+    (evil-collection-init))
 
   (evil-mode 1))
 
