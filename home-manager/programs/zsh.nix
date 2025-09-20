@@ -75,8 +75,8 @@
         fi
 
         prog="$1"
-        inp="io/$\{prog}.input"
-        exp="io/$\{prog}.out"
+        inp="io/''${prog}.input"
+        exp="io/''${prog}.out"
 
         if [ ! -f "$exp" ]; then
           echo "expected file '$exp' not found"
