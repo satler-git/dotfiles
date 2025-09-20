@@ -518,6 +518,9 @@
 (setq use-dialog-box nil)
 
 (setopt kill-ring-max 100000)
+(setopt recentf-max-saved-items 1000)
+
+(setopt vc-follow-symlinks t)
 
 (custom-set-variables '(savehist-additional-variables '(kill-ring)))
 

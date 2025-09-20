@@ -8,8 +8,6 @@ let
       leaf-convert
       leaf-tree
 
-      # doom-themes
-
       macrostep
 
       vertico
@@ -26,8 +24,8 @@ let
       ddskk
 
       embark
-      embark-consult # TODO: eglot?
-      consult # TODO: yasuni ghq? projectile?
+      embark-consult
+      consult
       consult-dir
       affe
 
@@ -162,7 +160,9 @@ in
       nemacs = "emacsclient -cn -a \"\"";
     };
     zsh-abbr.abbreviations = {
-      kemacs = "emacsclient -e '(kill-emacs)'";
+      kem = "emacsclient -e '(kill-emacs)'";
+      em = "emacs";
+      nem = "nemacs";
     };
   };
 
