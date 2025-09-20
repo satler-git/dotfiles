@@ -158,7 +158,7 @@ let
     in
     packages ++ [ stylixConf ];
 
-  emacsPkg = (pkgs.emacsPackagesFor pkgs.emacs).emacsWithPackages extraPackages';
+  emacsPkg = (pkgs.emacsPackagesFor pkgs.emacs30-pgtk).emacsWithPackages extraPackages';
 in
 {
   programs.emacs = {
