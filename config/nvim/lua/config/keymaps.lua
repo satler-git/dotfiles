@@ -1,7 +1,8 @@
 local opts = { noremap = true, silent = true }
+local eopts = { noremap = true, silent = true, expr = true }
 local term_opts = { silent = true }
 
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 -- keymap("n", "<Space>", "<Cmd><CR>", opts)
 
@@ -37,3 +38,22 @@ keymap("n", ">", ">>", opts)
 keymap("n", "<", "<<", opts)
 
 keymap("t", "<Esc>", "<C-\\><C-n>", opts)
+
+keymap("n", "<Space>z", "zMzv", opts)
+
+-- https://github.com/ompugao/vim-bundle/blob/074e7b22320ad4bfba4da5516e53b498ace35a89/vimrc
+-- https://github.com/monaqa/dotfiles/blob/6072f31d1d2ee395be22b46c837d9c0710ae12b8/.config/nvim/lua/rc/keymap.lua#L982
+local function ifexpr(condition, true_clause, false_clause)
+  if condition then
+    return true_clause
+  else
+    return false_clause
+  end
+end
+
+keymap("x", "I", function()
+  return ifexpr(vim.fn.mode(0) == "V", "<C-v>0o$I", "I")
+end, eopts)
+keymap("x", "A", function()
+  return ifexpr(vim.fn.mode(0) == "V", "<C-v>0o$A", "A")
+end, eopts)

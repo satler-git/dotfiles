@@ -26,34 +26,27 @@ vim.lsp.config("*", {
   capabilities = capabilities,
 })
 
-vim.lsp.enable("rust_analyzer")
+vim.lsp.enable({
+  "efm",
+  "typos_lsp",
 
-vim.lsp.enable("yamlls")
-vim.lsp.enable("jsonls")
-vim.lsp.enable("efm")
+  "yamlls",
+  "jsonls",
+  "taplo",
 
-vim.lsp.enable("dartls")
+  "dartls",
+  "buf_ls",
+  "rust_analyzer",
+  "pest_ls",
+  "elixirls",
+  "lua_ls",
+  "nil_ls",
+  "tinymist",
+  "sandls",
+  "ocamllsp",
 
-vim.lsp.enable("buf_ls")
-
-vim.lsp.config("elixirls", {
-  cmd = { "elixir-ls" },
+  "astro",
+  "biome",
+  "ts_ls",
+  "vtsls",
 })
-vim.lsp.enable("elixirls")
-
-vim.lsp.enable("lua_ls")
-vim.lsp.enable("nil_ls")
-vim.lsp.enable("taplo")
-vim.lsp.enable("tinymist")
-
-vim.lsp.enable("astro")
-
-vim.lsp.enable("biome")
-vim.lsp.enable("ts_ls")
-vim.lsp.enable("vtsls")
-vim.lsp.enable("typos_lsp")
-vim.lsp.enable("pest_ls")
-
-vim.lsp.enable("sandls")
-
-vim.lsp.enable("ocamllsp")
