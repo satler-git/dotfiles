@@ -7,11 +7,8 @@
   (setopt native-comp-speed 3)
   (setopt native-comp-always-compile t))
 
-(with-eval-after-load 'warnings
-  (setopt warning-suppress-types '((comp))))
-
-(with-eval-after-load 'time
-  (setopt display-time-24hr-format t))
+(setopt warning-suppress-types '((comp) (native-compiler)))
+(setopt native-comp-async-report-warnings-errors nil)
 
 (native-compile-async "~/.emacs.d/early-init.el")
 (native-compile-async "~/.emacs.d/init.el")

@@ -493,6 +493,8 @@
           #'(lambda ()
               (fset 'yes-or-no-p 'y-or-n-p)))
 
+(setq display-time-24hr-format t)
+
 (setq echo-keystrokes 0.1)
 (setq use-dialog-box nil)
 
