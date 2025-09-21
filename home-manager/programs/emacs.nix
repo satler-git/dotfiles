@@ -111,6 +111,9 @@ let
       ace-window
 
       dirvish
+
+      projectile
+      projectile-ripgrep
     ])
     ++ (with pkgs; [
       # TODO: neovimと共通化

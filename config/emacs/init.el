@@ -51,14 +51,21 @@
   :global-minor-mode t)
 
 (leaf tab-bar-mode
+  :bind (:evil-normal-state-map
+         ("C-t" . tab-bar-switch-to-tab))
   :bind (("C-c t" . tab-bar-new-tab)
          ("C-t" . tab-bar-switch-to-tab)
-         ("C-c n" . tab-bar-switch-to-next-tab)
-         ("C-c p" . tab-bar-switch-to-prev-tab) ;; TODO: embark?を導入したら
-         ("C-c 0" . tab-bar-switch-to-last-tab)
+         ("M-0" . tab-bar-switch-to-last-tab)
          ("M-c" . tab-bar-close-tab))
   :custom ((tab-bar-new-tab-choice . "*scratch*"))
-  :global-minor-mode t)
+  :global-minor-mode t
+  :config
+  (dotimes (i 9)
+    (let ((n (+ i 1)))
+      (global-set-key (kbd (format "M-%d" n))
+                      `(lambda ()
+                         (interactive)
+                         (tab-bar-select-tab ,n))))))
 
 (leaf leaf
   :config
@@ -306,16 +313,16 @@
          (typst-ts-mode-hook . lsp) ;; tinymist
          (lua-ts-mode-hook . lsp) ;; lua-language-server
          ((haskell-mode-hook haskell-literate-mode-hook). lsp) ;; haskell-language-server
-	 (toml-ts-mode-hook . lsp) ;; taplo
-	 (nix-ts-mode-hook . lsp) ;; nil-ls
-	 (yaml-ts-mode-hook . lsp) ;; yaml-lang-server
-	 (json-ts-mode-hook . lsp) ;; json (vsc)
+         (toml-ts-mode-hook . lsp) ;; taplo
+         (nix-ts-mode-hook . lsp) ;; nil-ls
+         (yaml-ts-mode-hook . lsp) ;; yaml-lang-server
+         (json-ts-mode-hook . lsp) ;; json (vsc)
          ((text-mode markdown-mode gfm-mode org-mode prog-mode) . lsp) ;; typos
 
          (lsp-mode-hook . lsp-enable-which-key-integration)
-	 (lsp-mode-hook . lsp-headerline-breadcrumb-mode)
-	 (lsp-mode-hook . flycheck-mode)
-	 (lsp-configure-hook . lsp-diagnostics-mode))
+         (lsp-mode-hook . lsp-headerline-breadcrumb-mode)
+         (lsp-mode-hook . flycheck-mode)
+         (lsp-configure-hook . lsp-diagnostics-mode))
   :commands lsp
 
   :config
@@ -343,8 +350,8 @@
    (lsp-ui-doc-show-with-cursor . nil)
    (lsp-ui-doc-show-with-mouse . nil))
   :bind (:lsp-ui-mode-map
-	 ([remap xref-find-definitions] . lsp-ui-peek-find-definitions) ; (C-l) M-. M-?
-	 ([remap xref-find-references] . lsp-ui-peek-find-references))
+    ([remap xref-find-definitions] . lsp-ui-peek-find-definitions) ; (C-l) M-. M-?
+    ([remap xref-find-references] . lsp-ui-peek-find-references))
   :bind
   ("C-c x a" . lsp-ui-imenu)
   ("K" . lsp-ui-doc-toggle))
@@ -431,7 +438,7 @@
 
 (leaf evil ;; TODO: replace with meow?
   :pre-setq ((evil-want-integration . t)
-	     (evil-want-keybinding . nil))
+             (evil-want-keybinding . nil))
   :custom
   ((evil-undo-system . 'undo-tree)
    (evil-mode-line-format . nil)
@@ -456,9 +463,8 @@
           ("P" . evil-paste-after)
           ("M" . evil-jump-item)
           )
-	 (:evil-insert-state-map
-	  ("C-j" . skk-mode)
-	  )
+         (:evil-insert-state-map
+          ("C-j" . skk-mode))
          )
   :require t
   :config
@@ -523,8 +529,8 @@
       mode-line-buffer-identification
       "   "
       mode-line-position
-      (project-mode-line project-mode-line-format) ;; TODO: projectile
-      (vc-mode vc-mode) ;; TODO: diff?
+      (project-mode-line project-mode-line-format)
+      (vc-mode vc-mode)
       "  "
       mode-line-modes
       mode-line-misc-info
@@ -576,8 +582,8 @@
   :bind
   ("<f2>" . vterm-toggle)
   (vterm-mode-map
-   ("C-." . vterm-toggle-forward)
-   ("C-," . vterm-toggle-backward))
+   ([remap projectile-previous-project-buffer]. vterm-toggle-forward)
+   ([remap projectile-next-project-buffer] . vterm-toggle-backward))
   :custom
   (vterm-toggle-scope . 'project)
   :config
@@ -634,26 +640,43 @@
   :after evil
   :custom (aw-keys . '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
   :bind ((:evil-normal-state-map
-	  :package evil
+          :package evil
           ("C-w C-w" . ace-window)
           ("C-w x"   . ace-swap-window))))
 
 (leaf dirvish
   :bind ((:dirvish-mode-map
-	  ("TAB" . dirvish-subtree-toggle)
-	  ("C-v" . dirvish-vc-menu)
-	  (";"   . dired-up-directory)
-	  ("?"   . dirvish-dispatch)
-	  ("f"   . dirvish-file-info-menu)
-	  ("h"   . dired-up-directory)
-	  ("l"   . dired-find-file)
-	  ))
+         ("TAB" . dirvish-subtree-toggle)
+         ("C-v" . dirvish-vc-menu)
+         (";"   . dired-up-directory)
+         ("?"   . dirvish-dispatch)
+         ("f"   . dirvish-file-info-menu)
+         ("h"   . dired-up-directory)
+         ("l"   . dired-find-file)))
   :global-minor-mode dirvish-override-dired-mode
   :config
   (setq dirvish-attributes
     (append
      '(vc-state subtree-state nerd-icons collapse)
      '(file-modes file-time file-size))))
+
+(leaf projectile
+  :require t
+  :custom
+  (projectile-project-search-path . '("~/repos/" "~/dotfiles"))
+  (projectile-cleanup-known-projects . nil)
+  :bind
+  (:projectile-mode-map
+   ("C-c p" . projectile-command-map)
+   ("C-." . projectile-next-project-buffer)
+   ("C-," . projectile-previous-project-buffer))
+  :global-minor-mode projectile-mode
+  :config
+  (add-to-list 'projectile-globally-ignored-modes "vterm-mode"))
+
+(leaf projectile-ripgrep)
+
+(setq-default indent-tabs-mode nil)
 
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
