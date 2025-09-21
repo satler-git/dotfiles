@@ -1,12 +1,16 @@
 {
   programs.waybar = {
     enable = true;
+    systemd.enable = true;
     style = builtins.readFile ./waybar-style.css;
     settings = {
       mainBar = {
         layer = "top";
         position = "top";
-        modules-left = [ "hyprland/workspaces" ];
+        modules-left = [
+          "hyprland/workspaces"
+          "niri/workspaces"
+        ];
         modules-center = [
           "clock"
           "custom/media"
@@ -21,7 +25,7 @@
           timezones = "Asia/Tokyo";
           format = "{:%H:%M}  ";
           # tooltip = true;
-          # tooltip-format = "{calendar}";
+          tooltip-format = "{calendar}";
           # calendar = {
           #   mode = "month";
           #   format = {
@@ -68,6 +72,15 @@
             "class<firefox>" = "";
             "class<firefox> title<.*github.*>" = "";
             "Alacritty vim nvim clipse" = "";
+          };
+        };
+
+        "niri/workspaces" = {
+          # format = "<sub>{icon}</sub>\n{windows}";
+          format = "{index} {icon}";
+          format-icons = {
+            active = "";
+            default = "";
           };
         };
 

@@ -92,15 +92,15 @@ in
 
   "Mod+Q".action.close-window = { };
 
-  "Mod+H".action.focus-column-left = { };
+  "Mod+H".action.focus-column-or-monitor-left = { };
   "Mod+J".action.focus-window-or-workspace-down = { };
   "Mod+K".action.focus-window-or-workspace-up = { };
-  "Mod+L".action.focus-column-right = { };
+  "Mod+L".action.focus-column-or-monitor-right = { };
 
-  "Mod+Ctrl+H".action.move-column-left = { };
-  "Mod+Ctrl+J".action.move-window-down-or-to-workspace-down = { };
-  "Mod+Ctrl+K".action.move-window-up-or-to-workspace-up = { };
-  "Mod+Ctrl+L".action.move-column-right = { };
+  "Mod+Shift+H".action.move-column-left-or-to-monitor-left = { };
+  "Mod+Shift+J".action.move-window-down-or-to-workspace-down = { };
+  "Mod+Shift+K".action.move-window-up-or-to-workspace-up = { };
+  "Mod+Shift+L".action.move-column-right-or-to-monitor-right = { };
 
   # Home -> d, End -> g
 
@@ -109,15 +109,10 @@ in
   "Mod+Ctrl+Home".action.move-column-to-first = { };
   "Mod+Ctrl+End".action.move-column-to-last = { };
 
-  "Mod+Shift+H".action.focus-monitor-left = { };
-  "Mod+Shift+J".action.focus-monitor-down = { };
-  "Mod+Shift+K".action.focus-monitor-up = { };
-  "Mod+Shift+L".action.focus-monitor-right = { };
-
-  "Mod+Shift+Ctrl+H".action.move-column-to-monitor-left = { };
-  "Mod+Shift+Ctrl+J".action.move-column-to-monitor-down = { };
-  "Mod+Shift+Ctrl+K".action.move-column-to-monitor-up = { };
-  "Mod+Shift+Ctrl+L".action.move-column-to-monitor-right = { };
+  "Mod+Ctrl+H".action.focus-monitor-left = { };
+  "Mod+Ctrl+J".action.focus-monitor-down = { };
+  "Mod+Ctrl+K".action.focus-monitor-up = { };
+  "Mod+Ctrl+L".action.focus-monitor-right = { };
 
   # Alternatively, there are commands to move just a single window:
   # Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
@@ -164,17 +159,17 @@ in
     action.move-column-to-workspace-up = { };
   };
 
-  "Mod+WheelScrollRight".action.focus-column-right = { };
-  "Mod+WheelScrollLeft".action.focus-column-left = { };
-  "Mod+Ctrl+WheelScrollRight".action.move-column-right = { };
-  "Mod+Ctrl+WheelScrollLeft".action.move-column-left = { };
+  "Mod+WheelScrollRight".action.focus-column-or-monitor-right = { };
+  "Mod+WheelScrollLeft".action.focus-column-or-monitor-left = { };
+  "Mod+Ctrl+WheelScrollRight".action.move-column-right-or-to-monitor-right = { };
+  "Mod+Ctrl+WheelScrollLeft".action.move-column-left-or-to-monitor-left = { };
 
   # Usually scrolling up and down with Shift in applications results in
   # horizontal scrolling; these binds replicate that.
-  "Mod+Shift+WheelScrollDown".action.focus-column-right = { };
-  "Mod+Shift+WheelScrollUp".action.focus-column-left = { };
-  "Mod+Ctrl+Shift+WheelScrollDown".action.move-column-right = { };
-  "Mod+Ctrl+Shift+WheelScrollUp".action.move-column-left = { };
+  "Mod+Shift+WheelScrollDown".action.focus-column-or-monitor-right = { };
+  "Mod+Shift+WheelScrollUp".action.focus-column-or-monitor-left = { };
+  "Mod+Ctrl+Shift+WheelScrollDown".action.move-column-right-or-to-monitor-right = { };
+  "Mod+Ctrl+Shift+WheelScrollUp".action.move-column-left-or-to-monitor-left = { };
 
   # Similarly, you can bind touchpad scroll "ticks".
   # Touchpad scrolling is continuous, so for these binds it is split into
@@ -182,17 +177,20 @@ in
   # These binds are also affected by touchpad's natural-scroll, so these
   # example binds are "inverted", since we have natural-scroll enabled for
   # touchpads by default.
+  #
+  "Mod+TouchpadScrollLeft".action.focus-column-or-monitor-left = { };
+  "Mod+TouchpadScrollDown".action.focus-window-or-workspace-down = { };
+  "Mod+TouchpadScrollUp".action.focus-window-or-workspace-up = { };
+  "Mod+TouchpadScrollRight".action.focus-column-or-monitor-right = { };
+
+  "Mod+Shift+TouchpadScrollLeft".action.move-column-left-or-to-monitor-left = { };
+  "Mod+Shift+TouchpadScrollDown".action.move-window-down-or-to-workspace-down = { };
+  "Mod+Shift+TouchpadScrollUp".action.move-window-up-or-to-workspace-up = { };
+  "Mod+Shift+TouchpadScrollRight".action.move-column-right-or-to-monitor-right = { };
+
   # Mod+TouchpadScrollDown { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
   # Mod+TouchpadScrollUp   { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
 
-  # You can refer to workspaces by index. However, keep in mind that
-  # niri is a dynamic workspace system, so these commands are kind of
-  # "best effort". Trying to refer to a workspace index bigger than
-  # the current workspace count will instead refer to the bottommost
-  # (empty) workspace.
-  #
-  # For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
-  # will all refer to the 3rd workspace.
   "Mod+1".action.focus-workspace = 1;
   "Mod+2".action.focus-workspace = 2;
   "Mod+3".action.focus-workspace = 3;
@@ -240,11 +238,11 @@ in
   # Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
   # set-column-width "100" will make the column occupy 200 physical screen pixels.
   "Mod+Minus".action.set-column-width = "-10%";
-  "Mod+Equal".action.set-column-width = "+10%";
+  "Mod+Ctrl+Minus".action.set-column-width = "+10%";
 
   # Finer height adjustments when in column with other windows.
   "Mod+Shift+Minus".action.set-window-height = "-10%";
-  "Mod+Shift+Equal".action.set-window-height = "+10%";
+  "Mod+Shift+Ctrl+Minus".action.set-window-height = "+10%";
 
   # Actions to switch layouts.
   # Note: if you uncomment these, make sure you do NOT have

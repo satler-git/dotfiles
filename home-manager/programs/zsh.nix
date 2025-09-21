@@ -17,6 +17,7 @@
 
       source <(jj util completion zsh)
       source <(sand completions zsh)
+      source <(niri completions zsh)
     '';
     initContent = ''
       setopt auto_param_slash

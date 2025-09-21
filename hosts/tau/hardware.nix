@@ -29,6 +29,13 @@
       services.hypridle.enable = true;
     }
     {
+      programs.niri.settings.outputs = {
+        "eDP-1" = {
+          scale = 1.3;
+        };
+      };
+    }
+    {
       programs.waybar.settings.mainBar.modules-right = lib.mkBefore [
         "battery"
       ];

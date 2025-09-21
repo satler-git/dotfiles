@@ -34,7 +34,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${lib.getExe pkgs.tuigreet} -t -r --remember-session --asterisks --cmd ${lib.getExe config.programs.hyprland.package}";
+        command = "${lib.getExe pkgs.tuigreet} -t -r --remember-session --asterisks --cmd niri-session"; # niri-session
         user = "satler";
       };
     };

@@ -22,7 +22,7 @@ let
     "-e"
     "zsh"
     "-c"
-    "\"yurf --fullscreen launch && disown\""
+    "yurf --fullscreen launch && disown"
   ];
   task = [
     "alacritty"
@@ -31,7 +31,7 @@ let
     "-e"
     "zsh"
     "-c"
-    "\"yurf --fullscreen task && disown\""
+    "yurf --fullscreen task && disown"
   ];
   clipse = [
     "alacritty"
@@ -69,7 +69,7 @@ in
     binds = defaultKeyBind // {
       "Mod+Return".action.spawn = terminal;
       "Alt+Space".action.spawn = launcher;
-      "Alt+Shift+Space".action.spawn = task;
+      "Mod+Space".action.spawn = task;
 
       "Mod+E".action.spawn = fileManager;
       "Mod+V".action.spawn = clipse;
@@ -85,16 +85,15 @@ in
       mouse = {
         accel-profile = "flat";
       };
+      touchpad.natural-scroll = false;
     };
     spawn-at-startup = [
-      { command = [ "fcitx5" ]; }
       {
         command = [
           "clipse"
           "-listen"
         ];
       }
-      { command = [ "waybar" ]; }
       {
         command = [
           "dbus-update-activation-environment"
@@ -103,7 +102,7 @@ in
           "XDG_CURRENT_DESKTOP"
         ];
       }
-      { command = wallpaper; }
+      # { command = wallpaper; }
     ];
     environment = {
       DISPLAY = ":0";
@@ -155,18 +154,42 @@ in
         default-column-width.fixed = 622;
         default-window-height.fixed = 652;
       }
+      {
+        matches = [
+          {
+            app-id = "steam";
+            title = "^notificationtoasts_\d+_desktop$";
+          }
+        ];
+        default-floating-position = {
+          relative-to = "bottom-right";
+          x = 10;
+          y = 10;
+        };
+      }
     ];
 
     layer-rules = [
       {
         matches = [
           { namespace = "^wallpaper$"; }
+          { namespace = "^hyprpaper$"; }
+          { namespace = "^swww-daemon$"; }
         ];
         place-within-backdrop = true;
       }
+      {
+        # Hack, see https://yalter.github.io/niri/Application-Issues.html#waybar-and-other-gtk-3-components
+        matches = [ { namespace = "^waybar$"; } ];
+        opacity = 0.99;
+      }
     ];
 
-    layout.background-color = "transparent";
+    layout = {
+      background-color = "transparent";
+
+      border.width = 8;
+    };
     clipboard.disable-primary = true;
   };
 }
