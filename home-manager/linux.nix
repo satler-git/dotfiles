@@ -1,3 +1,4 @@
+{ inputs, ... }:
 let
   programs = ./programs;
   services = ./services;
@@ -8,6 +9,10 @@ in
     ./apps
     ./pkgs.nix
     ./stylix.nix
+
+    ../hosts/modules/sops.nix
+    inputs.sops-nix.homeManagerModules.sops
+
     programs
     services
     modules

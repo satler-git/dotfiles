@@ -114,6 +114,9 @@ let
 
       projectile
       projectile-ripgrep
+
+      magit
+      forge
     ])
     ++ (with pkgs; [
       # TODO: neovimと共通化
@@ -205,6 +208,19 @@ in
       kem = "emacsclient -e '(kill-emacs)'";
       em = "emacs";
       nem = "nemacs";
+    };
+  };
+
+  sops = {
+    secrets = {
+      magit_token = { };
+    };
+
+    templates.authinfo = {
+      path = "/home/satler/.authinfo";
+      content = ''
+        machine api.github.com login satler-git^forge password ${config.sops.placeholder.magit_token}
+      '';
     };
   };
 

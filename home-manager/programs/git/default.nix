@@ -34,8 +34,11 @@
       commit.verbose = true;
       commit.template = "~/.gitmessage";
       ghq.root = "~/repos";
+
+      github.user = "satler-git"; # magit
     };
   };
+
   programs.lazygit = {
     enable = true;
   };

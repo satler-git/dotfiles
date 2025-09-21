@@ -113,7 +113,7 @@
 (setq consult-project-root-function #'my/vc-root-dir-or-def)
 
 (leaf consult
-  :bind (("C-c l" . consult-line) ("C-c b" . consult-buffer))
+  :bind (("C-c l" . consult-line) ("C-c b" . consult-buffer) ("C-c w" . consult-ripgrep))
   :custom ((consult-find-command . "fd --color=never --full-path ARG OPTS") ))
 
 (leaf embark-consult
@@ -663,18 +663,33 @@
 (leaf projectile
   :require t
   :custom
-  (projectile-project-search-path . '("~/repos/" "~/dotfiles"))
+  (projectile-project-search-path . '("~/repos/github.com/satler-git/" "~/repos/github.com/ltrait/" "~/dotfiles"))
   (projectile-cleanup-known-projects . nil)
   :bind
   (:projectile-mode-map
    ("C-c p" . projectile-command-map)
    ("C-." . projectile-next-project-buffer)
    ("C-," . projectile-previous-project-buffer))
+  :bind ("C-c f" . projectile-find-file)
   :global-minor-mode projectile-mode
   :config
   (add-to-list 'projectile-globally-ignored-modes "vterm-mode"))
 
 (leaf projectile-ripgrep)
+
+(leaf magit
+  :bind
+  ("C-c g" . magit-status)
+  ("C-c M-g" . magit-dispatch)
+  ("C-c C-M-g" . magit-file-dispatch)
+  :custom (magit-define-global-key-bindings . nil)
+  :config
+  (add-to-list 'magit-no-confirm :trash))
+
+(leaf forge
+  :after magit
+  :custom (auth-sources . '("~/.authinfo"))
+  :require t)
 
 (setq-default indent-tabs-mode nil)
 
