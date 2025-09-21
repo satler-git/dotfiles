@@ -33,6 +33,22 @@
         ];
       };
     }
+    {
+      programs.niri.settings.outputs = {
+        "HDMI-A-1" = {
+          position = {
+            x = 0;
+            y = 0;
+          };
+        };
+        "DP-1" = {
+          position = {
+            x = 1920;
+            y = 0;
+          };
+        };
+      };
+    }
   ];
 
   services.xserver = {

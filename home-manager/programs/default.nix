@@ -17,6 +17,7 @@
     ./tealdeer.nix
     ./wm/hyprland
     ./wm/i3
+    ./wm/niri
     ./wm/wlogout.nix
     ./yazi.nix
     ./yurf.nix

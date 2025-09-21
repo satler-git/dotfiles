@@ -40,6 +40,41 @@ in
       egl-wayland
       nvidia-vaapi-driver
     ];
+
+    ## See: https://yalter.github.io/niri/Nvidia.html
+    # https://github.com/erahhal/nixcfg/blob/3835b42ea0d6099d3bf5c82a4c675d4a35e922e7/profiles/niri.nix#L92
+    etc."nvidia/nvidia-application-profiles-rc.d/50-limit-free-buffer-pool-in-wayland-compositors.json" =
+      {
+        text = builtins.toJSON {
+          rules = [
+            {
+              pattern = {
+                feature = "procname";
+                matches = "niri";
+              };
+              profile = "Limit Free Buffer Pool On Wayland Compositors";
+            }
+            {
+              pattern = {
+                feature = "procname";
+                matches = ".Hyprland-wrapped";
+              };
+              profile = "Limit Free Buffer Pool On Wayland Compositors";
+            }
+          ];
+          profiles = [
+            {
+              name = "Limit Free Buffer Pool On Wayland Compositors";
+              settings = [
+                {
+                  key = "GLVidHeapReuseRatio";
+                  value = 0;
+                }
+              ];
+            }
+          ];
+        };
+      };
   };
 
   services.ollama.acceleration = lib.mkDefault "cuda";
