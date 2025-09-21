@@ -69,7 +69,7 @@ in
       "Mod+Shift+Q".action =
         if config.programs.wlogout.enable then { spawn = "wlogout"; } else { quit = { }; };
     };
-    # hotkey-overlay.skip-at-startup = true;
+    hotkey-overlay.skip-at-startup = true;
     input = {
       focus-follows-mouse.enable = true;
       warp-mouse-to-focus.enable = true;
