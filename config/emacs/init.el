@@ -688,7 +688,9 @@
 
 (leaf forge
   :after magit
-  :custom (auth-sources . '("~/.authinfo"))
+  :custom
+  (auth-sources . '("~/.authinfo"))
+  (forge-add-default-bindings . nil)
   :require t)
 
 (setq-default indent-tabs-mode nil)
