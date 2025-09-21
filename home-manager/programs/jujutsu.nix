@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   programs.jujutsu = {
     enable = true;
@@ -61,7 +61,9 @@
       aliases = {
         d = [ "desc" ];
         n = [ "new" ];
-        ne = [ "new" ];
+
+        ne = [ "next" ];
+        pr = [ "prev" ];
 
         nb = [
           "new"
