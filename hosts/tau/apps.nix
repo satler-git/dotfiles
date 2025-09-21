@@ -23,6 +23,7 @@
     hyprland.enable = true;
     light.enable = true;
     localsend.enable = true;
+    niri.enable = true;
     steam.enable = true;
     # keep-sorted end
   };

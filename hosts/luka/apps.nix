@@ -35,6 +35,7 @@
     firefox.enable = true;
     hyprland.enable = true;
     localsend.enable = true;
+    niri.enable = true;
     # keep-sorted end
 
     # gaming
