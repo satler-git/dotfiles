@@ -60,7 +60,7 @@
   };
 
   home.file.".local/bin/vime.sh" = {
-    source = ../../../../config/bin/vime.sh;
+    source = ../../../config/bin/vime.sh;
     executable = true;
   };
 }
