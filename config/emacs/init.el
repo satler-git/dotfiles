@@ -1,4 +1,6 @@
-;; -*- lexical-binding: t -*-
+;;; init.el --- satler's init.el ; -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 ; init.el
 ;;
@@ -50,7 +52,7 @@
 
 (leaf tab-bar-mode
   :bind (("C-c t" . tab-bar-new-tab)
-         ("C-c g" . tab-bar-switch-to-tab)
+         ("C-t" . tab-bar-switch-to-tab)
          ("C-c n" . tab-bar-switch-to-next-tab)
          ("C-c p" . tab-bar-switch-to-prev-tab) ;; TODO: embark?を導入したら
          ("C-c 0" . tab-bar-switch-to-last-tab)
@@ -293,6 +295,92 @@
   :require t
   :commands typst-preview-mode
   :custom (typst-preview-browser . "firefox"))
+
+(leaf lsp-mode
+  :custom
+  (lsp-modeline-diagnostics-scope . :workspace)
+  (lsp-keymap-prefix . "C-l")
+  (lsp-completion-no-cache . t)
+  (lsp-completion-provider . :none)
+  :hook ((rust-ts-mode-hook . lsp) ;; rust-analyzer
+         (typst-ts-mode-hook . lsp) ;; tinymist
+         (lua-ts-mode-hook . lsp) ;; lua-language-server
+         ((haskell-mode-hook haskell-literate-mode-hook). lsp) ;; haskell-language-server
+	 (toml-ts-mode-hook . lsp) ;; taplo
+	 (nix-ts-mode-hook . lsp) ;; nil-ls
+	 (yaml-ts-mode-hook . lsp) ;; yaml-lang-server
+	 (json-ts-mode-hook . lsp) ;; json (vsc)
+         ((text-mode markdown-mode gfm-mode org-mode prog-mode) . lsp) ;; typos
+
+         (lsp-mode-hook . lsp-enable-which-key-integration)
+	 (lsp-mode-hook . lsp-headerline-breadcrumb-mode)
+	 (lsp-mode-hook . flycheck-mode)
+	 (lsp-configure-hook . lsp-diagnostics-mode))
+  :commands lsp
+
+  :config
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]vendor")
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]target")
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\].direnv")
+
+  (add-to-list 'lsp-language-id-configuration '(typst-ts-mode . "typst"))
+  (lsp-register-client
+   (make-lsp-client
+    :new-connection (lsp-stdio-connection "tinymist")
+    :major-modes '(typst-ts-mode)
+    :server-id 'typst-lsp))
+  (lsp-register-client
+   (make-lsp-client
+    :new-connection (lsp-stdio-connection '("typos-lsp"))
+    :major-modes '(text-mode markdown-mode gfm-mode org-mode prog-mode)
+    :server-id 'typos-lsp)))
+
+(leaf lsp-ui
+  :commands lsp-ui-mode
+  :custom
+  ((lsp-ui-doc-enable . t)
+   (lsp-ui-doc-position . 'at-point)
+   (lsp-ui-doc-show-with-cursor . nil)
+   (lsp-ui-doc-show-with-mouse . nil))
+  :bind (:lsp-ui-mode-map
+	 ([remap xref-find-definitions] . lsp-ui-peek-find-definitions) ; (C-l) M-. M-?
+	 ([remap xref-find-references] . lsp-ui-peek-find-references))
+  :bind ("C-c x a" . lsp-ui-imenu))
+
+(leaf lsp-haskell)
+
+(leaf lsp-treemacs
+  :bind ("C-c x x" . lsp-treemacs-errors-list)
+  :commands lsp-treemacs-errors-list)
+
+(leaf consult-lsp)
+
+(leaf flycheck
+  :bind ("C-c x f" . flycheck-list-errors)
+  :global-minor-mode global-flycheck-mode
+  :config
+  (add-to-list 'display-buffer-alist
+               '("^\\*Flycheck errors\\*"
+                 (display-buffer-reuse-window display-buffer-in-side-window)
+                 (side . bottom)
+                 (slot . 0)
+                 (window-height . 10))))
+
+(leaf consult-flycheck)
+
+(leaf yasnippet
+  :custom
+  (yas-snippet-dirs . '("~/.emacs.d/snippets"))
+  :require t
+  :global-minor-mode yas-global-mode)
+
+(leaf yasnippet-snippets
+ :after yasnippet)
+
+(leaf yasnippet-capf
+  :after (yasnippet cape)
+  :config
+  (add-to-list 'completion-at-point-functions #'yasnippet-capf))
 
 (leaf undo-tree
   :require t

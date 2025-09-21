@@ -63,6 +63,19 @@ let
       typst-preview
       web-mode
 
+      lsp-mode
+      lsp-ui
+      lsp-haskell
+      lsp-treemacs
+      consult-lsp
+
+      flycheck
+      consult-flycheck
+
+      yasnippet
+      yasnippet-snippets
+      yasnippet-capf
+
       undo-tree
 
       evil
