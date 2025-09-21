@@ -55,6 +55,7 @@ in
     inputs.niri-flake.homeModules.niri
     inputs.niri-flake.homeModules.stylix # Default
     ../waybar
+    ../wayland.nix
   ];
 
   home.packages = with pkgs; [

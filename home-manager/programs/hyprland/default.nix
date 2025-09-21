@@ -4,6 +4,7 @@
     ../waybar
     # ../wofi
     ./config.nix
+    ../wayland.nix
   ];
 
   home.packages = with pkgs; [
@@ -22,10 +23,6 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-  };
-
-  programs.hyprlock = {
-    enable = true;
   };
 
   services.hypridle = {
