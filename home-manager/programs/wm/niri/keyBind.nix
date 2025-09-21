@@ -88,6 +88,8 @@ in
   "Mod+F8" = mute;
   "Mod+F9" = micMute;
 
+  "Mod+O".action.toggle-overview = { };
+
   "Mod+Q".action.close-window = { };
 
   "Mod+H".action.focus-column-left = { };

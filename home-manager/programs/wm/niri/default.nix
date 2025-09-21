@@ -2,7 +2,6 @@
 {
   inputs,
   config,
-  lib,
   pkgs,
   ...
 }:
@@ -34,13 +33,21 @@ let
     "-c"
     "\"yurf --fullscreen task && disown\""
   ];
-
   clipse = [
     "alacritty"
     "--class"
     "clipse"
     "-e"
     "clipse"
+  ];
+  wallpaper = [
+    "sh"
+    "-c"
+    "swww-daemon"
+    "&&"
+    "swww"
+    "img"
+    config.stylix.image
   ];
 in
 {
@@ -52,6 +59,7 @@ in
 
   home.packages = with pkgs; [
     xwayland-satellite
+    swww
   ];
 
   programs.niri.enable = true;
@@ -91,6 +99,7 @@ in
           "XDG_CURRENT_DESKTOP"
         ];
       }
+      { command = wallpaper; }
     ];
     environment = {
       DISPLAY = ":0";
@@ -143,6 +152,17 @@ in
         default-window-height.fixed = 652;
       }
     ];
+
+    layer-rules = [
+      {
+        matches = [
+          { namespace = "^wallpaper$"; }
+        ];
+        place-within-backdrop = true;
+      }
+    ];
+
+    layout.background-color = "transparent";
     clipboard.disable-primary = true;
   };
 }
