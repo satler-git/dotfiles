@@ -232,5 +232,9 @@ in
     ".skk.el".text = ''
       (setq skk-large-jisyo "${pkgs.skkDictionaries.l}/share/skk/SKK-JISYO.L")
     '';
+    ".emacs.d/snippets" = {
+      source = ../../config/emacs/snippets;
+      recursive = true;
+    };
   };
 }
