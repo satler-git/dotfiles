@@ -81,6 +81,10 @@ in
     input = {
       focus-follows-mouse.enable = true;
       warp-mouse-to-focus.enable = true;
+
+      mouse = {
+        accel-profile = "flat";
+      };
     };
     spawn-at-startup = [
       { command = [ "fcitx5" ]; }
