@@ -7,9 +7,9 @@ on:
     branches:
       - main
     paths:
-      - '**/*.nix'
-      - 'flake.lock'
-      - '.github/workflows/**'
+      - "**/*.nix"
+      - "flake.lock"
+      - ".github/workflows/**"
   workflow_dispatch:
 jobs:
   check-lock:

@@ -2,15 +2,21 @@ name: update-flake-lock
 on:
   workflow_dispatch: # allows manual triggering
   schedule:
-    - cron: '0 0 * * 0,3'
+    - cron: "0 0 * * 0,3"
 jobs:
   lockfile:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
-      - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@786fff0690178f1234e4e1fe9b536e94f5433196
+      - uses: cachix/install-nix-action@v31
+        with:
+          extra_nix_config: |
+            accept-flake-config = true
+            http-connections = 100
+            stalled-download-timeout = 15
+            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+            experimental-features = nix-command flakes
       - name: Update flake.lock
         uses: DeterminateSystems/update-flake-lock@c5930b397a673a70ca70be06020e943aeac310a1
         with:

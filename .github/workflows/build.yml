@@ -39,5 +39,7 @@ jobs:
             accept-flake-config = true
             http-connections = 100
             stalled-download-timeout = 15
+            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+            experimental-features = nix-command flakes
       - name: Build check
         run: nix build --no-link ".#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel"
