@@ -211,19 +211,6 @@ in
     };
   };
 
-  sops = {
-    secrets = {
-      magit_token = { };
-    };
-
-    templates.authinfo = {
-      path = "/home/satler/.authinfo";
-      content = ''
-        machine api.github.com login satler-git^forge password ${config.sops.placeholder.magit_token}
-      '';
-    };
-  };
-
   home.file = {
     ".emacs.d/init.el".source = ../../config/emacs/init.el;
     ".emacs.d/themes/aura-soft-dark-soft-text-theme.el".source = ../../config/emacs/aura-theme.el; # TODO:

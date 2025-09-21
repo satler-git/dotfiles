@@ -7,5 +7,18 @@ in
   sops = {
     defaultSopsFile = secrets;
     age.keyFile = "/home/satler/.config/sops/age/keys.txt";
+
+    secrets = {
+      magit_token = { };
+    };
+
+    templates.authinfo = {
+      # Emacs magit/forge
+      owner = "satler";
+      path = "/home/satler/.authinfo";
+      content = ''
+        machine api.github.com login satler-git^forge password ${config.sops.placeholder.magit_token}
+      '';
+    };
   };
 }
