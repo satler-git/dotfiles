@@ -345,7 +345,9 @@
   :bind (:lsp-ui-mode-map
 	 ([remap xref-find-definitions] . lsp-ui-peek-find-definitions) ; (C-l) M-. M-?
 	 ([remap xref-find-references] . lsp-ui-peek-find-references))
-  :bind ("C-c x a" . lsp-ui-imenu))
+  :bind
+  ("C-c x a" . lsp-ui-imenu)
+  ("K" . lsp-ui-doc-toggle))
 
 (leaf lsp-haskell)
 
@@ -681,21 +683,5 @@
 (setq truncate-lines t)
 (setq truncate-partial-width-windows t)
 (setq show-trailing-whitespace t)
-
-(defun my/apply-gui-settings (frame)
-  (when (display-graphic-p frame)
-    (with-selected-frame frame
-      (set-face-attribute 'default nil :family "Monaspace Argon" :height 120)
-
-      (set-fontset-font t 'unicode (font-spec :family "Symbols Nerd Font Mono") nil 'prepend)
-      (set-fontset-font t 'symbol  (font-spec :family "Symbols Nerd Font Mono") nil 'prepend)
-
-      (set-fontset-font t 'japanese-jisx0208 (font-spec :family "IBM Plex Sans JP") nil 'append)
-      (set-fontset-font t 'katakana-jisx0201 (font-spec :family "IBM Plex Sans JP") nil 'append))))
-
-(add-hook 'after-make-frame-functions #'my/apply-gui-settings)
-
-(when (display-graphic-p)
-  (my/apply-gui-settings (selected-frame)))
 
 (provide 'init)
