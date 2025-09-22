@@ -161,6 +161,8 @@ let
       nerd-fonts.symbols-only
 
       wakatime-cli
+
+      emacs-lsp-booster
     ])
     ++ (config.programs.emacs.extraPackages epkgs);
 
