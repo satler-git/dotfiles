@@ -89,6 +89,7 @@ in
       touchpad.natural-scroll = false;
     };
     spawn-at-startup = [
+      { command = [ "fcitx5" ]; }
       {
         command = [
           "clipse"

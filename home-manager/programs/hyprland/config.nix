@@ -215,6 +215,7 @@
     ];
 
     exec-once = [
+      "fcitx5"
       "clipse -listen"
       "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
     ];
