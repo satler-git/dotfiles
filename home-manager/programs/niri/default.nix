@@ -65,6 +65,43 @@ in
     inputs.myniri.packages.${pkgs.system}.default
   ];
 
+  services.swayidle = {
+    enable = true;
+    systemdTarget = "niri.service";
+
+    events = [
+      {
+        event = "before-sleep";
+        command = "pidof hyprlock || hyprlock";
+      }
+      {
+        event = "lock";
+        command = "loginctl lock-session";
+      }
+      {
+        event = "after-resume";
+        command = "niri msg action power-on-monitors";
+      }
+    ];
+
+    timeouts = [
+      {
+        timeout = 300;
+        command = "systemd-ac-power || loginctl lock-session";
+        # so we lock unless we are using battery
+      }
+      {
+        timeout = 420;
+        command = "systemd-ac-power || niri msg action power-off-monitors";
+        resumeCommand = "niri msg action power-on-monitors";
+      }
+      {
+        timeout = 600;
+        command = "systemd-ac-power || systemctl suspend";
+      }
+    ];
+  };
+
   programs.niri.enable = true;
   programs.niri.package = pkgs.niri;
 

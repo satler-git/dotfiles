@@ -26,7 +26,6 @@
           "eDP-1, preferred, 0x0, 1.25"
         ];
       };
-      services.hypridle.enable = true;
     }
     {
       programs.niri.settings.outputs = {
