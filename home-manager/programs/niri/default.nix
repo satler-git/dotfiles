@@ -61,6 +61,7 @@ in
   home.packages = with pkgs; [
     xwayland-satellite
     swww
+    nirius
   ];
 
   programs.niri.enable = true;
@@ -104,7 +105,7 @@ in
           "XDG_CURRENT_DESKTOP"
         ];
       }
-      # { command = wallpaper; }
+      { command = [ "niriusd" ]; }
     ];
     environment = {
       DISPLAY = ":0";
@@ -190,7 +191,7 @@ in
     layout = {
       background-color = "transparent";
 
-      border.width = 8;
+      border.width = 6;
     };
     clipboard.disable-primary = true;
   };

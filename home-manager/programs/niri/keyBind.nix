@@ -56,6 +56,13 @@ let
       "play-pause"
     ];
   };
+
+  toggle-follow-mode = {
+    action.spawn = [
+      "nirius"
+      "toggle-follow-mode"
+    ];
+  };
 in
 {
   # https://github.com/sodiboo/niri-flake/issues/483
@@ -259,4 +266,8 @@ in
   # Powers off the monitors. To turn them back on, do any input like
   # moving the mouse or pressing any other key.
   "Mod+Shift+P".action.power-off-monitors = { };
+
+  "Mod+W".action.toggle-column-tabbed-display = { };
+
+  "Mod+G" = toggle-follow-mode;
 }

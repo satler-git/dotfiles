@@ -304,6 +304,9 @@
   :custom (typst-preview-browser . "firefox"))
 
 (leaf lsp-mode
+  :bind (:evil-normal-state
+         :package evil
+         ("g a" . lsp-execute-code-action))
   :custom
   (lsp-modeline-diagnostics-scope . :workspace)
   (lsp-keymap-prefix . "C-l")
