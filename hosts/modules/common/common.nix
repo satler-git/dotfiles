@@ -81,28 +81,21 @@ in
 
     security.polkit.enable = true;
 
-    sops =
-      let
-        secretHome = ../../../secrets;
-        api-keys = "${secretHome}/api-keys.yaml";
-      in
-      {
-        secrets = {
-          github_pat = {
-            sopsFile = api-keys;
-          };
-        };
+    sops = {
+      secrets = {
+        github_pat = { };
+      };
 
-        templates = {
-          "extra-nix-config" = {
-            owner = "satler";
-            mode = "0400";
-            content = ''
-              extra-access-tokens = github.com=${config.sops.placeholder.github_pat}
-            '';
-          };
+      templates = {
+        "extra-nix-config" = {
+          owner = "satler";
+          mode = "0400";
+          content = ''
+            extra-access-tokens = github.com=${config.sops.placeholder.github_pat}
+          '';
         };
       };
+    };
 
     nix = {
       # package = pkgs.lix;

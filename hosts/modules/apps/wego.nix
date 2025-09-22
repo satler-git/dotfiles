@@ -1,17 +1,9 @@
 { config, pkgs, ... }:
-let
-  secretHome = ../../../secrets;
-  api-keys = "${secretHome}/api-keys.yaml";
-in
 {
   sops = {
     secrets = {
-      openweathermap = {
-        sopsFile = api-keys;
-      };
-      wakatime = {
-        sopsFile = api-keys;
-      };
+      openweathermap = { };
+      wakatime = { };
       location = { };
     };
     templates = {
