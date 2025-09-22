@@ -62,6 +62,7 @@ in
     xwayland-satellite
     swww
     nirius
+    inputs.myniri.packages.${pkgs.system}.default
   ];
 
   programs.niri.enable = true;
@@ -108,8 +109,6 @@ in
       { command = [ "niriusd" ]; }
     ];
     environment = {
-      DISPLAY = ":0";
-
       XCURSOR_THEME = "Bibata-Modern-Ice";
       XCURSOR_SIZE = "24";
 

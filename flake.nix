@@ -94,6 +94,12 @@
       inputs.treefmt-nix.follows = "treefmt-nix";
       inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
     };
+    myniri = {
+      url = "github:satler-git/myniri";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.treefmt-nix.follows = "treefmt-nix";
+      inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
+    };
 
     # utils
     treefmt-nix = {

@@ -63,6 +63,16 @@ let
       "toggle-follow-mode"
     ];
   };
+
+  move = direction: or-action: {
+    action.spawn = [
+      "myniri"
+      "floating-snap-or"
+      "-d"
+      direction
+      or-action
+    ];
+  };
 in
 {
   # https://github.com/sodiboo/niri-flake/issues/483
@@ -104,10 +114,10 @@ in
   "Mod+K".action.focus-window-or-workspace-up = { };
   "Mod+L".action.focus-column-or-monitor-right = { };
 
-  "Mod+Shift+H".action.move-column-left-or-to-monitor-left = { };
-  "Mod+Shift+J".action.move-window-down-or-to-workspace-down = { };
-  "Mod+Shift+K".action.move-window-up-or-to-workspace-up = { };
-  "Mod+Shift+L".action.move-column-right-or-to-monitor-right = { };
+  "Mod+Shift+H" = move "left" "move-column-left-or-to-monitor-left";
+  "Mod+Shift+J" = move "down" "move-window-down-or-to-workspace-down";
+  "Mod+Shift+K" = move "up" "move-window-up-or-to-workspace-up";
+  "Mod+Shift+L" = move "right" "move-column-right-or-to-monitor-right";
 
   # Home -> d, End -> g
 
