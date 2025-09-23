@@ -610,11 +610,11 @@
 
   (set-face-attribute 'mode-line-active nil
                       :foreground "#a277ff"
-                      :background "#15141b"
+                      :background "#29263c"
                       :box 'unspecified)
   (set-face-attribute 'mode-line-inactive nil
                       :foreground "#bdbdbd"
-                      :background "#15141b"
+                      :background "#29263c"
                       :box 'unspecified)
 
   (moody-replace-mode-line-front-space)
@@ -774,6 +774,7 @@
 ;; (load-theme 'aura-soft-dark-soft-text t)
 
 (which-key-mode 1)
+(hl-line-mode 1)
 
 (add-hook 'emacs-startup-hook #'electric-pair-mode)
 (add-hook 'emacs-startup-hook
