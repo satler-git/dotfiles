@@ -519,6 +519,41 @@
 
   (evil-mode 1))
 
+(leaf puni
+  :require t
+  :global-minor-mode puni-global-mode
+  :after evil
+  :bind ((:evil-normal-state-map
+          :package evil
+          ("si" . puni-mark-list-around-point)
+          ("sa" . puni-mark-sexp-around-point)
+          ("su" . puni-expand-region)
+
+          ("ss" . puni-slurp-forward)
+          ("sS" . puni-slurp-backward)
+          ("sb" . puni-barf-forward)
+          ("sB" . puni-barf-forward)
+
+          ("dw" . puni-forward-kill-word)
+          ("db" . puni-backward-kill-word)
+          ("dd" . puni-kill-line)
+          ("dD" . puni-backward-kill-line)
+          ("dS" . puni-splice)
+          ("x" . puni-forward-delete-char))
+         (:evil-visual-state-map
+          :package evil
+          ("si" . puni-mark-list-around-point)
+          ("sa" . puni-mark-sexp-around-point)
+          ("su" . puni-expand-region)
+
+          ("sb" . puni-wrap-round)
+          ("sB" . puni-wrap-curly)
+          ("s<" . puni-wrap-angle)
+          ("s[" . puni-wrap-square)
+          ))
+  :hook
+  (vterm-mode-hook . puni-disable-puni-mode))
+
 (leaf editorconfig
   :config
   (setq safe-local-variable-directories

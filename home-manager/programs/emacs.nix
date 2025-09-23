@@ -117,6 +117,8 @@ let
 
       magit
       forge
+
+      puni
     ])
     ++ (with pkgs; [
       # TODO: neovimと共通化
