@@ -64,6 +64,10 @@ let
     ];
   };
 
+  pick-color = {
+    action.spawn-sh = "hyprpicker --no-fancy | tr -d '\n' | wl-copy";
+  };
+
   move = direction: or-action: {
     action.spawn = [
       "myniri"
@@ -244,7 +248,7 @@ in
   "Mod+Shift+R".action.reset-window-height = { };
   "Mod+F".action.maximize-column = { };
   "Mod+Shift+F".action.fullscreen-window = { };
-  "Mod+C".action.center-column = { };
+  "Mod+Shift+C".action.center-column = { };
 
   # Finer width adjustments.
   # This command can also:
@@ -270,8 +274,13 @@ in
   # Mod+Shift+Space { switch-layout "prev"; }
 
   "Print".action.screenshot = { };
+  "Mod+P".action.screenshot = { };
   "Ctrl+Print".action.screenshot-screen = { };
+  "Mod+Ctrl+P".action.screenshot-screen = { };
   "Alt+Print".action.screenshot-window = { };
+  "Mod+Alt+P".action.screenshot-window = { };
+
+  "Mod+C" = pick-color;
 
   # Powers off the monitors. To turn them back on, do any input like
   # moving the mouse or pressing any other key.

@@ -63,6 +63,7 @@ in
     swww
     nirius
     inputs.myniri.packages.${pkgs.system}.default
+    hyprpicker
   ];
 
   services.swayidle = {
@@ -227,7 +228,10 @@ in
     layout = {
       background-color = "transparent";
 
-      border.width = 6;
+      border = {
+        active.color = "#74c7ec";
+        width = 6;
+      };
     };
     clipboard.disable-primary = true;
   };

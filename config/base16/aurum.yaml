@@ -1,19 +1,19 @@
 scheme: "Aurum" # Aura soft dark extended
 author: "Dalton Menezes(@daltonmenezes), satler(@satler-git)"
 
-base00: "15141b" # e1
-base01: "29263c" # e2
-base02: "29263c" # e2
+base00: "29263c" # e1
+base01: "29263c" # e1
+base02: "8B9ACD" # o
 base03: "6d6d6d"
-base04: "959595" # o
-base05: "8464c6" # e3
-base06: "bdbdbd" # e4
-base07: "15141b" # e1
-base08: "bdbdbd" # e4
-base09: "54c59f" # e5
+base04: "A2B8C9" # o
+base05: "8464c6" # a1
+base06: "bdbdbd" # a2
+base07: "433C67" # o?
+base08: "bdbdbd" # a2
+base09: "54c59f" # e2 o?
 base0A: "6cb2c7"
-base0B: "54c59f" # e5
+base0B: "54c59f" # e2
 base0C: "c17ac8"
 base0D: "c7a06f"
-base0E: "8464c6" # e3
-base0F: "bdbdbd" # e4
+base0E: "8464c6" # a1
+base0F: "bdbdbd" # a2

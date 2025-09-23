@@ -57,3 +57,6 @@ end, eopts)
 keymap("x", "A", function()
   return ifexpr(vim.fn.mode(0) == "V", "<C-v>0o$A", "A")
 end, eopts)
+
+keymap("i", "<C-j>", "<C-d>", opts)
+keymap("i", "<C-k>", "<C-u>", opts)
