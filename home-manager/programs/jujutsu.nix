@@ -62,9 +62,6 @@
         d = [ "desc" ];
         n = [ "new" ];
 
-        ne = [ "next" ];
-        pr = [ "prev" ];
-
         nb = [
           "new"
           "--insert-before"
@@ -82,6 +79,10 @@
 
         f = [ "next" ];
         b = [ "prev" ];
+        ne = [ "next" ];
+        pr = [ "prev" ];
+
+        di = [ "diff" ];
 
         fetch = [
           "git"

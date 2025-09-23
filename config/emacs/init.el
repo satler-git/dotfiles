@@ -304,7 +304,7 @@
   :custom (typst-preview-browser . "firefox"))
 
 (leaf lsp-mode
-  :bind (:evil-normal-state
+  :bind (:evil-normal-state-map
          :package evil
          ("g a" . lsp-execute-code-action))
   :custom
