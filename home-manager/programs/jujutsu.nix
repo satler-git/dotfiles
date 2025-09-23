@@ -83,6 +83,14 @@
         pr = [ "prev" ];
 
         di = [ "diff" ];
+        dir = [
+          "diff"
+          "-r"
+        ];
+        dr = [
+          "diff"
+          "-r"
+        ];
 
         fetch = [
           "git"
