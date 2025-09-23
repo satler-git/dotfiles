@@ -19,7 +19,8 @@ in
       size = 24;
     };
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
+    base16Scheme = ../config/base16/aurum.yaml;
 
     fonts = {
       serif = {
