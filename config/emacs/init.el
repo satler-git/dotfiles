@@ -52,6 +52,8 @@
 
 (leaf tab-bar-mode
   :bind (:evil-normal-state-map
+          :package evil
+         ("M-C-t" . tab-bar-new-tab)
          ("C-t" . tab-bar-switch-to-tab))
   :bind (("C-c t" . tab-bar-new-tab)
          ("C-t" . tab-bar-switch-to-tab)
@@ -306,7 +308,9 @@
 (leaf lsp-mode
   :bind (:evil-normal-state-map
          :package evil
-         ("g a" . lsp-execute-code-action))
+         ("g a" . lsp-execute-code-action)
+         ("g d" . xref-find-definitions-other-window)
+         ("g n" . lsp-rename))
   :custom
   (lsp-modeline-diagnostics-scope . :workspace)
   (lsp-keymap-prefix . "C-l")
