@@ -15,7 +15,7 @@
       template-aliases = {
         "format_short_id(id)" = "id.shortest()";
         "commit_style_desc" = ''"${
-          builtins.replaceStrings [ "@comment@" ] [ "JJ:" ] (builtins.readFile ./git/gitmessage)
+          builtins.replaceStrings [ "@comment@" ] [ "JJ:" ] (builtins.readFile ../../config/git/gitmessage)
         }"'';
         "in_branch(commit)" = "commit.contained_in(\"immutable_heads()..bookmarks()\")";
       };

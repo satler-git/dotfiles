@@ -1,6 +1,8 @@
 {
   home.file.".gitmessage" = {
-    text = builtins.replaceStrings [ "@comment@" ] [ "#" ] (builtins.readFile ./gitmessage);
+    text = builtins.replaceStrings [ "@comment@" ] [ "#" ] (
+      builtins.readFile ../../config/git/gitmessage
+    );
   };
   programs.git = {
     enable = true;

@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
-    ../waybar
+    ../waybar.nix
     # ../wofi
     ./config.nix
     ../wayland.nix

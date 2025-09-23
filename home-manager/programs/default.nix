@@ -6,7 +6,7 @@
     ./emacs.nix
     ./gh-cli.nix
     ./ghostty.nix
-    ./git
+    ./git.nix
     ./gtk.nix
     ./hyprland
     ./i3
