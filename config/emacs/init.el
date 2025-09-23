@@ -50,6 +50,7 @@
   :custom `((savehist-file . ,(locate-user-emacs-file "savehist")))
   :global-minor-mode t)
 
+
 (leaf tab-bar-mode
   :bind (:evil-normal-state-map
           :package evil
@@ -519,38 +520,58 @@
 
   (evil-mode 1))
 
+(define-prefix-command 'puni-s-map)
+
+(defun puni-wrap-double-quote (&optional n)
+  (interactive "P")
+  (puni-wrap-next-sexps
+   (puni--parse-interactive-argument-for-wrap n)
+   "\"" "\""))
+
+;; ys (move) (brace)
+;; v (move) s (brace)
+;;
+;; dsb
+;; sds
+
 (leaf puni
   :require t
   :global-minor-mode puni-global-mode
   :after evil
-  :bind ((:evil-normal-state-map
-          :package evil
-          ("si" . puni-mark-list-around-point)
-          ("sa" . puni-mark-sexp-around-point)
-          ("su" . puni-expand-region)
+  :bind ((:puni-s-map
+          ;; ("s" . puni-slurp-forward)
+          ;; ("S" . puni-slurp-backward)
+          ;; ("b" . puni-barf-forward)
+          ;; ("B" . puni-barf-forward)
+          ("ls" . puni-slurp-forward)
+          ("lS" . puni-slurp-backward)
+          ("lb" . puni-barf-forward)
+          ("lB" . puni-barf-backforward)
 
-          ("ss" . puni-slurp-forward)
-          ("sS" . puni-slurp-backward)
-          ("sb" . puni-barf-forward)
-          ("sB" . puni-barf-forward)
+          ("i" . puni-mark-list-around-point)
+          ("a" . puni-mark-sexp-around-point)
+          ("u" . puni-expand-region)
+
+          ("b" . puni-wrap-round)
+          ("(" . puni-wrap-round)
+          ("B" . puni-wrap-curly)
+          ("{" . puni-wrap-curly)
+          ("<" . puni-wrap-angle)
+          ("[" . puni-wrap-square)
+          ("\"" . puni-wrap-double-quote)
 
           ("dw" . puni-forward-kill-word)
           ("db" . puni-backward-kill-word)
           ("dd" . puni-kill-line)
           ("dD" . puni-backward-kill-line)
-          ("dS" . puni-splice)
+          ("ds" . puni-splice))
+         (:evil-normal-state-map
+          :package evil
+          ("s" . puni-s-map)
           ("x" . puni-forward-delete-char))
          (:evil-visual-state-map
           :package evil
-          ("si" . puni-mark-list-around-point)
-          ("sa" . puni-mark-sexp-around-point)
-          ("su" . puni-expand-region)
-
-          ("sb" . puni-wrap-round)
-          ("sB" . puni-wrap-curly)
-          ("s<" . puni-wrap-angle)
-          ("s[" . puni-wrap-square)
-          ))
+          ("s" . puni-s-map)))
   :hook
   (vterm-mode-hook . puni-disable-puni-mode))
 
