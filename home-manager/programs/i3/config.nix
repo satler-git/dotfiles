@@ -110,10 +110,6 @@ in
         command = "polybar";
         notification = false;
       }
-      {
-        command = "fcitx5";
-        notification = false;
-      }
     ];
   };
 }
