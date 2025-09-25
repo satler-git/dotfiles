@@ -142,7 +142,6 @@ let
       astro-language-server
       biome
       typescript-language-server
-      vtsls
 
       dart
 

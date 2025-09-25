@@ -325,7 +325,8 @@
          (nix-ts-mode-hook . lsp) ;; nil-ls
          (yaml-ts-mode-hook . lsp) ;; yaml-lang-server
          (json-ts-mode-hook . lsp) ;; json (vsc)
-         ((text-mode markdown-mode gfm-mode org-mode prog-mode) . lsp) ;; typos
+         ((text-mode-hook markdown-mode-hook gfm-mode-hook org-mode-hook prog-mode-hook) . lsp) ;; typos
+         ((tsx-ts-mode-hook . typescript-ts-mode-hook) . lsp) ;; ts
 
          (lsp-mode-hook . lsp-enable-which-key-integration)
          (lsp-mode-hook . lsp-headerline-breadcrumb-mode)
