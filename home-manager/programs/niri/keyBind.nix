@@ -59,7 +59,9 @@ let
 
   toggle-follow-mode = {
     action.spawn = [
-      "nirius"
+      # "nirius"
+      # wrapper of nirius, only toggle when the focusing window is floating
+      "myniri"
       "toggle-follow-mode"
     ];
   };
