@@ -211,7 +211,7 @@
 
 (leaf reformatter
   :config
-  (reformatter-hook rust-ts-mode-hook rustfmt
+  (reformatter-hook rust-ts-mode-hook rustfmt ;; TODO: 2015?
     :program "rustfmt"
     :args '("--color" "never" "--quiet"))
   (reformatter-hook lua-ts-mode-hook stylua

@@ -2,7 +2,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    -- event = { "LazyFile", "VeryLazy" },
+    event = { "VeryLazy" },
     config = function()
       local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
 
@@ -65,6 +65,7 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter-context",
+    event = { "VeryLazy" },
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
     },
