@@ -384,7 +384,8 @@
 (leaf lsp-ui
   :commands lsp-ui-mode
   :custom
-  ((lsp-ui-doc-enable . t)
+  ((lsp-ui-sideline-show-hover . t)
+   (lsp-ui-doc-enable . t)
    (lsp-ui-doc-position . 'at-point)
    (lsp-ui-doc-show-with-cursor . nil)
    (lsp-ui-doc-show-with-mouse . nil))
