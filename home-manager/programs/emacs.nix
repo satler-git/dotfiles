@@ -118,6 +118,10 @@ let
       forge
 
       puni
+
+      org-modern
+      org-contrib
+      org-journal
     ])
     ++ (with pkgs; [
       # TODO: neovimと共通化

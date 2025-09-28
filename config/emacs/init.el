@@ -377,7 +377,7 @@
     :new-connection (lsp-stdio-connection "tinymist")
     :major-modes '(typst-ts-mode)
     :server-id 'typst-lsp))
-  (lsp-register-client
+  (lsp-register-client ;; このへん
    (make-lsp-client
     :new-connection (lsp-stdio-connection '("typos-lsp"))
     :major-modes '(text-mode markdown-mode gfm-mode org-mode prog-mode)
@@ -785,6 +785,51 @@
   (auth-sources . '("~/.authinfo"))
   (forge-add-default-bindings . nil)
   :require t)
+
+(leaf org ;; TODO: なんかcustomがだめ
+  :custom
+  (calendar-date-style . 'iso)
+  (org-todo-keywords .
+                     '((sequence "TODO(t)" "PENDING(p)" "|" "DONE(d)" "CANCELED(c)")))
+  `(org-directory . ,(expand-file-name "~/repos/github.com/satler-git/org"))
+  `(diary-file . ,(format-time-string "diary/%Y/%m-%d.org"))
+  (org-extend-today-until . 6)
+  :config
+  (leaf org-contrib)
+  (leaf org-modern
+    :after org
+    :global-minor-mode global-org-modern-mode)
+
+  (set-language-environment "Japanese")
+  (prefer-coding-system 'utf-8)
+  (set-default 'buffer-file-coding-system 'utf-8)
+
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '(
+     (C . t)
+     (emacs-lisp . t)
+     (haskell . nil)
+     ;; (ledger . t)
+     (hledger . t)
+     (lua . t)
+     (mathomatic . t)
+     (python . t)
+     (ruby . t)
+     (shell . t)
+     ))
+  :bind (
+         ("C-c s" . org-store-link)
+         ("C-c a" . org-agenda)
+         ("C-c c" . org-capture)
+         )
+  :init)
+
+(leaf org-journal
+  :after org
+  :custom
+  `(org-journal-dir . ,(concat org-directory (format-time-string "/diary/%Y")))
+  (org-journal-file-format . "%m-%d.org"))
 
 (setq-default indent-tabs-mode nil)
 
