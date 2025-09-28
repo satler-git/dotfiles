@@ -66,7 +66,6 @@ let
       lsp-mode
       lsp-ui
       lsp-haskell
-      lsp-treemacs
       consult-lsp
 
       flycheck

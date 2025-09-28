@@ -398,14 +398,10 @@
 
 (leaf lsp-haskell)
 
-(leaf lsp-treemacs
-  :bind ("C-c x x" . lsp-treemacs-errors-list)
-  :commands lsp-treemacs-errors-list)
-
 (leaf consult-lsp)
 
 (leaf flycheck
-  :bind ("C-c x f" . flycheck-list-errors)
+  :bind ("C-c x x" . flycheck-list-errors)
   :global-minor-mode global-flycheck-mode
   :config
   (add-to-list 'display-buffer-alist
