@@ -8,7 +8,7 @@
     ../modules/apps/hoogle.nix
     ../modules/apps/i3.nix
     ../modules/apps/libvirt.nix
-    ../modules/apps/llm.nix
+    # ../modules/apps/llm.nix
     ../modules/apps/obs-studio.nix
     ../modules/apps/podman.nix
     ../modules/apps/syncthing.nix
