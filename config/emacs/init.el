@@ -319,7 +319,11 @@
   (lsp-completion-provider . :none)
   (lsp-inlay-hint-enable . t)
   :hook ((rust-ts-mode-hook . lsp) ;; rust-analyzer
+         (rust-ts-mode-hook . lsp-inlay-hints-mode) ;; rust-analyzer
+
          (typst-ts-mode-hook . lsp) ;; tinymist
+         (typst-ts-mode-hook  . lsp-inlay-hints-mode) ;; rust-analyzer
+
          (lua-ts-mode-hook . lsp) ;; lua-language-server
          ((haskell-mode-hook haskell-literate-mode-hook). lsp) ;; haskell-language-server
          (toml-ts-mode-hook . lsp) ;; taplo
@@ -332,7 +336,6 @@
          (lsp-mode-hook . lsp-enable-which-key-integration)
          (lsp-mode-hook . lsp-headerline-breadcrumb-mode)
          (lsp-mode-hook . flycheck-mode)
-         (lsp-mode-hook . lsp-inlay-hints-mode)
          (lsp-configure-hook . lsp-diagnostics-mode))
   :commands lsp
   :config
