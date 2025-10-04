@@ -80,6 +80,7 @@
     playerctl
     podman-compose
     prismlauncher
+    protonplus
     pympress
 
     smartmontools
