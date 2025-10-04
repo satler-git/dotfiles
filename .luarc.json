@@ -3,7 +3,7 @@
     "globals": [
       "vim",
       "require",
-            "ifexpr"
+      "ifexpr"
     ]
   },
   "workspace.ignoreDir": [

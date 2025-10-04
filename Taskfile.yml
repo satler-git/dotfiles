@@ -1,7 +1,5 @@
 # https://taskfile.dev
-
 version: "3"
-
 tasks:
   switch:
     cmds:
@@ -10,3 +8,6 @@ tasks:
     cmds:
       - elan default stable
       - opam init && opam install ocaml-lsp-server odoc ocamlformat utop dune
+  installer:
+    cmds:
+      - nix build .#nixosConfigurations.installer.config.system.build.isoImage

@@ -45,7 +45,7 @@ in
       firewall = {
         enable = lib.mkDefault true;
         allowedTCPPorts = [
-          8554 # audio-sharing
+          # 8554 # audio-sharing
         ];
       };
     };

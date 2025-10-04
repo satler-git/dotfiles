@@ -203,6 +203,20 @@
             inputs.stylix.nixosModules.stylix
           ];
         };
+        installer = nixpkgs.lib.nixosSystem {
+          # Live CD
+          system = "x86_64-linux";
+          specialArgs = {
+            inherit inputs self;
+          };
+
+          modules = [
+            {
+              nixpkgs.pkgs = pkgs;
+            }
+            ./hosts/installer
+          ];
+        };
       };
 
       formatter.x86_64-linux = treefmtEval.config.build.wrapper;
@@ -225,6 +239,7 @@
 
           # mics
           nvfetcher
+          go-task
         ];
       };
     };

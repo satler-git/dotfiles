@@ -8,4 +8,17 @@
     yamlfmt.enable = true;
     keep-sorted.enable = true;
   };
+
+  settings = {
+    excludes = [
+      "*.conf"
+      "*.crt"
+      "*.lock"
+      "*.patch"
+      "*.pem"
+      "*.txt"
+      "_sources/*"
+      "secrets/*"
+    ];
+  };
 }
