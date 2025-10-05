@@ -10,6 +10,7 @@
     ./hardware-configurations.nix
 
     ../modules/boot/plymouth.nix
+    ../modules/boot/secureboot.nix
 
     ../modules/common/desktop
 
