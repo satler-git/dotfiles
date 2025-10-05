@@ -35,6 +35,7 @@
               size = "100%";
               content = {
                 type = "luks";
+                name = "encryptedRoot";
                 settings = {
                   allowDiscards = true;
                   crypttabExtraOpts = [
@@ -76,6 +77,7 @@
               size = "100%";
               content = {
                 type = "luks";
+                name = "encryptedHome";
                 settings = {
                   allowDiscards = true;
                   crypttabExtraOpts = [
@@ -99,7 +101,7 @@
     };
   };
 
-  fileSystems."/home".neededForBoot = true;
+  fileSystems."/home".neededForBoot = true; # sopsの復号のために
 
   boot.initrd.availableKernelModules = [
     "nvme"
