@@ -11,3 +11,23 @@ tasks:
   installer:
     cmds:
       - nix build .#nixosConfigurations.installer.config.system.build.isoImage
+  create-sb-key:
+    cmds:
+      - sudo sbctl create-keys
+      - sudo sbctl verify
+  enroll-sb-key:
+    cmds:
+      - sudo sbctl enroll-keys --microsoft
+  enroll-luks-key:
+    cmds:
+      - systemd-cryptenroll --tpm-device=auto
+      - systemd-cryptenroll --recovery-key
+  gen-config:
+    cmds:
+      - nixos-generate-config --no-filesystems --root /mnt --dir .
+  disko:
+    cmds:
+      - echo "disko --mode destroy,format,mount --flake ~/dotfiles#"
+  install:
+    cmds:
+      - echo "nixos-install --flake ~/dotfiles#"

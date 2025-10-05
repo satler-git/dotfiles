@@ -30,20 +30,37 @@
                 mountOptions = [ "umask=0077" ];
               };
             };
-            swap = {
-              size = "8G";
-              content = {
-                type = "swap";
-                discardPolicy = "both";
-                resumeDevice = true; # resume from hiberation from this device
-              };
-            };
-            root = {
+
+            luks = {
               size = "100%";
               content = {
-                type = "filesystem";
-                format = "ext4";
-                mountpoint = "/";
+                type = "luks";
+                settings = {
+                  allowDiscards = true;
+                  crypttabExtraOpts = [
+                    # "tpm2-device=auto"
+                    "fido2-device=auto"
+                    "token-timeout=10"
+                  ];
+                  # keyFile = "/tmp/secret.key";
+                };
+                content = {
+                  type = "btrfs";
+                  extraArgs = [ "-f" ];
+                  subvolumes = {
+                    "/root" = {
+                      mountpoint = "/";
+                      mountOptions = [
+                        # "compress=zstd"
+                        "noatime"
+                      ];
+                    };
+                    "/swap" = {
+                      mountpoint = "/.swapvol";
+                      swap.swapfile.size = "32G";
+                    };
+                  };
+                };
               };
             };
           };
@@ -58,9 +75,22 @@
             root = {
               size = "100%";
               content = {
-                type = "filesystem";
-                format = "ext4";
-                mountpoint = "/home";
+                type = "luks";
+                settings = {
+                  allowDiscards = true;
+                  crypttabExtraOpts = [
+                    # "tpm2-device=auto"
+                    "fido2-device=auto"
+                    "token-timeout=10"
+                  ];
+                  # keyFile = "/tmp/secret.key";
+                };
+
+                content = {
+                  type = "btrfs";
+                  extraArgs = [ "-f" ]; # Override existing partition
+                  mountpoint = "/home";
+                };
               };
             };
           };

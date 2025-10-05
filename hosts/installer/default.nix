@@ -1,4 +1,5 @@
 {
+
   self,
   pkgs,
   modulesPath,
@@ -11,6 +12,8 @@
     (modulesPath + "/installer/cd-dvd/installation-cd-graphical-gnome.nix")
     (modulesPath + "/installer/cd-dvd/channel.nix")
   ];
+
+  services.xserver.xkb.layout = "jp";
 
   programs = {
     # keep-sorted start
