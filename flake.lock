@@ -1100,11 +1100,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1758975256,
-        "narHash": "sha256-2NlMFlVi3svSWvZkCRU/xtH5Dh3e9V6bGRKG1r840MA=",
+        "lastModified": 1759671440,
+        "narHash": "sha256-pG4qDfFxVz6BakzkeipB6IOPvo5PKbxhJZxjPisasCA=",
         "owner": "satler-git",
         "repo": "myniri",
-        "rev": "3949e3198753e78b9d24ca97c1babbf7559f5353",
+        "rev": "b25913e0353eba6bac64a6767e3d89ded2700f37",
         "type": "github"
       },
       "original": {

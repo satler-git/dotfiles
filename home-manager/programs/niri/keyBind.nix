@@ -79,6 +79,13 @@ let
       or-action
     ];
   };
+
+  consume-into-left = {
+    action.spawn = [
+      "myniri"
+      "consume-into-left"
+    ];
+  };
 in
 {
   # https://github.com/sodiboo/niri-flake/issues/483
@@ -239,6 +246,7 @@ in
   # Switches focus between the current and the previous workspace.
   "Mod+Tab".action.focus-workspace-previous = { };
 
+  "Mod+M" = consume-into-left;
   "Mod+Comma".action.consume-window-into-column = { };
   "Mod+Period".action.expel-window-from-column = { };
 
