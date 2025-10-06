@@ -1,15 +1,15 @@
 name: Build nix configs
 on:
-  # pull_request:
-  #   branches:
-  #     - main
-  # push:
-  #   branches:
-  #     - main
-  #   paths:
-  #     - '**/*.nix'
-  #     - 'flake.lock'
-  #     - '.github/workflows/**'
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+    paths:
+      - "**/*.nix"
+      - "flake.lock"
+      - ".github/workflows/**"
   workflow_dispatch:
 jobs:
   build:
@@ -43,4 +43,8 @@ jobs:
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
             experimental-features = nix-command flakes
       - name: Build check
+        if: ${{ matrix.host != 'installer' }}
         run: nix build --no-link ".#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel"
+      - name: Build check
+        if: ${{ matrix.host == 'installer' }}
+        run: nix build .#nixosConfigurations.${{ matrix.host }}.config.system.build.isoImage
