@@ -44,7 +44,7 @@ jobs:
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
             experimental-features = nix-command flakes
       - name: Build check
-        if: ${{ matrix.host != 'installer' ||  matrix.host != 'pkgs'}}
+        if: ${{ matrix.host != 'installer' &&  matrix.host != 'pkgs'}}
         env:
           "NIXOS_SKIP_PKGS": "1"
         run: nix build --no-link ".#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel" --impure
