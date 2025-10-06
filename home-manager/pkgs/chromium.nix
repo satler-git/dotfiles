@@ -31,9 +31,7 @@ let
 
   obsidian = wrap { appName = "obsidian"; };
 in
-{
-  home.packages = [
-    google-chrome
-    obsidian
-  ];
-}
+[
+  google-chrome
+  obsidian
+]

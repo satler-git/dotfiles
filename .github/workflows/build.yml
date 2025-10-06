@@ -21,6 +21,7 @@ jobs:
           - luka
           - tau
           - installer
+          - pkgs
     steps:
       - uses: easimon/maximize-build-space@fc881a613ad2a34aca9c9624518214ebc21dfc0c # master 2025/3/10
         with:
@@ -43,8 +44,13 @@ jobs:
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
             experimental-features = nix-command flakes
       - name: Build check
-        if: ${{ matrix.host != 'installer' }}
-        run: nix build --no-link ".#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel"
+        if: ${{ matrix.host != 'installer' ||  matrix.host != 'pkgs'}}
+        env:
+          "NIXOS_SKIP_PKGS": "1"
+        run: nix build --no-link ".#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel" --impure
       - name: Build check
         if: ${{ matrix.host == 'installer' }}
         run: nix build .#nixosConfigurations.${{ matrix.host }}.config.system.build.isoImage
+      - name: Build check
+        if: ${{ matrix.host == 'pkgs' }}
+        run: nix build .#pkgs

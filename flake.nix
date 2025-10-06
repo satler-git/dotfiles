@@ -163,6 +163,8 @@
         inherit overlays;
       };
 
+      lib = pkgs.lib;
+
       treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
     in
     {
@@ -241,6 +243,12 @@
           nvfetcher
           go-task
         ];
+      };
+
+      packages.x86_64-linux.pkgs = pkgs.buildEnv {
+        name = "pkgs";
+
+        paths = (import ./home-manager/pkgs.nix) { inherit pkgs lib inputs; };
       };
     };
 }

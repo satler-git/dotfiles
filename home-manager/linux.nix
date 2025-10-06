@@ -1,3 +1,9 @@
+{
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
 let
   programs = ./programs;
   services = ./services;
@@ -6,7 +12,6 @@ in
 {
   imports = [
     ./apps
-    ./pkgs.nix
     ./stylix.nix
 
     programs
@@ -28,5 +33,11 @@ in
     sessionPath = [
       "${homeDirectory}/.cargo/bin"
     ];
+
+    packages =
+      if ((builtins.getEnv "NIXOS_SKIP_PKGS" != "1")) then
+        (import ./pkgs.nix) { inherit pkgs lib inputs; }
+      else
+        [ ];
   };
 }
