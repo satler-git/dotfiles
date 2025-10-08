@@ -126,6 +126,7 @@ with pkgs;
 
   zip
   zoom-us
+  zotero
   zoxide
 ]
 ++ ((import ./pkgs/chromium.nix) { inherit pkgs lib; })
