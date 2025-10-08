@@ -159,7 +159,7 @@ let
       yamlfmt
 
       # DAP
-      haskellPackages.ghci-dap
+      # haskellPackages.ghci-dap
       haskellPackages.haskell-debug-adapter
 
       nerd-fonts.symbols-only

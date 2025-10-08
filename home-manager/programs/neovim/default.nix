@@ -71,7 +71,7 @@ in
         typstyle
 
         # DAP
-        haskellPackages.ghci-dap
+        # haskellPackages.ghci-dap
         haskellPackages.haskell-debug-adapter
 
         imagemagick
