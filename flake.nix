@@ -101,6 +101,11 @@
       inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
     };
 
+    sunsetr = {
+      url = "github:psi4j/sunsetr";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # utils
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
