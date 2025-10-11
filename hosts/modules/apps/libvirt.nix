@@ -19,16 +19,6 @@ in
     enable = lib.mkDefault true;
     qemu = {
       package = lib.mkDefault pkgs.qemu_kvm;
-
-      ovmf = {
-        enable = lib.mkDefault true;
-        packages = [
-          (pkgs.OVMF.override {
-            secureBoot = true;
-            tpmSupport = true;
-          }).fd
-        ];
-      };
       swtpm.enable = lib.mkDefault true;
     };
   };

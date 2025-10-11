@@ -160,7 +160,7 @@ let
 
       # DAP
       # haskellPackages.ghci-dap
-      haskellPackages.haskell-debug-adapter
+      # haskellPackages.haskell-debug-adapter
 
       nerd-fonts.symbols-only
 
