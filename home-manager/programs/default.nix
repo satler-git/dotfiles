@@ -16,6 +16,7 @@
     ./neovim
     ./niri
     ./nix-index-db.nix
+    ./sunsetr.nix
     ./supercollider.nix
     ./tealdeer.nix
     ./wlogout.nix

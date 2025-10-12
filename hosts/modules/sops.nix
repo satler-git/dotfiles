@@ -10,6 +10,8 @@ in
 
     secrets = {
       magit_token = { };
+      latitude = { };
+      longitude = { };
     };
 
     templates.authinfo = {
@@ -18,6 +20,16 @@ in
       path = "/home/satler/.authinfo";
       content = ''
         machine api.github.com login satler-git^forge password ${config.sops.placeholder.magit_token}
+      '';
+    };
+
+    templates.sunsetr-geo = {
+      # Emacs magit/forge
+      owner = "satler";
+      path = "/home/satler/.config/sunsetr/geo.toml";
+      content = ''
+        latitude = ${config.sops.placeholder.latitude}
+        longitude = ${config.sops.placeholder.longitude}
       '';
     };
   };

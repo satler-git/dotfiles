@@ -64,7 +64,6 @@ in
     nirius
     inputs.myniri.packages.${pkgs.system}.default
     hyprpicker
-    inputs.sunsetr.packages.${pkgs.system}.sunsetr
   ];
 
   services.swayidle = {
