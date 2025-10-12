@@ -3,7 +3,8 @@ version: "3"
 tasks:
   switch:
     cmds:
-      - sudo nixos-rebuild switch --flake ~/dotfiles
+      - sudo -v
+      - sudo nixos-rebuild switch --flake ~/dotfiles --log-format internal-json |& nom --json
   setup-ocaml:
     cmds:
       - elan default stable
