@@ -1,6 +1,11 @@
 { inputs, pkgs, ... }:
 let
   writeShellScript = name: content: builtins.toString (pkgs.writeShellScript name content);
+
+  sunsetr_preset = name: {
+    name = "sunsetr: active preset (${name})";
+    command = "sunsetr preset ${name}";
+  };
 in
 {
   imports = [
@@ -27,6 +32,8 @@ in
         name = "Take a screen capture (Active Window, Hyprland)";
         command = writeShellScript "screen-capture-window" "hyprctl -j activewindow | jq -r '\"\\(.at[0]),\\(.at[1]) \\(.size[0])x\\(.size[1])\"' | grim -g - - | wl-copy; dunstify \"A winwdow screenshot is copied!\"";
       }
+      (sunsetr_preset "day")
+      (sunsetr_preset "default")
     ];
   };
 }
