@@ -15,3 +15,4 @@ fetch.git = "https://git.sr.ht/~meow_king/typst-ts-mode"
 [typst-preview]
 src.git = "https://github.com/havarddj/typst-preview.el"
 fetch.github = "havarddj/typst-preview.el"
+pinned = true

@@ -5,7 +5,7 @@
         "extract": null,
         "name": "typst-preview",
         "passthru": null,
-        "pinned": false,
+        "pinned": true,
         "src": {
             "deepClone": false,
             "fetchSubmodules": false,
