@@ -8,6 +8,7 @@
     ./ghostty.nix
     ./git.nix
     ./gtk.nix
+    ./halloy.nix
     ./hyprland
     ./i3
     ./jujutsu.nix

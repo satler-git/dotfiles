@@ -12,6 +12,9 @@ in
       magit_token = { };
       latitude = { };
       longitude = { };
+      irc_satler = {
+        owner = "satler";
+      };
     };
 
     templates.authinfo = {
