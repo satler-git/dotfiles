@@ -176,6 +176,9 @@ in
             title = "^Picture-in-Picture$";
             app-id = "firefox";
           }
+          {
+            app-id = "lelke";
+          }
         ];
         open-floating = true;
 
