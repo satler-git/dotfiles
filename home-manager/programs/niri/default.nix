@@ -176,9 +176,6 @@ in
             title = "^Picture-in-Picture$";
             app-id = "firefox";
           }
-          {
-            app-id = "lelke";
-          }
         ];
         open-floating = true;
 
@@ -189,6 +186,7 @@ in
         matches = [
           { app-id = "clipse"; }
           { app-id = "yurf"; }
+          { app-id = "lelke"; }
         ];
 
         open-floating = true;
