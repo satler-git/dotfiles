@@ -20,6 +20,7 @@ with pkgs;
   # claude-code
   # code-cursor
 
+  d2
   deno
   delta
   duckdb
