@@ -62,7 +62,7 @@ return {
       )
 
       insx.add(
-        ":",
+        ": ",
         insx.with({
           enabled = par({
             "trait_bounds",
@@ -71,7 +71,6 @@ return {
             "where_clause",
           }),
           action = function(ctx)
-            ctx.send(": ")
             local row, col = ctx.row(), ctx.col()
             ctx.send(",")
             ctx.move(row, col)
