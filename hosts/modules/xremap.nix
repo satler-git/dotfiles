@@ -8,6 +8,7 @@
   ];
 
   services.xremap = {
+    enable = true;
     serviceMode = "system";
     config = {
       modmap = [
