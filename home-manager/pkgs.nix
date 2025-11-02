@@ -9,7 +9,7 @@ with pkgs;
   # audacity
   # aider-chat-full
   # android-studio
-  aria
+  aria2
   audio-sharing
 
   # blender
