@@ -121,6 +121,7 @@ with pkgs;
   watchman
   webcord-vencord
   wget
+  wxmaxima
 
   xh
 
