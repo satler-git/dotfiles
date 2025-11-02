@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 {
   home.packages = [
-    (inputs.sunsetr.packages.${pkgs.system}.sunsetr.overrideAttrs {
+    (inputs.sunsetr.packages.${pkgs.stdenv.hostPlatform.system}.sunsetr.overrideAttrs {
       doCheck = false;
     })
   ];

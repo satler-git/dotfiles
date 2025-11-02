@@ -39,7 +39,7 @@
   environment.systemPackages =
     with pkgs;
     [
-      inputs.disko.packages.${pkgs.system}.default
+      inputs.disko.packages.${pkgs.stdenv.hostPlatform.system}.default
 
       alacritty
     ]

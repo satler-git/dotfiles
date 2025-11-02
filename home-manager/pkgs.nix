@@ -43,7 +43,7 @@ with pkgs;
   gnumake
   gnutar
   go-task
-  graalvm-ce
+  graalvmPackages.graalvm-ce
   gst_all_1.gst-plugins-bad
   gst_all_1.gst-plugins-base
   gst_all_1.gst-plugins-ugly

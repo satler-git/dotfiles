@@ -62,7 +62,7 @@ in
     xwayland-satellite
     swww
     nirius
-    inputs.myniri.packages.${pkgs.system}.default
+    inputs.myniri.packages.${pkgs.stdenv.hostPlatform.system}.default
     hyprpicker
   ];
 
