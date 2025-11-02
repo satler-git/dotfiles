@@ -5,7 +5,7 @@
   ...
 }:
 let
-  inherit (inputs.cargo-compete.packages.${pkgs.system}) cargo-compete;
+  inherit (inputs.cargo-compete.packages.${pkgs.stdenv.hostPlatform.system}) cargo-compete;
   cargo-nightly =
     toolchain:
     pkgs.stdenv.mkDerivation {

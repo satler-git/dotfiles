@@ -7,14 +7,9 @@
   programs.git = {
     enable = true;
     lfs.enable = true;
-    userEmail = "satler@satler.dev";
-    userName = "satler";
     signing = {
       signByDefault = true;
       key = "1DB0252A735D5BAC";
-    };
-    delta = {
-      enable = true;
     };
     ignores = [
       ".env"
@@ -23,11 +18,11 @@
       "memo.md"
       ".goosehints"
     ];
-    aliases = {
-      s = "status";
-      d = "diff";
-    };
-    extraConfig = {
+    settings = {
+      user = {
+        email = "satler@satler.dev";
+        name = "satler";
+      };
       core = {
         editor = "nvim";
       };
@@ -37,8 +32,18 @@
       commit.template = "~/.gitmessage";
       ghq.root = "~/repos";
 
+      alias = {
+        s = "status";
+        d = "diff";
+      };
+
       github.user = "satler-git"; # magit
     };
+  };
+
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
   };
 
   programs.lazygit = {
