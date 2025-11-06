@@ -19,10 +19,12 @@ in
       {
         name = "hyprsunset: reset";
         command = "hyprctl hyprsunset identity";
+        show_if = "[ \"$XDG_CURRENT_DESKTOP\" = \"hyprland\" ]";
       }
       {
         name = "hyprsunset: sunset";
         command = "hyprctl hyprsunset temperature 2500";
+        show_if = "[ \"$XDG_CURRENT_DESKTOP\" = \"hyprland\" ]";
       }
       {
         name = "Take a screen capture (Select, Wayland)";
@@ -31,6 +33,7 @@ in
       {
         name = "Take a screen capture (Active Window, Hyprland)";
         command = writeShellScript "screen-capture-window" "hyprctl -j activewindow | jq -r '\"\\(.at[0]),\\(.at[1]) \\(.size[0])x\\(.size[1])\"' | grim -g - - | wl-copy; dunstify \"A winwdow screenshot is copied!\"";
+        show_if = "[ \"$XDG_CURRENT_DESKTOP\" = \"hyprland\" ]";
       }
       (sunsetr_preset "day")
       (sunsetr_preset "default")
