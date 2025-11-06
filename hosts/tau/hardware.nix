@@ -45,10 +45,12 @@
           {
             name = "light: Increase by 10";
             command = "light -A 10";
+            show_if = "[ \"$XDG_CURRENT_DESKTOP\" = \"hyprland\" ]";
           }
           {
             name = "light: Decrease by 10";
             command = "light -U 10";
+            show_if = "[ \"$XDG_CURRENT_DESKTOP\" = \"hyprland\" ]";
           }
           {
             name = "Open Bluetooth Manager";
