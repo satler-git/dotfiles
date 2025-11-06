@@ -44,8 +44,5 @@
     neovim = prev.neovim.override ({
       stdenv = final.useMoldLinker final.clangStdenv;
     });
-    yazi-unwrapped = prev.yazi-unwrapped.override ({
-      stdenv = final.useMoldLinker final.clangStdenv;
-    });
   };
 }
