@@ -60,26 +60,6 @@ return {
           insx.with.filetype({ "rust" }),
         })
       )
-
-      insx.add(
-        ": ",
-        insx.with({
-          enabled = par({
-            "trait_bounds",
-            "type_arguments",
-            "type_parameters",
-            "where_clause",
-          }),
-          action = function(ctx)
-            local row, col = ctx.row(), ctx.col()
-            ctx.send(",")
-            ctx.move(row, col)
-          end,
-          priority = 1000,
-        }, {
-          insx.with.filetype({ "rust" }),
-        })
-      )
     end,
   },
 }
