@@ -46,4 +46,17 @@ return {
     opts = {},
     cmd = { "Neoconf" },
   },
+  {
+    "bassamsdata/namu.nvim",
+    opts = {
+      global = {},
+      namu_symbols = { -- Specific Module options
+        options = {},
+      },
+    },
+    keys = {
+      { "<Space>ss", ":Namu symbols<cr>", { desc = "Jump to LSP symbol", silent = true } },
+      { "<Space>sw", ":Namu workspace<cr>", { desc = "LSP Symbols - Workspace", silent = true } },
+    },
+  },
 }
