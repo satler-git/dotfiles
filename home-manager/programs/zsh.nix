@@ -145,6 +145,8 @@
         dev = "nix develop";
         p = "pushd";
         pq = "popd";
+        da = "direnv allow";
+        dr = "direnv revoke";
       };
     };
   };
