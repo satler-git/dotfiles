@@ -10,13 +10,13 @@ with pkgs;
   # aider-chat-full
   # android-studio
   aria2
-  audio-sharing
+  # audio-sharing
 
   # blender
   bottom
 
   # calibre
-  charm-freeze
+  # charm-freeze
   # claude-code
   # code-cursor
 
@@ -36,7 +36,7 @@ with pkgs;
   foliate
   fzf
 
-  gg-jj
+  # gg-jj
   gh
   ghq
   gimp
@@ -58,7 +58,7 @@ with pkgs;
   jq
 
   # kicad
-  koreader
+  # koreader
   krita
 
   lnav
@@ -88,12 +88,13 @@ with pkgs;
 
   smartmontools
   spotify
+  sops
 
   teip
   tetrio-desktop
   thunderbird
   # todoist
-  todoist-electron
+  # todoist-electron
   trash-cli
   tre-command
   typos
@@ -128,7 +129,7 @@ with pkgs;
   yazi
 
   zip
-  zoom-us
+  # zoom-us
   zotero
   zoxide
 ]

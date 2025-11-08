@@ -4,9 +4,9 @@ let
 in
 {
   home.packages = with pkgs; [
-    haskellPackages.tidal
-    supercollider-with-sc3-plugins
-    superdirt-install
+    # haskellPackages.tidal
+    # supercollider-with-sc3-plugins
+    # superdirt-install
   ];
 
   xdg.configFile."SuperCollider/startup.scd" = {
