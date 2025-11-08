@@ -10,6 +10,8 @@
     ./fonts.nix
   ];
 
+  security.soteria.enable = lib.mkDefault true;
+
   hardware.graphics = {
     enable = lib.mkDefault true;
   };
