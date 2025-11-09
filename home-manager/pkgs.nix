@@ -9,6 +9,7 @@ with pkgs;
   # audacity
   # aider-chat-full
   # android-studio
+  amp-cli
   aria2
   # audio-sharing
 
