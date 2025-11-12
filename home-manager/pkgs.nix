@@ -23,6 +23,7 @@ with pkgs;
   d2
   deno
   delta
+  discord
   duckdb
   duf
   dust
@@ -120,7 +121,6 @@ with pkgs;
   # wireshark
   wakatime-cli
   watchman
-  webcord-vencord
   wget
   wxmaxima
 
