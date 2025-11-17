@@ -57,6 +57,7 @@ return {
           "sand",
           "ocaml",
           "ocaml_interface",
+          "python",
         },
         highlight = { enable = true },
         indent = { enable = true },
