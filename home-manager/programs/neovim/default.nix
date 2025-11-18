@@ -57,6 +57,7 @@ in
         biome
         typescript-language-server
         vtsls
+        ruff
 
         dart
 

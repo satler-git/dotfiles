@@ -49,4 +49,6 @@ vim.lsp.enable({
   "biome",
   "ts_ls",
   "vtsls",
+
+  "ruff",
 })
