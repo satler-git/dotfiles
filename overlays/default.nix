@@ -35,10 +35,17 @@
       ;
   };
 
-  # temporary-fix = final: prev: {
-  #   inherit (inputs.nixpkgs-unstable-small.legacyPackages.${final.stdenv.hostPlatform.system})
-  #     ;
-  # };
+  latest = final: prev: {
+    inherit
+      (import inputs.nixpkgs-unstable-small {
+        config = {
+          allowUnfree = true;
+        };
+        system = final.stdenv.hostPlatform.system;
+      })
+      antigravity
+      ;
+  };
 
   mold = final: prev: {
     neovim = prev.neovim.override ({
