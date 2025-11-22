@@ -35,6 +35,14 @@ in
         command = writeShellScript "screen-capture-window" "hyprctl -j activewindow | jq -r '\"\\(.at[0]),\\(.at[1]) \\(.size[0])x\\(.size[1])\"' | grim -g - - | wl-copy; dunstify \"A winwdow screenshot is copied!\"";
         show_if = "[ \"$XDG_CURRENT_DESKTOP\" = \"hyprland\" ]";
       }
+      {
+        name = "Enable Airplane Mode";
+        command = "rfkill block all";
+      }
+      {
+        name = "Disable Airplane Mode";
+        command = "rfkill unblock all";
+      }
       (sunsetr_preset "day")
       (sunsetr_preset "default")
     ];
