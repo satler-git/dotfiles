@@ -51,4 +51,5 @@ vim.lsp.enable({
   "vtsls",
 
   "ruff",
+  "unison",
 })

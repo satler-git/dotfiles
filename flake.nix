@@ -64,6 +64,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nixpkgs-stable.follows = "nixpkgs-stable";
     };
+    unison-lang = {
+      url = "github:ceedubs/unison-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # packages (not in nixpkgs)
     cargo-compete = {
@@ -143,14 +147,17 @@
     let
       system = "x86_64-linux";
 
-      overlays = [
-        inputs.fenix.overlays.default
-        inputs.neovim-nightly-overlay.overlays.default
-        (_: prev: {
-          osu-lazer-bin = inputs.nix-gaming.packages.${prev.system}.osu-lazer-bin;
-        })
-      ]
-      ++ nixpkgs.lib.attrValues self.overlays;
+      overlays =
+        with inputs;
+        [
+          fenix.overlays.default
+          neovim-nightly-overlay.overlays.default
+          unison-lang.overlay
+          (final: _: {
+            osu-lazer-bin = nix-gaming.packages.${final.stdenv.hostPlatform.system}.osu-lazer-bin;
+          })
+        ]
+        ++ nixpkgs.lib.attrValues self.overlays;
 
       pkgs = import nixpkgs {
         config = {
@@ -238,6 +245,7 @@
 
           # mics
           nvfetcher
+          node2nix
           go-task
         ];
       };

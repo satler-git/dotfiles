@@ -6,6 +6,9 @@
 }:
 with pkgs;
 [
+  inputs.isd.packages.${system}.default
+  inputs.sand.packages.${system}.default
+
   # audacity
   # aider-chat-full
   # android-studio
@@ -55,8 +58,6 @@ with pkgs;
   imagemagick
   imhex
   inkscape
-  inputs.isd.packages.${system}.default
-  inputs.sand.packages.${system}.default
 
   jq
 
@@ -105,6 +106,7 @@ with pkgs;
   typst-live
 
   ueberzugpp
+  unison-ucm
   unzip
 
   # osu-lazer-bin
