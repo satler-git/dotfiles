@@ -28,7 +28,6 @@ with pkgs;
   d2
   deno
   delta
-  discord
   duckdb
   duf
   dust
@@ -120,6 +119,7 @@ with pkgs;
   hledger
   hyperfine
 
+  vesktop
   vlc
 
   # wireshark
