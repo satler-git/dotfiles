@@ -41,6 +41,8 @@ with pkgs;
   foliate
   fzf
 
+  julia-bin
+
   # gg-jj
   gh
   ghq

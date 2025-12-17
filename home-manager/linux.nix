@@ -33,6 +33,7 @@ in
     sessionPath = [
       "${homeDirectory}/.cargo/bin"
       "${homeDirectory}/.julia/bin"
+      "${homeDirectory}/.local/bin"
     ];
 
     packages =

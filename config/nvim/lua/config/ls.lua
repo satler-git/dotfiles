@@ -52,4 +52,6 @@ vim.lsp.enable({
 
   "ruff",
   "unison",
+
+  "jetls",
 })

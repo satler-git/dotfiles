@@ -58,6 +58,7 @@ return {
           "ocaml",
           "ocaml_interface",
           "python",
+          "julia",
         },
         highlight = { enable = true },
         indent = { enable = true },

@@ -21,6 +21,7 @@ return {
           tsx = { "biome" },
           typescript = { "biome" },
           typst = { "typstyle" },
+          julia = { "runic" },
           -- keep-sorted end
         },
         format_on_save = {
