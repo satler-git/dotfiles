@@ -188,12 +188,12 @@ let
 in
 {
   programs.emacs = {
-    enable = true;
+    # enable = true;
     package = emacsPkg;
   };
 
   services.emacs = {
-    enable = true;
+    # enable = true;
     package = emacsPkg;
     client.enable = true;
   };
