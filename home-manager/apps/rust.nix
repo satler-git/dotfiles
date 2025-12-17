@@ -63,7 +63,7 @@ in
   home.packages = with pkgs; [
     # faster compiling
     clang
-    mold-wrapped
+    mold
     sccache
 
     # standard rust compiler(rustc and cargo and tools(rustfmt, cargo-clippy, ...))

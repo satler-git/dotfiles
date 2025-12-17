@@ -70,20 +70,11 @@ in
     enable = true;
     systemdTarget = "niri.service";
 
-    events = [
-      {
-        event = "before-sleep";
-        command = "pidof hyprlock || hyprlock";
-      }
-      {
-        event = "lock";
-        command = "loginctl lock-session";
-      }
-      {
-        event = "after-resume";
-        command = "niri msg action power-on-monitors";
-      }
-    ];
+    events = {
+      "before-sleep" = "pidof hyprlock || hyprlock";
+      "lock" = "loginctl lock-session";
+      "after-resume" = "niri msg action power-on-monitors";
+    };
 
     timeouts = [
       {
