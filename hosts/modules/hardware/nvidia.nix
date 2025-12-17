@@ -77,6 +77,6 @@ in
       };
   };
 
-  services.ollama.acceleration = lib.mkDefault "cuda";
+  services.ollama.package = lib.mkForce pkgs.ollama-cuda;
   services.xserver.videoDrivers = lib.mkBefore [ "nvidia" ];
 }
