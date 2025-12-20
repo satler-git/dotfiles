@@ -60,6 +60,15 @@ return {
           insx.with.filetype({ "rust" }),
         })
       )
+
+      insx.add(
+        "$",
+        insx.with(require("insx.recipe.auto_pair")({ open = "$", close = "$" }), {
+          insx.with.in_string(false),
+          insx.with.in_comment(false),
+          insx.with.filetype({ "typst" }),
+        })
+      )
     end,
   },
 }
