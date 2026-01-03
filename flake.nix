@@ -23,8 +23,6 @@
     xremap = {
       url = "github:xremap/nix-flake";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.treefmt-nix.follows = "treefmt-nix";
-      inputs.home-manager.follows = "home-manager";
       inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware";
@@ -81,10 +79,6 @@
     };
     yurf = {
       url = "github:satler-git/yurf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    aagl = {
-      url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     sand = {
