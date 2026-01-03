@@ -21,6 +21,7 @@
     # keep-sorted start
     firefox.enable = true;
     hyprland.enable = true;
+    immersed.enable = true;
     light.enable = true;
     localsend.enable = true;
     niri.enable = true;
