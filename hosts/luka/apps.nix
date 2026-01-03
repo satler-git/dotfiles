@@ -1,8 +1,6 @@
-{ lib, inputs, ... }:
+{ lib, ... }:
 {
   imports = [
-    inputs.aagl.nixosModules.default
-
     # keep-sorted start
     # ../modules/apps/dropbox.nix
     ../modules/apps/hoogle.nix
@@ -44,6 +42,5 @@
       remotePlay.openFirewall = true;
       enable = true;
     };
-    sleepy-launcher.enable = true;
   };
 }

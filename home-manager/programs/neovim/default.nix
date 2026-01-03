@@ -80,7 +80,7 @@ in
 
         cargo-nextest # neotest-rust
 
-        tree-sitter
+        # tree-sitter
       ]
       ++ [
         # testing-language-server
