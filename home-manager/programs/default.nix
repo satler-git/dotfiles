@@ -10,7 +10,7 @@
     ./gtk.nix
     ./halloy.nix
     ./hyprland
-    ./i3
+    # ./i3
     ./jujutsu.nix
     ./kalker.nix
     ./keybase.nix
