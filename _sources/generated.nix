@@ -29,26 +29,26 @@
   };
   yazi-compress = {
     pname = "yazi-compress";
-    version = "c9c16d8eb3d8f15bea5d58419229529921c58c94";
+    version = "e6007f7c3f364cdb7146f5b6b282790948fb0bd6";
     src = fetchFromGitHub {
       owner = "KKV9";
       repo = "compress.yazi";
-      rev = "c9c16d8eb3d8f15bea5d58419229529921c58c94";
+      rev = "e6007f7c3f364cdb7146f5b6b282790948fb0bd6";
       fetchSubmodules = false;
-      sha256 = "sha256-tllxA9rlyQGuFHMMhoTjjAAJImsCTAgawBd3c9ZGzMU=";
+      sha256 = "sha256-m5FfN2gnTHsbwP2aYaE+K6kNGfAC7HBVtCyy6HzNRrE=";
     };
-    date = "2026-01-05";
+    date = "2026-01-10";
   };
   yazi-plugins = {
     pname = "yazi-plugins";
-    version = "03cdd4b5b15341b3c0d0f4c850d633fadd05a45f";
+    version = "75f6f7276fadf306597c2d2b4e264335fa0937cf";
     src = fetchFromGitHub {
       owner = "yazi-rs";
       repo = "plugins";
-      rev = "03cdd4b5b15341b3c0d0f4c850d633fadd05a45f";
+      rev = "75f6f7276fadf306597c2d2b4e264335fa0937cf";
       fetchSubmodules = false;
-      sha256 = "sha256-5dMAJ6W/L66XuH4CCwRRFpKSLy0ZDFIABAYleFX0AsQ=";
+      sha256 = "sha256-iiV6WSLdc7LPjXr+DRwVKzgJr+0Z8hO2eil5cdAgW4g=";
     };
-    date = "2026-01-03";
+    date = "2026-01-12";
   };
 }
