@@ -30,7 +30,6 @@
 
   programs = {
     # keep-sorted start
-    adb.enable = true;
     firefox.enable = true;
     hyprland.enable = true;
     localsend.enable = true;
