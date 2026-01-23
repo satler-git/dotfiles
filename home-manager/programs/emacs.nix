@@ -151,7 +151,7 @@ let
       pest-ide-tools
 
       # Formatter
-      nixfmt-rfc-style
+      nixfmt
       rustfmt
       stylish-haskell
       stylua

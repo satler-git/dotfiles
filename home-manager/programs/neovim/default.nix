@@ -65,7 +65,7 @@ in
 
         # Formatter
         biome
-        nixfmt-rfc-style
+        nixfmt
         rustfmt
         stylish-haskell
         stylua

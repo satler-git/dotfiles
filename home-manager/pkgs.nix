@@ -78,7 +78,7 @@ with pkgs;
   nix-output-monitor
   nix-update
   nix-your-shell
-  nixfmt-rfc-style
+  nixfmt
   nomacs
   numbat
 
