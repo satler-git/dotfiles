@@ -1,6 +1,7 @@
 {
   inputs,
   lib,
+  pkgs,
   ...
 }:
 {
@@ -11,6 +12,14 @@
 
     inputs.nixos-hardware.nixosModules.lenovo-thinkpad-e14-amd
   ];
+
+  hardware.graphics = {
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      libva
+      libva-vdpau-driver
+    ];
+  };
 
   services.logind.settings.Login.HandleLidSwitch = "suspend"; # default
 
