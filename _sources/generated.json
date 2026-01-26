@@ -1,6 +1,6 @@
 {
     "typst-preview": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2025-08-12",
         "extract": null,
         "name": "typst-preview",
@@ -21,7 +21,7 @@
         "version": "4f3decb8d9b85b1a06b0dfbd0fccaa0d2d2c24b4"
     },
     "typst-ts-mode": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2024-12-07",
         "extract": null,
         "name": "typst-ts-mode",
@@ -41,8 +41,8 @@
         "version": "1367003e2ad55a2f6f9e43178584683028ab56e9"
     },
     "yazi-compress": {
-        "cargoLocks": null,
-        "date": "2026-01-10",
+        "cargoLock": null,
+        "date": "2026-01-24",
         "extract": null,
         "name": "yazi-compress",
         "passthru": null,
@@ -54,16 +54,16 @@
             "name": null,
             "owner": "KKV9",
             "repo": "compress.yazi",
-            "rev": "e6007f7c3f364cdb7146f5b6b282790948fb0bd6",
-            "sha256": "sha256-m5FfN2gnTHsbwP2aYaE+K6kNGfAC7HBVtCyy6HzNRrE=",
+            "rev": "cb6e8ec0141915dc319ccd6b904dcd2f03502576",
+            "sha256": "sha256-D/EpcRDIc3toeyjHqi+vGw0v9B22HVvKJua5EVEAc0U=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "e6007f7c3f364cdb7146f5b6b282790948fb0bd6"
+        "version": "cb6e8ec0141915dc319ccd6b904dcd2f03502576"
     },
     "yazi-plugins": {
-        "cargoLocks": null,
-        "date": "2026-01-18",
+        "cargoLock": null,
+        "date": "2026-01-26",
         "extract": null,
         "name": "yazi-plugins",
         "passthru": null,
@@ -75,11 +75,11 @@
             "name": null,
             "owner": "yazi-rs",
             "repo": "plugins",
-            "rev": "de339764c315059014245a8f5245298a2d29f7e3",
-            "sha256": "sha256-60xxQZlXsKs7F/TJdRkhgZpTXas6rUvJUb0rvwZIozo=",
+            "rev": "e07bf41442a7f6fdd003069f380e1ae469a86211",
+            "sha256": "sha256-aC8DUZpzNHEf9MW3tX3XcDYY/mWClAHkw+nZaxDQHp8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "de339764c315059014245a8f5245298a2d29f7e3"
+        "version": "e07bf41442a7f6fdd003069f380e1ae469a86211"
     }
 }
