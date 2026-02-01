@@ -200,6 +200,18 @@ in
           y = 10;
         };
       }
+      {
+        matches = [
+          {
+            app-id = "chromium-browser";
+          }
+        ];
+
+        open-floating = true;
+
+        default-column-width.fixed = 300;
+        default-window-height.fixed = 300;
+      }
     ];
 
     layer-rules = [
