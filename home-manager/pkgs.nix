@@ -70,8 +70,9 @@ with pkgs;
   lnav
 
   # mindustry-wayland
-  mission-center
   maxima
+  mission-center
+  moonlight-qt
   mpv
 
   nix-init
