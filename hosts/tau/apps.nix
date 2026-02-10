@@ -28,4 +28,7 @@
     steam.enable = true;
     # keep-sorted end
   };
+
+  virtualisation.waydroid.enable = true;
+  networking.nftables.enable = true;
 }
