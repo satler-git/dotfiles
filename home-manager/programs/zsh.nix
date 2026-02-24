@@ -94,7 +94,7 @@
         __zoxide_z "$@"
       }
 
-      eval $(opam env)
+      [[ ! -r '/home/satler/.opam/opam-init/init.zsh' ]] || source '/home/satler/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
     '';
     plugins = [
       {
