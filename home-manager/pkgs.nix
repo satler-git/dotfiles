@@ -67,6 +67,7 @@ with pkgs;
   # koreader
   krita
 
+  libreoffice
   lnav
 
   # mindustry-wayland
