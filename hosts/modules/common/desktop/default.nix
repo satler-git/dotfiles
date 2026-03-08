@@ -34,6 +34,7 @@
         fcitx5-gtk
         fcitx5-mozc-ut
         fcitx5-tokyonight
+        fcitx5-skk
       ];
       waylandFrontend = true;
 

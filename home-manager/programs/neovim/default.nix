@@ -3,7 +3,7 @@ let
   dicts_lua = ''
     -- SKKELETON's JISYO
     vim.fn['skkeleton#config']({
-      globalDictionaries = {'${pkgs.skkDictionaries.l}/share/skk/SKK-JISYO.L'},
+      globalDictionaries = {'~/.skk/SKK-JISYO.L'},
       eggLikeNewline = true,
     })
   '';
@@ -13,7 +13,7 @@ let
 in
 {
   imports = [
-    # ./neovide.nix
+    ./neovide.nix
   ];
 
   programs.neovim = {
@@ -133,5 +133,9 @@ in
         }
       );
     };
+  };
+
+  home.file = {
+    ".skk/SKK-JISYO.L".source = "${pkgs.skkDictionaries.l}/share/skk/SKK-JISYO.L";
   };
 }
