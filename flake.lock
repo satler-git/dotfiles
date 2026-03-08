@@ -502,6 +502,24 @@
         "type": "github"
       }
     },
+    "flake-utils_2": {
+      "inputs": {
+        "systems": "systems_6"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "fromYaml": {
       "flake": false,
       "locked": {
@@ -1637,6 +1655,7 @@
         "treefmt-nix": "treefmt-nix",
         "unison-lang": "unison-lang",
         "xremap": "xremap",
+        "yazi": "yazi",
         "yurf": "yurf"
       }
     },
@@ -1742,6 +1761,27 @@
       }
     },
     "rust-overlay_5": {
+      "inputs": {
+        "nixpkgs": [
+          "yazi",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1772420823,
+        "narHash": "sha256-q3oVwz1Rx41D1D+F6vg41kpOkk3Zi3KwnkHEZp7DCGs=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "458eea8d905c609e9d889423e6b8a1c7bc2f792c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "rust-overlay_6": {
       "inputs": {
         "nixpkgs": [
           "yurf",
@@ -1961,6 +2001,21 @@
       }
     },
     "systems_5": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_6": {
       "locked": {
         "lastModified": 1681028828,
         "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
@@ -2310,6 +2365,28 @@
         "type": "github"
       }
     },
+    "yazi": {
+      "inputs": {
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay_5"
+      },
+      "locked": {
+        "lastModified": 1772869527,
+        "narHash": "sha256-U0E3U2Iu3JeQFbTQ+vclG2jZMoJl+rJdEa68I8qk4Eg=",
+        "owner": "sxyazi",
+        "repo": "yazi",
+        "rev": "741f84e22b2c360366c685724d45cbec6d90b480",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sxyazi",
+        "repo": "yazi",
+        "type": "github"
+      }
+    },
     "yurf": {
       "inputs": {
         "crane": "crane_5",
@@ -2317,7 +2394,7 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "rust-overlay": "rust-overlay_5"
+        "rust-overlay": "rust-overlay_6"
       },
       "locked": {
         "lastModified": 1762600418,

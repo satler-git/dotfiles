@@ -104,6 +104,11 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    yazi = {
+      url = "github:sxyazi/yazi";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
@@ -116,6 +121,7 @@
       "https://nix-gaming.cachix.org"
       "https://numtide.cachix.org"
       "https://satler.cachix.org"
+      "https://yazi.cachix.org"
     ];
 
     extra-trusted-public-keys = [
@@ -127,6 +133,7 @@
       "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
       "numtide.cachix.org-1:2ps1kLBUWjxIneOy1Ik6cQjb41X0iXVXeHigGmycPPE="
       "satler.cachix.org-1:qPh5WfP6bZGq/dGK4DsoYRfZqbDAxPwO9l8v+x+ET04="
+      "yazi.cachix.org-1:Dcdz63NZKfvUCbDGngQDAZq6kOroIrFoyO064uvLh8k="
     ];
   };
 
@@ -147,6 +154,7 @@
           fenix.overlays.default
           neovim-nightly-overlay.overlays.default
           unison-lang.overlay
+          yazi.overlays.default
           (final: _: {
             osu-lazer-bin = nix-gaming.packages.${final.stdenv.hostPlatform.system}.osu-lazer-bin;
           })
