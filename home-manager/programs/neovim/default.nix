@@ -3,7 +3,7 @@ let
   dicts_lua = ''
     -- SKKELETON's JISYO
     vim.fn['skkeleton#config']({
-      globalDictionaries = {'~/.skk/SKK-JISYO.L'},
+      globalDictionaries = {'~/.skk/SKK-JISYO.L', '~/.skk/SKK-JISYO.pinyin'},
       eggLikeNewline = true,
     })
   '';
@@ -137,5 +137,6 @@ in
 
   home.file = {
     ".skk/SKK-JISYO.L".source = "${pkgs.skkDictionaries.l}/share/skk/SKK-JISYO.L";
+    ".skk/SKK-JISYO.pinyin".source = "${pkgs.skkDictionaries.pinyin}/share/skk/SKK-JISYO.pinyin";
   };
 }
