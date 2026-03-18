@@ -9,7 +9,7 @@ with pkgs;
   inputs.isd.packages.${system}.default
   inputs.sand.packages.${system}.default
 
-  # audacity
+  audacity
   # aider-chat-full
   # android-studio
   antigravity
@@ -94,6 +94,7 @@ with pkgs;
   protonplus
   pympress
 
+  shotcut
   smartmontools
   spotify
   sops
@@ -127,7 +128,7 @@ with pkgs;
   vesktop
   vlc
 
-  # wireshark
+  wireshark
   wakatime-cli
   watchman
   wget
