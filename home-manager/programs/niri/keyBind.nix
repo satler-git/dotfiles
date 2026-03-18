@@ -258,6 +258,9 @@ in
   "Mod+Shift+R".action.reset-window-height = { };
   "Mod+F".action.maximize-column = { };
   "Mod+Shift+F".action.fullscreen-window = { };
+  "Mod+Alt+F".action.toggle-windowed-fullscreen = { };
+  "Mod+Ctrl+F".action.maximize-window-to-edges = { };
+
   "Mod+Shift+C".action.center-column = { };
 
   # Finer width adjustments.

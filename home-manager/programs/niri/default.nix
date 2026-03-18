@@ -212,6 +212,18 @@ in
         default-column-width.fixed = 300;
         default-window-height.fixed = 300;
       }
+      {
+        matches = [
+          {
+            app-id = "steam_app_238960";
+          }
+          {
+            app-id = "steam_app_238960";
+          }
+        ];
+
+        open-fullscreen = true;
+      }
     ];
 
     layer-rules = [
