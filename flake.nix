@@ -247,7 +247,6 @@
 
           # mics
           nvfetcher
-          node2nix
           go-task
         ];
       };
