@@ -21,6 +21,8 @@
     ];
   };
 
+  hardware.acpilight.enable = true;
+
   services.logind.settings.Login.HandleLidSwitch = "suspend"; # default
 
   services.thinkfan.enable = true;
@@ -52,12 +54,12 @@
       programs.yurf = {
         task = [
           {
-            name = "light: Increase by 10";
-            command = "light -A 10";
+            name = "brightnessctl: Increase by 10";
+            command = "brightnessctl s +10";
           }
           {
-            name = "light: Decrease by 10";
-            command = "light -U 10";
+            name = "brightnessctl: Decrease by 10";
+            command = "brightnessctl s -10";
           }
           {
             name = "Open Bluetooth Manager";

@@ -19,6 +19,7 @@ with pkgs;
 
   # blender
   bottom
+  brightnessctl
 
   # calibre
   # charm-freeze
