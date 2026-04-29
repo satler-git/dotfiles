@@ -1,4 +1,4 @@
-{ osConfig, ... }:
+{ osConfig, lib, ... }:
 {
   programs.halloy = {
     enable = true;
@@ -55,7 +55,7 @@
         move_right = "alt+l";
       };
 
-      font.family = "IBM Plex Sans JP";
+      font.family = lib.mkForce "IBM Plex Sans JP";
     };
   };
 }
