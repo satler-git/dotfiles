@@ -21,7 +21,8 @@
   ];
 
   wayland.windowManager.hyprland = {
-    enable = true;
+    enable = false;
+    configType = "hyprlang";
     xwayland.enable = true;
   };
 

@@ -21,6 +21,8 @@ in
     package = pkgs.neovim;
     defaultEditor = true;
     viAlias = true;
+    withRuby = true;
+    withPython3 = true;
     # vimAlias = true;
     extraPackages =
       with pkgs;
