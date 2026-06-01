@@ -116,6 +116,7 @@ with pkgs;
   unzip
 
   # osu-lazer-bin
+  opencode
 
   rdfind
   ripgrep
