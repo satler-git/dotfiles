@@ -27,7 +27,7 @@
   };
 
   services.hypridle = {
-    enable = true;
+    enable = false;
 
     settings = {
       general = {
@@ -55,7 +55,7 @@
   };
 
   my.services.hyprsunset = {
-    enable = true;
+    enable = false;
     autoSwitch.enable = false;
   };
 
