@@ -5,6 +5,9 @@
   ...
 }:
 with pkgs;
+let
+  system = pkgs.stdenv.hostPlatform.system;
+in
 [
   inputs.isd.packages.${system}.default
   inputs.sand.packages.${system}.default

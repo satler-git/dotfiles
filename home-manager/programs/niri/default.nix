@@ -43,9 +43,9 @@ let
   wallpaper = [
     "sh"
     "-c"
-    "swww-daemon"
+    "awww-daemon"
     "&&"
-    "swww"
+    "awww"
     "img"
     config.stylix.image
   ];
@@ -60,7 +60,7 @@ in
 
   home.packages = with pkgs; [
     xwayland-satellite
-    swww
+    awww
     nirius
     inputs.myniri.packages.${pkgs.stdenv.hostPlatform.system}.default
     hyprpicker
@@ -231,7 +231,7 @@ in
         matches = [
           { namespace = "^wallpaper$"; }
           { namespace = "^hyprpaper$"; }
-          { namespace = "^swww-daemon$"; }
+          { namespace = "^awww-daemon$"; }
         ];
         place-within-backdrop = true;
       }
