@@ -58,6 +58,7 @@ in
           "waybar"
           "wpaperd"
           "zellij"
+          "qt"
         ]
       );
   };
