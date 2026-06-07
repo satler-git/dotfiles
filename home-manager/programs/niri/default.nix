@@ -41,13 +41,13 @@ let
     "clipse"
   ];
   wallpaper = [
-    "sh"
-    "-c"
     "awww-daemon"
-    "&&"
+  ];
+  wallpaper-set = [
     "awww"
     "img"
     config.stylix.image
+
   ];
 in
 {
@@ -137,6 +137,8 @@ in
       }
       { command = [ "niriusd" ]; }
       { command = [ "sunsetr" ]; }
+      { command = wallpaper; }
+      { command = wallpaper-set; }
     ];
     environment = {
       XCURSOR_THEME = "Bibata-Modern-Ice";
