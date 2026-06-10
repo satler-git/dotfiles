@@ -40,9 +40,6 @@ let
     "-e"
     "clipse"
   ];
-  wallpaper = [
-    "awww-daemon"
-  ];
   wallpaper-set = [
     "awww"
     "img"
@@ -97,6 +94,8 @@ in
   programs.niri.enable = true;
   programs.niri.package = pkgs.niri;
 
+  services.awww.enable = true;
+
   programs.niri.settings = {
     binds = defaultKeyBind // {
       "Mod+Return".action.spawn = terminal;
@@ -137,7 +136,6 @@ in
       }
       { command = [ "niriusd" ]; }
       { command = [ "sunsetr" ]; }
-      { command = wallpaper; }
       { command = wallpaper-set; }
     ];
     environment = {
