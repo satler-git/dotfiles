@@ -5,6 +5,6 @@
     cursorTheme = {
       name = "Bibata-Modern-Ice";
     };
-    gtk4.theme = config.gtk.theme;
+    # gtk4.theme = config.gtk.theme;
   };
 }
