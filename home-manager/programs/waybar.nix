@@ -1,6 +1,6 @@
 {
   programs.waybar = {
-    enable = true;
+    enable = false;
     systemd.enable = true;
     style = builtins.readFile ../../config/waybar/style.css;
     settings = {

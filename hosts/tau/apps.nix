@@ -3,6 +3,7 @@
   imports = [
     # keep-sorted start
     # ../modules/apps/dropbox.nix
+    ../modules/apps/dms-shell.nix
     ../modules/apps/i3.nix
     ../modules/apps/podman.nix
     ../modules/apps/tailscale.nix
