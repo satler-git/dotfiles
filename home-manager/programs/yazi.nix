@@ -33,7 +33,7 @@ in
     settings = {
       open.prepend_rules = [
         {
-          name = "*.html";
+          url = "*.html";
           use = [
             "open"
             "edit"
