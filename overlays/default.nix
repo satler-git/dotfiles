@@ -1,37 +1,46 @@
 { inputs }:
 {
-  stable = final: _: {
-    inherit
-      (import inputs.nixpkgs-stable {
+  stable = final: _:
+    let
+      stablePkgs = import inputs.nixpkgs-stable {
         config = {
           allowUnfree = true;
         };
         system = final.stdenv.hostPlatform.system;
-      })
-      blender
-      epson-escpr
-      epson-escpr2
-      gutenprint
-      kicad
+      };
+    in
+    {
+      inherit (stablePkgs)
+        blender
+        epson-escpr
+        epson-escpr2
+        gutenprint
+        kicad
 
-      open-webui
-      reversal-icon-theme
+        open-webui
+        reversal-icon-theme
 
-      biome
+        biome
 
-      kalker
+        kalker
 
-      pympress
+        pympress
 
-      # deno # 2.3.5 crashes, denops
+        # deno # 2.3.5 crashes, denops
 
-      waybar
+        waybar
 
-      gimp
+        gimp
 
-      prismlauncher
-      ;
-  };
+        prismlauncher
+        ;
+
+      # Pin neovim to stable. Provide the *unwrapped* build as `neovim`
+      # (mirroring neovim-nightly-overlay's convention) so that home-manager's
+      # wrapNeovimUnstable — which expects an unwrapped neovim with a `.lua`
+      # passthru — wraps the stable neovim-unwrapped instead of the nightly one.
+      neovim = stablePkgs.neovim-unwrapped;
+    };
 
   latest = final: prev: {
     inherit
@@ -46,9 +55,9 @@
       ;
   };
 
-  mold = final: prev: {
-    neovim = prev.neovim.override ({
-      stdenv = final.useMoldLinker final.clangStdenv;
-    });
-  };
+  # mold = final: prev: {
+  #   neovim = prev.neovim.override ({
+  #     stdenv = final.useMoldLinker final.clangStdenv;
+  #   });
+  # };
 }

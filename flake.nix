@@ -152,7 +152,7 @@
         with inputs;
         [
           fenix.overlays.default
-          neovim-nightly-overlay.overlays.default
+          # neovim-nightly-overlay.overlays.default
           unison-lang.overlay
           yazi.overlays.default
           (final: _: {
