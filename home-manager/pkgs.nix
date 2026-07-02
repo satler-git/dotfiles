@@ -15,8 +15,6 @@ in
   audacity
   # aider-chat-full
   # android-studio
-  antigravity
-  amp-cli
   aria2
   # audio-sharing
 
@@ -72,7 +70,6 @@ in
   krita
 
   libreoffice
-  lnav
 
   # mindustry-wayland
   maxima
@@ -95,7 +92,6 @@ in
   playerctl
   podman-compose
   prismlauncher
-  protonplus
   pympress
 
   shotcut
@@ -104,8 +100,6 @@ in
   sops
 
   teip
-  tetrio-desktop
-  thunderbird
   # todoist
   # todoist-electron
   trash-cli
@@ -130,7 +124,6 @@ in
   hledger
   hyperfine
 
-  vesktop
   vlc
 
   wireshark
