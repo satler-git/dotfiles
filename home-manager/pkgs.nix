@@ -11,6 +11,7 @@ in
 [
   inputs.isd.packages.${system}.default
   inputs.sand.packages.${system}.default
+  inputs.herdr.packages.${system}.herdr
 
   audacity
   # aider-chat-full
