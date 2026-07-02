@@ -69,7 +69,7 @@ in
 
     events = {
       "before-sleep" = "pidof hyprlock || hyprlock";
-      "lock" = "loginctl lock-session";
+      "lock" = "pidof hyprlock || hyprlock";
       "after-resume" = "niri msg action power-on-monitors";
     };
 

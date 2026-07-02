@@ -12,6 +12,13 @@
 
   security.soteria.enable = lib.mkDefault true;
 
+  # loginctl lock-session で hyprlock が起動するために必要
+  # (PAM サービスが登録され、ロック解除時のパスワード認証が正しく動く)
+  # ただし programs.hyprlock.enable は services.hypridle.enable も自動で有効にするので、
+  # swayidle と競合しないよう明示的に無効化する
+  programs.hyprlock.enable = lib.mkDefault true;
+  services.hypridle.enable = lib.mkForce false;
+
   hardware.graphics = {
     enable = lib.mkDefault true;
   };
