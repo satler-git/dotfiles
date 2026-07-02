@@ -72,6 +72,10 @@
           "--insert-after"
           "@"
         ];
+        nm = [
+          "new"
+          "main"
+        ];
         s = [ "squash" ];
         p = [ "push" ];
         r = [ "rebase" ];
