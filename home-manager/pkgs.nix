@@ -30,6 +30,7 @@ in
   d2
   deno
   delta
+  devin-cli
   duckdb
   duf
   dust
