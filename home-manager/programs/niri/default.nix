@@ -51,7 +51,7 @@ in
   imports = [
     inputs.niri-flake.homeModules.niri
     inputs.niri-flake.homeModules.stylix # Default
-    ../waybar.nix
+    # ../waybar.nix
     ../wayland.nix
   ];
 
