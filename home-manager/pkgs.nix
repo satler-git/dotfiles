@@ -110,7 +110,7 @@ in
   typst-live
 
   ueberzugpp
-  unison-ucm
+  inputs.unison-lang.packages.${system}.ucm-bin
   unzip
 
   # osu-lazer-bin

@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    libsForQt5.xp-pen-deco-01-v2-driver
-    xp-pen-g430-driver
+    xppen_3
+    xppen_4
   ];
 }

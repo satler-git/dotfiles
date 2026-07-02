@@ -27,7 +27,7 @@
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.4.3";
+      url = "github:nix-community/lanzaboote/v1.1.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     disko = {
@@ -153,7 +153,9 @@
         [
           fenix.overlays.default
           # neovim-nightly-overlay.overlays.default
-          unison-lang.overlay
+          # unison-lang.overlay は tree-sitter.override { extraGrammars = ... } を使い、
+          # nixos-unstable の tree-sitter では extraGrammars が削除されているため外した。
+          # unison-ucm は pkgs.nix で inputs.unison-lang.packages.${system}.ucm-bin を直接参照する。
           yazi.overlays.default
           (final: _: {
             osu-lazer-bin = nix-gaming.packages.${final.stdenv.hostPlatform.system}.osu-lazer-bin;
