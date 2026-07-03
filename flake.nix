@@ -39,6 +39,10 @@
       url = "github:nix-community/disko/latest";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-wsl = {
+      url = "github:nix-community/NixOS-WSL";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Overlays
     tidalcycles = {
@@ -235,6 +239,21 @@
               nixpkgs.pkgs = pkgs;
             }
             ./hosts/installer
+          ];
+        };
+        lukaw = nixpkgs.lib.nixosSystem {
+          # NixOS-WSL
+          system = "x86_64-linux";
+          specialArgs = {
+            inherit inputs self;
+          };
+
+          modules = [
+            {
+              nixpkgs.pkgs = pkgs;
+            }
+            ./hosts/lukaw
+            home-manager.nixosModules.home-manager
           ];
         };
       };
