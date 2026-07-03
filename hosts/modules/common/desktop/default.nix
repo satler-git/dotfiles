@@ -79,6 +79,17 @@
   security.rtkit.enable = true;
 
   environment = {
+    systemPackages = with pkgs; [
+      # DMS (Quickshell) がトレイアイコンを解決するにはアイコンテーマが
+      # XDG_DATA_DIRS に存在し、かつ gsettings でシステムテーマ名が取得できる必要がある。
+      # - gsettings-desktop-schemas: org.gnome.desktop.interface schema を提供 (DMS が icon-theme を検出するのに必要)
+      # - reversal-icon-theme: blueman-tray, application-exit, view-refresh などのアイコンを提供 (dark background 用)
+      # - adwaita-icon-theme: Reversal-dark が Inherits する symbolic アイコン (input-keyboard-symbolic, bluetooth-symbolic 等) を提供
+      gsettings-desktop-schemas
+      reversal-icon-theme
+      adwaita-icon-theme
+    ];
+
     sessionVariables = {
       QT_IM_MODULE = "${config.i18n.inputMethod.type}";
     };
