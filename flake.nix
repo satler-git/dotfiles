@@ -12,6 +12,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-on-droid = {
+      url = "github:nix-community/nix-on-droid";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
     stylix = {
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -146,6 +151,7 @@
       self,
       nixpkgs,
       home-manager,
+      nix-on-droid,
       treefmt-nix,
       ...
     }@inputs:
@@ -232,6 +238,25 @@
           ];
         };
       };
+
+      nixOnDroidConfigurations.upsilon =
+        let
+          system = "aarch64-linux";
+          droidPkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+            overlays = [
+              nix-on-droid.overlays.default
+            ];
+          };
+        in
+        nix-on-droid.lib.nixOnDroidConfiguration {
+          pkgs = droidPkgs;
+          modules = [ ./hosts/upsilon ];
+          extraSpecialArgs = {
+            inherit inputs self;
+          };
+        };
 
       formatter.x86_64-linux = treefmtEval.config.build.wrapper;
 
