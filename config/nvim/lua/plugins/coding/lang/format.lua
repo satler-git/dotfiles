@@ -14,6 +14,7 @@ return {
           haskell = { "stylish-haskell" },
           javascript = { "biome" },
           json = { "biome" },
+          julia = { "runic" },
           lua = { "stylua" },
           nix = { "nixfmt" },
           rust = { "rustfmt", lsp_format = "fallback" },
@@ -21,7 +22,6 @@ return {
           tsx = { "biome" },
           typescript = { "biome" },
           typst = { "typstyle" },
-          julia = { "runic" },
           -- keep-sorted end
         },
         format_on_save = {

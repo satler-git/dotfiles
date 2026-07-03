@@ -1,6 +1,7 @@
 { inputs }:
 {
-  stable = final: _:
+  stable =
+    final: _:
     let
       stablePkgs = import inputs.nixpkgs-stable {
         config = {
