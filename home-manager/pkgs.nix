@@ -104,6 +104,7 @@ in
   teip
   # todoist
   # todoist-electron
+  tirith
   trash-cli
   tre-command
   typos

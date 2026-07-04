@@ -53,6 +53,11 @@
         nix-your-shell zsh | source /dev/stdin
       fi
 
+      # tirith
+      if command -v tirith > /dev/null; then
+        eval "$(tirith init --shell zsh)"
+      fi
+
       # https://zenn.dev/yuys13/articles/fish-plugins-2025
       __list_directory_contents () {
         if [[ -o interactive ]]; then
