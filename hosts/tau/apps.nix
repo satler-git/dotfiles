@@ -1,4 +1,4 @@
-# { ... }:
+{ lib, ... }:
 {
   imports = [
     # keep-sorted start
@@ -6,6 +6,7 @@
     ../modules/apps/dms-shell.nix
     ../modules/apps/i3.nix
     ../modules/apps/mosh.nix
+    ../modules/apps/openssh.nix
     ../modules/apps/podman.nix
     ../modules/apps/tailscale.nix
     # keep-sorted end
@@ -17,6 +18,8 @@
 
   services.tailscale = {
     useRoutingFeatures = "both";
+    # mosh は通常の SSH でネゴシエーションするため Tailscale SSH を無効化
+    extraUpFlags = lib.mkForce [ ];
   };
 
   programs = {
