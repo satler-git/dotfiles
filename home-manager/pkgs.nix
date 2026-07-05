@@ -87,6 +87,7 @@ in
   nomacs
   numbat
 
+  onlyoffice-desktopeditors
   opam
 
   p7zip
