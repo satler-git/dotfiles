@@ -3,6 +3,7 @@
   imports = [
     # keep-sorted start
     # ../modules/apps/dropbox.nix
+    ../modules/apps/battery-warn.nix
     ../modules/apps/dms-shell.nix
     ../modules/apps/i3.nix
     ../modules/apps/mosh.nix
@@ -15,6 +16,8 @@
   my.openFirewall = false;
 
   # my.services.dropbox.enable = true;
+
+  my.services.batteryWarn.enable = true;
 
   services.tailscale = {
     useRoutingFeatures = "both";
