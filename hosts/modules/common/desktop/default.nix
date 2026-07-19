@@ -12,6 +12,8 @@
 
   security.soteria.enable = lib.mkDefault true;
 
+  programs.firefox.nativeMessagingHosts.packages = [ pkgs.kdePackages.plasma-browser-integration ];
+
   # loginctl lock-session で hyprlock が起動するために必要
   # (PAM サービスが登録され、ロック解除時のパスワード認証が正しく動く)
   # ただし programs.hyprlock.enable は services.hypridle.enable も自動で有効にするので、

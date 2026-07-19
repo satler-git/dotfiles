@@ -1,11 +1,9 @@
 {
-  osConfig,
-  lib,
   ...
 }:
 {
   services.kdeconnect = {
-    enable = lib.mkDefault (osConfig.programs.kdeconnect.enable or false);
+    enable = true;
     indicator = true;
   };
 }
