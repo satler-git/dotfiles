@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 let
   dicts_lua = ''
     -- SKKELETON's JISYO
@@ -18,7 +18,7 @@ in
 
   programs.neovim = {
     enable = true;
-    package = pkgs.neovim;
+    package = inputs.neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.default;
     defaultEditor = true;
     viAlias = true;
     withRuby = true;
@@ -82,7 +82,7 @@ in
 
         cargo-nextest # neotest-rust
 
-        # tree-sitter
+        tree-sitter
       ]
       ++ [
         # testing-language-server

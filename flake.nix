@@ -170,7 +170,7 @@
         with inputs;
         [
           fenix.overlays.default
-          # neovim-nightly-overlay.overlays.default
+          neovim-nightly-overlay.overlays.default
           # unison-lang.overlay は tree-sitter.override { extraGrammars = ... } を使い、
           # nixos-unstable の tree-sitter では extraGrammars が削除されているため外した。
           # unison-ucm は pkgs.nix で inputs.unison-lang.packages.${system}.ucm-bin を直接参照する。

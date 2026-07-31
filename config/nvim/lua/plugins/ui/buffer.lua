@@ -32,6 +32,6 @@ return {
       },
     },
     opts = { preserve_window_layout = { "this" } },
-    version = "^1.0.0",
+    version = false,
   },
 }
