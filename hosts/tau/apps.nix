@@ -39,12 +39,14 @@
   networking = {
     nftables.enable = true;
     firewall = {
+      allowedTCPPorts = [ 3939 ];
       allowedTCPPortRanges = [
         {
           from = 1714;
           to = 1764;
         }
       ];
+      allowedUDPPorts = [ 3939 ];
       allowedUDPPortRanges = [
         {
           from = 1714;
