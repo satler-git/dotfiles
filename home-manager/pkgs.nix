@@ -45,6 +45,8 @@ in
   foliate
   fzf
 
+  gamescope
+
   julia-bin
 
   # gg-jj
@@ -72,6 +74,7 @@ in
   krita
 
   libreoffice
+  lutris
 
   # mindustry-wayland
   maxima
