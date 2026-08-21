@@ -80,6 +80,7 @@ in
   maxima
   mission-center
   moonlight-qt
+  mo-viewer
   mpv
 
   nix-init
