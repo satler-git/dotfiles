@@ -42,7 +42,7 @@
     },
     "yazi-compress": {
         "cargoLock": null,
-        "date": "2026-05-15",
+        "date": "2026-08-22",
         "extract": null,
         "name": "yazi-compress",
         "passthru": null,
@@ -54,16 +54,16 @@
             "name": null,
             "owner": "KKV9",
             "repo": "compress.yazi",
-            "rev": "e60e122e565e7c4798ef22767eb363428dc6704e",
-            "sha256": "sha256-yts/LCDpCH9cH1pY6Im/UpCQDCyzjhSGDZfGpQDdEZc=",
+            "rev": "80e5268ec74c7ac17d4d739e13a9958cba4c70d3",
+            "sha256": "sha256-9cdA8D/TtwHcLqrtoyIixA0YJmTs+c8FSNrjxp8CYI0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "e60e122e565e7c4798ef22767eb363428dc6704e"
+        "version": "80e5268ec74c7ac17d4d739e13a9958cba4c70d3"
     },
     "yazi-plugins": {
         "cargoLock": null,
-        "date": "2026-08-17",
+        "date": "2026-08-24",
         "extract": null,
         "name": "yazi-plugins",
         "passthru": null,
@@ -75,11 +75,11 @@
             "name": null,
             "owner": "yazi-rs",
             "repo": "plugins",
-            "rev": "3d25b6705fb1fb7967dfe393cf1b4a2926ebc40b",
-            "sha256": "sha256-vEm2AO1tEHnsX93LlxBytjFFNnwpnoZd86WiVQf67BU=",
+            "rev": "044c3cc290a2b2ea931b54e65b9bdc83baa6f1c3",
+            "sha256": "sha256-A5iWqkjbdXcuVOh0mLpA8Hlum3xaZJ8GgqBdxM4qfJY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "3d25b6705fb1fb7967dfe393cf1b4a2926ebc40b"
+        "version": "044c3cc290a2b2ea931b54e65b9bdc83baa6f1c3"
     }
 }
