@@ -80,21 +80,19 @@ return {
       })
 
       -- Ensure all desired parsers are installed (no-op when already installed).
-      require("nvim-treesitter")
-        .install(parsers)
-        :await(function(err)
-          if err then
-            return
-          end
+      require("nvim-treesitter").install(parsers):await(function(err)
+        if err then
+          return
+        end
 
-          -- Apply treesitter to buffers that were loaded before the parsers
-          -- became available (e.g. the first buffer at startup).
-          for _, buf in ipairs(vim.api.nvim_list_bufs()) do
-            if vim.api.nvim_buf_is_loaded(buf) then
-              enable_ts(buf)
-            end
+        -- Apply treesitter to buffers that were loaded before the parsers
+        -- became available (e.g. the first buffer at startup).
+        for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+          if vim.api.nvim_buf_is_loaded(buf) then
+            enable_ts(buf)
           end
-        end)
+        end
+      end)
     end,
   },
   {

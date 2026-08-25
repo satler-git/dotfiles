@@ -18,34 +18,32 @@ in
 
   home.stateVersion = "24.05"; # Don't change this
 
-  home.packages =
-    with pkgs;
-    [
-      # basic CLI
-      bat
-      bottom
-      curl
-      delta
-      direnv
-      eza
-      fd
-      fzf
-      gh
-      ghq
-      git
-      gnumake
-      htop
-      jq
-      nix-output-monitor
-      nix-your-shell
-      ripgrep
-      tmux
-      tree
-      unzip
-      wget
-      zip
-      zoxide
-    ];
+  home.packages = with pkgs; [
+    # basic CLI
+    bat
+    bottom
+    curl
+    delta
+    direnv
+    eza
+    fd
+    fzf
+    gh
+    ghq
+    git
+    gnumake
+    htop
+    jq
+    nix-output-monitor
+    nix-your-shell
+    ripgrep
+    tmux
+    tree
+    unzip
+    wget
+    zip
+    zoxide
+  ];
 
   programs.git = {
     enable = true;
@@ -128,36 +126,34 @@ in
     viAlias = true;
     withRuby = true;
     withPython3 = true;
-    extraPackages =
-      with pkgs;
-      [
-        gcc # for Tree-sitter
-        nodejs
-        deno
-        sqlite
-        sqlite.dev
+    extraPackages = with pkgs; [
+      gcc # for Tree-sitter
+      nodejs
+      deno
+      sqlite
+      sqlite.dev
 
-        # Lang-servers
-        efm-langserver
-        typos-lsp
-        lua-language-server
-        nil
-        taplo # Toml
-        vscode-langservers-extracted
-        yaml-language-server
-        biome
-        typescript-language-server
-        vtsls
-        ruff
-        tinymist # For typst
+      # Lang-servers
+      efm-langserver
+      typos-lsp
+      lua-language-server
+      nil
+      taplo # Toml
+      vscode-langservers-extracted
+      yaml-language-server
+      biome
+      typescript-language-server
+      vtsls
+      ruff
+      tinymist # For typst
 
-        # Formatter
-        biome
-        nixfmt
-        rustfmt
-        stylua
-        typstyle
-      ];
+      # Formatter
+      biome
+      nixfmt
+      rustfmt
+      stylua
+      typstyle
+    ];
     extraLuaPackages = ps: [
       ps.jsregexp
     ];

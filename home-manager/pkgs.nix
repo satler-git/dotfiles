@@ -106,6 +106,8 @@ in
   spotify
   sops
 
+  takusu-cli
+  takusu-desktop
   teip
   # todoist
   # todoist-electron

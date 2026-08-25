@@ -126,6 +126,11 @@
       url = "github:getpaseo/paseo";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    takusu = {
+      url = "github:takusu-dev/takusu";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
@@ -175,6 +180,7 @@
           # nixos-unstable の tree-sitter では extraGrammars が削除されているため外した。
           # unison-ucm は pkgs.nix で inputs.unison-lang.packages.${system}.ucm-bin を直接参照する。
           yazi.overlays.default
+          takusu.overlays.default
           (final: _: {
             osu-lazer-bin = nix-gaming.packages.${final.stdenv.hostPlatform.system}.osu-lazer-bin;
           })

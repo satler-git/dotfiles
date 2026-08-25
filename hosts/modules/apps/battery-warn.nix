@@ -48,7 +48,12 @@ in
           pkgs.writers.writeBash "battery-warn" ''
             set -euo pipefail
 
-            PATH="${lib.makeBinPath [ cfg.notifyPackage pkgs.coreutils ]}:$PATH"
+            PATH="${
+              lib.makeBinPath [
+                cfg.notifyPackage
+                pkgs.coreutils
+              ]
+            }:$PATH"
 
             state_dir="''${XDG_STATE_HOME:-$HOME/.local/state}/battery-warn"
             mkdir -p "$state_dir"
