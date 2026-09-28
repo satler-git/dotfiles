@@ -63,7 +63,7 @@
     },
     "yazi-plugins": {
         "cargoLock": null,
-        "date": "2026-09-18",
+        "date": "2026-09-29",
         "extract": null,
         "name": "yazi-plugins",
         "passthru": null,
@@ -75,11 +75,11 @@
             "name": null,
             "owner": "yazi-rs",
             "repo": "plugins",
-            "rev": "f703392df78b5fba5e8f9f1ad0b1cb6d3def9736",
-            "sha256": "sha256-O1yYAhsf7xMqUrTTSLac06WSxCvUQqedH3DWqGwn/Ok=",
+            "rev": "e0f8f6f335b10107a657477978baa345da820c3e",
+            "sha256": "sha256-9AcARIHIRtKnVShXRmlM/qf+JSQnFGuDOAWZK8ab3Jo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "f703392df78b5fba5e8f9f1ad0b1cb6d3def9736"
+        "version": "e0f8f6f335b10107a657477978baa345da820c3e"
     }
 }
