@@ -190,6 +190,9 @@
       pkgs = import nixpkgs {
         config = {
           allowUnfree = true;
+          permittedInsecurePackages = [
+            "firefox-esr-140-bin-unwrapped-140.17.0esr"
+          ];
         };
         inherit system;
         inherit overlays;
