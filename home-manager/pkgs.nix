@@ -101,6 +101,7 @@ in
   prismlauncher
   pympress
 
+  scribus
   shotcut
   smartmontools
   spotify
