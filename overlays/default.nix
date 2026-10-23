@@ -56,6 +56,31 @@
       ;
   };
 
+  mozc-build = final: prev: {
+    mozc = prev.mozc.overrideAttrs (old: {
+      postPatch = (old.postPatch or "") + ''
+        for ui in src/gui/dictionary_tool/dictionary_tool.ui \
+                  gui/dictionary_tool/dictionary_tool.ui; do
+          if [ -f "$ui" ]; then
+            substituteInPlace "$ui" \
+              --replace '::mozc::gui::DictionaryContentTableWidget' \
+                        'mozc::gui::DictionaryContentTableWidget'
+          fi
+        done
+      '';
+    });
+  };
+
+  pyrate-limiter = final: prev: {
+    python3 = prev.python3.override {
+      packageOverrides = pyfinal: pyprev: {
+        "pyrate-limiter" = pyprev."pyrate-limiter".overridePythonAttrs (_: {
+          doCheck = false;
+        });
+      };
+    };
+  };
+
   # mold = final: prev: {
   #   neovim = prev.neovim.override ({
   #     stdenv = final.useMoldLinker final.clangStdenv;
