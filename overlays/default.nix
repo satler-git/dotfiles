@@ -12,6 +12,8 @@
     in
     {
       inherit (stablePkgs)
+        audacity
+
         blender
         epson-escpr
         epson-escpr2
