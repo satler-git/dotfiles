@@ -13,6 +13,9 @@ in
   inputs.sand.packages.${system}.default
   inputs.herdr.packages.${system}.herdr
 
+  _1password-gui
+  _1password-cli
+
   audacity
   # aider-chat-full
   # android-studio
