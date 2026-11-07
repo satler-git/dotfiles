@@ -30,8 +30,11 @@ in
   # charm-freeze
   # claude-code
   # code-cursor
+  chatgpt
+  codex
 
   d2
+  deepseek-harness
   deno
   delta
   devin-cli
@@ -127,8 +130,6 @@ in
   unzip
 
   # osu-lazer-bin
-  opencode
-
   rdfind
   ripgrep
   ripgrep-all
