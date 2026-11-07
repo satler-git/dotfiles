@@ -114,12 +114,6 @@
       kernelModules = [ ];
 
       # luks.fido2Support = true;
-
-      systemd = {
-        enable = true;
-        tpm2.enable = true;
-        fido2.enable = true;
-      };
     };
 
     kernelModules = [ "kvm-amd" ];

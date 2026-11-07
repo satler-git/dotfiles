@@ -28,7 +28,7 @@
   programs = {
     # keep-sorted start
     firefox.enable = true;
-    hyprland.enable = true;
+    # hyprland.enable = true;
     localsend.enable = true;
     niri.enable = true;
     steam.enable = true;

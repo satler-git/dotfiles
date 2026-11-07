@@ -9,7 +9,7 @@ let
   system = pkgs.stdenv.hostPlatform.system;
 in
 [
-  inputs.isd.packages.${system}.default
+  # inputs.isd.packages.${system}.default
   inputs.sand.packages.${system}.default
   inputs.herdr.packages.${system}.herdr
 
@@ -111,7 +111,7 @@ in
   sops
 
   takusu-cli
-  takusu-desktop
+  # takusu-desktop
   teip
   # todoist
   # todoist-electron

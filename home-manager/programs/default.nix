@@ -9,7 +9,7 @@
     ./git.nix
     ./gtk.nix
     ./halloy.nix
-    ./hyprland
+    # ./hyprland
     # ./i3
     ./jujutsu.nix
     ./kalker.nix

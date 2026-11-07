@@ -4,7 +4,7 @@
     ./dunst.nix
     ./fcitx5.nix
     ./kdeconnect.nix
-    ./takusu.nix
+    # ./takusu.nix
     # keep-sorted end
   ];
 }
