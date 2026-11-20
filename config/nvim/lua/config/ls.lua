@@ -43,7 +43,6 @@ vim.lsp.enable({
   "lua_ls",
   "nil_ls",
   "tinymist",
-  "sandls",
   "ocamllsp",
 
   "astro",

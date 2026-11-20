@@ -24,8 +24,4 @@
       ];
     };
   };
-
-  home.packages = with pkgs; [
-    keybase-gui
-  ];
 }

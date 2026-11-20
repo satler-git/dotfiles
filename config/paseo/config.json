@@ -1,14 +1,5 @@
 {
   "agents": {
-    "providers": {
-      "devin": {
-        "extends": "acp",
-        "label": "Devin CLI",
-        "command": [
-          "devin",
-          "acp"
-        ]
-      }
-    }
+    "providers": {}
   }
 }

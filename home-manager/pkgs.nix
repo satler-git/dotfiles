@@ -10,7 +10,6 @@ let
 in
 [
   # inputs.isd.packages.${system}.default
-  inputs.sand.packages.${system}.default
   inputs.herdr.packages.${system}.herdr
 
   _1password-gui
@@ -39,7 +38,6 @@ in
   deepseek-harness
   deno
   delta
-  devin-cli
   duckdb
   duf
   dust

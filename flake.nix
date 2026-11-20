@@ -90,12 +90,6 @@
       url = "github:satler-git/yurf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    sand = {
-      url = "github:satler-git/sand-markup";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.treefmt-nix.follows = "treefmt-nix";
-      inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
-    };
     myniri = {
       url = "github:satler-git/myniri";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -114,10 +108,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    yazi = {
-      url = "github:sxyazi/yazi";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     herdr = {
       url = "github:ogulcancelik/herdr";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -179,7 +169,6 @@
           # unison-lang.overlay は tree-sitter.override { extraGrammars = ... } を使い、
           # nixos-unstable の tree-sitter では extraGrammars が削除されているため外した。
           # unison-ucm は pkgs.nix で inputs.unison-lang.packages.${system}.ucm-bin を直接参照する。
-          yazi.overlays.default
           takusu.overlays.default
           (final: _: {
             osu-lazer-bin = nix-gaming.packages.${final.stdenv.hostPlatform.system}.osu-lazer-bin;

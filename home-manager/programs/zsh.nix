@@ -16,7 +16,6 @@
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
       source <(jj util completion zsh)
-      source <(sand completions zsh)
       source <(niri completions zsh)
     '';
     initContent = ''

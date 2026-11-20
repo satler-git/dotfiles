@@ -1,6 +1,8 @@
 { pkgs, ... }:
 {
   home.packages = [
-    pkgs.neovide
+    (pkgs.neovide.overrideAttrs (_: {
+      doCheck = false;
+    }))
   ];
 }

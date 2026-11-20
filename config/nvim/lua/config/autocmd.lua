@@ -20,7 +20,6 @@ two_space("sh")
 
 vim.filetype.add({
   extension = {
-    sand = "sand",
     pest = "pest",
     hujson = "json5",
   },

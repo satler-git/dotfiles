@@ -3,31 +3,6 @@ return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     lazy = false,
-    init = function()
-      -- Register the custom `sand` parser every time nvim-treesitter reloads
-      -- the parser table (during TSInstall / TSUpdate).
-      vim.api.nvim_create_autocmd("User", {
-        pattern = "TSUpdate",
-        callback = function()
-          require("nvim-treesitter.parsers").sand = {
-            install_info = {
-              url = "https://github.com/satler-git/sand-markup",
-              branch = "main",
-              location = "tree-sitter",
-              queries = "queries/sand",
-            },
-            filetype = "sand",
-          }
-        end,
-      })
-
-      -- Make Neovim aware of the `sand` filetype and parser.
-      vim.filetype.add({
-        extension = { sand = "sand" },
-        filename = { ["README.sand"] = "sand" },
-      })
-      vim.treesitter.language.register("sand", "sand")
-    end,
     config = function()
       local parsers = {
         "elixir",
@@ -57,7 +32,6 @@ return {
         "yaml",
         "gitignore",
         "gitcommit",
-        "sand",
         "ocaml",
         "ocaml_interface",
         "python",
