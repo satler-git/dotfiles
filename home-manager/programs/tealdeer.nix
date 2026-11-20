@@ -3,7 +3,9 @@
     enable = true;
     settings = {
       style = {
-        foreground = "cyan";
+        description = {
+          foreground = "cyan";
+        };
         example_text = {
           foreground = "blue";
         };

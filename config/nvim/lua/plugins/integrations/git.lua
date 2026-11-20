@@ -4,7 +4,6 @@ return {
     version = "*",
     config = function()
       require("gitsigns").setup()
-      require("scrollbar.handlers.gitsigns").setup()
     end,
     event = { "BufReadPost", "BufWritePost", "BufNewFile" },
   },

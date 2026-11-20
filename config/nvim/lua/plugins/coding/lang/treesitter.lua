@@ -2,7 +2,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    event = { "VeryLazy" },
+    lazy = false,
     init = function()
       -- Register the custom `sand` parser every time nvim-treesitter reloads
       -- the parser table (during TSInstall / TSUpdate).

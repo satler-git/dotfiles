@@ -65,7 +65,7 @@ in
 
   services.swayidle = {
     enable = true;
-    systemdTarget = "niri.service";
+    systemdTargets = [ "niri.service" ];
 
     events = {
       "before-sleep" = "pidof hyprlock || hyprlock";

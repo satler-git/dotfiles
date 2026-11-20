@@ -2,5 +2,5 @@ return {
   settings = {
     rootMarkers = { ".git/", ".jj/" },
   },
-  filetypes = { "rust", "yaml" },
+  filetypes = { "rust", "yaml", "dockerfile", "sh" },
 }

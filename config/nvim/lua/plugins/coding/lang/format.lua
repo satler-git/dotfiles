@@ -10,17 +10,20 @@ return {
         formatters_by_ft = {
           -- keep-sorted start
           astro = { "biome" },
+          c = { "clang_format" },
+          cpp = { "clang_format" },
           dart = { "dart_format" },
           haskell = { "stylish-haskell" },
           javascript = { "biome" },
+          javascriptreact = { "biome" },
           json = { "biome" },
           julia = { "runic" },
           lua = { "stylua" },
           nix = { "nixfmt" },
           rust = { "rustfmt", lsp_format = "fallback" },
           toml = { "taplo" },
-          tsx = { "biome" },
           typescript = { "biome" },
+          typescriptreact = { "biome" },
           typst = { "typstyle" },
           -- keep-sorted end
         },

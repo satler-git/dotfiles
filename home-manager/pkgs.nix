@@ -16,6 +16,7 @@ in
   _1password-gui
   _1password-cli
 
+  ac-library
   audacity
   # aider-chat-full
   # android-studio
@@ -31,6 +32,7 @@ in
   # claude-code
   # code-cursor
   chatgpt
+  clang-tools # clangd, clang-format, clang-tidy
   codex
 
   d2

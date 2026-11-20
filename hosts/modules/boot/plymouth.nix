@@ -8,8 +8,6 @@
       "udev.log_level=3"
     ];
 
-    initrd.verbose = lib.mkForce false;
-
     plymouth = {
       enable = lib.mkDefault true;
       themePackages =

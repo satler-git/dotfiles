@@ -35,6 +35,7 @@ vim.lsp.enable({
   "taplo",
 
   "dartls",
+  "clangd",
   "buf_ls",
   "rust_analyzer",
   "pest_ls",
@@ -47,7 +48,6 @@ vim.lsp.enable({
 
   "astro",
   "biome",
-  "ts_ls",
   "vtsls",
 
   "ruff",

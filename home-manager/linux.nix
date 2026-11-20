@@ -27,6 +27,7 @@ in
     stateVersion = "24.05";
 
     sessionVariables = {
+      CPLUS_INCLUDE_PATH = "${pkgs.ac-library}/include";
       PODMAN_COMPOSE_WARNING_LOGS = "false";
     };
 

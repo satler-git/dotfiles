@@ -23,6 +23,12 @@ in
     viAlias = true;
     withRuby = true;
     withPython3 = true;
+    extraWrapperArgs = [
+      "--prefix"
+      "CPLUS_INCLUDE_PATH"
+      ":"
+      "${pkgs.ac-library}/include"
+    ];
     # vimAlias = true;
     extraPackages =
       with pkgs;
@@ -36,6 +42,7 @@ in
         haskellPackages.fast-tags
 
         # Lang-servers
+        clang-tools # clangd and clang-format
         efm-langserver
 
         typos-lsp
@@ -57,7 +64,6 @@ in
 
         astro-language-server
         biome
-        typescript-language-server
         vtsls
         ruff
 
@@ -66,7 +72,6 @@ in
         pest-ide-tools
 
         # Formatter
-        biome
         nixfmt
         rustfmt
         stylish-haskell
@@ -122,7 +127,6 @@ in
     "nvim/lua/extra.lua" = {
       text = ''
         vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.so'
-        vim.g.cpptools_path = "${pkgs.vscode-extensions.ms-vscode.cpptools}/share/vscode/extensions/ms-vscode.cpptools/debugAdapters/bin/OpenDebugAD7"
         vim.g.astro_tsdk = "${pkgs.astro-language-server}/lib/astro-language-server/node_modules/typescript/lib"
       '';
       # vim.g.denops_server_addr = "${denops_server_addr}:${toString denops_server_port}"
