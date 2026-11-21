@@ -83,7 +83,7 @@ in
               if [ -n "$capacity" ] && [ -n "$status" ]; then
                 charging=0
                 case "$status" in
-                  Charging|Full|Not charging) charging=1 ;;
+                  Charging|Full|"Not charging") charging=1 ;;
                 esac
 
                 if [ "$charging" -eq 0 ] && [ "$capacity" -le "$threshold" ]; then
