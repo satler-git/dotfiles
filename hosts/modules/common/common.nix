@@ -28,6 +28,14 @@ in
       git.enable = true;
       neovim.enable = true;
       zsh.enable = true;
+
+      # 1Password のデスクトップアプリ連携 (op が GUI と通信する経路) は、
+      # 接続元プロセスの effective GID が onepassword-cli グループであることを
+      # SO_PEERCRED で検証する。素の `_1password-cli` では GID が users のままなので
+      # アプリ側が "invalid group attempted to connect" で接続を切る。
+      # このモジュールが onepassword-cli グループ (GID 31002) の作成と
+      # /run/wrappers/bin/op (setgid) を用意する。
+      _1password.enable = true;
     };
 
     time.timeZone = "Asia/Tokyo";

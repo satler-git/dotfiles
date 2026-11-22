@@ -13,7 +13,8 @@ in
   inputs.herdr.packages.${system}.herdr
 
   _1password-gui
-  _1password-cli
+  # _1password-cli は programs._1password がシステム側で入れる
+  # (setgid ラッパー経由でないと GUI 連携が動かないため)
 
   ac-library
   audacity

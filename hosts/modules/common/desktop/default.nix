@@ -14,6 +14,19 @@
 
   programs.firefox.nativeMessagingHosts.packages = [ pkgs.kdePackages.plasma-browser-integration ];
 
+  # 1Password ブラウザ拡張のネイティブメッセージングホスト。
+  # GUI 側も接続元の effective GID が onepassword グループかどうかを SO_PEERCRED で
+  # 検証するため、1Password-BrowserSupport は setgid ラッパー経由で起動させる。
+  # (アプリが生成する NMH マニフェストは既に /run/wrappers/bin/1Password-BrowserSupport を指す)
+  users.groups.onepassword.gid = config.ids.gids.onepassword;
+  security.wrappers."1Password-BrowserSupport" = {
+    source = "${pkgs._1password-gui}/share/1password/1Password-BrowserSupport";
+    owner = "root";
+    group = "onepassword";
+    setgid = true;
+    setuid = false;
+  };
+
   # loginctl lock-session で hyprlock が起動するために必要
   # (PAM サービスが登録され、ロック解除時のパスワード認証が正しく動く)
   # ただし programs.hyprlock.enable は services.hypridle.enable も自動で有効にするので、
