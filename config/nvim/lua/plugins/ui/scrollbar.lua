@@ -1,7 +1,6 @@
 return {
   "petertriho/nvim-scrollbar",
-  -- v2 moves to main on 2026-11-16; use its published branch in the meantime.
-  branch = "refactor/v2",
+  -- v2 replaced v1 on main on 2026-11-18, so no branch pin is needed.
   event = "UIEnter",
   dependencies = { "lewis6991/gitsigns.nvim" },
   opts = {
