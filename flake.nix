@@ -34,6 +34,8 @@
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v1.1.0";
       inputs.nixpkgs.follows = "nixpkgs";
+      # 古い rust-overlay ピンによる stdenv.isLinux/isDarwin の deprecation warning を避ける。
+      inputs.rust-overlay.follows = "rust-overlay";
     };
     disko = {
       url = "github:nix-community/disko/latest";
@@ -66,6 +68,10 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     niri-flake = {
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -89,12 +95,17 @@
     yurf = {
       url = "github:satler-git/yurf";
       inputs.nixpkgs.follows = "nixpkgs";
+      # yurf の rust-overlay ピンは stdenv.isLinux/isDarwin を使う古い版で、
+      # 評価時に deprecated warning が出るため最新の rust-overlay に追従させる。
+      inputs.rust-overlay.follows = "rust-overlay";
     };
     myniri = {
       url = "github:satler-git/myniri";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.treefmt-nix.follows = "treefmt-nix";
       inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
+      # 古い rust-overlay ピンによる stdenv.isLinux/isDarwin の deprecation warning を避ける。
+      inputs.rust-overlay.follows = "rust-overlay";
     };
 
     sunsetr = {
@@ -111,6 +122,8 @@
     herdr = {
       url = "github:ogulcancelik/herdr";
       inputs.nixpkgs.follows = "nixpkgs";
+      # 古い rust-overlay ピンによる stdenv.isLinux/isDarwin の deprecation warning を避ける。
+      inputs.rust-overlay.follows = "rust-overlay";
     };
     paseo = {
       url = "github:getpaseo/paseo";
@@ -120,6 +133,8 @@
     takusu = {
       url = "github:takusu-dev/takusu";
       inputs.nixpkgs.follows = "nixpkgs";
+      # 古い rust-overlay ピンによる stdenv.isLinux/isDarwin の deprecation warning を避ける。
+      inputs.rust-overlay.follows = "rust-overlay";
     };
   };
 

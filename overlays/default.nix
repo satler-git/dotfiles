@@ -73,6 +73,22 @@
     });
   };
 
+  # 1Password 8.12.x の MFA ダイアログは、方式の一覧から「先頭」を無条件に初期選択し、
+  # 選ばれた WebAuthn (セキュリティキー) ビューが失敗すると onCancel でダイアログごと
+  # 閉じてしまう。TOTP を併用登録していても、セキュリティキーがあると TOTP を選ぶ前に
+  # MFA が即座に消える (上流でも known issue として認識済み; Linux では ~40ms で失敗)。
+  # ユーザーが方式を明示選択していない場合に TOTP/Code を優先させる暫定パッチ。
+  # 上流で修正されたらこの overlay ごと削除する。
+  # 参考: overlays/1password-mfa-totp.py (app.asar を再構築して integrity も再計算)
+  onepassword-mfa-totp = final: prev: {
+    _1password-gui = prev._1password-gui.overrideAttrs (old: {
+      nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ [ final.python3 ];
+      postInstall = (old.postInstall or "") + ''
+        python3 ${./1password-mfa-totp.py} "$out/share/1password/resources/app.asar"
+      '';
+    });
+  };
+
   pyrate-limiter = final: prev: {
     python3 = prev.python3.override {
       packageOverrides = pyfinal: pyprev: {

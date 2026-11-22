@@ -39,7 +39,9 @@
   environment.systemPackages =
     with pkgs;
     [
-      inputs.disko.packages.${pkgs.stdenv.hostPlatform.system}.default
+      # inputs.disko.packages.default は stdenv.isDarwin を使う古い実装で
+      # 評価時に deprecated warning を出すため、nixpkgs の disko を使う。
+      disko
 
       alacritty
     ]

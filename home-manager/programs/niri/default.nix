@@ -58,6 +58,11 @@ in
   home.packages = with pkgs; [
     xwayland-satellite
     awww
+    # Mod+V で開くクリップボード履歴と、その常駐リスナー (clipse -listen)。
+    # clipse は Wayland では wl-clipboard を必要とする。
+    # 上の let で clipse を起動引数リストとして定義しているため pkgs. を明示する。
+    pkgs.clipse
+    pkgs.wl-clipboard
     nirius
     inputs.myniri.packages.${pkgs.stdenv.hostPlatform.system}.default
     hyprpicker
@@ -120,6 +125,14 @@ in
     };
     spawn-at-startup = [
       { command = [ "fcitx5" ]; }
+      # 1Password を常駐させ、SSH エージェントをログイン直後から使えるようにする。
+      # --silent はメインウィンドウを開かずトレイに常駐する。
+      {
+        command = [
+          "1password"
+          "--silent"
+        ];
+      }
       {
         command = [
           "clipse"

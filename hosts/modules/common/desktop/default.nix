@@ -75,13 +75,15 @@
       support32Bit = true;
     };
     pulse.enable = true;
-    jack.enable = true;
+    # services.pipewire.jack.enable は LD_LIBRARY_PATH を汚すため非推奨。
+    # JACK が必要なアプリは `pw-jack <command>` 経由で起動する。
   };
 
   security.rtkit.enable = true;
 
   environment = {
     systemPackages = with pkgs; [
+      pipewire.jack
       # DMS (Quickshell) がトレイアイコンを解決するにはアイコンテーマが
       # XDG_DATA_DIRS に存在し、かつ gsettings でシステムテーマ名が取得できる必要がある。
       # - gsettings-desktop-schemas: org.gnome.desktop.interface schema を提供 (DMS が icon-theme を検出するのに必要)
