@@ -17,6 +17,7 @@
       ".direnv/*"
       "memo.md"
       ".goosehints"
+      ".dsh/cache/nix/"
     ];
     settings = {
       user = {
