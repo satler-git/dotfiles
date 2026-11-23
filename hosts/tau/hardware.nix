@@ -28,6 +28,17 @@
   services.thinkfan.enable = true;
   boot.kernelParams = [
     "thinkpad_acpi.fan_control=1"
+
+    # Diagnostics for the s2idle -> black screen / no resume hangs.
+    # "pm_debug_messages" logs every device suspend/resume step to dmesg,
+    # and turning a stuck CPU / hung task into a panic makes efi_pstore keep
+    # the trace so it can be read back after the forced reboot.
+    "pm_debug_messages"
+    "no_console_suspend"
+    "softlockup_panic=1"
+    "hardlockup_panic=1"
+    "hung_task_panic=1"
+    "panic=15"
   ];
 
   home-manager.sharedModules = [
