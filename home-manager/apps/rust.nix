@@ -6,6 +6,11 @@
 }:
 let
   inherit (inputs.cargo-compete.packages.${pkgs.stdenv.hostPlatform.system}) cargo-compete;
+
+  # sccache の置き換え。pkgs.kache は通常の nixpkgs 入力に含まれるため、
+  # nixpkgs の更新にそのまま追従する。
+  kache = pkgs.kache;
+
   cargo-nightly =
     toolchain:
     pkgs.stdenv.mkDerivation {
@@ -55,16 +60,48 @@ in
       ];
     };
 
-    build.rustc-wrapper = lib.getExe pkgs.sccache;
+    build.rustc-wrapper = lib.getExe kache;
   };
 
-  home.sessionVariables.SCCACHE_CACHE_SIZE = "50G";
+  # kache のユーザー設定。`kache init` は ~/.cargo/config.toml や
+  # シェルの rc、systemd unit を直接書き換えるので使わず、同等の内容を
+  # home-manager から置く。
+  xdg.configFile."kache/config.toml".source = (pkgs.formats.toml { }).generate "kache-config.toml" {
+    cache = {
+      # btrfs なのでリストアは reflink になり、実ディスクはほぼ増えない。
+      # sccache で 50G 使っていた頃と同じ上限。
+      local_max_size = "200GiB";
+    };
+  };
+
+  # 常駐デーモン。ビルド間でパイプライン・GC・プリフェッチ・
+  # 同一キーのビルド共有を維持する。未起動でもビルド時に自動起動するが、
+  # ログイン時から動かしておく。
+  systemd.user.services.kache = {
+    Unit = {
+      Description = "kache build cache daemon";
+      After = [ "default.target" ];
+    };
+
+    Service = {
+      Type = "simple";
+      ExecStart = "${lib.getExe kache} daemon run";
+      Restart = "on-failure";
+      RestartSec = "5s";
+      Environment = [ "KACHE_LOG=kache=info" ];
+      NoNewPrivileges = true;
+    };
+
+    Install = {
+      WantedBy = [ "default.target" ];
+    };
+  };
 
   home.packages = with pkgs; [
     # faster compiling
     clang
     mold
-    sccache
+    kache
 
     # standard rust compiler(rustc and cargo and tools(rustfmt, cargo-clippy, ...))
     (fenix.combine [
