@@ -105,14 +105,15 @@ with pkgs;
   spotify
   sops
 
-  takusu-cli
   # takusu-desktop
   # teip
   # todoist
   # todoist-electron
+  takusu-cli
   tirith
   trash-cli
   tre-command
+  tutanota-desktop
   typos
   typst
   typst-live
