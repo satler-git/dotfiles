@@ -31,8 +31,6 @@
 
         # deno # 2.3.5 crashes, denops
 
-        waybar
-
         gimp
 
         prismlauncher
@@ -44,19 +42,6 @@
       # passthru — wraps the stable neovim-unwrapped instead of the nightly one.
       neovim = stablePkgs.neovim-unwrapped;
     };
-
-  latest = final: prev: {
-    inherit
-      (import inputs.nixpkgs-unstable-small {
-        config = {
-          allowUnfree = true;
-        };
-        system = final.stdenv.hostPlatform.system;
-      })
-      antigravity
-      anki
-      ;
-  };
 
   mozc-build = final: prev: {
     mozc = prev.mozc.overrideAttrs (old: {

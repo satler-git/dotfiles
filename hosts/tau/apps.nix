@@ -5,7 +5,6 @@
     # ../modules/apps/dropbox.nix
     ../modules/apps/battery-warn.nix
     ../modules/apps/dms-shell.nix
-    ../modules/apps/i3.nix
     ../modules/apps/mosh.nix
     ../modules/apps/openssh.nix
     ../modules/apps/podman.nix

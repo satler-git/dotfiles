@@ -9,8 +9,6 @@
     ./git.nix
     ./gtk.nix
     ./halloy.nix
-    # ./hyprland
-    # ./i3
     ./jujutsu.nix
     ./kalker.nix
     ./keybase.nix
@@ -19,7 +17,6 @@
     ./nix-index-db.nix
     ./ssh.nix
     ./sunsetr.nix
-    ./supercollider.nix
     ./tealdeer.nix
     ./wlogout.nix
     ./yazi.nix

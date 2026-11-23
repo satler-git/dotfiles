@@ -51,7 +51,6 @@ in
   imports = [
     inputs.niri-flake.homeModules.niri
     inputs.niri-flake.homeModules.stylix # Default
-    # ../waybar.nix
     ../wayland.nix
   ];
 
@@ -63,6 +62,8 @@ in
     # 上の let で clipse を起動引数リストとして定義しているため pkgs. を明示する。
     pkgs.clipse
     pkgs.wl-clipboard
+    grim
+    slurp
     nirius
     inputs.myniri.packages.${pkgs.stdenv.hostPlatform.system}.default
     hyprpicker

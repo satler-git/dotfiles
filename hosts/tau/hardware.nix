@@ -1,6 +1,5 @@
 {
   inputs,
-  lib,
   pkgs,
   ...
 }:
@@ -55,11 +54,6 @@
           scale = 1.3;
         };
       };
-    }
-    {
-      programs.waybar.settings.mainBar.modules-right = lib.mkBefore [
-        "battery"
-      ];
     }
     {
       programs.yurf = {

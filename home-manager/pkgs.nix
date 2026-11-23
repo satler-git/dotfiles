@@ -118,7 +118,6 @@ with pkgs;
   typst-live
 
   ueberzugpp
-  # inputs.unison-lang.packages.${system}.ucm-bin
   unzip
 
   # osu-lazer-bin

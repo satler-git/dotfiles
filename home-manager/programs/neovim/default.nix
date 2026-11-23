@@ -7,9 +7,6 @@ let
       eggLikeNewline = true,
     })
   '';
-
-  # denops_server_addr = "127.0.0.1";
-  # denops_server_port = 32123;
 in
 {
   imports = [
@@ -98,15 +95,6 @@ in
     ];
   };
 
-  # my.services.denopsSharedServer = {
-  #   enable = true;
-  #   port = denops_server_port;
-  #   extraDenoArgs = [
-  #     # "--unstable-ffi" # For ddt-ui-shell
-  #   ];
-  #   hostName = denops_server_addr;
-  # };
-
   xdg.configFile = {
     "nvim/" = {
       target = "nvim";
@@ -129,7 +117,6 @@ in
         vim.g.sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.so'
         vim.g.astro_tsdk = "${pkgs.astro-language-server}/lib/astro-language-server/node_modules/typescript/lib"
       '';
-      # vim.g.denops_server_addr = "${denops_server_addr}:${toString denops_server_port}"
     };
     "efm-langserver/config.yaml" = {
       text = pkgs.lib.generators.toYAML { } (

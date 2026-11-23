@@ -17,16 +17,6 @@ in
 
     task = [
       {
-        name = "hyprsunset: reset";
-        command = "hyprctl hyprsunset identity";
-        show_if = "[ \"$XDG_CURRENT_DESKTOP\" = \"hyprland\" ]";
-      }
-      {
-        name = "hyprsunset: sunset";
-        command = "hyprctl hyprsunset temperature 2500";
-        show_if = "[ \"$XDG_CURRENT_DESKTOP\" = \"hyprland\" ]";
-      }
-      {
         name = "Take a screen capture (Select, Wayland)";
         command = writeShellScript "screen-capture-select" "grim -g \"$(slurp -d)\" - | wl-copy; dunstify \"A rect screenshot is copied!\"";
       }

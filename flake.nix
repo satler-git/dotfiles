@@ -5,7 +5,6 @@
     # nixpkgs
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
-    nixpkgs-unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
 
     # NixOS Modules
     home-manager = {
@@ -67,12 +66,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nixpkgs-stable.follows = "nixpkgs-stable";
     };
-    unison-lang = {
-      url = "github:ceedubs/unison-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-      inputs.unison.inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     # packages (not in nixpkgs)
     cargo-compete = {
@@ -105,6 +98,7 @@
     takusu = {
       url = "github:takusu-dev/takusu";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.treefmt-nix.follows = "treefmt-nix";
       inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
       # 古い rust-overlay ピンによる stdenv.isLinux/isDarwin の deprecation warning を避ける。
       inputs.rust-overlay.follows = "rust-overlay";
@@ -153,9 +147,6 @@
         [
           fenix.overlays.default
           neovim-nightly-overlay.overlays.default
-          # unison-lang.overlay は tree-sitter.override { extraGrammars = ... } を使い、
-          # nixos-unstable の tree-sitter では extraGrammars が削除されているため外した。
-          # unison-ucm は pkgs.nix で inputs.unison-lang.packages.${system}.ucm-bin を直接参照する。
           takusu.overlays.default
           (final: _: {
             osu-lazer-bin = nix-gaming.packages.${final.stdenv.hostPlatform.system}.osu-lazer-bin;
