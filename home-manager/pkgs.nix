@@ -1,17 +1,10 @@
 {
   pkgs,
-  inputs,
   lib,
   ...
 }:
 with pkgs;
-let
-  system = pkgs.stdenv.hostPlatform.system;
-in
 [
-  # inputs.isd.packages.${system}.default
-  inputs.herdr.packages.${system}.herdr
-
   _1password-gui
   # _1password-cli は programs._1password がシステム側で入れる
   # (setgid ラッパー経由でないと GUI 連携が動かないため)
@@ -49,7 +42,6 @@ in
   f2
   fd
   ffmpeg_7-full
-  foliate
   fzf
 
   gamescope
@@ -71,7 +63,7 @@ in
   gst_all_1.gstreamer
 
   imagemagick
-  imhex
+  # imhex
   inkscape
 
   jq
@@ -85,7 +77,6 @@ in
 
   # mindustry-wayland
   maxima
-  mission-center
   moonlight-qt
   mo-viewer
   mpv
@@ -109,14 +100,14 @@ in
   pympress
 
   scribus
-  shotcut
+  # shotcut
   smartmontools
   spotify
   sops
 
   takusu-cli
   # takusu-desktop
-  teip
+  # teip
   # todoist
   # todoist-electron
   tirith
@@ -134,15 +125,16 @@ in
   rdfind
   ripgrep
   ripgrep-all
-  rquickshare
+  # rquickshare
   # rustdesk-flutter
 
+  herdr
   hledger
   hyperfine
 
   vlc
 
-  wireshark
+  # wireshark
   wakatime-cli
   watchman
   wget

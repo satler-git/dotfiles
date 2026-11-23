@@ -1,9 +1,7 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
   home.packages = [
-    (inputs.sunsetr.packages.${pkgs.stdenv.hostPlatform.system}.sunsetr.overrideAttrs {
-      doCheck = false;
-    })
+    pkgs.sunsetr
   ];
 
   xdg.configFile = {

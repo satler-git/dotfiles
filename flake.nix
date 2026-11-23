@@ -12,11 +12,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-on-droid = {
-      url = "github:nix-community/nix-on-droid";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
     stylix = {
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,7 +25,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
     };
-    nixos-hardware.url = "github:NixOS/nixos-hardware";
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v1.1.0";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -41,16 +39,8 @@
       url = "github:nix-community/disko/latest";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-wsl = {
-      url = "github:nix-community/NixOS-WSL";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     # Overlays
-    tidalcycles = {
-      url = "github:mitchmindtree/tidalcycles.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     neovim-nightly-overlay = {
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -80,6 +70,8 @@
     unison-lang = {
       url = "github:ceedubs/unison-nix";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+      inputs.unison.inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # packages (not in nixpkgs)
@@ -87,10 +79,6 @@
       url = "github:satler-git/sb-nix-cargo-compete";
       # Hashがかわる
       # inputs.nixpkgs.follows = "nixpkgs";
-    };
-    isd = {
-      url = "github:isd-project/isd";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     yurf = {
       url = "github:satler-git/yurf";
@@ -108,31 +96,16 @@
       inputs.rust-overlay.follows = "rust-overlay";
     };
 
-    sunsetr = {
-      url = "github:psi4j/sunsetr";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # utils
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    herdr = {
-      url = "github:ogulcancelik/herdr";
-      inputs.nixpkgs.follows = "nixpkgs";
-      # 古い rust-overlay ピンによる stdenv.isLinux/isDarwin の deprecation warning を避ける。
-      inputs.rust-overlay.follows = "rust-overlay";
-    };
-    paseo = {
-      url = "github:getpaseo/paseo";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     takusu = {
       url = "github:takusu-dev/takusu";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "neovim-nightly-overlay/flake-parts";
       # 古い rust-overlay ピンによる stdenv.isLinux/isDarwin の deprecation warning を避ける。
       inputs.rust-overlay.follows = "rust-overlay";
     };
@@ -169,7 +142,6 @@
       self,
       nixpkgs,
       home-manager,
-      nix-on-droid,
       treefmt-nix,
       ...
     }@inputs:
@@ -258,41 +230,7 @@
             ./hosts/installer
           ];
         };
-        lukaw = nixpkgs.lib.nixosSystem {
-          # NixOS-WSL
-          system = "x86_64-linux";
-          specialArgs = {
-            inherit inputs self;
-          };
-
-          modules = [
-            {
-              nixpkgs.pkgs = pkgs;
-            }
-            ./hosts/lukaw
-            home-manager.nixosModules.home-manager
-          ];
-        };
       };
-
-      nixOnDroidConfigurations.upsilon =
-        let
-          system = "aarch64-linux";
-          droidPkgs = import nixpkgs {
-            inherit system;
-            config.allowUnfree = true;
-            overlays = [
-              nix-on-droid.overlays.default
-            ];
-          };
-        in
-        nix-on-droid.lib.nixOnDroidConfiguration {
-          pkgs = droidPkgs;
-          modules = [ ./hosts/upsilon ];
-          extraSpecialArgs = {
-            inherit inputs self;
-          };
-        };
 
       formatter.x86_64-linux = treefmtEval.config.build.wrapper;
 
