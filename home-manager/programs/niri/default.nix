@@ -119,6 +119,11 @@ in
       focus-follows-mouse.enable = true;
       warp-mouse-to-focus.enable = true;
 
+      # 日本語配列 (108 キー) のキーボードを使う。
+      # niri は NixOS 側の xkb 設定を参照せず、無指定だと "us" になる。
+      # Henkan/Muhenkan/かな キーを有効にするためここで明示する。
+      keyboard.xkb.layout = "jp";
+
       mouse = {
         accel-profile = "flat";
       };

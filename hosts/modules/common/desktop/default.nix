@@ -27,6 +27,19 @@
     setuid = false;
   };
 
+  # home-manager の services.kbfs は PATH=/run/wrappers/bin から `fusermount` を
+  # 直接 exec するが、nixpkgs 26.11 の programs.fuse は fuse3 の
+  # fusermount3 ラッパーしか作らない。kbfsfuse (go-fuse) は fusermount3 を
+  # 探さないため、KBFS が FUSE マウントに失敗して ~/keybase が空になる。
+  # 互換のため fusermount 名でも同じ setuid ラッパーを提供する。
+  # 背景: https://github.com/NixOS/nixpkgs/issues/526161 (fuse 2.x の削除)
+  security.wrappers.fusermount = {
+    source = "${lib.getBin pkgs.fuse3}/bin/fusermount3";
+    owner = "root";
+    group = "root";
+    setuid = true;
+  };
+
   # loginctl lock-session で hyprlock が起動するために必要
   # (PAM サービスが登録され、ロック解除時のパスワード認証が正しく動く)
   # ただし programs.hyprlock.enable は services.hypridle.enable も自動で有効にするので、
