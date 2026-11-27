@@ -91,6 +91,7 @@ with pkgs;
 
   onlyoffice-desktopeditors
   opam
+  (callPackage ./pkgs/open-pencil.nix { })
 
   p7zip
   pandoc
