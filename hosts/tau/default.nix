@@ -69,6 +69,11 @@
 
   my.hostName = "tau";
 
+  # 音声入力 (Voxtype + Haas-ja-v1.0 + speech.cpp) をこのホストだけで有効化
+  home-manager.sharedModules = [
+    { services.voxtypeHaas.enable = true; }
+  ];
+
   boot.kernelPackages = lib.mkForce pkgs.linuxKernel.packages.linux_zen;
 
   services.greetd = {

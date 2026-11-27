@@ -111,6 +111,13 @@ in
       "Mod+E".action.spawn = fileManager;
       "Mod+V".action.spawn = clipse;
 
+      # 音声入力 (Voxtype + Haas-ja)。押すたびに録音開始/停止。
+      "Mod+D".action.spawn = [
+        "voxtype"
+        "record"
+        "toggle"
+      ];
+
       "Mod+Shift+Q".action =
         if config.programs.wlogout.enable then { spawn = "wlogout"; } else { quit = { }; };
     };
