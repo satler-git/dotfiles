@@ -24,7 +24,25 @@
 
   services.logind.settings.Login.HandleLidSwitch = "suspend"; # default
 
-  services.thinkfan.enable = true;
+  # ファンを少し強めに回して CPU 温度を下げる。
+  # 既定カーブは 60°C で level 7 (約 3700 rpm)、80°C 以上で EC の自動制御
+  # (約 4000 rpm) に戻るため、76〜85°C 付近で回転が脈打っていた。
+  # thinkpad_acpi の "level full-speed" は "disengaged" の別名で、EC の
+  # 閉ループ制御を切って上限 (実測 約 6200 rpm) まで回すモード。
+  # 常用は騒音・ファン負荷が大きいので、80°C 以上でのみ使う。
+  # (80〜84°C はヒステリシス用の重なり)
+  services.thinkfan = {
+    enable = true;
+    levels = [
+      [ 0 0 55 ]
+      [ 1 48 60 ]
+      [ 2 50 61 ]
+      [ 3 52 63 ]
+      [ 6 56 65 ]
+      [ 7 60 84 ]
+      [ "level full-speed" 80 32767 ]
+    ];
+  };
   boot.kernelParams = [
     "thinkpad_acpi.fan_control=1"
 
