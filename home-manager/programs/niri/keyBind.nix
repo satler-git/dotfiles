@@ -302,4 +302,13 @@ in
   "Mod+W".action.toggle-column-tabbed-display = { };
 
   "Mod+G" = toggle-follow-mode;
+
+  "Mod+S".action.spawn = [
+    "mote-hud"
+    "toggle"
+  ];
+  "Mod+Shift+S".action.spawn = [
+    "mote-hud"
+    "capture"
+  ];
 }
